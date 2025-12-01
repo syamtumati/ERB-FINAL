@@ -10,7 +10,7 @@
   color: #EAF1FF;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: hidden; /* avoid horizontal scroll on mobile */
 }
 
 /* ================= HERO SECTION ===================== */
@@ -59,25 +59,15 @@
   max-width: 1350px;
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 2rem 8rem;
+  padding: 6rem 2rem 8rem; /* top / sides / bottom */
   box-sizing: border-box;
 }
 
-/* GRID WITH EQUAL HEIGHT BOXES */
-
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.3fr;
   gap: 3.5rem;
   align-items: stretch;
-}
-
-/* both cards become equal height */
-.address-card,
-.form-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 /* ADDRESS CARD */
@@ -88,6 +78,8 @@
   border-radius: 2.4rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.14);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .address-card h3 {
@@ -123,6 +115,8 @@
   padding: 2.8rem 2.6rem 2.4rem;
   border-radius: 2.4rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.14);
+  display: flex;
+  flex-direction: column;
 }
 
 .form-card form {
@@ -131,7 +125,7 @@
   height: 100%;
 }
 
-/* INPUTS */
+/* INPUTS & TEXTAREA */
 
 .form-card form input,
 .form-card form textarea {
@@ -144,6 +138,7 @@
   font-size: 1.15rem;
   font-family: "Georgia", serif;
   color: #1a1208;
+  box-sizing: border-box;
   transition: all 0.3s ease;
 }
 
@@ -151,6 +146,8 @@
   resize: vertical;
   min-height: 180px;
 }
+
+/* FOCUS STATE */
 
 .form-card form input:focus,
 .form-card form textarea:focus {
@@ -162,25 +159,26 @@
 /* SUBMIT BUTTON */
 
 .form-card .coffee-btn {
-  margin-top: auto;
+  margin-top: auto; /* stick to bottom of card */
   width: 100%;
   padding: 1.5rem;
   background: linear-gradient(90deg, #6b4e31, #8c6b47);
   color: #ffffff;
   font-weight: 900;
   font-size: 1.3rem;
-  letter-spacing: 1.6px;
-  border-radius: 999px;
-  border: none;
   text-transform: uppercase;
-  cursor: pointer;
+  letter-spacing: 1.6px;
+  border: none;
+  border-radius: 999px;
   box-shadow: 0 22px 60px rgba(107, 78, 49, 0.6);
+  cursor: pointer;
   transition: all 0.4s ease;
 }
 
 .form-card .coffee-btn:hover {
   transform: translateY(-8px);
   background: linear-gradient(90deg, #8c6b47, #a07d5b);
+  box-shadow: 0 35px 80px rgba(107, 78, 49, 0.85);
 }
 
 /* SUCCESS MESSAGE */
@@ -198,6 +196,7 @@
 .success-message h2 {
   font-size: 3.8rem;
   color: #6b4e31;
+  margin-bottom: 1rem;
 }
 
 /* ================= FOOTER ========================== */
@@ -209,6 +208,7 @@
   border-top: 1px solid rgba(0,0,0,0.08);
   margin: 0 !important;
   flex-shrink: 0;
+  font-family: "Georgia", serif;
 }
 
 .footer-inner {
@@ -216,14 +216,15 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.8rem;
+  align-items: center;
 }
 
 .church-name {
   font-size: 2.6rem;
   font-weight: 900;
   color: #8b4513;
+  letter-spacing: -1px;
 }
 
 .footer-nav {
@@ -244,9 +245,11 @@
   color: #5d4037;
   font-size: 1.05rem;
   text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
   letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color .3s;
 }
 
 .footer-nav a:hover {
@@ -263,13 +266,12 @@
 
 @media (max-width: 968px) {
   .contact-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
   }
 
-  /* reset equal heights on mobile */
-  .address-card,
-  .form-card {
-    height: auto !important;
+  .contact-content {
+    padding: 4.5rem 1.8rem 6rem;
   }
 
   .hero-title {
@@ -285,11 +287,16 @@
   .contact-hero-image {
     height: 70vh;
     min-height: 480px;
-    background-attachment: scroll;
+    background-attachment: scroll; /* avoid jank on mobile */
+  }
+
+  .hero-overlay {
+    padding: 1.5rem;
   }
 
   .hero-title {
     font-size: 3.8rem;
+    letter-spacing: -2px;
   }
 
   .hero-subtitle {
@@ -299,9 +306,37 @@
   .contact-content {
     padding: 3.5rem 1.5rem 5rem;
   }
+
+  .address-card,
+  .form-card {
+    padding: 2.2rem 1.8rem 2rem;
+  }
+
+  .address-card h3 {
+    font-size: 2rem;
+  }
+
+  .address-block p {
+    font-size: 1.15rem;
+  }
+
+  .map-container {
+    height: 260px;
+  }
+
+  .form-card form input,
+  .form-card form textarea {
+    padding: 1.3rem 1.4rem;
+    margin-bottom: 1.4rem;
+    font-size: 1.05rem;
+  }
+
+  .form-card .coffee-btn {
+    font-size: 1.15rem;
+  }
 }
 
-/* HIDE OLD FOOTER VARIANTS */
+/* HIDE OLD FOOTER VARIANTS IF PRESENT */
 .biscuit-footer,
 .footer-links,
 .latin {
