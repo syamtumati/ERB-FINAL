@@ -60,7 +60,7 @@
 /* Mobile screens */
 @media (max-width: 480px) {
   .hero-church-name {
-    font-size: 2.8rem !important;
+    font-size: 2.4rem !important;
     line-height: 1.1;
     letter-spacing: -1px;
   }
