@@ -1,6 +1,5 @@
 /* ===================================================== */
 /* GNADENKIRCHE FRANKFURT – Home.css */
-/* English comments + German content + Fixes */
 /* ===================================================== */
 
 .home-page {
@@ -31,7 +30,7 @@
   background: linear-gradient(
     to bottom,
     rgba(10, 8, 15, 0.15),
-    rgba(15, 10, 30, 0.25)  /* much lighter */
+    rgba(15, 10, 30, 0.25)
   );
   display: flex;
   align-items: center;
@@ -46,56 +45,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 90%;
+  max-width: 800px;     /* narrower so long words don’t stretch too far */
+  padding: 0 2rem;      /* 👈 important: space from screen edges */
+  margin: 0 auto;
 }
 
 .hero-church-name {
-  font-size: 5.5rem !important;
+  font-size: 4.2rem;    /* base size for big screens */
   font-weight: 900;
   line-height: 1.05;
-  margin: 0 0 1rem 0 !important;
-  letter-spacing: -2px;
-}
-
-/* Mobile screens */
-@media (max-width: 480px) {
-  .hero-church-name {
-    font-size: 2.4rem !important;
-    line-height: 1.1;
-    letter-spacing: -1px;
-  }
-}
-
-/* Small tablets */
-@media (max-width: 768px) {
-  .hero-church-name {
-    font-size: 4rem !important;
-    line-height: 1.1;
-  }
+  margin: 0 0 1rem 0;
+  letter-spacing: -1px;
 }
 
 .hero-subtitle {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 600;
   color: #e8c0a0;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 0 0 3rem 0;
+  margin: 0 0 2.5rem 0;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
 }
 
 .hero-motto {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #f0e8ff;
   font-weight: 500;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
 }
 
 /* ==================== 2. HEARTCRY FILM SECTION ==================== */
 
 .heartcry-section {
-  padding: 4rem 2rem 4rem;  /* top, sides, bottom */
+  padding: 4rem 2rem 4rem;
   background: linear-gradient(135deg, #0c0a0e, #121015, #0f0d12);
   background-attachment: fixed;
   color: #f0e8ff;
@@ -125,24 +109,23 @@
   max-width: 1000px;
 }
 
-/* === VIDEO FRAME – NO GAP ON TOP/BOTTOM INSIDE CONTAINER === */
+/* VIDEO FRAME */
 
 .video-container {
   position: relative;
   width: 100%;
   max-width: 1450px;
-  margin: 0 auto 3rem auto;   /* bottom space below video */
+  margin: 0 auto 3rem auto;
   border-radius: 2.5rem;
   overflow: hidden;
   box-shadow: 0 80px 180px rgba(0, 0, 0, 0.95);
   border: 14px solid rgba(232, 192, 160, 0.42);
 }
 
-/* 16:9 aspect ratio, no padding tricks on the iframe itself */
 .video-container::before {
   content: "";
   display: block;
-  padding-top: 56.25%;  /* 16:9 ratio */
+  padding-top: 56.25%;  /* 16:9 */
 }
 
 .youtube-player {
@@ -155,7 +138,6 @@
   display: block;
 }
 
-/* Description under the video */
 .video-description {
   font-size: 1.45rem;
   color: #e0d4ff;
@@ -164,7 +146,7 @@
   line-height: 2.1;
 }
 
-/* ==================== 3. WAS UNS WICHTIG IST – CLEAN & EQUAL BOXES ==================== */
+/* ==================== 3. WAS UNS WICHTIG IST ==================== */
 
 .what-matters-section {
   padding: 4rem 2rem 4rem;
@@ -175,13 +157,12 @@
 
 .what-matters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Title */
 .main-title {
   grid-column: 1 / -1;
   font-size: 4.6rem;
@@ -191,7 +172,6 @@
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ALL THREE BOXES — UNIFORM DESIGN */
 .matter-block {
   background: white;
   padding: 3rem 2.2rem;
@@ -207,16 +187,13 @@
   height: 100%;
 }
 
-/* ALL HEADERS aligned equally */
 .matter-block h3 {
   font-size: 2.6rem;
   font-weight: 800;
   color: #8b4513;
   margin: 0 0 1.6rem 0;
-  padding: 0;
 }
 
-/* ALL PARAGRAPHS aligned equally */
 .matter-block p {
   font-size: 1.4rem;
   line-height: 2.1;
@@ -225,7 +202,6 @@
   flex-grow: 1;
 }
 
-/* READ MORE consistent placement */
 .read-more {
   font-size: 1.2rem;
   font-weight: 700;
@@ -240,7 +216,6 @@
   color: #8b4513;
 }
 
-/* Hover effect */
 .matter-block:hover {
   background: rgba(255, 255, 255, 0.75);
   transform: translateY(-12px);
@@ -253,9 +228,9 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-top: 0 !important; /* remove previous gap above */
+  margin-top: 0 !important;
   overflow: hidden;
-  background: #000000 !important; /* solid black behind video */
+  background: #000000 !important;
   z-index: 0;
 }
 
@@ -273,11 +248,11 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.55) 0%,      /* bottom: lighter */
-    rgba(10, 8, 15, 0.40) 20%,   /* much lighter */
-    rgba(15, 10, 30, 0.25) 50%,  /* mid: almost transparent */
-    rgba(10, 8, 15, 0.40) 80%,   /* light at top */
-    rgba(0, 0, 0, 0.55) 100%     /* top: lighter */
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(10, 8, 15, 0.4) 20%,
+    rgba(15, 10, 30, 0.25) 50%,
+    rgba(10, 8, 15, 0.4) 80%,
+    rgba(0, 0, 0, 0.55) 100%
   );
   display: flex;
   align-items: center;
@@ -301,65 +276,64 @@
   text-shadow: 0 8px 35px rgba(0, 0, 0, 0.9);
 }
 
-.latin {
-  color: #8b4513;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
+/* ==================== TITLE HELPERS ==================== */
 
-/* ==================== 6. TITLE CLASSES ==================== */
 .white-title {
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: 900;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
 }
 
 .black-title {
-  color: #1a1208 !important;
+  color: #1a1208;
   font-weight: 900;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* ==================== 7. RESPONSIVE ==================== */
+/* ==================== RESPONSIVE ==================== */
 
+/* Tablets / small laptops */
 @media (max-width: 1024px) {
   .hero-church-name {
-    font-size: 6rem !important;
+    font-size: 3.8rem;
   }
   .hero-subtitle {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .hero-motto {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .main-title {
     font-size: 4rem;
   }
 }
 
+/* Samsung S20 FE range (~412px width) falls here & below */
 @media (max-width: 768px) {
+  .hero-content-centered {
+    padding: 0 1.8rem;
+  }
+
   .hero-church-name {
-    font-size: 4.8rem !important;
+    font-size: 3.2rem;     /* tuned for mid-size screens */
   }
   .hero-subtitle {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
   }
   .hero-motto {
-    font-size: 1.8rem;
-  }
-  .section-title {
-    font-size: 3.6rem;
+    font-size: 1.4rem;
   }
 
-  /* reduce padding so content doesn't look pushed off-screen */
+  .section-title {
+    font-size: 3.4rem;
+  }
+
   .heartcry-section,
   .what-matters-section {
     padding: 4rem 1.5rem 3rem !important;
   }
 
-  /* single-column grid on tablets/phones */
   .what-matters-grid {
     grid-template-columns: 1fr;
     gap: 2.4rem;
@@ -377,19 +351,25 @@
   }
 }
 
+/* Very small phones – but your S20 FE will also use this safely */
 @media (max-width: 480px) {
+  .hero-content-centered {
+    padding: 0 1.6rem;
+  }
+
   .hero-church-name {
-    font-size: 3.6rem !important;
+    font-size: 2.8rem;     /* 👈 this is the safety net: will NOT cut */
   }
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
   }
   .hero-motto {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .main-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   .matter-block h3 {
@@ -408,13 +388,13 @@
   }
 }
 
-/* SAME CLEAN FOOTER AS ALL OTHER PAGES – ALL LINKS IN ONE LINE */
+/* ==================== FOOTER ==================== */
 
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   margin-top: 0 !important;
   font-family: "Georgia", serif;
 }
@@ -472,13 +452,12 @@
   opacity: 0.9;
 }
 
-/* Hide old footer bits if they ever appear */
+/* Hide old footer variants if they exist */
 .biscuit-footer,
 .footer-container,
 .footer-logo,
 .footer-links,
-.footer-copyright,
-.latin {
+.footer-copyright {
   display: none !important;
 }
 
