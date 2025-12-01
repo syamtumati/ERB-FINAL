@@ -1,5 +1,5 @@
 /* -------------------------------------------------- */
-/* HEARTCRY STYLE + BIG TEXT + SPACING + FOOTER       */
+/* DONATIONS PAGE – CENTERED CARD, RESPONSIVE LAYOUT  */
 /* -------------------------------------------------- */
 
 .donations-page {
@@ -10,10 +10,10 @@
   position: relative;
   font-family: system-ui, "Segoe UI", sans-serif;
   color: #fff;
-  overflow-x: hidden;              /* avoid side scrolling */
+  overflow-x: hidden;
 }
 
-/* DARK OVERLAY OVER BACKGROUND IMAGE */
+/* Dark overlay */
 .donations-bg-overlay {
   position: fixed;
   inset: 0;
@@ -21,7 +21,7 @@
   z-index: 0;
 }
 
-/* INNER LAYOUT – FLEX COLUMN TO HOLD MAIN + FOOTER */
+/* Flex column wrapper */
 .donations-inner {
   position: relative;
   z-index: 1;
@@ -30,15 +30,16 @@
   flex-direction: column;
 }
 
-/* ---------- MAIN (TOP SPACING UNDER HEADER) ---------- */
+/* -------------------------------------------------- */
+/* MAIN – CENTER CARD ON DESKTOP + SAFE SPACING MOBILE */
+/* -------------------------------------------------- */
 
 .donations-main {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  /* top padding leaves space for the fixed header/logo */
-  padding: 11rem 1.5rem 5rem;      /* top, sides, bottom (desktop) */
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* center vertically (desktop) */
+  padding: 12rem 1.5rem 6rem;  /* top | left/right | bottom */
 }
 
 .donations-card {
@@ -51,8 +52,7 @@
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
 }
 
-/* TITLE + INTRO */
-
+/* Title & intro text */
 .donations-card h1 {
   font-size: 2.4rem;
   margin-bottom: 0.8rem;
@@ -66,7 +66,9 @@
   margin-bottom: 2rem;
 }
 
-/* ---------- FORM ---------- */
+/* -------------------------------------------------- */
+/* FORM */
+/* -------------------------------------------------- */
 
 .donations-form {
   display: flex;
@@ -79,10 +81,8 @@
   color: #555;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  margin-bottom: 0.3rem;
 }
 
-/* amount buttons */
 .amount-row {
   display: flex;
   gap: 0.8rem;
@@ -104,7 +104,7 @@
   color: #fff;
 }
 
-/* custom amount */
+/* Custom amount */
 .custom-amount {
   display: flex;
   align-items: center;
@@ -128,7 +128,6 @@
   background: transparent;
 }
 
-/* method */
 .method-row {
   display: flex;
   flex-direction: column;
@@ -140,7 +139,7 @@
   text-align: center;
 }
 
-/* primary button */
+/* Primary button */
 .primary-btn {
   width: 100%;
   padding: 1rem;
@@ -163,13 +162,13 @@
   color: #777;
 }
 
-/* divider */
+/* Divider */
 .divider {
   border-top: 1px solid #eee;
   margin: 2rem 0;
 }
 
-/* other ways */
+/* Other ways */
 .other-ways h2 {
   font-size: 1.5rem;
   margin-bottom: 0.4rem;
@@ -201,7 +200,7 @@
   border-bottom: none;
 }
 
-/* secondary button */
+/* Secondary button */
 .secondary-btn {
   width: 100%;
   padding: 0.9rem;
@@ -217,13 +216,15 @@
   color: #fff;
 }
 
-/* ---------- FOOTER (overlay style, sits nicely under form) ---------- */
+/* -------------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------------- */
 
 .clean-footer {
   background: rgba(0, 0, 0, 0.4);
   padding: 2.5rem 2rem 2.2rem;
   text-align: center;
-  margin-top: 0;               /* main already gives bottom spacing */
+  margin-top: 0;
 }
 
 .footer-inner {
@@ -254,12 +255,16 @@
   font-size: 0.9rem;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* -------------------------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------------------------- */
 
 @media (max-width: 640px) {
+
+  /* Keep form from touching header */
   .donations-main {
-    /* MORE SPACE from the fixed header/logo on mobile */
-    padding: 7.5rem 1rem 4rem;     /* top, sides, bottom */
+    padding: 9rem 1rem 4rem;    /* slightly tighter but safe */
+    align-items: flex-start;    /* card sits higher on mobile */
   }
 
   .donations-card {
