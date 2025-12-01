@@ -1,4 +1,4 @@
-/* OUTREACH PAGE – FULL IMAGE MOBILE, SHORTER HERO DESKTOP */
+/* OUTREACH PAGE – FULL IMAGE, CLEAN LAYOUT */
 
 /* Reset */
 html,
@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-/* PAGE WRAPPER */
+/* PAGE WRAPPER – dark blue, flex column */
 .outreach-page {
   min-height: 100vh;
   display: flex;
@@ -18,43 +18,23 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== HERO ========== */
+/* ========== HERO (FULL IMAGE, NO CROPPING) ========== */
 
-/* MOBILE-FIRST: show full image, height controlled by image ratio */
 .outreach-hero {
   width: 100%;
-  background: #000a1f;
+  background: #000a1f;        /* dark behind the image */
 }
 
 .outreach-hero-image {
   display: block;
   width: 100%;
-  height: auto;                /* full image, no cropping on mobile */
-}
-
-/* DESKTOP/TABLET: shorten hero height and crop a bit */
-@media (min-width: 1024px) {
-  .outreach-hero {
-    height: 65vh;              /* <— shorter hero on desktop */
-    max-height: 65vh;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .outreach-hero-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;         /* crop a bit to fit height */
-    object-position: center 80%; /* show more lower part of image */
-  }
+  height: auto;                /* keep aspect ratio, no cropping */
 }
 
 /* ========== MAIN CONTENT ========== */
 
 .outreach-saturday {
-  padding: 4rem 0 4rem;
+  padding: 4rem 0 4rem;        /* same top/bottom for symmetry */
   background: transparent;
   text-align: center;
 }
@@ -120,7 +100,7 @@ body {
   padding: 4rem 3rem;
   border-radius: 3rem;
   max-width: 900px;
-  margin: 4rem auto 0;
+  margin: 4rem auto 0;          /* equal spacing: 4rem above, then footer below */
   border: 1px solid rgba(139, 69, 19, 0.15);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
   color: #3a2a18;
@@ -213,8 +193,9 @@ body {
     padding: 2.6rem 2rem;
   }
 
+  /* bottom box full-width and nicely centered on mobile */
   .join-us {
-    margin: 3rem 0 0;
+    margin: 3rem 0 0;         /* equal top spacing, sides controlled by container */
     width: 100%;
     padding: 3rem 2rem;
   }

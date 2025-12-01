@@ -50,8 +50,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 3rem;
-  margin: 6rem auto 4rem;   /* smaller bottom margin so no huge gap before footer */
+  margin: 5rem auto 3.5rem;   /* reduced bottom gap so footer sits nicely */
   max-width: 1300px;
+  align-items: stretch;        /* cards in a row stretch to same height */
 }
 
 .confession-card {
@@ -63,7 +64,13 @@
   border: 1px solid rgba(139, 69, 19, 0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-align: left;
-  box-sizing: border-box;   /* ensures padding doesn't break width */
+  box-sizing: border-box;
+
+  /* equal-height behavior */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 240px;          /* gives a consistent feeling across cards */
 }
 
 .confession-card:hover {
@@ -103,12 +110,14 @@
   line-height: 1.9;
   color: #3a2a18;
   margin: 0;
+  margin-top: 0.4rem;
+  flex-grow: 1;              /* fills vertical space so bottom alignment feels even */
 }
 
 /* COFFEE BROWN BUTTON */
 
 .belief-cta {
-  margin-bottom: 3rem;   /* slightly smaller, so spacing to footer is nice */
+  margin-bottom: 3.2rem;
 }
 
 .coffee-btn {
@@ -132,12 +141,6 @@
   box-shadow: 0 50px 110px rgba(107, 78, 49, 0.9);
 }
 
-.latin {
-  color: #6b4e31;
-  font-style: italic;
-  font-weight: 700;
-}
-
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -157,7 +160,7 @@
     font-size: 1.8rem;
   }
 
-  /* always 1 column on mobile, boxes full width */
+  /* purely one column on mobile, full width cards */
   .confession-grid {
     grid-template-columns: 1fr;
     gap: 2.4rem;
@@ -166,6 +169,7 @@
 
   .confession-card {
     padding: 2.4rem 2rem;
+    min-height: 220px;   /* a bit less tall on mobile */
   }
 
   .coffee-btn {
@@ -180,7 +184,7 @@
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.08);
-  margin-top: 0;              /* important: no big extra gap */
+  margin-top: 0;
   font-family: "Georgia", serif;
 }
 
