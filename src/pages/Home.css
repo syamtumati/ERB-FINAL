@@ -54,7 +54,7 @@
   font-weight: 900;
   line-height: 1.05;
   margin: 0 0 1rem 0;
-  letter-spacing: 2px;
+  letter-spacing: -3px;
 }
 
 .hero-subtitle {
