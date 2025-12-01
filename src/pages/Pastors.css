@@ -16,6 +16,7 @@
 }
 
 /* ORBS */
+/* ORBS */
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -33,12 +34,12 @@
   left: -10%;
 }
 
-/* IMPORTANT: keep this inside the page, not below it */
+/* ⬇️ Move this orb higher so it doesn't glow under the footer */
 .orb-2 {
   width: 520px;
   height: 520px;
   background: rgba(186, 143, 101, 0.3);
-  bottom: 0;          /* was bottom: -10%; caused extra dark area below footer */
+  top: 45%;     /* was bottom: -10% or bottom: 0; */
   right: -8%;
 }
 
