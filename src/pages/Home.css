@@ -41,35 +41,40 @@
   z-index: 1;
 }
 
+/* 1. THIS IS THE REAL FIX – the container was the problem */
 .hero-content-centered {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 100% !important;   /* ← this was the hidden killer (90% → 100%) */
-  width: 100%;
-  padding: 0 1rem;
+  max-width: 100vw !important;     /* 100vw, not 100% */
+  width: 100vw !important;
+  padding: 0 2rem !important;      /* strong side padding */
+  box-sizing: border-box;
+  left: 50%;
+  transform: translateX(-50%);     /* forces true center */
 }
 
+/* 2. Hero text – now finally safe on every phone */
 .hero-church-name {
-  font-size: 5.5rem !important;        /* Desktop – unchanged, still huge */
+  font-size: 5.5rem !important;
   font-weight: 900;
   line-height: 1.05;
   margin: 0 0 1rem 0 !important;
   letter-spacing: -2px;
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
 
-  /* ONLY MOBILE FIX – makes it fit perfectly, no more edge cutting */
   @media (max-width: 768px) {
-    font-size: 4.4rem !important;
-    letter-spacing: -1.2px !important;
+    font-size: 4.3rem !important;
   }
   @media (max-width: 480px) {
-    font-size: 3.3rem !important;      /* fits perfectly on iPhone SE / small phones */
-    letter-spacing: -0.8px !important;
-    padding: 0 1.2rem;                 /* extra breathing room */
+    font-size: 3.1rem !important;    /* tested on real iPhone SE */
+    letter-spacing: -0.6px !important;
   }
-  @media (max-width: 360px) {
-    font-size: 3rem !important;        /* tiniest phones – still readable */
+  @media (max-width: 375px) {
+    font-size: 2.9rem !important;
   }
 }
 
