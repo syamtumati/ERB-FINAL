@@ -2,22 +2,24 @@
 
 .belief-page {
   min-height: 100vh;
+  /*  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);*/
   background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
+  /*  color: #3a2a18;*/
   color: #EAF1FF;
   font-family: "Georgia", serif;
+
   display: flex;
-  flex-direction: column;
-  padding-top: 10rem;   /* ONLY top padding, no sides */
-  overflow-x: hidden;
+  flex-direction: column;  /* footer sticks to bottom */
+  padding: 10rem 2rem 0;   /* top padding, no bottom here */
+  overflow-x: hidden;      /* prevent horizontal scroll on mobile */
 }
 
 .belief-content {
   max-width: 1350px;
   margin: 0 auto;
   text-align: center;
-  flex: 1;                 /* push footer to bottom */
-  padding: 0 2rem;         /* inner side padding like UpEvents container */
+  flex: 1;                 /* take all free vertical space */
 }
 
 /* HERO */
@@ -25,6 +27,7 @@
 .belief-hero h1 {
   font-size: clamp(2.6rem, 7vw, 4.5rem);
   font-weight: 900;
+  /*  color: #1a1208;*/
   color: #ffffff !important;
   margin: 0 0 1.5rem 0;
   letter-spacing: -2px;
@@ -33,6 +36,7 @@
 .confession-title {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
+  /*  color: #8b4513;*/
   color: #ffffff !important;
   margin: 0 0 1.2rem 0;
 }
@@ -40,6 +44,7 @@
 .tagline {
   font-size: clamp(1.3rem, 3.5vw, 2.1rem);
   font-weight: 600;
+  /*  color: #5d4037;*/
   color: #ffffff !important;
   margin: 0;
   line-height: 1.6;
@@ -49,6 +54,7 @@
 
 .confession-grid {
   display: grid;
+  /* slightly smaller min width so it fits even on ~320px screens */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 3rem;
   margin: 6rem auto 7rem;
@@ -132,15 +138,29 @@
   box-shadow: 0 50px 110px rgba(107, 78, 49, 0.9);
 }
 
+.latin {
+  color: #6b4e31;
+  font-style: italic;
+  font-weight: 700;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
   .belief-page {
-    padding-top: 8rem;
+    padding: 6rem 1.5rem 0;
   }
 
-  .belief-content {
-    padding: 0 1.5rem;
+  .belief-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .confession-title {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
   }
 
   .confession-grid {
@@ -159,18 +179,27 @@
     width: 100%;
     max-width: 320px;
     text-align: center;
-    white-space: normal;
+    white-space: normal;  /* allow button text to wrap */
+  }
+
+  .footer-nav {
+    gap: 1.2rem;
+  }
+
+  .footer-nav a {
+    margin: 0;
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
   }
 }
 
-/* SAME CLEAN FOOTER AS UPEVENTS – ZERO GAP, FULL WIDTH */
+/* SAME CLEAN FOOTER AS ALL OTHER PAGES – ALL LINKS IN ONE LINE */
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.08);
-  margin: 0 !important;
-  flex-shrink: 0;
+  margin-top: 10rem;
   font-family: "Georgia", serif;
 }
 

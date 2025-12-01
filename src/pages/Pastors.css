@@ -4,14 +4,12 @@
 
 .pastors-page {
   min-height: 100vh;
-  /* background: linear-gradient(135deg, #f9f3e8 0%, #fdf8f0 50%, #f5efe2 100%); */
   background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
-  /* color: #3a2a18; */
   color: #EAF1FF;
   font-family: "Georgia", serif;
   overflow-x: hidden;
-  padding: 11rem 0 0;   /* ⬅️ NO SIDE PADDING here */
+  padding-top: 11rem;   /* ONLY top padding */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -54,10 +52,10 @@
 .pastors-container {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 2rem;      /* ⬅️ moved side padding here */
+  padding: 0 2rem;      /* inner side padding */
   position: relative;
   z-index: 2;
-  flex: 1; /* pushes footer to the bottom */
+  flex: 1;              /* pushes footer to bottom */
 }
 
 /* CARD STYLES */
@@ -107,11 +105,7 @@
 .glow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(232, 192, 160, 0.3),
-    transparent 70%
-  );
+  background: linear-gradient(135deg, rgba(232, 192, 160, 0.3), transparent 70%);
   opacity: 0;
   transition: opacity 0.8s;
 }
@@ -170,16 +164,15 @@
   border-color: #a56733;
 }
 
-/* CLEAN FOOTER – NO GAP, FULL WIDTH COLOR */
+/* CLEAN FOOTER – SAME AS UPEVENTS, FULL WIDTH BISCUIT */
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
   text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0,0,0,0.08);
   margin: 0 !important;
   flex-shrink: 0;
   font-family: "Georgia", serif;
-  width: 100%;          /* ⬅️ ensure it spans full width */
 }
 
 .footer-inner {
@@ -222,7 +215,7 @@
   text-decoration: none;
   font-weight: 600;
   white-space: nowrap;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .footer-nav a:hover {
@@ -235,9 +228,7 @@
   opacity: 0.9;
 }
 
-/* ================================================ */
-/* RESPONSIVE – TABLET                              */
-/* ================================================ */
+/* TABLET */
 @media (max-width: 992px) {
   .pastor-card {
     grid-template-columns: 1fr;
@@ -264,16 +255,14 @@
   }
 }
 
-/* ================================================ */
-/* RESPONSIVE – MOBILE                              */
-/* ================================================ */
+/* MOBILE */
 @media (max-width: 768px) {
   .pastors-page {
-    padding: 9rem 0 0;      /* no side padding */
+    padding-top: 9rem;
   }
 
   .pastors-container {
-    padding: 0 1.5rem;      /* smaller padding on mobile */
+    padding: 0 1.5rem;
   }
 
   .pastor-card {
@@ -327,7 +316,7 @@
 /* EXTRA SMALL PHONES */
 @media (max-width: 480px) {
   .pastors-page {
-    padding: 8rem 0 0;      /* still no side padding */
+    padding-top: 8rem;
   }
 
   .pastors-container {
@@ -351,7 +340,7 @@
   }
 }
 
-/* Hide old footer completely (if exists elsewhere) */
+/* Hide old footer completely */
 .biscuit-footer,
 .footer-container,
 .footer-logo,
