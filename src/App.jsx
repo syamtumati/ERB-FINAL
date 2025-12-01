@@ -1,4 +1,4 @@
-// src/App.jsx
+/// src/App.jsx
 import React, { useEffect, useState } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 
