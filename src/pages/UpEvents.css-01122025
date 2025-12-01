@@ -1,36 +1,37 @@
 /* ===================================================== */
-/* UPCOMING EVENTS — UNIFORM WITH ALL OTHER PAGES       */
+/* UPCOMING EVENTS – FINAL CLEAN & PERFECT             */
+/* Same footer as all other pages – zero gap           */
 /* ===================================================== */
 
 .upevents-page {
   min-height: 100vh;
+/*  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);*/
   background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
+/*  color: #3a2a18;*/
   color: #EAF1FF;
   font-family: "Georgia", serif;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
-/* MAIN CONTENT */
 .upevents-simple {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8rem 0;           /* ❗ no side padding */
+  padding: 8rem 2rem;
 }
 
 .upevents-simple .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 2rem;           /* consistent inner padding */
 }
 
 .upevents-simple h1 {
-  font-size: 3.6rem;
+  font-size: 3.8rem;
+/*  color: #2b1a0f;*/
   color: #ffffff !important;
   margin-bottom: 2rem;
   font-weight: 900;
@@ -40,17 +41,18 @@
 .message {
   font-size: 1.6rem;
   line-height: 2;
+/*  color: #5d4037;*/
   color: #ffffff !important;
   margin: 2rem 0;
 }
 
 .sub-message {
   font-size: 1.3rem;
+ /* color: #6d4c41;*/
   color: #ffffff !important;
   margin: 1.5rem 0;
 }
 
-/* BUTTON */
 .home-btn {
   display: inline-block;
   margin-top: 3rem;
@@ -73,7 +75,7 @@
   box-shadow: 0 35px 80px rgba(107, 78, 49, 0.8);
 }
 
-/* CLEAN FOOTER (Same as all other pages) */
+/* CLEAN FOOTER – GLUED TO BOTTOM */
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
@@ -137,38 +139,14 @@
   opacity: 0.9;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
-  .upevents-simple {
-    padding: 6rem 0;
-  }
-
-  .container {
-    padding: 0 1.5rem;
-  }
-
-  .upevents-simple h1 {
-    font-size: 2.8rem;
-  }
-
-  .message {
-    font-size: 1.4rem;
-  }
-
-  .sub-message {
-    font-size: 1.2rem;
-  }
-
-  .home-btn {
-    padding: 1rem 3rem;
-    font-size: 1.15rem;
-    width: 100%;
-    max-width: 320px;
-  }
+  .upevents-simple h1 { font-size: 2.8rem; }
+  .message { font-size: 1.4rem; }
+  .home-btn { padding: 1rem 3rem; font-size: 1.15rem; }
 }
 
-/* Remove old footer classes if they exist */
+/* HIDE OLD FOOTER COMPLETELY */
 .biscuit-footer,
 .footer-container,
 .footer-logo,
@@ -177,4 +155,3 @@
 .latin {
   display: none !important;
 }
-
