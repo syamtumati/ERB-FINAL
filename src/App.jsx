@@ -19,7 +19,7 @@ function App() {
   const [showHeader, setShowHeader] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Hide-on-scroll
+  // Hide-on-scroll logic
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -45,62 +45,93 @@ function App() {
     <>
       <ScrollToTop />
 
-      {/* HEADER */}
-      <header className={`heartcry-header ${!showHeader ? "header-hidden" : ""}`}>
+      {/* HEADER – transparent, hide-on-scroll, with mobile menu */}
+      <header
+        className={`heartcry-header ${!showHeader ? "header-hidden" : ""}`}
+      >
         <div className="header-container">
-
-          {/* Desktop Left Nav */}
+          {/* LEFT MENU – DESKTOP ONLY */}
           <nav className="menu-left desktop-nav">
-            <NavLink to="/" className="menu-item" end>Startseite</NavLink>
-            <NavLink to="/glaube" className="menu-item">Glaube</NavLink>
-            <NavLink to="/Über uns" className="menu-item">Über uns</NavLink>
-            <NavLink to="/predigten" className="menu-item">Predigten</NavLink>
+            <NavLink to="/" className="menu-item" end>
+              Startseite
+            </NavLink>
+            <NavLink to="/glaube" className="menu-item">
+              Glaube
+            </NavLink>
+            <NavLink to="/Über uns" className="menu-item">
+              Über uns
+            </NavLink>
+            <NavLink to="/predigten" className="menu-item">
+              Predigten
+            </NavLink>
           </nav>
 
-          {/* Logo Center */}
+          {/* CENTER LOGO */}
           <NavLink to="/" className="logo-center" onClick={closeMobile}>
             <img
-              src="/logo/gnadenkirche-logo-white.png"
+              src="logo/gnadenkirche-logo-white.png"
               alt="Gnadenkirche Frankfurt"
               className="logo-image"
             />
           </NavLink>
 
-          {/* Desktop Right Nav */}
+          {/* RIGHT MENU – DESKTOP ONLY */}
           <nav className="menu-right desktop-nav">
-            <NavLink to="/dienst" className="menu-item">Dienst & Mission</NavLink>
-            <NavLink to="/veranstaltungen" className="menu-item">Veranstaltungen</NavLink>
-            <NavLink to="/spenden" className="menu-item">Spenden</NavLink>
-            <NavLink to="/kontakt" className="menu-item">Kontakt</NavLink>
+            <NavLink to="/dienst" className="menu-item">
+              Dienst & Mission
+            </NavLink>
+            <NavLink to="/veranstaltungen" className="menu-item">
+              Veranstaltungen
+            </NavLink>
+            <NavLink to="/spenden" className="menu-item">
+              Spenden
+            </NavLink>
+            <NavLink to="/kontakt" className="menu-item">
+              Kontakt
+            </NavLink>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* MOBILE MENU BUTTON */}
           <button
             className="mobile-menu-toggle"
-            onClick={() => setMobileOpen(o => !o)}
+            onClick={() => setMobileOpen((o) => !o)}
             aria-label="Menü öffnen"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span />
+            <span />
+            <span />
           </button>
-
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* MOBILE MENU OVERLAY */}
         <nav className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
-          <NavLink to="/" onClick={closeMobile}>Startseite</NavLink>
-          <NavLink to="/glaube" onClick={closeMobile}>Glaube</NavLink>
-          <NavLink to="/Über uns" onClick={closeMobile}>Über uns</NavLink>
-          <NavLink to="/predigten" onClick={closeMobile}>Predigten</NavLink>
-          <NavLink to="/dienst" onClick={closeMobile}>Dienst & Mission</NavLink>
-          <NavLink to="/veranstaltungen" onClick={closeMobile}>Veranstaltungen</NavLink>
-          <NavLink to="/spenden" onClick={closeMobile}>Spenden</NavLink>
-          <NavLink to="/kontakt" onClick={closeMobile}>Kontakt</NavLink>
+          <NavLink to="/" onClick={closeMobile}>
+            Startseite
+          </NavLink>
+          <NavLink to="/glaube" onClick={closeMobile}>
+            Glaube
+          </NavLink>
+          <NavLink to="/Über uns" onClick={closeMobile}>
+            Über uns
+          </NavLink>
+          <NavLink to="/predigten" onClick={closeMobile}>
+            Predigten
+          </NavLink>
+          <NavLink to="/dienst" onClick={closeMobile}>
+            Dienst & Mission
+          </NavLink>
+          <NavLink to="/veranstaltungen" onClick={closeMobile}>
+            Veranstaltungen
+          </NavLink>
+          <NavLink to="/spenden" onClick={closeMobile}>
+            Spenden
+          </NavLink>
+          <NavLink to="/kontakt" onClick={closeMobile}>
+            Kontakt
+          </NavLink>
         </nav>
       </header>
 
-      {/* ROUTES */}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

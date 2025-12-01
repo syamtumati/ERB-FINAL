@@ -10,32 +10,32 @@
 
 body {
   margin: 0;
-  overflow-x: hidden; /* prevents sideways scrolling */
-  font-family: system-ui, sans-serif;
+  overflow-x: hidden; /* avoids horizontal scroll */
 }
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+/* Don't globally touch img/video here anymore to avoid messing layouts */
 
 /* ======================= */
-/* HEADER BASE STYLES      */
+/* HEARTCRY-STYLE HEADER   */
 /* ======================= */
 
 .heartcry-header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 160px;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent !important;
+
+  /* hide on scroll animation */
   transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+
+  background: transparent !important;
 }
 
 .heartcry-header.header-hidden {
@@ -43,48 +43,86 @@ video {
   opacity: 0;
 }
 
+/* no pseudo background */
+.heartcry-header::before {
+  content: none !important;
+}
+
+/* Inner header layout */
 .header-container {
-  width: 100%;
-  max-width: 1600px;
-  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1700px;
+  width: 100%;
+  padding: 0 1.5rem;
 }
 
-/* ======================= */
-/* LOGO                    */
-/* ======================= */
+/* LOGO */
+
+.logo-center {
+  flex-shrink: 0;
+}
 
 .logo-image {
-  height: 150px;
+  height: 130px;
   width: auto;
-  filter: drop-shadow(0 12px 40px rgba(0,0,0,0.8));
+  filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.8));
   animation: logo-float 10s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+.logo-image:hover {
+  transform: translateY(-6px);
 }
 
 @keyframes logo-float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-/* ======================= */
-/* DESKTOP NAV             */
-/* ======================= */
+/* DESKTOP MENUS */
+
+.menu-left,
+.menu-right {
+  display: flex;
+  gap: 3.5rem;
+}
 
 .desktop-nav {
   display: flex;
-  gap: 3rem;
 }
 
 .menu-item {
-  color: #fff;
-  text-transform: uppercase;
+  color: #f0e8ff;
   text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
   position: relative;
+  transition: color 0.3s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  color: #e8c0a0;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e8c0a0;
+  transition: width 0.3s;
 }
 
 .menu-item:hover::after,
@@ -92,19 +130,17 @@ video {
   width: 100%;
 }
 
-.menu-item::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background: #e8c0a0;
-  transition: 0.3s;
+/* ======================= */
+/* HERO TOP PADDING        */
+/* ======================= */
+
+/* Pages with a hero at the top should not sit behind the header */
+.hero-video-section {
+  padding-top: 150px !important;
 }
 
 /* ======================= */
-/* MOBILE MENU BUTTON      */
+/* MOBILE NAVIGATION       */
 /* ======================= */
 
 .mobile-menu-toggle {
@@ -112,34 +148,33 @@ video {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0.3rem;
 }
 
 .mobile-menu-toggle span {
   display: block;
-  width: 30px;
+  width: 26px;
   height: 3px;
-  margin: 6px 0;
-  background: #fff;
+  margin: 4px 0;
+  background: #f0e8ff;
   border-radius: 999px;
 }
 
-/* ======================= */
-/* MOBILE MENU OVERLAY     */
-/* ======================= */
-
+/* Fullscreen overlay menu */
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background: rgba(6, 6, 12, 0.95);
+  background: rgba(6, 6, 12, 0.96);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.8rem;
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 998;
 }
 
 .mobile-menu.open {
@@ -149,35 +184,78 @@ video {
 }
 
 .mobile-menu a {
-  color: #fff;
-  font-size: 1.6rem;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 800;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 /* ======================= */
 /* RESPONSIVE BREAKPOINTS  */
 /* ======================= */
 
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .menu-left,
+  .menu-right {
+    gap: 2rem;
+  }
+
+  .logo-image {
+    height: 110px;
+  }
+}
+
 @media (max-width: 992px) {
   .desktop-nav {
-    display: none;
+    display: none; /* hide desktop menus */
+  }
+
+  .mobile-menu-toggle {
+    display: block;
   }
 
   .logo-image {
     height: 90px;
   }
 
-  .mobile-menu-toggle {
-    display: block;
+  .hero-video-section {
+    padding-top: 120px !important;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .logo-image {
-    height: 70px;
+    height: 75px;
   }
+
+  .hero-video-section {
+    padding-top: 110px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 65px;
+  }
+
+  .hero-video-section {
+    padding-top: 100px !important;
+  }
+}
+
+/* ensure header stays fully transparent, no shadows */
+.heartcry-header,
+.heartcry-header *,
+.header-container,
+.header-container * {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
 }
 
