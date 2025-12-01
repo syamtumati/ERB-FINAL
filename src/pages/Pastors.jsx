@@ -17,7 +17,7 @@ const Pastors = () => {
         {/* PASTOR PETER SCHILD */}
         <section className="pastor-card">
           <div className="pastor-photo">
-            <img src="{seniorPastor}" alt="Pastor Peter Schild" />
+            <img src={seniorPastor} alt="Pastor Peter Schild" />
             <div className="glow"></div>
           </div>
           <div className="pastor-content">
@@ -42,7 +42,7 @@ const Pastors = () => {
         {/* DIAKON HANS EWERT */}
         <section className="pastor-card deacon">
           <div className="pastor-photo">
-            <img src="{deaconHans}" alt="Diakon Hans Ewert" />
+            <img src={deaconHans} alt="Diakon Hans Ewert" />
             <div className="glow"></div>
           </div>
           <div className="pastor-content">
