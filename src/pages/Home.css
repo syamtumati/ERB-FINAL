@@ -3,6 +3,10 @@
 /* English comments + German content + Fixes */
 /* ===================================================== */
 
+.home-page {
+  overflow-x: hidden; /* avoid sideways scroll on mobile */
+}
+
 /* ==================== 1. HERO VIDEO (NO LOGO) ==================== */
 .hero-video-section {
   position: relative;
@@ -10,15 +14,17 @@
   height: 100vh;
   overflow: hidden;
 }
+
 .hero-video {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -34,6 +40,7 @@
   color: white;
   z-index: 1;
 }
+
 .hero-content-centered {
   display: flex;
   flex-direction: column;
@@ -41,6 +48,7 @@
   justify-content: center;
   max-width: 90%;
 }
+
 .hero-church-name {
   font-size: 5.5rem !important;
   font-weight: 900;
@@ -48,6 +56,7 @@
   margin: 0 0 1rem 0 !important;
   letter-spacing: -2px;
 }
+
 .hero-subtitle {
   font-size: 2.5rem;
   font-weight: 600;
@@ -57,6 +66,7 @@
   margin: 0 0 3rem 0;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
 }
+
 .hero-motto {
   font-size: 2.4rem;
   color: #f0e8ff;
@@ -140,7 +150,7 @@
 /* ==================== 3. WAS UNS WICHTIG IST – CLEAN & EQUAL BOXES ==================== */
 
 .what-matters-section {
-  padding: 4rem 2rem 4rem; 
+  padding: 4rem 2rem 4rem;
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   background-attachment: fixed;
   text-align: center;
@@ -149,7 +159,7 @@
 .what-matters-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 3rem;        
+  gap: 3rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -176,7 +186,7 @@
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -185,7 +195,7 @@
   font-size: 2.6rem;
   font-weight: 800;
   color: #8b4513;
-  margin: 0 0 1.6rem 0; 
+  margin: 0 0 1.6rem 0;
   padding: 0;
 }
 
@@ -195,7 +205,7 @@
   line-height: 2.1;
   color: #3a2a18;
   margin: 0 0 2rem 0;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 /* READ MORE consistent placement */
@@ -221,7 +231,7 @@
 }
 
 /* ==================== 4. CLOSING FULLSCREEN VIDEO ==================== */
-/* FIX 3: make entire section sit on solid black, no gap to previous */
+
 .bottom-video-section {
   position: relative;
   width: 100%;
@@ -231,6 +241,7 @@
   background: #000000 !important; /* solid black behind video */
   z-index: 0;
 }
+
 .bottom-video {
   position: absolute;
   inset: 0;
@@ -265,6 +276,7 @@
   color: #e8c0a0;
   text-shadow: 0 15px 60px rgba(0, 0, 0, 0.95);
 }
+
 .bottom-video-text p {
   font-size: 2.7rem;
   color: #f0e8ff;
@@ -285,6 +297,7 @@
   font-weight: 900;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
 }
+
 .black-title {
   color: #1a1208 !important;
   font-weight: 900;
@@ -292,6 +305,7 @@
 }
 
 /* ==================== 7. RESPONSIVE ==================== */
+
 @media (max-width: 1024px) {
   .hero-church-name {
     font-size: 6rem !important;
@@ -306,6 +320,7 @@
     font-size: 4rem;
   }
 }
+
 @media (max-width: 768px) {
   .hero-church-name {
     font-size: 4.8rem !important;
@@ -320,46 +335,70 @@
   .section-title {
     font-size: 3.6rem;
   }
+
+  /* reduce padding so content doesn't look pushed off-screen */
   .heartcry-section,
   .what-matters-section {
-    padding: 9rem 1.5rem 0 !important;
+    padding: 4rem 1.5rem 3rem !important;
   }
+
+  /* single-column grid on tablets/phones */
+  .what-matters-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .matter-block {
+    padding: 2.4rem 1.8rem;
+  }
+
   .bottom-video-text h2 {
     font-size: 4.8rem;
   }
   .bottom-video-text p {
     font-size: 1.9rem;
   }
-  .footer-links a {
-    display: block;
-    margin: 1rem 0;
-  }
 }
+
 @media (max-width: 480px) {
   .hero-church-name {
-    font-size: 4rem !important;
+    font-size: 3.6rem !important;
   }
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  .hero-motto {
+    font-size: 1.5rem;
+  }
+
   .main-title {
     font-size: 3.2rem;
+  }
+
+  .matter-block h3 {
+    font-size: 2.1rem;
+  }
+
+  .matter-block p {
+    font-size: 1.2rem;
+  }
+
+  .bottom-video-text h2 {
+    font-size: 3.8rem;
+  }
+  .bottom-video-text p {
+    font-size: 1.5rem;
   }
 }
 
 /* SAME CLEAN FOOTER AS ALL OTHER PAGES – ALL LINKS IN ONE LINE */
-/*.clean-footer {
-  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
-  padding: 4rem 2rem 3rem;
-  text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  margin-top: 10rem;
-  font-family: "Georgia", serif;
-}
-*/
+
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.08);
-  margin-top: 0 !important;        /* THIS KILLS THE WHITE GAP */
+  margin-top: 0 !important;
   font-family: "Georgia", serif;
 }
 
@@ -416,7 +455,7 @@
   opacity: 0.9;
 }
 
-/* Hide old footer */
+/* Hide old footer bits if they ever appear */
 .biscuit-footer,
 .footer-container,
 .footer-logo,
@@ -425,3 +464,4 @@
 .latin {
   display: none !important;
 }
+
