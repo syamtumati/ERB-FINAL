@@ -129,8 +129,9 @@ body {
 /* HERO TOP PADDING        */
 /* ======================= */
 
+/* Pages with a hero at the top should not sit behind the header */
 .hero-video-section {
-  padding-top: 150px !important; /* pages with hero shouldn’t sit under the header */
+  padding-top: 150px !important;
 }
 
 /* ======================= */
@@ -175,7 +176,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 1001; /* above header */
+  z-index: 1001; /* above header & backdrop */
 }
 
 .mobile-menu.open {
@@ -191,6 +192,26 @@ body {
   letter-spacing: 2px;
   font-weight: 700;
   font-size: 1.2rem;
+}
+
+/* Dark backdrop behind the mobile sidebar */
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000; /* just under the sidebar */
+}
+
+/* Close button inside the sidebar */
+.mobile-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 /* ======================= */

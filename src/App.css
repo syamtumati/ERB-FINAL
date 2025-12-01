@@ -23,12 +23,11 @@ body {
   left: 0;
   width: 100%;
   height: 160px;
-  z-index: 999;
+  z-index: 900; /* header under mobile menu/backdrop */
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* hide on scroll animation */
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform: translateY(0);
   opacity: 1;
@@ -156,6 +155,14 @@ body {
   border-radius: 999px;
 }
 
+/* Dark backdrop behind sidebar */
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 950; /* between header(900) and sidebar(960) */
+}
+
 /* Side-drawer mobile menu (slides from the right) */
 .mobile-menu {
   position: fixed;
@@ -172,15 +179,15 @@ body {
   padding: 2rem 2.5rem;
   gap: 1.8rem;
 
-  transform: translateX(100%); /* hidden off-screen to the right */
+  transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 1001; /* above header & backdrop */
+  z-index: 960; /* above everything */
 }
 
 .mobile-menu.open {
-  transform: translateX(0); /* slide into view */
+  transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
 }
@@ -194,15 +201,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* Dark backdrop behind the mobile sidebar */
-.mobile-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1000; /* just under the sidebar */
-}
-
-/* Close button inside the sidebar */
+/* Close button inside sidebar */
 .mobile-close {
   position: absolute;
   top: 1.2rem;
@@ -282,5 +281,13 @@ body {
   .hero-video-section {
     padding-top: 100px !important;
   }
+}
+
+/* Keep header & nav fully transparent */
+.heartcry-header,
+.heartcry-header * {
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
