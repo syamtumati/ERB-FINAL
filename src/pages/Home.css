@@ -42,27 +42,32 @@
 }
 
 /* 1. Replace your current .hero-church-name block with this */
+
+/* 1. HERO TEXT – FINAL BULLETPROOF VERSION */
 .hero-church-name {
-  font-size: clamp(2.8rem, 8.5vw, 5.5rem) !important;   /* smaller minimum + better scaling */
+  font-size: clamp(2.6rem, 8vw, 5.5rem) !important;   /* even smaller minimum */
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.1;
   margin: 0 0 1rem 0 !important;
-  letter-spacing: -1.5px;           /* was -2px – this is the key! */
-  padding: 0 1.5rem;                /* strong side padding on small screens */
+  letter-spacing: -0.5px !important;                 /* almost no negative spacing */
+  padding: 0 2.5rem !important;                      /* huge side breathing room */
   text-align: center;
   max-width: 100%;
-  word-wrap: break-word;            /* forces break if somehow still too long */
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
-/* 2. Make sure .hero-content-centered has side padding (replace or add this) */
+/* 2. HERO CONTAINER – extra safety */
 .hero-content-centered {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 90%;
-  padding: 0 2rem;                  /* ← increased safety margin */
+  max-width: 100% !important;      /* was 90% → this was the real culprit! */
+  padding: 0 3rem !important;      /* massive side padding on mobile */
+  box-sizing: border-box;
 }
+
 .hero-subtitle {
   font-size: 2.5rem;
   font-weight: 600;
