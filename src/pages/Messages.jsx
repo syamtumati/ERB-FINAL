@@ -114,6 +114,7 @@ const Messages = () => {
           <nav className="footer-nav">
             <Link to="/glaube">Glaube</Link>
             <Link to="/Über uns">Über uns</Link>
+	    <Link to="/predigten">Predigten</Link>
             <Link to="/dienst">Dienst &amp; Mission</Link>
             <Link to="/veranstaltungen">Veranstaltungen</Link>
             <Link to="/spenden">Spenden</Link>
