@@ -41,25 +41,28 @@
   z-index: 1;
 }
 
+/* 1. Replace your current .hero-church-name block with this */
+.hero-church-name {
+  font-size: clamp(2.8rem, 8.5vw, 5.5rem) !important;   /* smaller minimum + better scaling */
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0 0 1rem 0 !important;
+  letter-spacing: -1.5px;           /* was -2px – this is the key! */
+  padding: 0 1.5rem;                /* strong side padding on small screens */
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;            /* forces break if somehow still too long */
+}
+
+/* 2. Make sure .hero-content-centered has side padding (replace or add this) */
 .hero-content-centered {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 90%;
-  padding: 0 1rem;          /* ← extra safety on very small phones */
+  padding: 0 2rem;                  /* ← increased safety margin */
 }
-
-.hero-church-name {
-  font-size: clamp(3rem, 9vw, 5.5rem) !important;   /* ← this is the magic line */
-  font-weight: 900;
-  line-height: 1.05;
-  margin: 0 0 1rem 0 !important;
-  letter-spacing: -2px;
-  padding: 0 1rem;                                 /* ← prevents side cutting */
-  text-align: center;
-}
-
 .hero-subtitle {
   font-size: 2.5rem;
   font-weight: 600;
