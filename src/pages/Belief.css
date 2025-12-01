@@ -48,13 +48,12 @@
 
 .confession-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.8rem;
-  margin: 6rem auto 4rem;        /* ⬅ smaller bottom margin (no huge gap before footer) */
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 3rem;
+  margin: 6rem auto 4rem;   /* smaller bottom margin so no huge gap before footer */
   max-width: 1300px;
 }
 
-/* make all cards "equal" height per row */
 .confession-card {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
@@ -64,11 +63,7 @@
   border: 1px solid rgba(139, 69, 19, 0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-align: left;
-
-  display: flex;              /* ⬅ flex so all cards can stretch evenly */
-  flex-direction: column;
-  height: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box;   /* ensures padding doesn't break width */
 }
 
 .confession-card:hover {
@@ -108,14 +103,12 @@
   line-height: 1.9;
   color: #3a2a18;
   margin: 0;
-  margin-top: 0.4rem;
-  flex-grow: 1;             /* ⬅ makes text area take the free space so button/next rows line up */
 }
 
 /* COFFEE BROWN BUTTON */
 
 .belief-cta {
-  margin-bottom: 3rem;      /* was 4rem, slightly tighter so gap is cleaner */
+  margin-bottom: 3rem;   /* slightly smaller, so spacing to footer is nice */
 }
 
 .coffee-btn {
@@ -164,16 +157,15 @@
     font-size: 1.8rem;
   }
 
+  /* always 1 column on mobile, boxes full width */
   .confession-grid {
     grid-template-columns: 1fr;
-    gap: 2.2rem;
-    margin: 4.5rem auto 3.2rem;
+    gap: 2.4rem;
+    margin: 4.5rem 0 3rem;
   }
 
   .confession-card {
     padding: 2.4rem 2rem;
-    /* keep cards visually similar height on mobile */
-    min-height: 210px;
   }
 
   .coffee-btn {
@@ -188,7 +180,7 @@
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.08);
-  margin-top: 0;              /* ⬅ no extra giant gap under the grid */
+  margin-top: 0;              /* important: no big extra gap */
   font-family: "Georgia", serif;
 }
 
