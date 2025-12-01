@@ -8,7 +8,7 @@ function Home() {
       {/* HERO VIDEO MIT LOGO & DEUTSCHEM TEXT */}
       <section className="hero-video-section">
         <video className="hero-video" autoPlay loop muted playsInline>
-          <source src="/videos/hero-message.mp4" type="video/mp4" />
+          <source src="${base}videos/hero-message.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay">
           <div className="hero-content-centered">
@@ -86,7 +86,7 @@ function Home() {
       {/* ABSCHLUSS-VIDEO */}
       <section className="bottom-video-section">
         <video className="bottom-video" autoPlay loop muted playsInline>
-          <source src="/videos/closing-glory.mp4" type="video/mp4" />
+          <source src="${base}videos/closing-glory.mp4" type="video/mp4" />
         </video>
         <div className="bottom-video-overlay">
           <div className="bottom-video-text">

@@ -9,7 +9,7 @@ function Outreach() {
       {/* FULLSCREEN HERO VIDEO – NO TEXT OVERLAY */}
       <section className="outreach-hero">
         <img 
-          src="/images/outreach-hero.jpg" 
+          src="${base}images/outreach-hero.jpg" 
           alt="Outreach" 
           className="outreach-hero-image"
         />
