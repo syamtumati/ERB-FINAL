@@ -1,13 +1,14 @@
-/* OUTREACH PAGE – CONSISTENT WITH OTHER PAGES */
+/* OUTREACH PAGE – MINIMAL & POWERFUL */
 
-/* Reset margins so no white border appears */
+/* Remove default page margin so no white border appears */
 html,
 body {
   margin: 0;
   padding: 0;
+  background: #000a1f; /* dark navy base, so no white flashes */
 }
 
-/* PAGE WRAPPER – dark blue, flex column, no side padding */
+/* Make the WHOLE outreach page dark blue so header never sees white */
 .outreach-page {
   min-height: 100vh;
   display: flex;
@@ -15,10 +16,10 @@ body {
   background: radial-gradient(circle at top, #000a1f 0%, #00142e 50%, #000818 100%);
   color: #eaf1ff;
   font-family: "Georgia", serif;
-  overflow-x: hidden;
 }
 
-/* FULLSCREEN HERO IMAGE (under header) */
+/* FULLSCREEN HERO VIDEO – sits under transparent header */
+
 .outreach-hero {
   position: relative;
   width: 100%;
@@ -26,18 +27,21 @@ body {
   overflow: hidden;
 }
 
+/* HERO IMAGE (replaces video) */
 .outreach-hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 80%;
+  object-position: center 80%;  /* moves the image slightly up */
 }
 
-/* OUTREACH CONTENT SECTION */
+/* LAST SATURDAY SECTION – now sits on dark blue, cards are light */
+
 .outreach-saturday {
-  padding: 4rem 0 6rem;   /* no side padding here */
+  padding: 4rem 2rem 6rem;
+  /* No biscuit background anymore – page is dark blue */
   background: transparent;
   text-align: center;
 }
@@ -45,18 +49,16 @@ body {
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2rem;        /* inner side padding like other pages */
 }
 
 .black-title {
   font-size: 4.5rem;
   font-weight: 900;
-  color: #fdf5e6;
+  color: #fdf5e6; /* light warm text on dark bg */
   margin-bottom: 5rem;
   text-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* GRID WITH TWO CARDS */
 .saturday-details {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -66,6 +68,7 @@ body {
 }
 
 /* Light cards on dark blue background */
+
 .detail-card {
   background: rgba(255, 255, 255, 0.8);
   padding: 3.5rem 2.5rem;
@@ -84,7 +87,7 @@ body {
   margin-bottom: 1.8rem;
   font-weight: 800;
 
-  /* keep long German words inside the box */
+  /* 👇 keep long German words inside the box */
   overflow-wrap: anywhere;
   word-wrap: break-word;
   word-break: break-word;
@@ -97,7 +100,7 @@ body {
   line-height: 2;
 }
 
-/* JOIN-US CARD */
+/* Join-us block – also light card floating on dark bg */
 .join-us {
   background: rgba(255, 255, 255, 0.96);
   padding: 4.5rem 3rem;
@@ -126,7 +129,7 @@ body {
 .gold-btn {
   display: inline-block;
   padding: 1.5rem 5rem;
-  background: linear-gradient(90deg, #6b4e31, #8c6b47);
+  background: linear-gradient(90deg, #6b4e31, #8c6b47); /* coffee gradient */
   color: #ffffff !important;
   font-weight: 900;
   font-size: 1.5rem;
@@ -134,7 +137,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 25px 70px rgba(107, 78, 49, 0.7);
+  box-shadow: 0 25px 70px rgba(107, 78, 49, 0.7); /* brown shadow */
   transition: all 0.4s;
 }
 
@@ -146,21 +149,9 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .outreach-hero {
-    height: 60vh;
-  }
-
   .black-title {
-    font-size: 3.2rem;
-    margin-bottom: 3.5rem;
-  }
-
-  .outreach-saturday {
-    padding: 3.5rem 0 4.5rem;
-  }
-
-  .container {
-    padding: 0 1.5rem;
+    font-size: 3.6rem;
+    margin-bottom: 4rem;
   }
 
   .saturday-details {
@@ -172,10 +163,6 @@ body {
     padding: 3rem 2rem;
   }
 
-  .join-us {
-    padding: 3.5rem 2.2rem;
-  }
-
   .join-us h3 {
     font-size: 2.4rem;
   }
@@ -184,22 +171,23 @@ body {
     font-size: 1.4rem;
   }
 
+  .outreach-saturday {
+    padding: 10rem 1.5rem;
+  }
+
   .gold-btn {
-    padding: 1.3rem 3.5rem;
+    padding: 1.3rem 4rem;
     font-size: 1.3rem;
-    width: 100%;
-    max-width: 320px;
   }
 }
 
-/* CLEAN FOOTER – SAME AS OTHER PAGES, BISCUIT BAR FULL WIDTH */
+/* SAME CLEAN FOOTER – but now on dark blue background */
 .clean-footer {
-  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  background: transparent; /* footer sits on same dark blue page bg */
   padding: 4rem 2rem 3rem;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  margin: 0 !important;
-  flex-shrink: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;           /* pushes footer to bottom */
   font-family: "Georgia", serif;
 }
 
@@ -215,7 +203,7 @@ body {
 .church-name {
   font-size: 2.6rem;
   font-weight: 900;
-  color: #8b4513;
+  color: #f7e2c2;
   letter-spacing: -1px;
 }
 
@@ -236,7 +224,7 @@ body {
 }
 
 .footer-nav a {
-  color: #5d4037;
+  color: #f0e8ff;
   font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -247,12 +235,12 @@ body {
 }
 
 .footer-nav a:hover {
-  color: #8b4513;
+  color: #f7e2c2;
 }
 
 .copyright {
   font-size: 0.88rem;
-  color: #6d4c41;
+  color: #d8cfd9;
   opacity: 0.9;
 }
 
