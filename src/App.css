@@ -33,17 +33,12 @@ body {
   transform: translateY(0);
   opacity: 1;
 
-  background: transparent !important;
+  background: transparent;
 }
 
 .heartcry-header.header-hidden {
   transform: translateY(-100%);
   opacity: 0;
-}
-
-/* no pseudo background */
-.heartcry-header::before {
-  content: none !important;
 }
 
 /* Inner header layout */
@@ -84,12 +79,18 @@ body {
   }
 }
 
-/* DESKTOP MENUS (now also visible on mobile, just smaller) */
+/* ======================= */
+/* DESKTOP MENUS           */
+/* ======================= */
 
 .menu-left,
 .menu-right {
   display: flex;
   gap: 3.5rem;
+}
+
+.desktop-nav {
+  display: flex;
 }
 
 .menu-item {
@@ -128,23 +129,62 @@ body {
 /* HERO TOP PADDING        */
 /* ======================= */
 
-/* Pages with a hero at the top should not sit behind the header */
 .hero-video-section {
-  padding-top: 150px !important;
+  padding-top: 150px !important; /* pages with hero shouldn’t sit under the header */
 }
 
 /* ======================= */
 /* MOBILE NAVIGATION       */
-/* (we are NOT using overlay menu now) */
 /* ======================= */
 
-/* Hide mobile toggle (we keep full menu even on mobile) */
+/* Hamburger button (hidden on desktop) */
 .mobile-menu-toggle {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
 }
 
+.mobile-menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: #f0e8ff;
+  border-radius: 999px;
+}
+
+/* Fullscreen overlay menu (mobile) */
 .mobile-menu {
-  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 6, 12, 0.96);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 998;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 /* ======================= */
@@ -167,18 +207,17 @@ body {
 }
 
 @media (max-width: 992px) {
+  /* Hide full desktop nav, show hamburger */
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
   .header-container {
     padding: 0 0.75rem;
-  }
-
-  .menu-left,
-  .menu-right {
-    gap: 1.4rem;         /* tighter so it fits on tablets */
-  }
-
-  .menu-item {
-    font-size: 0.85rem;
-    letter-spacing: 1px;
   }
 
   .logo-image {
@@ -195,16 +234,6 @@ body {
     padding: 0 0.6rem;
   }
 
-  .menu-left,
-  .menu-right {
-    gap: 1rem;
-  }
-
-  .menu-item {
-    font-size: 0.78rem;
-    letter-spacing: 0.8px;
-  }
-
   .logo-image {
     height: 80px;
   }
@@ -219,16 +248,6 @@ body {
     padding: 0 0.4rem;
   }
 
-  .menu-left,
-  .menu-right {
-    gap: 0.7rem;
-  }
-
-  .menu-item {
-    font-size: 0.7rem;
-    letter-spacing: 0.6px;
-  }
-
   .logo-image {
     height: 70px;
   }
@@ -236,15 +255,5 @@ body {
   .hero-video-section {
     padding-top: 100px !important;
   }
-}
-
-/* ensure header stays fully transparent, no shadows */
-.heartcry-header,
-.heartcry-header *,
-.header-container,
-.header-container * {
-  background: transparent !important;
-  backdrop-filter: none !important;
-  box-shadow: none !important;
 }
 
