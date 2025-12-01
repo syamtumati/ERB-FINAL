@@ -1,13 +1,12 @@
 /* ===================================================== */
-/* GNADENKIRCHE FRANKFURT – Home.css */
-/* English comments + German content + Fixes */
+/* GNADENKIRCHE FRANKFURT – Home.css (FULL FIXED VERSION) */
 /* ===================================================== */
 
 .home-page {
   overflow-x: hidden; /* avoid sideways scroll on mobile */
 }
 
-/* ==================== 1. HERO VIDEO (NO LOGO) ==================== */
+/* ==================== 1. HERO VIDEO ==================== */
 .hero-video-section {
   position: relative;
   width: 100%;
@@ -47,18 +46,21 @@
   align-items: center;
   justify-content: center;
   max-width: 90%;
-  padding: 0 1.5rem;          /* extra padding to avoid cut-off on mobile */
-  box-sizing: border-box;
+  padding: 0 1rem; /* extra safety padding for mobile */
 }
 
+/* MAIN HERO TITLE */
 .hero-church-name {
   font-size: 4.5rem;
   font-weight: 900;
   line-height: 1.05;
   margin: 0 0 1rem 0;
-  letter-spacing: -3px;
+  letter-spacing: -3px; /* desktop OK */
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  word-break: break-word;
 }
 
+/* SUBTITLE */
 .hero-subtitle {
   font-size: 2.5rem;
   font-weight: 600;
@@ -67,20 +69,23 @@
   text-transform: uppercase;
   margin: 0 0 3rem 0;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
+  word-break: break-word;
 }
 
+/* MOTTO */
 .hero-motto {
   font-size: 2.4rem;
   color: #f0e8ff;
   font-weight: 500;
   letter-spacing: 1.2px;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  word-break: break-word;
 }
 
 /* ==================== 2. HEARTCRY FILM SECTION ==================== */
 
 .heartcry-section {
-  padding: 4rem 2rem 4rem;  /* top, sides, bottom */
+  padding: 4rem 2rem 4rem;
   background: linear-gradient(135deg, #0c0a0e, #121015, #0f0d12);
   background-attachment: fixed;
   color: #f0e8ff;
@@ -110,8 +115,7 @@
   max-width: 1000px;
 }
 
-/* === VIDEO FRAME === */
-
+/* VIDEO WRAPPER */
 .video-container {
   position: relative;
   width: 100%;
@@ -126,17 +130,15 @@
 .video-container::before {
   content: "";
   display: block;
-  padding-top: 56.25%;  /* 16:9 ratio */
+  padding-top: 56.25%;
 }
 
 .youtube-player {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
-  display: block;
 }
 
 .video-description {
@@ -147,7 +149,7 @@
   line-height: 2.1;
 }
 
-/* ==================== 3. WAS UNS WICHTIG IST ==================== */
+/* ==================== 3. WHAT MATTERS SECTION ==================== */
 
 .what-matters-section {
   padding: 4rem 2rem 4rem;
@@ -164,7 +166,6 @@
   margin: 0 auto;
 }
 
-/* Title */
 .main-title {
   grid-column: 1 / -1;
   font-size: 4.6rem;
@@ -174,19 +175,16 @@
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Boxes */
 .matter-block {
   background: white;
   padding: 3rem 2.2rem;
   border-radius: 2rem;
-  text-decoration: none;
   color: #2d1b0a;
   text-align: left;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   height: 100%;
 }
 
@@ -194,14 +192,13 @@
   font-size: 2.6rem;
   font-weight: 800;
   color: #8b4513;
-  margin: 0 0 1.6rem 0;
+  margin-bottom: 1.6rem;
 }
 
 .matter-block p {
   font-size: 1.4rem;
   line-height: 2.1;
   color: #3a2a18;
-  margin: 0 0 2rem 0;
   flex-grow: 1;
 }
 
@@ -214,18 +211,13 @@
   margin-top: auto;
 }
 
-.read-more:hover {
-  text-decoration: underline;
-  color: #8b4513;
-}
-
 .matter-block:hover {
   background: rgba(255, 255, 255, 0.75);
   transform: translateY(-12px);
   box-shadow: 0 30px 75px rgba(0, 0, 0, 0.15);
 }
 
-/* ==================== 4. CLOSING FULLSCREEN VIDEO ==================== */
+/* ==================== 4. BOTTOM FULLSCREEN VIDEO ==================== */
 
 .bottom-video-section {
   position: relative;
@@ -243,7 +235,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
 }
 
 .bottom-video-overlay {
@@ -261,12 +252,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 1;
 }
 
 .bottom-video-text h2 {
   font-size: 7.5rem;
-  margin: 0;
   letter-spacing: -2px;
   color: #e8c0a0;
   text-shadow: 0 15px 60px rgba(0, 0, 0, 0.95);
@@ -279,14 +268,7 @@
   text-shadow: 0 8px 35px rgba(0, 0, 0, 0.9);
 }
 
-.latin {
-  color: #8b4513;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-/* ==================== TITLE CLASSES ==================== */
+/* ==================== 5. TITLES ==================== */
 
 .white-title {
   color: #ffffff !important;
@@ -300,13 +282,13 @@
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* ==================== 7. RESPONSIVE ==================== */
+/* ==================== 6. RESPONSIVE FIXES ==================== */
 
 /* Tablets / small laptops */
 @media (max-width: 1024px) {
   .hero-church-name {
     font-size: 3.8rem;
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
   }
   .hero-subtitle {
     font-size: 2rem;
@@ -314,21 +296,24 @@
   .hero-motto {
     font-size: 2rem;
   }
-  .main-title {
-    font-size: 4rem;
-  }
 }
 
-/* Landscape phones / small tablets */
+/* Phones & small tablets */
 @media (max-width: 768px) {
-  .hero-church-name {
-    font-size: 3.2rem;
-    letter-spacing: -1.5px;
+  .hero-content-centered {
+    padding: 0 2rem;
   }
+
+  .hero-church-name {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+
   .hero-subtitle {
     font-size: 1.6rem;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
+
   .hero-motto {
     font-size: 1.7rem;
   }
@@ -354,6 +339,7 @@
   .bottom-video-text h2 {
     font-size: 4.8rem;
   }
+
   .bottom-video-text p {
     font-size: 1.9rem;
   }
@@ -361,19 +347,25 @@
 
 /* Small phones */
 @media (max-width: 480px) {
-  .hero-church-name {
-    font-size: 2.8rem;
-    letter-spacing: -1px;
-  }
-  .hero-subtitle {
-    font-size: 1.3rem;
-    letter-spacing: 1.5px;
-  }
-  .hero-motto {
-    font-size: 1.4rem;
+  .hero-content-centered {
+    padding: 0 2.4rem;
   }
 
-  .main-title {
+  .hero-church-name {
+    font-size: 2.4rem;
+    letter-spacing: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-motto {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
     font-size: 3rem;
   }
 
@@ -388,12 +380,13 @@
   .bottom-video-text h2 {
     font-size: 3.8rem;
   }
+
   .bottom-video-text p {
     font-size: 1.5rem;
   }
 }
 
-/* ==================== FOOTER ==================== */
+/* ==================== 7. FOOTER ==================== */
 
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
@@ -417,7 +410,6 @@
   font-size: 2.6rem;
   font-weight: 900;
   color: #8b4513;
-  letter-spacing: -1px;
 }
 
 .footer-nav {
@@ -457,7 +449,7 @@
   opacity: 0.9;
 }
 
-/* Hide old footer bits if they ever appear */
+/* Hide old footer if it appears */
 .biscuit-footer,
 .footer-container,
 .footer-logo,
