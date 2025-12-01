@@ -2,17 +2,16 @@
 
 .belief-page {
   min-height: 100vh;
-  /*  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);*/
+/*  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);*/
   background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
-  /*  color: #3a2a18;*/
+/*  color: #3a2a18;*/
   color: #EAF1FF;
   font-family: "Georgia", serif;
 
   display: flex;
   flex-direction: column;  /* footer sticks to bottom */
   padding: 10rem 2rem 0;   /* top padding, no bottom here */
-  overflow-x: hidden;      /* prevent horizontal scroll on mobile */
 }
 
 .belief-content {
@@ -25,26 +24,26 @@
 /* HERO */
 
 .belief-hero h1 {
-  font-size: clamp(2.6rem, 7vw, 4.5rem);
+  font-size: 4.5rem;
   font-weight: 900;
-  /*  color: #1a1208;*/
+/*  color: #1a1208;*/
   color: #ffffff !important;
   margin: 0 0 1.5rem 0;
   letter-spacing: -2px;
 }
 
 .confession-title {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: 2.4rem;
   font-weight: 700;
-  /*  color: #8b4513;*/
+/*  color: #8b4513;*/
   color: #ffffff !important;
   margin: 0 0 1.2rem 0;
 }
 
 .tagline {
-  font-size: clamp(1.3rem, 3.5vw, 2.1rem);
+  font-size: 2.1rem;
   font-weight: 600;
-  /*  color: #5d4037;*/
+/*  color: #5d4037;*/
   color: #ffffff !important;
   margin: 0;
   line-height: 1.6;
@@ -54,8 +53,7 @@
 
 .confession-grid {
   display: grid;
-  /* slightly smaller min width so it fits even on ~320px screens */
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 3rem;
   margin: 6rem auto 7rem;
   max-width: 1300px;
@@ -148,48 +146,33 @@
 
 @media (max-width: 768px) {
   .belief-page {
-    padding: 6rem 1.5rem 0;
+    padding: 8rem 1.5rem 0;
   }
 
   .belief-hero h1 {
-    font-size: 2.6rem;
+    font-size: 3.4rem;
   }
 
   .confession-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .tagline {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   .confession-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 4rem auto 5rem;
-  }
-
-  .confession-card {
-    padding: 2rem 1.6rem;
   }
 
   .coffee-btn {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.2rem;
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    white-space: normal;  /* allow button text to wrap */
+    padding: 1.5rem 3.5rem;
+    font-size: 1.4rem;
   }
 
-  .footer-nav {
-    gap: 1.2rem;
-  }
-
-  .footer-nav a {
-    margin: 0;
-    font-size: 0.85rem;
-    letter-spacing: 1.2px;
+  .footer-links a {
+    margin: 0 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -265,4 +248,3 @@
 .latin {
   display: none !important;
 }
-
