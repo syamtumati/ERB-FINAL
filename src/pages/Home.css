@@ -465,3 +465,32 @@
   display: none !important;
 }
 
+/* --- EXTRA MOBILE FIX FOR HERO TITLE --- */
+@media (max-width: 480px) {
+  .hero-church-name {
+    font-size: 3.2rem !important;
+    letter-spacing: -1px !important;
+    padding: 0 1rem;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-church-name {
+    font-size: 2.8rem !important;
+    padding: 0 0.8rem;
+  }
+}
+
+/* --- MOBILE FIX: Make HeartCry video taller --- */
+@media (max-width: 768px) {
+  .video-container::before {
+    padding-top: 70% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container::before {
+    padding-top: 85% !important;
+  }
+}
