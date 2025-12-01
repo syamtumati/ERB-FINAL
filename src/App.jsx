@@ -71,7 +71,7 @@ function App() {
           {/* CENTER LOGO */}
           <NavLink to="/" className="logo-center">
             <img
-              src="public/logo/gnadenkirche-logo-white.png"
+              src="logo/gnadenkirche-logo-white.png"
               alt="Gnadenkirche Frankfurt"
               className="logo-image"
             />
