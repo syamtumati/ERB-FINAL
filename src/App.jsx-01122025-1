@@ -13,25 +13,22 @@ import Outreach from "./pages/Outreach";
 import UpEvents from "./pages/UpEvents";
 import AdminEvents from "./pages/AdminEvents";
 import Belief from "./pages/Belief";
-
 import "./App.css";
 
 function App() {
   const [showHeader, setShowHeader] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Hide-on-scroll logic
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
       const currentY = window.scrollY;
 
-      // scrolling down & not at the very top → hide
       if (currentY > lastScrollY + 10 && currentY > 80) {
         setShowHeader(false);
-      }
-      // scrolling up → show
-      else if (currentY < lastScrollY - 10) {
+      } else if (currentY < lastScrollY - 10) {
         setShowHeader(true);
       }
 
@@ -48,7 +45,7 @@ function App() {
     <>
       <ScrollToTop />
 
-      {/* HEADER */}
+      {/* HEADER – transparent, hide-on-scroll, with mobile menu */}
       <header
         className={`heartcry-header ${!showHeader ? "header-hidden" : ""}`}
       >
@@ -106,21 +103,8 @@ function App() {
           </button>
         </div>
 
-        {/* BACKDROP BEHIND SIDEBAR – CLICK TO CLOSE */}
-        {mobileOpen && (
-          <div className="mobile-backdrop" onClick={closeMobile} />
-        )}
-
-        {/* SIDEBAR MENU */}
+        {/* MOBILE MENU OVERLAY */}
         <nav className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
-          <button
-            className="mobile-close"
-            onClick={closeMobile}
-            aria-label="Menü schließen"
-          >
-            ×
-          </button>
-
           <NavLink to="/" onClick={closeMobile}>
             Startseite
           </NavLink>
