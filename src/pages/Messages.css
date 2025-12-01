@@ -4,27 +4,29 @@
 
 .messages-page {
   min-height: 100vh;
-  /*  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2); */
+  /* background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2); */
   background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
-  padding: 8rem 0 0;          /* ✅ top padding ONLY – no side padding */
-  text-align: center;
+  background-attachment: fixed;
   color: #EAF1FF;
   font-family: "Georgia", serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  /* ❌ IMPORTANT: no left/right padding here, no text-align here */
 }
 
 /* HERO */
 .messages-hero {
   max-width: 900px;
-  margin: 0 auto 3rem;
-  padding: 0 2rem;            /* inner side padding like other pages */
+  margin: 8rem auto 3rem;   /* top spacing instead of page padding */
+  padding: 0 2rem;          /* inner side padding */
+  text-align: center;
 }
 
 .messages-hero h1 {
   font-size: 3.6rem;
   font-weight: 900;
-  /*  color: #2b1a0f; */
+  /* color: #2b1a0f; */
   color: #ffffff !important;
   margin-bottom: 1rem;
 }
@@ -43,25 +45,34 @@
   gap: 2.4rem;
   max-width: 1300px;
   margin: 0 auto 4rem;
-  padding: 0 2rem;            /* ✅ side padding moved here */
+  padding: 0 2rem;          /* inner side padding */
 }
 
 /* VIDEO CARD */
 .video-card {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 1.8rem;
   overflow: hidden;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
-  transition: transform .3s;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
 }
-.video-card:hover { transform: translateY(-10px); }
-.thumb { width: 100%; display: block; }
+
+.video-card:hover {
+  transform: translateY(-10px);
+}
+
+.thumb {
+  width: 100%;
+  display: block;
+}
+
 .video-title {
   font-size: 1.25rem;
   font-weight: 700;
   color: #3a2a18;
   padding: 1rem 1.4rem 0.2rem;
 }
+
 .video-date {
   font-size: 1rem;
   color: #6d4c41;
@@ -70,8 +81,9 @@
 
 /* SUBSCRIBE BUTTON (space before footer) */
 .subscribe-button {
-  margin-bottom: 4rem;        /* only this controls space above footer */
-  padding: 0 2rem;            /* ✅ align with grid + hero */
+  margin-bottom: 4rem;      /* only this controls the space above footer */
+  padding: 0 2rem;
+  text-align: center;
 }
 
 /* GOLD BUTTON */
@@ -87,27 +99,40 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 18px 45px rgba(245,158,11,.45);
-  transition: all .4s;
+  box-shadow: 0 18px 45px rgba(245, 158, 11, 0.45);
+  transition: all 0.4s;
 }
+
 .gold-btn:hover {
   transform: translateY(-6px);
-  box-shadow: 0 28px 60px rgba(245,158,11,.7);
+  box-shadow: 0 28px 60px rgba(245, 158, 11, 0.7);
 }
+
 .shine {
   position: absolute;
-  top: 0; left: -100%; width: 50%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.6), transparent);
-  transition: .8s;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: 0.8s;
 }
-.gold-btn:hover .shine { left: 100%; }
+
+.gold-btn:hover .shine {
+  left: 100%;
+}
 
 /* CLEAN FOOTER – GLUED TO BOTTOM, ZERO GAP */
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   margin: 0 !important;
   flex-shrink: 0;
   font-family: "Georgia", serif;
@@ -153,20 +178,23 @@
   text-decoration: none;
   font-weight: 600;
   white-space: nowrap;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
-.footer-nav a:hover { color: #8b4513; }
+.footer-nav a:hover {
+  color: #8b4513;
+}
 
 .copyright {
-  font-size: .88rem;
+  font-size: 0.88rem;
   color: #6d4c41;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .messages-hero {
+    margin-top: 7rem;
     padding: 0 1.5rem;
   }
 
