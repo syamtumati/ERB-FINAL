@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Outreach.css";
 
-import outreachHero from "../assets/pastors/outreach-hero.jpg";
+import outreachHero from "../assets/images/outreach-hero.jpg";
 
 function Outreach() {
   return (
