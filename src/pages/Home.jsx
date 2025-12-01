@@ -2,20 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+import heroVideo from "../assets/videos/hero-message.mp4";
+import closingVideo from "../assets/videos/closing-glory.mp4";
+
 function Home() {
   return (
     <div className="home-page">
       {/* HERO VIDEO MIT LOGO & DEUTSCHEM TEXT */}
       <section className="hero-video-section">
-	 <video
+	<video
           className="hero-video"
           autoPlay
           loop
           muted
           playsInline
-         >
+        >
           <source src={heroVideo} type="video/mp4" />
-	 </video>
+        </video>
         <div className="hero-overlay">
           <div className="hero-content-centered">
             <h1 className="white-title hero-church-name">
@@ -91,16 +94,15 @@ function Home() {
 
       {/* ABSCHLUSS-VIDEO */}
       <section className="bottom-video-section">
-	<section className="hero-video-section">
-         <video
+	<video
           className="bottom-video"
           autoPlay
           loop
           muted
           playsInline
-         >
+        >
           <source src={closingVideo} type="video/mp4" />
-         </video>
+        </video>
         <div className="bottom-video-overlay">
           <div className="bottom-video-text">
             <h2 className="white-title">Soli Deo Gloria</h2>
