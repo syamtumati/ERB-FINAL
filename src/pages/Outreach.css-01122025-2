@@ -1,4 +1,4 @@
-/* OUTREACH PAGE – CONSISTENT WITH OTHER PAGES */
+/* OUTREACH PAGE – KONSISTENT MIT ALLEN ANDEREN SEITEN */
 
 /* Reset */
 html,
@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-/* PAGE WRAPPER – dark blue, flex column */
+/* PAGE WRAPPER – dunkelblauer Hintergrund, Flex-Layout */
 .outreach-page {
   min-height: 100vh;
   display: flex;
@@ -18,29 +18,27 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== HERO ========== */
-
+/* HERO-BEREICH */
 .outreach-hero {
   position: relative;
   width: 100%;
-  height: 80vh;              /* taller on desktop to reduce cropping */
+  height: 70vh;              /* Desktop-Höhe */
   overflow: hidden;
 }
 
+/* HERO-BILD */
 .outreach-hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* anchor to bottom so lower part of image is visible */
-  object-position: center 100%;
+  object-position: center 60%; /* etwas nach oben, damit Motiv gut sitzt */
 }
 
-/* ========== MAIN CONTENT ========== */
-
+/* INHALTSBEREICH NACH DEM BILD */
 .outreach-saturday {
-  padding: 4rem 0 6rem;
+  padding: 4rem 0 6rem;      /* kein Seitenpadding hier */
   background: transparent;
   text-align: center;
 }
@@ -48,10 +46,10 @@ body {
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
+  padding: 0 2rem;           /* Innenabstand wie andere Seiten */
 }
 
+/* (Optional) falls du später eine große Überschrift nutzt */
 .black-title {
   font-size: 4.5rem;
   font-weight: 900;
@@ -60,8 +58,7 @@ body {
   text-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* GRID WITH TWO TOP CARDS */
-
+/* GRID MIT DEN ZWEI KARTEN */
 .saturday-details {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -70,13 +67,13 @@ body {
   margin: 0 auto 6rem;
 }
 
+/* Helle Karten */
 .detail-card {
   background: rgba(255, 255, 255, 0.85);
   padding: 3.2rem 2.4rem;
   border-radius: 2.5rem;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
   transition: transform 0.4s;
-  box-sizing: border-box;
 }
 
 .detail-card:hover {
@@ -102,19 +99,16 @@ body {
   line-height: 2;
 }
 
-/* ========== BOTTOM BOX: "Mach mit bei unserer Evangelisation" ========== */
-
+/* JOIN-US – "Mach mit bei unserer Evangelisation" */
 .join-us {
   background: rgba(255, 255, 255, 0.96);
   padding: 4rem 3rem;
   border-radius: 3rem;
   max-width: 900px;
-  margin: 0 auto;                    /* centered on desktop */
+  margin: 0 auto;
   border: 1px solid rgba(139, 69, 19, 0.15);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
   color: #3a2a18;
-  box-sizing: border-box;
-  text-align: center;
 }
 
 .join-us h3 {
@@ -123,7 +117,7 @@ body {
   margin-bottom: 2rem;
   line-height: 1.3;
 
-  /* wichtig für "Mach mit bei unserer Evangelisation" */
+  /* wichtig für "Mach mit bei unserer Evangelisation" auf Mobile */
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -157,15 +151,14 @@ body {
   box-shadow: 0 50px 110px rgba(107, 78, 49, 0.95);
 }
 
-/* ========== RESPONSIVE ========== */
-
+/* RESPONSIVE – TABLET / MOBILE */
 @media (max-width: 1024px) {
   .outreach-hero {
-    height: 65vh;
+    height: 60vh;
   }
 
   .outreach-hero-image {
-    object-position: center 80%;
+    object-position: center 55%;
   }
 
   .detail-card h3 {
@@ -191,11 +184,11 @@ body {
 
 @media (max-width: 768px) {
   .outreach-hero {
-    height: 55vh;
+    height: 55vh;              /* etwas kleiner auf Handy */
   }
 
   .outreach-hero-image {
-    object-position: center 60%;
+    object-position: center 50%; /* Bild etwas nach oben */
   }
 
   .outreach-saturday {
@@ -203,24 +196,21 @@ body {
   }
 
   .container {
-    padding: 0 1.5rem;         /* same padding for cards + join-us */
+    padding: 0 1.5rem;
   }
 
   .saturday-details {
     grid-template-columns: 1fr;
     gap: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
   }
 
   .detail-card {
     padding: 2.6rem 2rem;
   }
 
-  /* bottom box full width, nicely aligned on mobile */
   .join-us {
-    margin: 0;                 /* remove extra auto margins that can look off */
-    width: 100%;
-    padding: 3rem 2rem;
+    padding: 3.2rem 2rem;
   }
 
   .join-us h3 {
@@ -236,4 +226,104 @@ body {
     font-size: 1.3rem;
     width: 100%;
     max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .outreach-hero {
+    height: 50vh;
+  }
+
+  .container {
+    padding: 0 1.2rem;
+  }
+
+  .detail-card {
+    padding: 2.4rem 1.8rem;
+  }
+
+  .detail-card h3 {
+    font-size: 1.9rem;
+  }
+
+  .detail-card p {
+    font-size: 1.2rem;
+  }
+
+  .join-us {
+    padding: 2.8rem 1.8rem;
+  }
+
+  .join-us h3 {
+    font-size: 1.9rem;
+  }
+
+  .join-us p {
+    font-size: 1.2rem;
+  }
+}
+
+/* FOOTER – BISCUIT WIE AUF ALLEN ANDEREN SEITEN */
+.clean-footer {
+  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 0 !important;
+  flex-shrink: 0;
+  font-family: "Georgia", serif;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+}
+
+.footer-nav a {
+  color: #5d4037;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #8b4513;
+}
+
+.copyright {
+  font-size: 0.88rem;
+  color: #6d4c41;
+  opacity: 0.9;
+}
 

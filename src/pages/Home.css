@@ -31,7 +31,7 @@
   background: linear-gradient(
     to bottom,
     rgba(10, 8, 15, 0.15),
-    rgba(15, 10, 30, 0.25)  /* much lighter */
+    rgba(15, 10, 30, 0.25)
   );
   display: flex;
   align-items: center;
@@ -47,6 +47,8 @@
   align-items: center;
   justify-content: center;
   max-width: 90%;
+  padding: 0 1.5rem;          /* extra padding to avoid cut-off on mobile */
+  box-sizing: border-box;
 }
 
 .hero-church-name {
@@ -108,20 +110,19 @@
   max-width: 1000px;
 }
 
-/* === VIDEO FRAME – NO GAP ON TOP/BOTTOM INSIDE CONTAINER === */
+/* === VIDEO FRAME === */
 
 .video-container {
   position: relative;
   width: 100%;
   max-width: 1450px;
-  margin: 0 auto 3rem auto;   /* bottom space below video */
+  margin: 0 auto 3rem auto;
   border-radius: 2.5rem;
   overflow: hidden;
   box-shadow: 0 80px 180px rgba(0, 0, 0, 0.95);
   border: 14px solid rgba(232, 192, 160, 0.42);
 }
 
-/* 16:9 aspect ratio, no padding tricks on the iframe itself */
 .video-container::before {
   content: "";
   display: block;
@@ -138,7 +139,6 @@
   display: block;
 }
 
-/* Description under the video */
 .video-description {
   font-size: 1.45rem;
   color: #e0d4ff;
@@ -147,7 +147,7 @@
   line-height: 2.1;
 }
 
-/* ==================== 3. WAS UNS WICHTIG IST – CLEAN & EQUAL BOXES ==================== */
+/* ==================== 3. WAS UNS WICHTIG IST ==================== */
 
 .what-matters-section {
   padding: 4rem 2rem 4rem;
@@ -174,7 +174,7 @@
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ALL THREE BOXES — UNIFORM DESIGN */
+/* Boxes */
 .matter-block {
   background: white;
   padding: 3rem 2.2rem;
@@ -190,16 +190,13 @@
   height: 100%;
 }
 
-/* ALL HEADERS aligned equally */
 .matter-block h3 {
   font-size: 2.6rem;
   font-weight: 800;
   color: #8b4513;
   margin: 0 0 1.6rem 0;
-  padding: 0;
 }
 
-/* ALL PARAGRAPHS aligned equally */
 .matter-block p {
   font-size: 1.4rem;
   line-height: 2.1;
@@ -208,7 +205,6 @@
   flex-grow: 1;
 }
 
-/* READ MORE consistent placement */
 .read-more {
   font-size: 1.2rem;
   font-weight: 700;
@@ -223,7 +219,6 @@
   color: #8b4513;
 }
 
-/* Hover effect */
 .matter-block:hover {
   background: rgba(255, 255, 255, 0.75);
   transform: translateY(-12px);
@@ -236,9 +231,9 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-top: 0 !important; /* remove previous gap above */
+  margin-top: 0 !important;
   overflow: hidden;
-  background: #000000 !important; /* solid black behind video */
+  background: #000000 !important;
   z-index: 0;
 }
 
@@ -256,11 +251,11 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.55) 0%,      /* bottom: lighter */
-    rgba(10, 8, 15, 0.40) 20%,   /* much lighter */
-    rgba(15, 10, 30, 0.25) 50%,  /* mid: almost transparent */
-    rgba(10, 8, 15, 0.40) 80%,   /* light at top */
-    rgba(0, 0, 0, 0.55) 100%     /* top: lighter */
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(10, 8, 15, 0.40) 20%,
+    rgba(15, 10, 30, 0.25) 50%,
+    rgba(10, 8, 15, 0.40) 80%,
+    rgba(0, 0, 0, 0.55) 100%
   );
   display: flex;
   align-items: center;
@@ -291,7 +286,8 @@
   font-size: 1.2rem;
 }
 
-/* ==================== 6. TITLE CLASSES ==================== */
+/* ==================== TITLE CLASSES ==================== */
+
 .white-title {
   color: #ffffff !important;
   font-weight: 900;
@@ -306,9 +302,11 @@
 
 /* ==================== 7. RESPONSIVE ==================== */
 
+/* Tablets / small laptops */
 @media (max-width: 1024px) {
   .hero-church-name {
-    font-size: 6rem !important;
+    font-size: 3.8rem;
+    letter-spacing: -2px;
   }
   .hero-subtitle {
     font-size: 2rem;
@@ -321,28 +319,29 @@
   }
 }
 
+/* Landscape phones / small tablets */
 @media (max-width: 768px) {
   .hero-church-name {
-    font-size: 4.8rem !important;
+    font-size: 3.2rem;
+    letter-spacing: -1.5px;
   }
   .hero-subtitle {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
   }
   .hero-motto {
-    font-size: 1.8rem;
-  }
-  .section-title {
-    font-size: 3.6rem;
+    font-size: 1.7rem;
   }
 
-  /* reduce padding so content doesn't look pushed off-screen */
+  .section-title {
+    font-size: 3.4rem;
+  }
+
   .heartcry-section,
   .what-matters-section {
     padding: 4rem 1.5rem 3rem !important;
   }
 
-  /* single-column grid on tablets/phones */
   .what-matters-grid {
     grid-template-columns: 1fr;
     gap: 2.4rem;
@@ -360,19 +359,22 @@
   }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
   .hero-church-name {
-    font-size: 3.6rem !important;
+    font-size: 2.8rem;
+    letter-spacing: -1px;
   }
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
   }
   .hero-motto {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .main-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   .matter-block h3 {
@@ -391,7 +393,7 @@
   }
 }
 
-/* SAME CLEAN FOOTER AS ALL OTHER PAGES – ALL LINKS IN ONE LINE */
+/* ==================== FOOTER ==================== */
 
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
