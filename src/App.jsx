@@ -15,6 +15,8 @@ import AdminEvents from "./pages/AdminEvents";
 import Belief from "./pages/Belief";
 import "./App.css";
 
+const base = import.meta.env.BASE_URL;   // 👈 add this
+
 function App() {
   const [showHeader, setShowHeader] = useState(true);
 
