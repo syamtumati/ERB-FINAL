@@ -50,11 +50,11 @@
 }
 
 .hero-church-name {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   font-weight: 900;
   line-height: 1.05;
   margin: 0 0 1rem 0;
-  letter-spacing: -2px;
+  letter-spacing: 2px;
 }
 
 .hero-subtitle {
