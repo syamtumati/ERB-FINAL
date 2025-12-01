@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Outreach.css";
 
+import outreachHero from "../assets/pastors/outreach-hero.jpg";
+
 function Outreach() {
   return (
     <div className="outreach-page">
@@ -9,7 +11,7 @@ function Outreach() {
       {/* FULLSCREEN HERO VIDEO – NO TEXT OVERLAY */}
       <section className="outreach-hero">
         <img 
-          src="${base}images/outreach-hero.jpg" 
+          src={outreachHero} 
           alt="Outreach" 
           className="outreach-hero-image"
         />
