@@ -2,13 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+import heroVideo from "../assets/videos/hero-message.mp4";
+import closingVideo from "../assets/videos/closing-glory.mp4";
+
 function Home() {
   return (
     <div className="home-page">
       {/* HERO VIDEO MIT LOGO & DEUTSCHEM TEXT */}
       <section className="hero-video-section">
-        <video className="hero-video" autoPlay loop muted playsInline>
-          <source src="videos/hero-message.mp4" type="video/mp4" />
+	<video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={heroVideo} type="video/mp4" />
         </video>
         <div className="hero-overlay">
           <div className="hero-content-centered">
