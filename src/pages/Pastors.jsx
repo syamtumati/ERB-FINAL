@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";   // ← Make sure this is imported
 import "./Pastors.css";
 
+const base = import.meta.env.BASE_URL;   // 👈 ADD THIS
+
 const Pastors = () => {
   return (
     <div className="pastors-page">
@@ -14,7 +16,7 @@ const Pastors = () => {
         {/* PASTOR PETER SCHILD */}
         <section className="pastor-card">
           <div className="pastor-photo">
-            <img src="pastors/senior-pastor.jpg" alt="Pastor Peter Schild" />
+            <img src="${base}pastors/senior-pastor.jpg" alt="Pastor Peter Schild" />
             <div className="glow"></div>
           </div>
           <div className="pastor-content">
@@ -39,7 +41,7 @@ const Pastors = () => {
         {/* DIAKON HANS EWERT */}
         <section className="pastor-card deacon">
           <div className="pastor-photo">
-            <img src="pastors/deacon-hans.jpg" alt="Diakon Hans Ewert" />
+            <img src="${base}pastors/deacon-hans.jpg" alt="Diakon Hans Ewert" />
             <div className="glow"></div>
           </div>
           <div className="pastor-content">
