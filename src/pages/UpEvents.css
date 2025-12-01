@@ -1,0 +1,157 @@
+/* ===================================================== */
+/* UPCOMING EVENTS – FINAL CLEAN & PERFECT             */
+/* Same footer as all other pages – zero gap           */
+/* ===================================================== */
+
+.upevents-page {
+  min-height: 100vh;
+/*  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);*/
+  background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
+  background-attachment: fixed;
+/*  color: #3a2a18;*/
+  color: #EAF1FF;
+  font-family: "Georgia", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.upevents-simple {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.upevents-simple .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.upevents-simple h1 {
+  font-size: 3.8rem;
+/*  color: #2b1a0f;*/
+  color: #ffffff !important;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.message {
+  font-size: 1.6rem;
+  line-height: 2;
+/*  color: #5d4037;*/
+  color: #ffffff !important;
+  margin: 2rem 0;
+}
+
+.sub-message {
+  font-size: 1.3rem;
+ /* color: #6d4c41;*/
+  color: #ffffff !important;
+  margin: 1.5rem 0;
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 1.2rem 3.5rem;
+  background: linear-gradient(90deg, #6b4e31, #8c6b47);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 999px;
+  box-shadow: 0 20px 55px rgba(107, 78, 49, 0.55);
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(90deg, #8c6b47, #a07d5b);
+  box-shadow: 0 35px 80px rgba(107, 78, 49, 0.8);
+}
+
+/* CLEAN FOOTER – GLUED TO BOTTOM */
+.clean-footer {
+  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 0 !important;
+  flex-shrink: 0;
+  font-family: "Georgia", serif;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+}
+
+.footer-nav a {
+  color: #5d4037;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #8b4513;
+}
+
+.copyright {
+  font-size: 0.88rem;
+  color: #6d4c41;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .upevents-simple h1 { font-size: 2.8rem; }
+  .message { font-size: 1.4rem; }
+  .home-btn { padding: 1rem 3rem; font-size: 1.15rem; }
+}
+
+/* HIDE OLD FOOTER COMPLETELY */
+.biscuit-footer,
+.footer-container,
+.footer-logo,
+.footer-links,
+.footer-copyright,
+.latin {
+  display: none !important;
+}

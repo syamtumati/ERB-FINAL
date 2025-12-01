@@ -1,0 +1,145 @@
+/* ===================================================== */
+/* MESSAGES PAGE – FINAL CLEAN VERSION (NO GAP)        */
+/* ===================================================== */
+
+.messages-page {
+  min-height: 100vh;
+/*  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);*/
+  background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
+  padding: 8rem 2rem 0;                 /* top + sides only */
+  text-align: center;
+  color: #EAF1FF;
+  font-family: "Georgia", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO */
+.messages-hero h1 {
+  font-size: 3.6rem;
+  font-weight: 900;
+/*  color: #2b1a0f;*/
+  color: #ffffff !important;
+  margin-bottom: 1rem;
+}
+.messages-hero p {
+  font-size: 1.4rem;
+  color: #5d4037;
+  margin-bottom: 3rem;
+}
+
+/* VIDEO GRID */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.4rem;
+  max-width: 1300px;
+  margin: 0 auto 4rem;
+}
+
+/* VIDEO CARD */
+.video-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+  transition: transform .3s;
+}
+.video-card:hover { transform: translateY(-10px); }
+.thumb { width: 100%; display: block; }
+.video-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3a2a18;
+  padding: 1rem 1.4rem 0.2rem;
+}
+.video-date {
+  font-size: 1rem;
+  color: #6d4c41;
+  padding-bottom: 1rem;
+}
+
+/* SUBSCRIBE BUTTON (space before footer) */
+.subscribe-button {
+  margin-bottom: 4rem;           /* only this controls the space above footer */
+}
+
+/* GOLD BUTTON */
+.gold-btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  color: #111;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  border-radius: 999px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(245,158,11,.45);
+  transition: all .4s;
+}
+.gold-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(245,158,11,.7);
+}
+.shine {
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.6), transparent);
+  transition: .8s;
+}
+.gold-btn:hover .shine { left: 100%; }
+
+/* CLEAN FOOTER – GLUED TO BOTTOM, ZERO GAP */
+.clean-footer {
+  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 0 !important;
+  flex-shrink: 0;
+  font-family: "Georgia", serif;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+.church-name { font-size: 2.6rem; font-weight: 900; color: #8b4513; letter-spacing: -1px; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 2.4rem; justify-content: center; max-width: 900px; margin: 0 auto; }
+@media (min-width: 640px) { .footer-nav { flex-wrap: nowrap; gap: 3rem; } }
+.footer-nav a {
+  color: #5d4037;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color .3s;
+}
+.footer-nav a:hover { color: #8b4513; }
+.copyright { font-size: .88rem; color: #6d4c41; opacity: .9; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .messages-hero h1 { font-size: 2.8rem; }
+  .video-grid { grid-template-columns: 1fr; }
+  .subscribe-button { margin-bottom: 3rem; }
+}
+
+/* KILL EVERYTHING FROM THE OLD FOOTER */
+.biscuit-footer,
+.footer-container,
+.footer-logo,
+.footer-links,
+.footer-copyright,
+.latin {
+  display: none !important;
+}
