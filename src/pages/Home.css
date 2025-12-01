@@ -482,15 +482,21 @@
   }
 }
 
-/* --- MOBILE FIX: Make HeartCry video taller --- */
+/* --- MOBILE FIX: Make HeartCry video much taller --- */
 @media (max-width: 768px) {
   .video-container::before {
-    padding-top: 70% !important;
+    padding-top: 90% !important;   /* was 70% → now much taller */
   }
 }
 
 @media (max-width: 480px) {
   .video-container::before {
-    padding-top: 85% !important;
+    padding-top: 115% !important;  /* was 85% → now fullscreen feeling */
+  }
+}
+
+@media (max-width: 380px) {
+  .video-container::before {
+    padding-top: 130% !important;  /* extra small phones */
   }
 }
