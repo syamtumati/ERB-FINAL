@@ -290,6 +290,10 @@
     gap: 2.5rem;
   }
 
+  .belief-hero {
+    transform: translateX(-40px); /* adjust this value */
+  }
+
   .confession-card {
     height: 360px;   /* all cards exactly same height on desktop */
   }
