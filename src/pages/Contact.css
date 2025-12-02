@@ -35,7 +35,7 @@
   padding: 2rem;
   width: 100%;
   left: 50%;
-  transform: translateX(-50%);  /* ← FINAL FIX – forces perfect centering */
+  transform: translateX(-60%);  /* ← FINAL FIX – forces perfect centering */
 }
 
 .hero-title {

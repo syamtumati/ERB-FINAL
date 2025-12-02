@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 10rem;      /* only top padding */
-  overflow-x: hidden;      /* stop any sideways cut / scroll */
+  overflow-x: hidden;      /* stop sideways scroll */
 }
 
 .belief-content {
@@ -68,7 +68,7 @@
   max-width: 90vw;
 }
 
-/* GRID */
+/* GRID – DESKTOP / BASE */
 
 .confession-grid {
   display: grid;
@@ -76,10 +76,10 @@
   gap: 2.8rem;
   margin: 5rem auto 3.5rem;
   max-width: 1300px;
-  align-items: stretch;    /* equal height per row */
+  align-items: stretch;    /* equal height per row on desktop */
 }
 
-/* Equal-looking cards (no scrolling text) */
+/* Cards equal-ish height on desktop */
 .confession-card {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
@@ -93,7 +93,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 260px;       /* all cards at least this tall */
+  min-height: 260px;       /* desktop: all cards at least this tall */
 }
 
 .confession-card:hover {
@@ -172,7 +172,7 @@
   }
 
   .belief-content {
-    padding: 0 1rem;        /* a bit less padding to avoid clipping */
+    padding: 0 1rem;
   }
 
   .belief-hero {
@@ -195,20 +195,22 @@
     max-width: 92vw;
   }
 
-  /* STRICT full-width 1-column grid */
+  /* MOBILE GRID: true 1-column, centered cards, rectangular */
   .confession-grid {
-    grid-template-columns: minmax(0, 1fr);  /* ⬅ take full width, allow shrinking */
-    max-width: 100%;                        /* ⬅ no fixed 600px cap */
+    grid-template-columns: 1fr;        /* single column */
+    max-width: 100%;
     width: 100%;
-    margin: 4.5rem 0 3rem;                  /* ⬅ no side margin */
-    padding: 0 0.5rem;                      /* a little inner space from edges */
+    margin: 4.5rem 0 3rem;
+    padding: 0;                         /* no extra padding here */
     gap: 2.4rem;
+    justify-items: center;              /* center items horizontally */
   }
 
   .confession-card {
-    padding: 2.4rem 1.9rem;
-    min-height: 250px;
-    width: 100%;                            /* ⬅ card never wider than viewport */
+    padding: 2.0rem 1.7rem;
+    min-height: auto;                   /* 🔴 let height follow content (rectangles) */
+    width: 100%;
+    max-width: 480px;                   /* 🔴 narrower, nice rectangle, centered */
   }
 
   .coffee-btn {
@@ -240,8 +242,9 @@
     font-size: 1.45rem;
   }
 
-  .confession-grid {
-    padding: 0 0.3rem;      /* tiny padding, but safe from edges */
+  .confession-card {
+    max-width: 420px;                  /* a bit narrower on very small phones */
+    padding: 1.8rem 1.5rem;
   }
 }
 
