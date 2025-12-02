@@ -1,7 +1,7 @@
 /* ===================================================== */
 /* CONTACT PAGE – CLEAN, RESPONSIVE, CONSISTENT         */
-/* FIXED: Perfect desktop centering (matches Home page) */
 /* ===================================================== */
+
 .contact-page {
   min-height: 100vh;
   background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
@@ -11,10 +11,10 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  align-items: center;        /* ← THIS FIXES DESKTOP CENTERING */
 }
 
 /* ================= HERO SECTION ===================== */
+
 .contact-hero-image {
   position: relative;
   width: 100%;
@@ -22,6 +22,7 @@
   min-height: 620px;
   background: url("/images/contact-hero.jpg") center/cover no-repeat fixed;
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -33,6 +34,7 @@
   text-align: center;
   padding: 2rem;
 }
+
 .hero-title {
   font-size: 8rem;
   font-weight: 900;
@@ -41,6 +43,7 @@
   letter-spacing: -3px;
   text-shadow: 0 12px 50px rgba(0,0,0,0.9);
 }
+
 .hero-subtitle {
   font-size: 2.6rem;
   color: #f0e8ff;
@@ -50,6 +53,7 @@
 }
 
 /* ================= CONTENT SECTION ================== */
+
 .contact-content {
   flex: 1;
   max-width: 1350px;
@@ -60,6 +64,7 @@
 }
 
 /* GRID WITH EQUAL HEIGHT BOXES */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -76,6 +81,7 @@
 }
 
 /* ADDRESS CARD */
+
 .address-card {
   background: rgba(255,255,255,0.95);
   padding: 2.6rem 2.3rem 2rem;
@@ -83,36 +89,42 @@
   box-shadow: 0 20px 60px rgba(0,0,0,0.14);
   text-align: center;
 }
+
 .address-card h3 {
   font-size: 2.4rem;
   color: #8b4513;
   margin-bottom: 1.6rem;
   font-weight: 800;
 }
+
 .address-block p {
   font-size: 1.3rem;
   line-height: 2;
   color: #3a2a18;
   margin-bottom: 1.3rem;
 }
+
 .contact-info strong {
   color: #6b4e31;
 }
+
 .map-container {
   margin-top: auto;
-  border-radius: 1.8 cocoa;
+  border-radius: 1.8rem;
   overflow: hidden;
   box-shadow: 0 18px 45px rgba(0,0,0,0.2);
   height: 320px;
 }
 
 /* FORM CARD */
+
 .form-card {
   background: rgba(255,255,255,0.95);
   padding: 2.8rem 2.6rem 2.4rem;
   border-radius: 2.4rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.14);
 }
+
 .form-card form {
   display: flex;
   flex-direction: column;
@@ -120,6 +132,7 @@
 }
 
 /* INPUTS */
+
 .form-card form input,
 .form-card form textarea {
   width: 100%;
@@ -133,10 +146,12 @@
   color: #1a1208;
   transition: all 0.3s ease;
 }
+
 .form-card form textarea {
   resize: vertical;
   min-height: 180px;
 }
+
 .form-card form input:focus,
 .form-card form textarea:focus {
   border-color: #8b4513;
@@ -145,6 +160,7 @@
 }
 
 /* SUBMIT BUTTON */
+
 .form-card .coffee-btn {
   margin-top: auto;
   width: 100%;
@@ -161,12 +177,14 @@
   box-shadow: 0 22px 60px rgba(107, 78, 49, 0.6);
   transition: all 0.4s ease;
 }
+
 .form-card .coffee-btn:hover {
   transform: translateY(-8px);
   background: linear-gradient(90deg, #8c6b47, #a07d5b);
 }
 
 /* SUCCESS MESSAGE */
+
 .success-message {
   text-align: center;
   padding: 8rem 3rem;
@@ -176,12 +194,14 @@
   max-width: 800px;
   margin: 0 auto;
 }
+
 .success-message h2 {
   font-size: 3.8rem;
   color: #6b4e31;
 }
 
 /* ================= FOOTER ========================== */
+
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 5rem 2rem 3rem;
@@ -190,6 +210,7 @@
   margin: 0 !important;
   flex-shrink: 0;
 }
+
 .footer-inner {
   max-width: 1000px;
   margin: 0 auto;
@@ -198,23 +219,27 @@
   align-items: center;
   gap: 1.8rem;
 }
+
 .church-name {
   font-size: 2.6rem;
   font-weight: 900;
   color: #8b4513;
 }
+
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 2.4rem;
   justify-content: center;
 }
+
 @media (min-width: 640px) {
   .footer-nav {
     flex-wrap: nowrap;
     gap: 3rem;
   }
 }
+
 .footer-nav a {
   color: #5d4037;
   font-size: 1.05rem;
@@ -223,9 +248,11 @@
   text-decoration: none;
   letter-spacing: 2px;
 }
+
 .footer-nav a:hover {
   color: #8b4513;
 }
+
 .copyright {
   font-size: 0.88rem;
   color: #6d4c41;
@@ -233,33 +260,42 @@
 }
 
 /* ================= RESPONSIVE ====================== */
+
 @media (max-width: 968px) {
   .contact-grid {
     grid-template-columns: 1fr !important;
   }
+
+  /* reset equal heights on mobile */
   .address-card,
   .form-card {
     height: auto !important;
   }
+
   .hero-title {
     font-size: 5.2rem;
   }
+
   .hero-subtitle {
     font-size: 1.9rem;
   }
 }
+
 @media (max-width: 600px) {
   .contact-hero-image {
     height: 70vh;
     min-height: 480px;
     background-attachment: scroll;
   }
+
   .hero-title {
     font-size: 3.8rem;
   }
+
   .hero-subtitle {
     font-size: 1.6rem;
   }
+
   .contact-content {
     padding: 3.5rem 1.5rem 5rem;
   }
@@ -271,3 +307,4 @@
 .latin {
   display: none !important;
 }
+
