@@ -498,6 +498,6 @@
 /* Desktop-only: pull hero UP slightly */
 @media (min-width: 1024px) {
   .hero-video-section {
-    margin-top: 1rem; /* try 0rem if you want it tighter */
+    margin-top: 0rem; /* try 0rem if you want it tighter */
   }
 }
