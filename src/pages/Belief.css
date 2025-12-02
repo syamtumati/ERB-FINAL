@@ -164,7 +164,7 @@
   box-shadow: 0 50px 110px rgba(107, 78, 49, 0.9);
 }
 
-/* RESPONSIVE – TABLETS & PHONES */
+/* ==================== MOBILE & TABLET ==================== */
 
 @media (max-width: 768px) {
   .belief-page {
@@ -172,7 +172,7 @@
   }
 
   .belief-content {
-    padding: 0 1rem;
+    padding: 0 0.8rem;      /* a bit less, so nothing touches the edge */
   }
 
   .belief-hero {
@@ -195,37 +195,42 @@
     max-width: 92vw;
   }
 
-  /* MOBILE GRID: true 1-column, centered cards, rectangular */
+  /* MOBILE GRID: single column, centered cards, rectangular, safe edges */
   .confession-grid {
     grid-template-columns: 1fr;        /* single column */
     max-width: 100%;
     width: 100%;
     margin: 4.5rem 0 3rem;
     padding: 0;                         /* no extra padding here */
-    gap: 2.4rem;
-    justify-items: center;              /* center items horizontally */
+    gap: 2rem;
+    justify-items: center;              /* center cards horizontally */
   }
 
   .confession-card {
-    padding: 2.0rem 1.7rem;
-    min-height: auto;                   /* 🔴 let height follow content (rectangles) */
+    padding: 1.7rem 1.5rem;            /* less padding → more rectangle */
+    min-height: auto;                  /* height from content */
     width: 100%;
-    max-width: 480px;                   /* 🔴 narrower, nice rectangle, centered */
+    max-width: 360px;                  /* 🔴 REAL FIX: card narrower than phone */
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
   }
 
   .coffee-btn {
-    padding: 1.5rem 3.5rem;
+    display: block;
+    width: 100%;
+    max-width: 320px;                  /* button also narrower */
+    margin: 0 auto;                    /* center the button */
+    padding: 1.4rem 1rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width: 480px) {
   .belief-content {
-    padding: 0 0.6rem;
+    padding: 0 0.5rem;
   }
 
   .belief-hero {
-    padding: 0 0.4rem;
+    padding: 0 0.3rem;
   }
 
   .belief-hero h1 {
@@ -243,8 +248,12 @@
   }
 
   .confession-card {
-    max-width: 420px;                  /* a bit narrower on very small phones */
-    padding: 1.8rem 1.5rem;
+    max-width: 330px;                  /* slightly smaller for tiny phones */
+    padding: 1.6rem 1.3rem;
+  }
+
+  .coffee-btn {
+    max-width: 300px;
   }
 }
 
