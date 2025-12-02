@@ -1,5 +1,10 @@
 /* === BELIEF PAGE – BISCUIT / COFFEE THEME === */
 
+.belief-page,
+.belief-page * {
+  box-sizing: border-box;
+}
+
 .belief-page {
   min-height: 100vh;
   background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
@@ -8,15 +13,15 @@
   font-family: "Georgia", serif;
 
   display: flex;
-  flex-direction: column;  /* footer sticks to bottom */
-  padding: 10rem 0 0;      /* top only – no side padding so footer can be full width */
-  overflow-x: hidden;      /* stop sideways scroll on mobile */
+  flex-direction: column;
+  padding-top: 10rem;      /* only top padding */
+  overflow-x: hidden;      /* stop any sideways cut */
 }
 
 .belief-content {
   max-width: 1350px;
   margin: 0 auto;
-  padding: 0 2rem;         /* horizontal padding only for the content */
+  padding: 0 1.5rem;       /* horizontal padding */
   text-align: center;
   flex: 1;
 }
@@ -28,70 +33,71 @@
   margin: 0 auto;
 }
 
-/* Force centered text even if translator injects styles */
 .belief-hero h1,
 .confession-title,
 .tagline {
-  text-align: center !important;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
 .belief-hero h1 {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 900;
-  color: #ffffff !important;
+  color: #ffffff;
   margin: 0 0 1.5rem 0;
-  letter-spacing: -2px;
-  word-break: break-word;
+  letter-spacing: -1.5px;
+  max-width: 90vw;             /* never wider than screen */
+  overflow-wrap: break-word;   /* long German words can wrap */
 }
 
 .confession-title {
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  color: #ffffff !important;
+  color: #ffffff;
   margin: 0 0 1.2rem 0;
+  max-width: 90vw;
 }
 
 .tagline {
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #ffffff !important;
+  color: #ffffff;
   margin: 0;
   line-height: 1.6;
+  max-width: 90vw;
 }
 
 /* GRID */
 
 .confession-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 3rem;
-  margin: 5rem 0 3.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.8rem;
+  margin: 5rem auto 3.5rem;
   max-width: 1300px;
-  align-items: stretch;
+  align-items: stretch;    /* equal height per row */
 }
 
-/* Every card EXACTLY the same height */
+/* Equal-looking cards (no scrolling text) */
 .confession-card {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
-  padding: 2.8rem 2.4rem;
+  padding: 2.6rem 2.2rem;
   border-radius: 2.4rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(139, 69, 19, 0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-align: left;
-  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
-  height: 320px;          /* 🔴 FIXED HEIGHT (desktop) */
-  overflow-y: auto;       /* scroll inside if text is too long */
+  height: 100%;
+  min-height: 260px;       /* ⬅ all cards at least this tall */
 }
 
 .confession-card:hover {
-  transform: translateY(-15px);
+  transform: translateY(-12px);
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.18);
 }
 
@@ -123,11 +129,12 @@
 }
 
 .confession-card p {
-  font-size: 1.32rem;
+  font-size: 1.3rem;
   line-height: 1.9;
   color: #3a2a18;
   margin: 0;
   margin-top: 0.4rem;
+  flex-grow: 1;            /* stretch text area so bottoms line up */
 }
 
 /* COFFEE BROWN BUTTON */
@@ -140,7 +147,7 @@
   display: inline-block;
   padding: 1.8rem 5rem;
   background: linear-gradient(90deg, #6b4e31, #8c6b47);
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: 900;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -157,50 +164,47 @@
   box-shadow: 0 50px 110px rgba(107, 78, 49, 0.9);
 }
 
-.latin {
-  color: #6b4e31;
-  font-style: italic;
-  font-weight: 700;
-}
-
 /* RESPONSIVE – TABLETS & PHONES */
 
 @media (max-width: 768px) {
   .belief-page {
-    padding: 8rem 0 0;
+    padding-top: 8rem;
   }
 
   .belief-content {
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
   }
 
   .belief-hero {
-    padding: 0 0.5rem;
+    padding: 0 0.4rem;
   }
 
   .belief-hero h1 {
     font-size: 3rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
+    max-width: 92vw;
   }
 
   .confession-title {
     font-size: 1.9rem;
+    max-width: 92vw;
   }
 
   .tagline {
     font-size: 1.7rem;
+    max-width: 92vw;
   }
 
   .confession-grid {
-    grid-template-columns: 1fr;   /* single column */
+    grid-template-columns: 1fr;   /* 1 column on mobile */
     max-width: 600px;
     margin: 4.5rem auto 3rem;
     gap: 2.4rem;
   }
 
   .confession-card {
-    padding: 2.4rem 2rem;
-    height: 280px;                /* 🔴 fixed height on mobile */
+    padding: 2.4rem 1.9rem;
+    min-height: 250px;            /* same look, just a bit shorter */
   }
 
   .coffee-btn {
@@ -209,29 +213,28 @@
   }
 }
 
-/* EXTRA SMALL PHONES – avoid cutting hero text */
-
 @media (max-width: 480px) {
   .belief-hero {
-    padding: 0 0.8rem;
+    padding: 0 0.6rem;
   }
 
   .belief-hero h1 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     letter-spacing: 0;
-    line-height: 1.15;
+    line-height: 1.2;
   }
 
   .confession-title {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   .tagline {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 }
 
-/* SAME CLEAN FOOTER AS ALL OTHER PAGES – ALL LINKS IN ONE LINE */
+/* FOOTER – FULL WIDTH BISCUIT */
+
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
@@ -239,7 +242,7 @@
   border-top: 1px solid rgba(0,0,0,0.08);
   margin-top: 0;
   font-family: "Georgia", serif;
-  width: 100%;               /* ensures biscuit color fills full width */
+  width: 100%;              /* biscuit to full width */
 }
 
 .footer-inner {
@@ -295,7 +298,7 @@
   opacity: 0.9;
 }
 
-/* Hide old footer */
+/* Hide old footer artifacts if any */
 .biscuit-footer,
 .footer-container,
 .footer-logo,
