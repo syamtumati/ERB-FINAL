@@ -501,7 +501,7 @@
     padding-top: 8rem; /* same as Belief page */
   }
   .hero-content-centered {
-    transform: translateY(-90px); /* move hero UP */
+    transform: translateY(-60px); /* move hero UP */
   }
   .hero-church-name {
     font-size: 4rem !important;   /* reduce from 5.5rem */
