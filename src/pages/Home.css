@@ -498,7 +498,7 @@
 /* Desktop-only: pull hero UP slightly */
 @media (min-width: 1024px) {
   .hero-video-section {
-    margin-top: 0rem; /* try 0rem if you want it tighter */
+    padding-top: 13rem; /* same as Belief page */
   }
   .hero-church-name {
     font-size: 4rem !important;   /* reduce from 5.5rem */
