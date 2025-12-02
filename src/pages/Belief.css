@@ -294,6 +294,10 @@
     transform: translateX(-60px); /* adjust this value */
   }
 
+  .belief-page {
+    padding-top: 13rem; /* increase from 10rem → 13rem */
+  }
+
   .confession-card {
     height: 360px;   /* all cards exactly same height on desktop */
   }
