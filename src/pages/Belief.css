@@ -294,6 +294,10 @@
     transform: translateX(-60px); /* adjust this value */
   }
 
+  .belief-hero h1 {
+    font-size: 4rem; /* reduce size – adjust as you want */
+  }
+
   .belief-page {
     padding-top: 13rem; /* increase from 10rem → 13rem */
   }
