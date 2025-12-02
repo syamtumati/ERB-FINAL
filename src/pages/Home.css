@@ -501,8 +501,7 @@
     margin-top: 0rem; /* try 0rem if you want it tighter */
   }
   .hero-church-name {
-    font-size: 4.8rem !important;   /* reduce from 5.5rem */
-    margin-top: -1.5rem !important; /* moves text UP */
+    font-size: 4rem !important;   /* reduce from 5.5rem */
   }
 
   .hero-subtitle {
