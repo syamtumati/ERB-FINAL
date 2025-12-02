@@ -35,7 +35,11 @@
   padding: 2rem;
   width: 100%;
   left: 50%;
-  transform: translateX(-50%);  /* ← FINAL FIX – forces perfect centering */
+/*  transform: translateX(-50%);*/  /* ← FINAL FIX – forces perfect centering */
+  /* ← ONLY APPLIES ON DESKTOP (≥1024px) */
+  @media (min-width: 1024px) {
+    transform: translateX(-70px);   /* adjust -60px … -80px until it’s perfect for you */
+  }
 }
 
 .hero-title {
