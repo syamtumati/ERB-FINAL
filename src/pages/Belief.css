@@ -11,15 +11,16 @@
 
   display: flex;
   flex-direction: column;  /* footer sticks to bottom */
-  padding: 10rem 2rem 0;   /* top padding, no bottom here */
+  padding: 10rem 0 0;      /* ⬅ no left/right padding, so footer can be full width */
   overflow-x: hidden;      /* prevent sideways scroll */
 }
 
 .belief-content {
   max-width: 1350px;
   margin: 0 auto;
+  padding: 0 2rem;          /* ⬅ horizontal padding only on content, not footer */
   text-align: center;
-  flex: 1;                 /* take all free vertical space */
+  flex: 1;                  /* take all free vertical space */
 }
 
 /* HERO */
@@ -32,7 +33,6 @@
 .belief-hero h1 {
   font-size: 4.5rem;
   font-weight: 900;
-  /*  color: #1a1208; */
   color: #ffffff !important;
   margin: 0 0 1.5rem 0;
   letter-spacing: -2px;
@@ -42,7 +42,6 @@
 .confession-title {
   font-size: 2.4rem;
   font-weight: 700;
-  /*  color: #8b4513; */
   color: #ffffff !important;
   margin: 0 0 1.2rem 0;
 }
@@ -50,7 +49,6 @@
 .tagline {
   font-size: 2.1rem;
   font-weight: 600;
-  /*  color: #5d4037; */
   color: #ffffff !important;
   margin: 0;
   line-height: 1.6;
@@ -62,9 +60,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 3rem;
-  margin: 5rem auto 3.5rem;
+  margin: 5rem 0 3.5rem;   /* ⬅ no horizontal margins, content already centered */
   max-width: 1300px;
-  align-items: stretch;       /* make cards in a row equal height */
+  align-items: stretch;     /* make cards in a row equal height */
 }
 
 .confession-card {
@@ -78,11 +76,11 @@
   text-align: left;
   box-sizing: border-box;
 
-  /* equal-height behavior */
+  /* equal-height behavior: every card same visual size */
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 260px;   /* tweak this number if you want taller/shorter cards */
+  min-height: 300px;        /* ⬅ pick a size that fits your longest text */
 }
 
 .confession-card:hover {
@@ -123,7 +121,7 @@
   color: #3a2a18;
   margin: 0;
   margin-top: 0.4rem;
-  flex-grow: 1;            /* pushes content down so bottoms align */
+  flex-grow: 1;            /* push content down so bottoms line up */
 }
 
 /* COFFEE BROWN BUTTON */
@@ -163,11 +161,15 @@
 
 @media (max-width: 768px) {
   .belief-page {
-    padding: 8rem 1.5rem 0;
+    padding: 8rem 0 0;        /* top only; sides come from belief-content */
+  }
+
+  .belief-content {
+    padding: 0 1.5rem;        /* slightly less padding on mobile */
   }
 
   .belief-hero {
-    padding: 0 0.5rem;           /* keep text away from the screen edge */
+    padding: 0 0.5rem;        /* keep hero text away from edges */
   }
 
   .belief-hero h1 {
@@ -184,15 +186,15 @@
   }
 
   .confession-grid {
-    grid-template-columns: 1fr;
-    max-width: 600px;           /* centered column */
-    margin: 4.5rem auto 3rem;
+    grid-template-columns: 1fr;    /* single column on mobile */
+    max-width: 600px;
+    margin: 4.5rem auto 3rem;      /* center the column */
     gap: 2.4rem;
   }
 
   .confession-card {
     padding: 2.4rem 2rem;
-    min-height: 230px;          /* slightly shorter on mobile */
+    min-height: 260px;            /* slightly smaller but still same size for all */
   }
 
   .coffee-btn {
@@ -202,6 +204,7 @@
 }
 
 /* EXTRA SMALL PHONES – avoid cutting hero text */
+
 @media (max-width: 480px) {
   .belief-hero {
     padding: 0 0.8rem;
@@ -228,8 +231,9 @@
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.08);
-  margin-top: 0;
+  margin-top: 0;                      /* no extra vertical gap */
   font-family: "Georgia", serif;
+  width: 100%;                        /* full width */
 }
 
 .footer-inner {
