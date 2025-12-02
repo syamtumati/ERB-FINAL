@@ -29,7 +29,8 @@
 /* HERO */
 
 .belief-hero {
-  max-width: 1000px;
+/*  max-width: 1000px; */
+  max-width: 100%;   /* or just remove max-width entirely */
   margin: 0 auto;
 }
 
