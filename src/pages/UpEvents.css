@@ -195,7 +195,7 @@
     display: inline-block;
     width: 400px;        /* ⭐ Increase width so text stays on one line */
     position: relative;
-    left: -20px;         /* same alignment as logo */
+    left: -10px;         /* same alignment as logo */
     text-align: center;  /* center text in the new wider button */
     white-space: nowrap; /* prevents line break */
   }
