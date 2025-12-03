@@ -312,7 +312,9 @@ body {
   }
 }
 
-/* ========================================= */
-/* GLOBAL PAGE CONTENT OFFSET                */
-/* ========================================= */
-
+@media (min-width: 1024px) {
+  .logo-center {
+    position: relative;
+    left: 30px;
+  }
+}
