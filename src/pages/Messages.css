@@ -233,3 +233,35 @@
   display: none !important;
 }
 
+@media (min-width: 1024px) {
+  .messages-hero {
+    /* Move hero slightly LEFT + DOWN */
+    transform: translate(-55px, 45px);
+    /* -35px = move left
+       25px = move down
+       adjust as needed */
+  }
+
+  .messages-hero h1 {
+    font-size: 3.2rem !important; /* reduce hero title size */
+  }
+
+  .messages-hero p {
+    font-size: 1.8rem !important; /* reduce subtitle size */
+    transform: translateX(-85px); /* adjust this value */
+  }
+  .subscribe-button {
+/*    transform: translate(-55px, -35px); */
+    margin-top: -20px; /* adjust this value */
+  }
+  .no-videos {
+    max-width: 900px;       /* same container width as .messages-hero */
+    margin: 2rem auto 4rem; /* center container, small top gap */
+    padding: 0 2rem;        /* same inner padding as hero */
+    text-align: left;       /* move the text inside left */
+    font-size: 1.35rem;
+    color: #ffffff;
+    transform: translateX(-55px);
+  }
+  
+}

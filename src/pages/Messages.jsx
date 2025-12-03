@@ -89,7 +89,7 @@ const Messages = () => {
         ))}
 
         {videos.length === 0 && (
-          <p style={{ textAlign: "center", width: "100%" }}>
+          <p className="no-videos">
             Keine Videos für &quot;Peter Schild&quot; gefunden.
           </p>
         )}
