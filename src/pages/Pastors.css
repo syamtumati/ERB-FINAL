@@ -376,7 +376,7 @@
     margin-top: 2rem !important;       /* was 4rem */
   }  
   .pastors-page {
-    padding-top: 13rem;  /* was 11rem → increase gap below logo */
+    padding-top: 14rem;  /* was 11rem → increase gap below logo */
     padding-bottom: 0 !important;   /* add small gap only */
   }
 }
