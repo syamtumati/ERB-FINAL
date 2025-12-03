@@ -255,6 +255,7 @@
     position: relative;
     left: -60px;
     margin-top: -20px; /* adjust this value */
+    margin-bottom: 40px;
   }
   .no-videos {
     max-width: 900px;       /* same container width as .messages-hero */
