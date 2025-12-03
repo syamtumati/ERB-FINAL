@@ -1,4 +1,4 @@
-/* OUTREACH PAGE – BLUE BACKGROUND, NO HERO IMAGE */
+/* OUTREACH PAGE – FULL IMAGE MOBILE, SHORTER HERO DESKTOP */
 
 /* Reset */
 html,
@@ -16,13 +16,39 @@ body {
   color: #eaf1ff;
   font-family: "Georgia", serif;
   overflow-x: hidden;
-  padding-top: 10rem;          /* base top space under navbar */
 }
 
-/* (Optional) empty hero section if it still exists in JSX */
+/* ========== HERO ========== */
+
+/* MOBILE-FIRST: show full image, height controlled by image ratio */
 .outreach-hero {
   width: 100%;
-  /* no image, no extra height needed */
+  background: #000a1f;
+}
+
+.outreach-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;                /* full image, no cropping on mobile */
+}
+
+/* DESKTOP/TABLET: shorten hero height and crop a bit */
+@media (min-width: 1024px) {
+  .outreach-hero {
+    height: 65vh;              /* <— shorter hero on desktop */
+    max-height: 65vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .outreach-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* crop a bit to fit height */
+    object-position: center 80%; /* show more lower part of image */
+  }
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -143,10 +169,6 @@ body {
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 1024px) {
-  .outreach-page {
-    padding-top: 10rem;  /* tablets / small laptops */
-  }
-
   .black-title {
     font-size: 3.8rem;
   }
@@ -173,10 +195,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .outreach-page {
-    padding-top: 9rem;
-  }
-
   .outreach-saturday {
     padding: 3.5rem 0 3.5rem;
   }
@@ -218,10 +236,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .outreach-page {
-    padding-top: 8rem;
-  }
-
   .black-title {
     font-size: 3.2rem;
   }
@@ -322,26 +336,34 @@ body {
 
 /* ========== DESKTOP ALIGNMENT WITH LOGO ========== */
 @media (min-width: 1024px) {
-  /* more top space on desktop to clear navbar */
-  .outreach-page {
-    padding-top: 13rem;
+  /* Move hero image slightly down to match Home hero level */
+  .outreach-hero {
+    margin-top: 4rem;  /* adjust to 3rem / 5rem if needed */
+    height: 42vh;         /* smaller hero */
+    max-height: 42vh;
+  }
+  .outreach-hero-image {
+    object-fit: cover;
+
+    /* Move LEFT (smaller % = more left) */
+    object-position: 40% 60%;
+
+    /* optional: remove old transform if still present */
+    transform: none;
+    width: 100%;
+    height: 100%;
   }
 
-  /* push boxes a bit down */
-  .outreach-saturday {
-    padding-top: 5rem;
-  }
-
-  /* Align top boxes with logo */
+  /* Align title + two cards with logo */
   .outreach-saturday .container {
     position: relative;
-    left: -60px;
+    left: -70px;       /* same as other pages */
   }
 
-  /* Align bottom "Mach mit..." box with same baseline */
+  /* Align bottom "Mach mit..." box */
   .join-us {
     position: relative;
-    left: -60px;
+    left: -10px;
   }
 
   /* Align footer text with same vertical line */
@@ -351,4 +373,3 @@ body {
     left: -60px;
   }
 }
-

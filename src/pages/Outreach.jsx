@@ -2,19 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Outreach.css";
 
-import outreachHero from "../assets/images/outreach-hero.jpg";
-
 function Outreach() {
   return (
     <div className="outreach-page">
 
       {/* FULLSCREEN HERO VIDEO – NO TEXT OVERLAY */}
       <section className="outreach-hero">
-        <img 
-          src={outreachHero} 
-          alt="Outreach" 
-          className="outreach-hero-image"
-        />
       </section>
 
       {/* OUTREACH SECTION WITHOUT HEADING */}
