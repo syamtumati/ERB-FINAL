@@ -504,12 +504,12 @@
     align-items: flex-start;  /* keep hero near top */
   }
   .hero-content-centered {
-    transform: translateY(-60px); /* move hero UP */
+/*    transform: translateY(20px);*/ /* move hero UP */
     max-width: 1350px; /* same width as Belief .belief-content */
     margin: 0 auto;    /* true horizontal centering */
     text-align: center;
- 
-    transform: translateX(-20px);
+    transform: translate(-50px, -200px);
+/*    transform: translateX(-50px);*/
     /* if it needs to go right instead of left, use +20px */
   }
   .hero-church-name {

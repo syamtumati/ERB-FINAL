@@ -359,3 +359,13 @@
   display: none !important;
 }
 
+
+/* Desktop only: Push the pastor cards down slightly */
+@media (min-width: 1024px) {
+  .pastors-container {
+    transform: translateX(-50px); /* adjust this value */
+  }	
+  .pastors-page {
+    padding-top: 15rem;  /* was 11rem → increase gap below logo */
+  }
+}
