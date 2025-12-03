@@ -183,6 +183,7 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .upevents-simple {
+    padding-top: 10rem !important;
     padding-bottom: 4rem !important;  /* was 8rem */
   }
 
