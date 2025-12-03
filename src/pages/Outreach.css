@@ -184,7 +184,7 @@ body {
 
   .join-us {
     position: relative;
-    left: -60px;
+    left: -80px;
   }
 
   .join-us h3 {
@@ -203,7 +203,7 @@ body {
   /* 2️⃣ Move the title + two cards LEFT to align with logo */
   .outreach-saturday .container {
     position: relative;
-    left: -60px;           /* same as all your other pages */
+    left: -80px;           /* same as all your other pages */
   }
 
   /* Align footer text with the same vertical line */
