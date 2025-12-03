@@ -364,8 +364,19 @@
 @media (min-width: 1024px) {
   .pastors-container {
     transform: translateX(-50px); /* adjust this value */
-  }	
+  }
+  /* Reduce gap between Pastor 1 and Pastor 2 */
+  .pastor-card {
+    margin-bottom: 4rem !important;   /* was 8rem */
+    gap: 4rem !important;              /* was 5.5rem */
+  }
+
+  /* Reduce extra top gap added to Deacon block */
+  .deacon {
+    margin-top: 2rem !important;       /* was 4rem */
+  }  
   .pastors-page {
     padding-top: 15rem;  /* was 11rem → increase gap below logo */
+    padding-bottom: 4rem !important;   /* add small gap only */
   }
 }
