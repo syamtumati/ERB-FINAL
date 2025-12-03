@@ -192,7 +192,7 @@
   /* 2️⃣ Align the button with the same left baseline */
   .home-btn {
     position: relative;
-    left: -60px;
+    left: -50px;
   }
 
   /* 3️⃣ Align footer church-name + copyright */
