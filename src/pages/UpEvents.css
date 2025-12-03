@@ -183,7 +183,7 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .upevents-simple {
-    padding-bottom: 2rem !important;  /* was 8rem */
+    padding-bottom: 4rem !important;  /* was 8rem */
   }
 
   /* 1️⃣ Align the HERO (title + text) with logo */
