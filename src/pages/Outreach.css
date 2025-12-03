@@ -197,7 +197,7 @@ body {
 
   /* 1️⃣ Move the hero image DOWN a bit */
   .outreach-hero {
-    margin-top: 6rem;      /* adjust: 5rem, 6rem, 7rem */
+    margin-top: 4rem;      /* adjust: 5rem, 6rem, 7rem */
   }
 
   /* 2️⃣ Move the title + two cards LEFT to align with logo */
