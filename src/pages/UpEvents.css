@@ -192,7 +192,10 @@
   /* 2️⃣ Align the button with the same left baseline */
   .home-btn {
     position: relative;
-    left: -50px;
+    left: -60px;
+    display: inline-block;
+    width: 320px;       /* increase width */
+    text-align: center;
   }
 
   /* 3️⃣ Align footer church-name + copyright */
