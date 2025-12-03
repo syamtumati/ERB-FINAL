@@ -534,4 +534,22 @@
     position: relative;
     left: -60px;      /* adjust as needed */
   }
+  /* === BOTTOM VIDEO TEXT LEFT === */
+  .bottom-video-text {
+    position: relative;
+    left: -60px;
+  }
+
+  /* === FOOTER CHURCH NAME LEFT === */
+  .clean-footer .church-name {
+    position: relative;
+    left: -60px;
+  }
+
+  /* OPTIONAL: move footer nav and copyright too (looks nicer) */
+  .clean-footer .footer-nav,
+  .clean-footer .copyright {
+    position: relative;
+    left: -40px;
+  }
 }
