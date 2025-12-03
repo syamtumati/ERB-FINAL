@@ -180,11 +180,9 @@ body {
   .detail-card p {
     font-size: 1.25rem;
   }
-  /* 3️⃣ Move bottom JOIN-US blockLEFT */
 
   .join-us {
-    position: relative;
-    left: -80px;
+    padding: 3.5rem 2.4rem;
   }
 
   .join-us h3 {
@@ -193,24 +191,6 @@ body {
 
   .join-us p {
     font-size: 1.35rem;
-  }
-
-  /* 1️⃣ Move the hero image DOWN a bit */
-  .outreach-hero {
-    margin-top: 4rem;      /* adjust: 5rem, 6rem, 7rem */
-  }
-
-  /* 2️⃣ Move the title + two cards LEFT to align with logo */
-  .outreach-saturday .container {
-    position: relative;
-    left: -80px;           /* same as all your other pages */
-  }
-
-  /* Align footer text with the same vertical line */
-  .clean-footer .church-name,
-  .clean-footer .copyright {
-    position: relative;
-    left: -60px;
   }
 }
 
@@ -354,3 +334,30 @@ body {
   opacity: 0.9;
 }
 
+/* ========== DESKTOP ALIGNMENT WITH LOGO ========== */
+@media (min-width: 1024px) {
+
+  /* Move hero image slightly down to match Home hero level */
+  .outreach-hero {
+    margin-top: 4rem;  /* adjust to 3rem / 5rem if needed */
+  }
+
+  /* Align title + two cards with logo */
+  .outreach-saturday .container {
+    position: relative;
+    left: -60px;       /* same as other pages */
+  }
+
+  /* Align bottom "Mach mit..." box */
+  .join-us {
+    position: relative;
+    left: -60px;
+  }
+
+  /* Align footer text with same vertical line */
+  .clean-footer .church-name,
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
+}
