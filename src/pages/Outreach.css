@@ -192,6 +192,21 @@ body {
   .join-us p {
     font-size: 1.35rem;
   }
+  .outreach-saturday .container {
+    transform: translateX(-60px); /* same offset as other pages */
+  }
+
+  /* Move bottom "Mach mit..." box left as well */
+  .join-us {
+    transform: translateX(-60px);
+  }
+
+  /* Align footer text with the same vertical line */
+  .clean-footer .church-name,
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
 }
 
 @media (max-width: 768px) {
