@@ -182,11 +182,15 @@
 /* DESKTOP ALIGNMENT — MATCH ALL OTHER PAGES             */
 /* ===================================================== */
 @media (min-width: 1024px) {
+  .upevents-simple {
+    padding-bottom: 3rem !important;  /* was 8rem */
+  }
 
   /* 1️⃣ Align the HERO (title + text) with logo */
   .upevents-simple .container {
     position: relative;
     left: -60px;     /* same global alignment offset */
+    margin-bottom: 2rem;
   }
 
   /* 2️⃣ Align the button with the same left baseline */
@@ -198,6 +202,7 @@
     left: -10px;         /* same alignment as logo */
     text-align: center;  /* center text in the new wider button */
     white-space: nowrap; /* prevents line break */
+    margin-bottom: 0 !important;
   }
 
   /* 3️⃣ Align footer church-name + copyright */
