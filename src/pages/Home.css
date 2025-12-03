@@ -524,6 +524,13 @@
     font-size: 2rem !important;     /* slightly smaller */
   }
   /* Move entire HeartCry block left */
+  .heartcry-section .section-title,
+  .heartcry-section .section-subtitle {
+    position: relative;
+    left: -60px;        /* adjust: -40px, -60px, -80px */
+    text-align: left;   /* optional: makes it look cleaner */
+  }
+
   .heartcry-section .container {
     position: relative;
     left: -20px;      /* adjust to -40px or -80px as needed */
