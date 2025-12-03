@@ -335,13 +335,13 @@ body {
   /* Align top boxes with logo */
   .outreach-saturday .container {
     position: relative;
-    left: -60px;
+    left: -75px;
   }
 
   /* Align bottom "Mach mit..." box with same baseline */
   .join-us {
     position: relative;
-    left: -60px;
+    left: -10px;
   }
 
   /* Align footer text with same vertical line */
