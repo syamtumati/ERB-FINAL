@@ -324,7 +324,7 @@ body {
 @media (min-width: 1024px) {
   /* more top space on desktop to clear navbar */
   .outreach-page {
-    padding-top: 13rem;
+    padding-top: 9rem;
   }
 
   /* push boxes a bit down */
