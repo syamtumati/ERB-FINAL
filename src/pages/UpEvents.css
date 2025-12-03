@@ -178,3 +178,27 @@
   display: none !important;
 }
 
+/* ===================================================== */
+/* DESKTOP ALIGNMENT — MATCH ALL OTHER PAGES             */
+/* ===================================================== */
+@media (min-width: 1024px) {
+
+  /* 1️⃣ Align the HERO (title + text) with logo */
+  .upevents-simple .container {
+    position: relative;
+    left: -60px;     /* same global alignment offset */
+  }
+
+  /* 2️⃣ Align the button with the same left baseline */
+  .home-btn {
+    position: relative;
+    left: -60px;
+  }
+
+  /* 3️⃣ Align footer church-name + copyright */
+  .clean-footer .church-name,
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
+}
