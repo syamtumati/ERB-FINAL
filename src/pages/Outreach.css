@@ -337,7 +337,7 @@ body {
 /* ========== DESKTOP ALIGNMENT WITH LOGO ========== */
 @media (min-width: 1024px) {
   .outreach-hero-image {
-    object-position: 40% 80%;   /* LEFT SHIFT — adjust value */
+    object-position: 30% 80%;   /* LEFT SHIFT — adjust value */
   }
 
   /* Move hero image slightly down to match Home hero level */
@@ -348,13 +348,13 @@ body {
   /* Align title + two cards with logo */
   .outreach-saturday .container {
     position: relative;
-    left: -60px;       /* same as other pages */
+    left: -65px;       /* same as other pages */
   }
 
   /* Align bottom "Mach mit..." box */
   .join-us {
     position: relative;
-    left: -20px;
+    left: -10px;
   }
 
   /* Align footer text with same vertical line */
