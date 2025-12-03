@@ -336,6 +336,9 @@ body {
 
 /* ========== DESKTOP ALIGNMENT WITH LOGO ========== */
 @media (min-width: 1024px) {
+  .outreach-hero-image {
+    object-position: 40% 80%;   /* LEFT SHIFT — adjust value */
+  }
 
   /* Move hero image slightly down to match Home hero level */
   .outreach-hero {
@@ -351,7 +354,7 @@ body {
   /* Align bottom "Mach mit..." box */
   .join-us {
     position: relative;
-    left: -40px;
+    left: -20px;
   }
 
   /* Align footer text with same vertical line */
