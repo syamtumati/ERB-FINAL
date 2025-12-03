@@ -236,7 +236,7 @@
 @media (min-width: 1024px) {
   .messages-hero {
     /* Move hero slightly LEFT + DOWN */
-    transform: translate(-55px, 45px);
+    transform: translate(-60px, 45px);
     /* -35px = move left
        25px = move down
        adjust as needed */
@@ -266,5 +266,13 @@
     color: #ffffff;
     transform: translateX(-55px);
   }
+  .video-grid {
+    transform: translateX(-60px); /* align with hero / logo */
+  }
+  .video-date {
+    font-size: 1rem;
+    color: #6d4c41;
+    padding: 0 1.4rem 1rem;  /* ⬅ add left/right padding like title */
+}
   
 }
