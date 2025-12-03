@@ -309,6 +309,10 @@
   .belief-cta {
     transform: translateX(-60px);
   }
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
 }
 
 /* FOOTER – FULL WIDTH BISCUIT */
