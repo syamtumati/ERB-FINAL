@@ -190,12 +190,14 @@
   }
 
   /* 2️⃣ Align the button with the same left baseline */
+  /* Fix button width + alignment + one-line text */
   .home-btn {
-    position: relative;
-    left: -60px;
     display: inline-block;
-    width: 320px;       /* increase width */
-    text-align: center;
+    width: 400px;        /* ⭐ Increase width so text stays on one line */
+    position: relative;
+    left: -60px;         /* same alignment as logo */
+    text-align: center;  /* center text in the new wider button */
+    white-space: nowrap; /* prevents line break */
   }
 
   /* 3️⃣ Align footer church-name + copyright */
