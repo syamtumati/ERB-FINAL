@@ -293,22 +293,3 @@ body {
   box-shadow: none;
 }
 
-/* ========================================= */
-/* PAGE FADE ANIMATION FOR ROUTE CHANGES     */
-/* ========================================= */
-
-.page-wrapper {
-  animation: pageFade 250ms ease-out;
-}
-
-@keyframes pageFade {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-

@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useEffect, useState } from "react";
-import { Routes, Route, NavLink, useLocation } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -20,10 +20,7 @@ function App() {
   const [showHeader, setShowHeader] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Needed for fade animation
-  const location = useLocation();
-
-  // Header hide/reveal on scroll
+  // Hide header when scrolling down, show when scrolling up
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -43,9 +40,13 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Disable scroll when mobile nav is open
+  // Lock body scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
     return () => {
       document.body.style.overflow = "";
     };
@@ -58,10 +59,11 @@ function App() {
       <ScrollToTop />
 
       {/* HEADER */}
-      <header className={`heartcry-header ${!showHeader ? "header-hidden" : ""}`}>
+      <header
+        className={`heartcry-header ${!showHeader ? "header-hidden" : ""}`}
+      >
         <div className="header-container">
-
-          {/* LEFT NAV */}
+          {/* LEFT MENU – DESKTOP ONLY */}
           <nav className="menu-left desktop-nav">
             <NavLink to="/" className="menu-item" end>
               Startseite
@@ -86,7 +88,7 @@ function App() {
             />
           </NavLink>
 
-          {/* RIGHT NAV */}
+          {/* RIGHT MENU – DESKTOP ONLY */}
           <nav className="menu-right desktop-nav">
             <NavLink to="/dienst" className="menu-item">
               Dienst & Mission
@@ -102,7 +104,7 @@ function App() {
             </NavLink>
           </nav>
 
-          {/* MOBILE BUTTON */}
+          {/* MOBILE MENU BUTTON */}
           <button
             className="mobile-menu-toggle"
             onClick={() => setMobileOpen((o) => !o)}
@@ -115,28 +117,48 @@ function App() {
         </div>
       </header>
 
-      {/* MOBILE BACKDROP */}
-      {mobileOpen && <div className="mobile-backdrop" onClick={closeMobile} />}
+      {/* 🔹 BACKDROP & SIDEBAR OUTSIDE HEADER (COVERS WHOLE SCREEN) */}
+      {mobileOpen && (
+        <div className="mobile-backdrop" onClick={closeMobile} />
+      )}
 
-      {/* MOBILE SIDEBAR */}
       <nav className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
-        <button className="mobile-close" onClick={closeMobile}>
+        <button
+          className="mobile-close"
+          onClick={closeMobile}
+          aria-label="Menü schließen"
+        >
           ×
         </button>
 
-        <NavLink to="/" onClick={closeMobile}>Startseite</NavLink>
-        <NavLink to="/glaube" onClick={closeMobile}>Glaube</NavLink>
-        <NavLink to="/Über uns" onClick={closeMobile}>Über uns</NavLink>
-        <NavLink to="/predigten" onClick={closeMobile}>Predigten</NavLink>
-        <NavLink to="/dienst" onClick={closeMobile}>Dienst & Mission</NavLink>
-        <NavLink to="/veranstaltungen" onClick={closeMobile}>Veranstaltungen</NavLink>
-        <NavLink to="/spenden" onClick={closeMobile}>Spenden</NavLink>
-        <NavLink to="/kontakt" onClick={closeMobile}>Kontakt</NavLink>
+        <NavLink to="/" onClick={closeMobile}>
+          Startseite
+        </NavLink>
+        <NavLink to="/glaube" onClick={closeMobile}>
+          Glaube
+        </NavLink>
+        <NavLink to="/Über uns" onClick={closeMobile}>
+          Über uns
+        </NavLink>
+        <NavLink to="/predigten" onClick={closeMobile}>
+          Predigten
+        </NavLink>
+        <NavLink to="/dienst" onClick={closeMobile}>
+          Dienst & Mission
+        </NavLink>
+        <NavLink to="/veranstaltungen" onClick={closeMobile}>
+          Veranstaltungen
+        </NavLink>
+        <NavLink to="/spenden" onClick={closeMobile}>
+          Spenden
+        </NavLink>
+        <NavLink to="/kontakt" onClick={closeMobile}>
+          Kontakt
+        </NavLink>
       </nav>
 
-      {/* PAGE CONTENT WITH SMOOTH FADE-IN */}
-      <main key={location.pathname} className="page-wrapper">
-        <Routes location={location}>
+      <main>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/glaube" element={<Belief />} />
           <Route path="/Über uns" element={<Pastors />} />
