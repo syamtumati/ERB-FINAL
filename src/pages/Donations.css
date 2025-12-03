@@ -35,8 +35,10 @@
   display: flex;
   justify-content: center;
   align-items: center;         /* center vertically on desktop */
-  padding: 12rem 1.5rem 6rem;  /* top | left/right | bottom */
+  align-items: flex-start;
+  padding: 10rem 1.5rem 6rem;  /* top | left/right | bottom */
 }
+
 
 /* Outer card wrapper */
 .donations-card {
@@ -308,7 +310,7 @@
 @media (max-width: 899px) {
 
   .donations-main {
-    padding: 10rem 1.5rem 5rem;
+    padding: 9rem 1rem 4rem;
     align-items: flex-start;       /* card a bit higher on small screens */
   }
 
