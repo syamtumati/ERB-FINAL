@@ -313,8 +313,14 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .menu-left,
+  .menu-right {
+    gap: 2.2rem; /* SAME on both sides */
+  }
+
+  /* Ensure logo stays perfectly centered */
   .logo-center {
     position: relative;
-    left: 30px;
+    left: 0;   /* reset any previous adjustments */
   }
 }
