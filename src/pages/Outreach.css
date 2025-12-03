@@ -180,9 +180,11 @@ body {
   .detail-card p {
     font-size: 1.25rem;
   }
+  /* 3️⃣ Move bottom JOIN-US blockLEFT */
 
   .join-us {
-    padding: 3.5rem 2.4rem;
+    position: relative;
+    left: -60px;
   }
 
   .join-us h3 {
@@ -192,13 +194,16 @@ body {
   .join-us p {
     font-size: 1.35rem;
   }
-  .outreach-saturday .container {
-    transform: translateX(-60px); /* same offset as other pages */
+
+  /* 1️⃣ Move the hero image DOWN a bit */
+  .outreach-hero {
+    margin-top: 6rem;      /* adjust: 5rem, 6rem, 7rem */
   }
 
-  /* Move bottom "Mach mit..." box left as well */
-  .join-us {
-    transform: translateX(-60px);
+  /* 2️⃣ Move the title + two cards LEFT to align with logo */
+  .outreach-saturday .container {
+    position: relative;
+    left: -60px;           /* same as all your other pages */
   }
 
   /* Align footer text with the same vertical line */
