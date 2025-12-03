@@ -252,6 +252,8 @@
   }
   .subscribe-button {
 /*    transform: translate(-55px, -35px); */
+    position: relative;
+    left: -60px;
     margin-top: -20px; /* adjust this value */
   }
   .no-videos {
