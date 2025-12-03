@@ -131,9 +131,9 @@ body {
 /* ======================= */
 
 /* Pages with a hero at the top should not sit behind the header */
-.hero-video-section {
+/*.hero-video-section {
   padding-top: 150px !important;
-}
+}*/
 
 /* ======================= */
 /* MOBILE NAVIGATION       */
@@ -311,3 +311,8 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ========================================= */
+/* GLOBAL PAGE CONTENT OFFSET                */
+/* ========================================= */
+
