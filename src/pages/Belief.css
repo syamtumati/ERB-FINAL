@@ -305,6 +305,10 @@
   .confession-card {
     height: 360px;   /* all cards exactly same height on desktop */
   }
+  .confession-grid,
+  .belief-cta {
+    transform: translateX(-60px);
+  }
 }
 
 /* FOOTER – FULL WIDTH BISCUIT */
