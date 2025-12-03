@@ -248,7 +248,7 @@
 
   .messages-hero p {
     font-size: 1.8rem !important; /* reduce subtitle size */
-    transform: translateX(-85px); /* adjust this value */
+    transform: translateX(-60px); /* adjust this value */
   }
   .subscribe-button {
 /*    transform: translate(-55px, -35px); */
@@ -264,7 +264,7 @@
     text-align: left;       /* move the text inside left */
     font-size: 1.35rem;
     color: #ffffff;
-    transform: translateX(-55px);
+    transform: translateX(-60px);
   }
   .video-grid {
     transform: translateX(-60px); /* align with hero / logo */
@@ -273,6 +273,10 @@
     font-size: 1rem;
     color: #6d4c41;
     padding: 0 1.4rem 1rem;  /* ⬅ add left/right padding like title */
-}
+  }
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
   
 }
