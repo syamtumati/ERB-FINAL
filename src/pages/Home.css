@@ -526,7 +526,7 @@
   /* Move entire HeartCry block left */
   .heartcry-section .container {
     position: relative;
-    left: -60px;      /* adjust to -40px or -80px as needed */
+    left: -40px;      /* adjust to -40px or -80px as needed */
   }
 
   /* Move “Was uns wichtig ist” title + grid left */
