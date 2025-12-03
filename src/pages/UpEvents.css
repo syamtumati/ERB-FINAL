@@ -183,14 +183,14 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .upevents-simple {
-    padding-bottom: 3rem !important;  /* was 8rem */
+    padding-bottom: 2rem !important;  /* was 8rem */
   }
 
   /* 1️⃣ Align the HERO (title + text) with logo */
   .upevents-simple .container {
     position: relative;
     left: -60px;     /* same global alignment offset */
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   /* 2️⃣ Align the button with the same left baseline */
