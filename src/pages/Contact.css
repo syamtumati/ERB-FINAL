@@ -326,7 +326,7 @@
 @media (min-width: 1024px) {
   /* shrink & move CONTACT hero only (not Home) */
   .contact-hero-title {
-    font-size: 6rem;                    /* smaller than base 8rem */
+    font-size: 4rem;                    /* smaller than base 8rem */
     transform: translate(-60px, -80px); /* move left & slightly up */
   }
 
