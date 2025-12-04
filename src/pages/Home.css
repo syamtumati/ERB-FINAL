@@ -531,7 +531,7 @@
   /* Move “Was uns wichtig ist” title + grid left */
   .what-matters-grid {
     position: relative;
-    left: -10px;      /* adjust as needed */
+    left: -5px;      /* adjust as needed */
   }
   /* === BOTTOM VIDEO TEXT LEFT === */
   .bottom-video-text {
