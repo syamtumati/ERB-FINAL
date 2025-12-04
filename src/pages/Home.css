@@ -528,6 +528,11 @@
     left: -20px;      /* adjust to -40px or -80px as needed */
   }
 
+  .video-container {
+    position: relative;
+    left: -15px; /* move only video right */
+  }
+
   /* Move “Was uns wichtig ist” title + grid left */
   .what-matters-grid {
     position: relative;
