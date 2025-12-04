@@ -530,7 +530,7 @@
 
   .video-container {
     position: relative;
-    left: -15px; /* move only video right */
+    left: -5px; /* move only video right */
   }
 
   /* Move “Was uns wichtig ist” title + grid left */
