@@ -7,26 +7,15 @@
 
 .belief-page {
   min-height: 100vh;
-
-  /* NAVY LINEN TEXTURE BACKGROUND */
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(5, 20, 45, 0.40),
-      rgba(5, 20, 45, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 8px
-    ),
-    radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
+  background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
-
   color: #EAF1FF;
   font-family: "Georgia", serif;
 
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
-  overflow-x: hidden;
+  padding-top: 10rem;      /* only top padding */
+  overflow-x: hidden;      /* stop sideways scroll */
 }
 
 .belief-content {

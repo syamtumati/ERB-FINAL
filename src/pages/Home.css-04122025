@@ -76,21 +76,11 @@
 }
 
 /* ==================== 2. HEARTCRY FILM SECTION ==================== */
+
 .heartcry-section {
   padding: 4rem 2rem 4rem;  /* top, sides, bottom */
-
-  /* TEXTURED DARK NAVY BACKGROUND */
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(5, 20, 45, 0.45),
-      rgba(5, 20, 45, 0.45) 4px,
-      rgba(3, 15, 35, 0.45) 4px,
-      rgba(3, 15, 35, 0.45) 8px
-    ),
-    linear-gradient(135deg, #071a36, #021126);
+  background: linear-gradient(135deg, #0c0a0e, #121015, #0f0d12);
   background-attachment: fixed;
-
   color: #f0e8ff;
   text-align: center;
 }
