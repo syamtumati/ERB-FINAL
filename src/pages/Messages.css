@@ -271,14 +271,9 @@
   .subscribe-button {
 /*    transform: translate(-55px, -35px); */
     position: relative;
-    left: -60px;
+    left: -40px;
     margin-top: -20px; /* adjust this value */
     margin-bottom: 60px;
-  }
-  .subscribe-button .gold-btn {
-    padding: 1.4rem 4rem; /* Wider button */
-    font-size: 1.35rem;   /* Slightly bigger text */
-    min-width: 320px;     /* Make it visibly wider */
   }
   .video-grid {
     transform: translateX(-10px); /* align with hero / logo */
