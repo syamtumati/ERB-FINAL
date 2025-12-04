@@ -525,12 +525,7 @@
 
   .heartcry-section .container {
     position: relative;
-    left: -20px;      /* adjust to -40px or -80px as needed */
-  }
-
-  .video-container {
-    position: relative;
-    left: -5px; /* move only video right */
+    left: -15px;      /* adjust to -40px or -80px as needed */
   }
 
   /* Move “Was uns wichtig ist” title + grid left */
