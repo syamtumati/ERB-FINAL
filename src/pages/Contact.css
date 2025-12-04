@@ -1,20 +1,32 @@
 /* ===================================================== */
 /* CONTACT PAGE – FINAL VERSION                        */
-/* KONTAKT hero title now perfectly centered under logo */
+/* KONTAKT hero title centered, navy linen background   */
 /* ===================================================== */
+
 .contact-page {
   min-height: 100vh;
-  background: radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
+
+  /* NAVY FABRIC / LINEN TEXTURE (same family as other blue pages) */
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(5, 20, 45, 0.40),
+      rgba(5, 20, 45, 0.40) 4px,
+      rgba(3, 15, 35, 0.40) 4px,
+      rgba(3, 15, 35, 0.40) 8px
+    ),
+    radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
+
   font-family: "Georgia", serif;
   color: #EAF1FF;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  align-items: center;          /* ← centers everything horizontally */
 }
 
 /* ================= HERO SECTION ===================== */
+
 .contact-hero-image {
   position: relative;
   width: 100%;
@@ -27,15 +39,17 @@
   position: absolute;
   inset: 0;
   background: rgba(10, 8, 15, 0.58);
+
   display: flex;
   flex-direction: column;
-  align-items: center;          /* ← centers text horizontally */
+  align-items: center;          /* centers text horizontally */
   justify-content: center;
   text-align: center;
+
   padding: 2rem;
   width: 100%;
   left: 50%;
-  transform: translateX(-50%);  /* ← FINAL FIX – forces perfect centering */
+  transform: translateX(-50%);  /* keeps overlay perfectly centered */
 }
 
 .hero-title {
@@ -56,6 +70,7 @@
 }
 
 /* ================= CONTENT SECTION ================== */
+
 .contact-content {
   flex: 1;
   max-width: 1350px;
@@ -65,44 +80,240 @@
   box-sizing: border-box;
 }
 
-/* (rest of your CSS – 100 % unchanged) */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: stretch; }
-.address-card, .form-card { display: flex; flex-direction: column; height: 100%; }
-.address-card { background: rgba(255,255,255,0.95); padding: 2.6rem 2.3rem 2rem; border-radius: 2.4rem; box-shadow: 0 20px 60px rgba(0,0,0,0.14); text-align: center; }
-.address-card h3 { font-size: 2.4rem; color: #8b4513; margin-bottom: 1.6rem; font-weight: 800; }
-.address-block p { font-size: 1.3rem; line-height: 2; color: #3a2a18; margin-bottom: 1.3rem; }
-.contact-info strong { color: #6b4e31; }
-.map-container { margin-top: auto; border-radius: 1.8rem; overflow: hidden; box-shadow: 0 18px 45px rgba(0,0,0,0.2); height: 320px; }
-.form-card { background: rgba(255,255,255,0.95); padding: 2.8rem 2.6rem 2.4rem; border-radius: 2.4rem; box-shadow: 0 20px 60px rgba(0,0,0,0.14); }
-.form-card form { display: flex; flex-direction: column; height: 100%; }
-.form-card form input, .form-card form textarea { width: 100%; padding: 1.5rem 1.7rem; margin-bottom: 1.8rem; background: #ffffff; border: 2px solid rgba(107,78,49,0.25); border-radius: 1.6rem; font-size: 1.15rem; font-family: "Georgia", serif; color: #1a1208; transition: all 0.3s ease; }
-.form-card form textarea { resize: vertical; min-height: 180px; }
-.form-card form input:focus, .form-card form textarea:focus { border-color: #8b4513; box-shadow: 0 0 20px rgba(139,69,19,0.25); outline: none; }
-.form-card .coffee-btn { margin-top: auto; width: 100%; padding: 1.5rem; background: linear-gradient(90deg,#6b4e31,#8c6b47); color:#fff; font-weight:900; font-size:1.3rem; letter-spacing:1.6px; border-radius:999px; border:none; text-transform:uppercase; cursor:pointer; box-shadow:0 22px 60px rgba(107,78,49,0.6); transition:all .4s; }
-.form-card .coffee-btn:hover { transform:translateY(-8px); background:linear-gradient(90deg,#8c6b47,#a07d5b); }
-.success-message { text-align:center; padding:8rem 3rem; background:rgba(255,255,255,0.96); border-radius:3rem; box-shadow:0 30px 80px rgba(0,0,0,0.2); max-width:800px; margin:0 auto; }
-.success-message h2 { font-size:3.8rem; color:#6b4e31; }
-.clean-footer { background:linear-gradient(135deg,#f9f3e8,#fdf8f0,#f5efe2); padding:5rem 2rem 3rem; text-align:center; border-top:1px solid rgba(0,0,0,0.08); margin:0 !important; flex-shrink:0; }
-.footer-inner { max-width:1000px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:1.8rem; }
-.church-name { font-size:2.6rem; font-weight:900; color:#8b4513; }
-.footer-nav { display:flex; flex-wrap:wrap; gap:2.4rem; justify-content:center; }
-@media (min-width:640px) { .footer-nav { flex-wrap:nowrap; gap:3rem; } }
-.footer-nav a { color:#5d4037; font-size:1.05rem; text-transform:uppercase; font-weight:600; text-decoration:none; letter-spacing:2px; }
-.footer-nav a:hover { color:#8b4513; }
-.copyright { font-size:0.88rem; color:#6d4c41; opacity:0.9; }
-
-/* RESPONSIVE */
-@media (max-width:968px) {
-  .contact-grid { grid-template-columns:1fr !important; }
-  .address-card, .form-card { height:auto !important; }
-  .hero-title { font-size:5.2rem; }
-  .hero-subtitle { font-size:1.9rem; }
-}
-@media (max-width:600px) {
-  .contact-hero-image { height:70vh; min-height:480px; background-attachment:scroll; }
-  .hero-title { font-size:3.8rem; }
-  .hero-subtitle { font-size:1.6rem; }
-  .contact-content { padding:3.5rem 1.5rem 5rem; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: stretch;
 }
 
-.biscuit-footer, .footer-links, .latin { display:none !important; }
+/* LEFT CARD: ADDRESS + MAP */
+
+.address-card,
+.form-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.address-card {
+  background: rgba(255,255,255,0.95);
+  padding: 2.6rem 2.3rem 2rem;
+  border-radius: 2.4rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.14);
+  text-align: center;
+}
+
+.address-card h3 {
+  font-size: 2.4rem;
+  color: #8b4513;
+  margin-bottom: 1.6rem;
+  font-weight: 800;
+}
+
+.address-block p {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #3a2a18;
+  margin-bottom: 1.3rem;
+}
+
+.contact-info strong {
+  color: #6b4e31;
+}
+
+.map-container {
+  margin-top: auto;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.2);
+  height: 320px;
+}
+
+/* RIGHT CARD: FORM */
+
+.form-card {
+  background: rgba(255,255,255,0.95);
+  padding: 2.8rem 2.6rem 2.4rem;
+  border-radius: 2.4rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.14);
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.form-card form input,
+.form-card form textarea {
+  width: 100%;
+  padding: 1.5rem 1.7rem;
+  margin-bottom: 1.8rem;
+  background: #ffffff;
+  border: 2px solid rgba(107,78,49,0.25);
+  border-radius: 1.6rem;
+  font-size: 1.15rem;
+  font-family: "Georgia", serif;
+  color: #1a1208;
+  transition: all 0.3s ease;
+}
+
+.form-card form textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.form-card form input:focus,
+.form-card form textarea:focus {
+  border-color: #8b4513;
+  box-shadow: 0 0 20px rgba(139,69,19,0.25);
+  outline: none;
+}
+
+.form-card .coffee-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(90deg,#6b4e31,#8c6b47);
+  color:#fff;
+  font-weight:900;
+  font-size:1.3rem;
+  letter-spacing:1.6px;
+  border-radius:999px;
+  border:none;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 22px 60px rgba(107,78,49,0.6);
+  transition:all .4s;
+}
+
+.form-card .coffee-btn:hover {
+  transform:translateY(-8px);
+  background:linear-gradient(90deg,#8c6b47,#a07d5b);
+}
+
+/* SUCCESS MESSAGE */
+
+.success-message {
+  text-align:center;
+  padding:8rem 3rem;
+  background:rgba(255,255,255,0.96);
+  border-radius:3rem;
+  box-shadow:0 30px 80px rgba(0,0,0,0.2);
+  max-width:800px;
+  margin:0 auto;
+}
+
+.success-message h2 {
+  font-size:3.8rem;
+  color:#6b4e31;
+}
+
+/* ================= FOOTER ========================== */
+
+.clean-footer {
+  background:linear-gradient(135deg,#f9f3e8,#fdf8f0,#f5efe2);
+  padding:5rem 2rem 3rem;
+  text-align:center;
+  border-top:1px solid rgba(0,0,0,0.08);
+  margin:0 !important;
+  flex-shrink:0;
+}
+
+.footer-inner {
+  max-width:1000px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1.8rem;
+}
+
+.church-name {
+  font-size:2.6rem;
+  font-weight:900;
+  color:#8b4513;
+}
+
+.footer-nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:2.4rem;
+  justify-content:center;
+}
+
+@media (min-width:640px) {
+  .footer-nav {
+    flex-wrap:nowrap;
+    gap:3rem;
+  }
+}
+
+.footer-nav a {
+  color:#5d4037;
+  font-size:1.05rem;
+  text-transform:uppercase;
+  font-weight:600;
+  text-decoration:none;
+  letter-spacing:2px;
+}
+
+.footer-nav a:hover {
+  color:#8b4513;
+}
+
+.copyright {
+  font-size:0.88rem;
+  color:#6d4c41;
+  opacity:0.9;
+}
+
+/* ================= RESPONSIVE ====================== */
+
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns:1fr !important;
+  }
+
+  .address-card,
+  .form-card {
+    height:auto !important;
+  }
+
+  .hero-title {
+    font-size:5.2rem;
+  }
+
+  .hero-subtitle {
+    font-size:1.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero-image {
+    height:70vh;
+    min-height:480px;
+    background-attachment:scroll;
+  }
+
+  .hero-title {
+    font-size:3.8rem;
+  }
+
+  .hero-subtitle {
+    font-size:1.6rem;
+  }
+
+  .contact-content {
+    padding:3.5rem 1.5rem 5rem;
+  }
+}
+
+/* Hide any old legacy footer bits if they exist */
+.biscuit-footer,
+.footer-links,
+.latin {
+  display:none !important;
+}
+
