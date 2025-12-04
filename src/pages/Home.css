@@ -480,7 +480,7 @@
     padding-top: 70% !important;
   }
   .hero-content-centered {
-    transform: translateY(-40px); /* move a bit up on mobile */
+    transform: translateY(-60px); /* move a bit up on mobile */
   }
 }
 
@@ -503,7 +503,7 @@
     max-width: 1350px; /* same width as Belief .belief-content */
     margin: 0 auto;    /* true horizontal centering */
     text-align: center;
-    transform: translate(-60px, -130px);
+    transform: translate(-60px, -140px);
 /*    transform: translateX(-50px);*/
     /* if it needs to go right instead of left, use +20px */
   }
