@@ -20,15 +20,14 @@ const Contact = () => {
   };
 
   /* --------------------------------------------------------- */
-  /* SUCCESS MESSAGE                                           */
+  /* SUCCESS MESSAGE */
   /* --------------------------------------------------------- */
   if (submitted) {
     return (
       <div className="contact-page">
         <div className="contact-hero-image">
           <div className="hero-overlay">
-            {/* use contact-specific class */}
-            <h1 className="contact-hero-title">Kontakt</h1>
+            <h1 className="hero-title">Kontakt</h1>
           </div>
         </div>
 
@@ -51,16 +50,14 @@ const Contact = () => {
             <div className="church-name">Gnadenkirche Frankfurt</div>
             <nav className="footer-nav">
               <Link to="/glaube">Glaube</Link>
-              <Link to="/Über uns">Über uns</Link>
-              <Link to="/predigten">Predigten</Link>
+              <Link to="/über-uns">Über uns</Link>
               <Link to="/dienst">Dienst & Mission</Link>
               <Link to="/veranstaltungen">Veranstaltungen</Link>
               <Link to="/spenden">Spenden</Link>
               <Link to="/kontakt">Kontakt</Link>
             </nav>
             <div className="copyright">
-              © {new Date().getFullYear()} Gnadenkirche Frankfurt. Alle Rechte
-              vorbehalten.
+              © {new Date().getFullYear()} Gnadenkirche Frankfurt. Alle Rechte vorbehalten.
             </div>
           </div>
         </footer>
@@ -69,24 +66,23 @@ const Contact = () => {
   }
 
   /* --------------------------------------------------------- */
-  /* MAIN CONTACT PAGE                                         */
+  /* MAIN CONTACT PAGE */
   /* --------------------------------------------------------- */
   return (
     <div className="contact-page">
+
       {/* HERO IMAGE */}
       <div className="contact-hero-image">
         <div className="hero-overlay">
-          {/* contact-specific hero classes */}
-          <h1 className="contact-hero-title">Kontakt</h1>
-          <p className="contact-hero-subtitle">
-            Wir freuen uns auf deine Nachricht
-          </p>
+          <h1 className="hero-title">Kontakt</h1>
+          <p className="hero-subtitle">Wir freuen uns auf deine Nachricht</p>
         </div>
       </div>
 
       {/* CONTENT */}
       <div className="contact-content">
         <div className="contact-grid">
+
           {/* ADDRESS SECTION */}
           <div className="address-card">
             <h3>Komm vorbei</h3>
@@ -100,13 +96,7 @@ const Contact = () => {
                 61440 Oberursel (Taunus)
               </p>
 
-              <p
-                style={{
-                  marginTop: "1rem",
-                  fontSize: "1.3rem",
-                  color: "#6b4e31",
-                }}
-              >
+              <p style={{ marginTop: "1rem", fontSize: "1.3rem", color: "#6b4e31" }}>
                 <strong>Gottesdienst:</strong> Sonntag • 16:30 Uhr
               </p>
 
@@ -164,6 +154,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
+
         </div>
       </div>
 
@@ -174,18 +165,18 @@ const Contact = () => {
           <nav className="footer-nav">
             <Link to="/glaube">Glaube</Link>
             <Link to="/Über uns">Über uns</Link>
-            <Link to="/predigten">Predigten</Link>
+	    <Link to="/predigten">Predigten</Link>
             <Link to="/dienst">Dienst & Mission</Link>
             <Link to="/veranstaltungen">Veranstaltungen</Link>
             <Link to="/spenden">Spenden</Link>
             <Link to="/kontakt">Kontakt</Link>
           </nav>
           <div className="copyright">
-            © {new Date().getFullYear()} Gnadenkirche Frankfurt. Alle Rechte
-            vorbehalten.
+            © {new Date().getFullYear()} Gnadenkirche Frankfurt. Alle Rechte vorbehalten.
           </div>
         </div>
       </footer>
+
     </div>
   );
 };

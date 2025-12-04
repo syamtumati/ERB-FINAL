@@ -1,6 +1,6 @@
 /* ===================================================== */
-/* CONTACT PAGE – FINAL VERSION                        */
-/* KONTAKT hero title centered, navy linen background   */
+/* CONTACT PAGE – FINAL VERSION                          */
+/* KONTAKT hero title centered, navy linen background     */
 /* ===================================================== */
 
 .contact-page {
@@ -10,10 +10,10 @@
   background:
     repeating-linear-gradient(
       0deg,
-      rgba(5, 20, 45, 0.40),
-      rgba(5, 20, 45, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 8px
+      rgba(5, 20, 45, 0.4),
+      rgba(5, 20, 45, 0.4) 4px,
+      rgba(3, 15, 35, 0.4) 4px,
+      rgba(3, 15, 35, 0.4) 8px
     ),
     radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
@@ -52,7 +52,8 @@
   transform: translateX(-50%);  /* keeps overlay perfectly centered */
 }
 
-.hero-title {
+/* ⚠️ Contact-only hero classes (no conflict with Home) */
+.contact-hero-title {
   font-size: 8rem;
   font-weight: 900;
   color: #fff;
@@ -61,7 +62,7 @@
   text-shadow: 0 12px 50px rgba(0,0,0,0.9);
 }
 
-.hero-subtitle {
+.contact-hero-subtitle {
   font-size: 2.6rem;
   color: #f0e8ff;
   max-width: 800px;
@@ -76,7 +77,7 @@
   max-width: 1350px;
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 2rem 8rem;
+  padding: 5rem 2rem 8rem;  /* slightly closer to hero */
   box-sizing: border-box;
 }
 
@@ -202,7 +203,7 @@
   border-radius:3rem;
   box-shadow:0 30px 80px rgba(0,0,0,0.2);
   max-width:800px;
-  margin:0 auto;
+  margin:0 auto 6rem;
 }
 
 .success-message h2 {
@@ -273,40 +274,44 @@
 
 @media (max-width: 968px) {
   .contact-grid {
-    grid-template-columns:1fr !important;
+    grid-template-columns: 1fr !important;
   }
 
   .address-card,
   .form-card {
-    height:auto !important;
+    height: auto !important;
   }
 
-  .hero-title {
-    font-size:5.2rem;
+  .contact-hero-title {
+    font-size: 5.2rem;
   }
 
-  .hero-subtitle {
-    font-size:1.9rem;
+  .contact-hero-subtitle {
+    font-size: 1.9rem;
+  }
+
+  .contact-content {
+    padding-top: 4rem;
   }
 }
 
 @media (max-width: 600px) {
   .contact-hero-image {
-    height:70vh;
-    min-height:480px;
-    background-attachment:scroll;
+    height: 70vh;
+    min-height: 480px;
+    background-attachment: scroll;
   }
 
-  .hero-title {
-    font-size:3.8rem;
+  .contact-hero-title {
+    font-size: 3.8rem;
   }
 
-  .hero-subtitle {
-    font-size:1.6rem;
+  .contact-hero-subtitle {
+    font-size: 1.6rem;
   }
 
   .contact-content {
-    padding:3.5rem 1.5rem 5rem;
+    padding: 3.5rem 1.5rem 5rem;
   }
 }
 
@@ -319,16 +324,21 @@
 
 /* ================= DESKTOP HERO ADJUSTMENTS ================= */
 @media (min-width: 1024px) {
-
-  .hero-title {
-    font-size: 6rem;       /* reduce from 8rem → 6rem */
-    transform: translate(-60px, -20px); /* left 40px, up 20px */
+  /* shrink & move CONTACT hero only (not Home) */
+  .contact-hero-title {
+    font-size: 6rem;                    /* smaller than base 8rem */
+    transform: translate(-60px, -20px); /* move left & slightly up */
   }
 
-  .hero-subtitle {
-    font-size: 2.2rem;     /* smaller subtitle */
+  .contact-hero-subtitle {
+    font-size: 2.2rem;
     max-width: 700px;
-    transform: translate(-60px, -10px); /* align with title, a bit less up */
+    transform: translate(-40px, -10px); /* follow title, a bit less up */
+  }
+
+  /* Slightly reduce gap between hero and content on desktop */
+  .contact-content {
+    padding-top: 4rem;
   }
 }
 
