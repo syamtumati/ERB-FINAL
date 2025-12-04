@@ -264,7 +264,7 @@
     text-align: left;       /* move the text inside left */
     font-size: 1.35rem;
     color: #ffffff;
-    transform: translateX(-60px);
+    transform: translateX(-20px);
   }
   .video-grid {
     transform: translateX(-30px); /* align with hero / logo */
