@@ -339,6 +339,9 @@
   .section-title {
     font-size: 3.6rem;
   }
+  .hero-content-centered {
+    transform: translateY(-120px); /* try -120px so it’s clearly visible */
+  }
 
   /* reduce padding so content doesn't look pushed off-screen */
   .heartcry-section,
@@ -478,9 +481,6 @@
 @media (max-width: 768px) {
   .video-container::before {
     padding-top: 70% !important;
-  }
-  .hero-content-centered {
-    transform: translateY(-60px); /* move a bit up on mobile */
   }
 }
 
