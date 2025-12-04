@@ -525,7 +525,7 @@
 
   .heartcry-section .container {
     position: relative;
-    left: -15px;      /* adjust to -40px or -80px as needed */
+    left: -20px;      /* adjust to -40px or -80px as needed */
   }
 
   /* Move “Was uns wichtig ist” title + grid left */
