@@ -318,7 +318,7 @@
   }
   .confession-grid,
   .belief-cta {
-    transform: translateX(-10px);
+    transform: translateX(-5px);
   }
   .clean-footer .copyright {
     position: relative;
