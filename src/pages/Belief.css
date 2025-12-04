@@ -291,7 +291,7 @@
   }
 
   .belief-hero {
-    transform: translateX(-40px); /* adjust this value */
+    transform: translateX(-30px); /* adjust this value */
   }
 
   .belief-hero h1 {
@@ -307,11 +307,11 @@
   }
   .confession-grid,
   .belief-cta {
-    transform: translateX(-40px);
+    transform: translateX(-30px);
   }
   .clean-footer .copyright {
     position: relative;
-    left: -40px;
+    left: -30px;
   }
 }
 
