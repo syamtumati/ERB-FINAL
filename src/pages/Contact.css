@@ -320,11 +320,6 @@
 /* ================= DESKTOP HERO ADJUSTMENTS ================= */
 @media (min-width: 1024px) {
 
-  /* Move hero title UP and LEFT */
-  .hero-overlay {
-    transform: translate(-50%, -40px);  /* up by 40px */
-  }
-
   .hero-title {
     font-size: 6rem;       /* reduce from 8rem → 6rem */
     transform: translateX(-60px); /* move left */
