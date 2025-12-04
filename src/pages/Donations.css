@@ -315,6 +315,10 @@
   .divider {
     display: none;         /* no horizontal divider needed */
   }
+  /* ⭐ Added: increase desktop top spacing */
+  .donations-main {
+    padding-top: 14rem;   /* adjust 12–16rem as needed */
+  }
 }
 
 /* Tablet & below */

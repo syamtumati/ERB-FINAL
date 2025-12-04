@@ -82,19 +82,10 @@
   padding: 1rem 1.4rem 0.2rem;
 }
 
-.no-videos {
-  max-width: 900px;
-  margin: 2rem auto 4rem; /* centered block */
-  padding: 0 2rem;
-  text-align: center;     /* ✅ centered text */
-  font-size: 1.35rem;
-  color: #ffffff;
-}
-
 .video-date {
   font-size: 1rem;
   color: #6d4c41;
-  padding: 0 1.4rem 1rem;  /* ✅ same nice left/right padding on mobile + desktop */
+  padding-bottom: 1rem;
 }
 
 /* SUBSCRIBE BUTTON (space before footer) */
@@ -275,15 +266,26 @@
     margin-top: -20px; /* adjust this value */
     margin-bottom: 60px;
   }
+  .no-videos {
+    max-width: 900px;       /* same container width as .messages-hero */
+    margin: 2rem auto 4rem; /* center container, small top gap */
+    padding: 0 2rem;        /* same inner padding as hero */
+    text-align: left;       /* move the text inside left */
+    font-size: 1.35rem;
+    color: #ffffff;
+    transform: translateX(-20px);
+  }
   .video-grid {
     transform: translateX(-30px); /* align with hero / logo */
   }
-  
+  .video-date {
+    font-size: 1rem;
+    color: #6d4c41;
+    padding: 0 1.4rem 1rem;  /* ⬅ add left/right padding like title */
+  }
   .clean-footer .copyright {
     position: relative;
     left: -60px;
   }
   
 }
-
-
