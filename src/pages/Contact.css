@@ -322,13 +322,13 @@
 
   .hero-title {
     font-size: 6rem;       /* reduce from 8rem → 6rem */
-    transform: translateX(-60px); /* move left */
+    transform: translate(-60px, -20px); /* left 40px, up 20px */
   }
 
   .hero-subtitle {
     font-size: 2.2rem;     /* smaller subtitle */
     max-width: 700px;
-    transform: translateX(-60px); /* same left shift */
+    transform: translate(-60px, -10px); /* align with title, a bit less up */
   }
 }
 
