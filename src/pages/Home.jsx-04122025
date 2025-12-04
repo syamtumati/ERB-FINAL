@@ -27,6 +27,9 @@ function Home() {
             <p className="hero-subtitle">
               Evangelisch-Reformierte Baptistengemeinde
             </p>
+            <p className="hero-motto">
+              Christus erhöhen • Gläubige ausrüsten • Evangelium weitergeben
+            </p>
           </div>
         </div>
       </section>
