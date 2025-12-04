@@ -525,13 +525,13 @@
 
   .heartcry-section .container {
     position: relative;
-    left: -10px;      /* adjust to -40px or -80px as needed */
+    left: -5px;      /* adjust to -40px or -80px as needed */
   }
 
   /* Move “Was uns wichtig ist” title + grid left */
   .what-matters-grid {
     position: relative;
-    left: -40px;      /* adjust as needed */
+    left: -5px;      /* adjust as needed */
   }
   /* === BOTTOM VIDEO TEXT LEFT === */
   .bottom-video-text {
