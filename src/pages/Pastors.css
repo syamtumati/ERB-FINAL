@@ -363,7 +363,7 @@
 /* Desktop only: Push the pastor cards down slightly */
 @media (min-width: 1024px) {
   .pastors-container {
-    transform: translateX(-20px); /* adjust this value */
+    transform: translateX(-15px); /* adjust this value */
   }
   /* Reduce gap between Pastor 1 and Pastor 2 */
   .pastor-card {
