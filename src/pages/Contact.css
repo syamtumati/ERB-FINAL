@@ -345,10 +345,15 @@
 /* MOBILE: move KONTAKT title + subtitle UP a bit */
 @media (max-width: 600px) {
   .contact-hero-title {
-    transform: translateY(-35px); /* move UP */
+    font-size: 3.6rem !important;   /* smaller mobile title */
+    letter-spacing: -1px;
+    transform: translateY(-35px);   /* move UP slightly */
   }
 
   .contact-hero-subtitle {
-    transform: translateY(-20px); /* move UP but less */
+    font-size: 1.7rem !important;   /* smaller subtitle */
+    line-height: 1.4;
+    max-width: 90%;
+    transform: translateY(-20px);   /* move UP slightly */
   }
 }
