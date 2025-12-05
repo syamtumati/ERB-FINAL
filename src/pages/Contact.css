@@ -342,3 +342,13 @@
   }
 }
 
+/* MOBILE: move KONTAKT title + subtitle UP a bit */
+@media (max-width: 600px) {
+  .contact-hero-title {
+    transform: translateY(-30px); /* move UP */
+  }
+
+  .contact-hero-subtitle {
+    transform: translateY(-20px); /* move UP but less */
+  }
+}
