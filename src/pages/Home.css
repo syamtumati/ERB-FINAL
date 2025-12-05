@@ -557,3 +557,20 @@
     left: -40px;
   }
 }
+
+@media (max-width: 600px) {
+  .section-title,
+  .main-title {
+    font-size: 3.6rem !important;   /* uniform small size */
+    line-height: 1.2;
+    margin-bottom: 1.8rem;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 1.4rem !important;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+}
