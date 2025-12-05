@@ -573,4 +573,15 @@
     line-height: 1.5;
     margin-bottom: 2rem;
   }
+  .bottom-video-text h2 {
+    font-size: 3rem !important;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Reduce Soli Deo Gloria subtitle */
+  .bottom-video-text p {
+    font-size: 1.4rem !important;
+  }
 }
