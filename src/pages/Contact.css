@@ -345,7 +345,7 @@
 /* MOBILE: move KONTAKT title + subtitle UP a bit */
 @media (max-width: 600px) {
   .contact-hero-title {
-    transform: translateY(-40px); /* move UP */
+    transform: translateY(-35px); /* move UP */
   }
 
   .contact-hero-subtitle {
