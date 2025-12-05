@@ -585,7 +585,7 @@
     font-size: 1.4rem !important;
   }
 
-  /* HeartCry Film title — override global section title */
+  /* HeartCry title + subtitle (we keep your nice styles) */
   .heartcry-section .section-title {
     font-size: 2.6rem !important;
     margin-bottom: 1.2rem;
@@ -599,15 +599,24 @@
     margin-bottom: 1.8rem;
   }
 
-  /* HeartCry video — enhanced style for mobile */
+  /* 🔧 HeartCry video – fill width, remove empty side corners */
+  .heartcry-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .heartcry-section .video-container {
-    transform: scale(0.96);
-    border-width: 6px;
-    border-radius: 1.8rem;
+    max-width: none;
+    width: calc(100% + 2rem);   /* make it a bit wider than screen */
+    margin: 0 -1rem 2.5rem;     /* pull it out to the sides */
+    border-radius: 1.2rem;      /* slightly softer corners */
+    border-width: 8px;          /* not too thick */
     box-shadow: 0 35px 80px rgba(0,0,0,0.55);
+    transform: none;            /* ⬅ important: no scaling anymore */
   }
 
   .heartcry-section .video-container::before {
-    padding-top: 90% !important; /* taller for cinematic look */
+    padding-top: 90% !important; /* keep nice tall look */
   }
+
 }
