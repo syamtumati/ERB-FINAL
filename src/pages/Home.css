@@ -584,4 +584,30 @@
   .bottom-video-text p {
     font-size: 1.4rem !important;
   }
+
+  /* HeartCry Film title — override global section title */
+  .heartcry-section .section-title {
+    font-size: 2.6rem !important;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.8);
+    letter-spacing: -0.5px;
+  }
+
+  .heartcry-section .section-subtitle {
+    font-size: 1.2rem !important;
+    opacity: 0.9;
+    margin-bottom: 1.8rem;
+  }
+
+  /* HeartCry video — enhanced style for mobile */
+  .heartcry-section .video-container {
+    transform: scale(0.96);
+    border-width: 6px;
+    border-radius: 1.8rem;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.55);
+  }
+
+  .heartcry-section .video-container::before {
+    padding-top: 90% !important; /* taller for cinematic look */
+  }
 }
