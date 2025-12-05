@@ -561,7 +561,7 @@
 @media (max-width: 600px) {
   .section-title,
   .main-title {
-    font-size: 3.6rem !important;   /* uniform small size */
+    font-size: 3rem !important;   /* uniform small size */
     line-height: 1.2;
     margin-bottom: 1.8rem;
     letter-spacing: -1px;
