@@ -17,7 +17,7 @@
   }
 }
 
-/* ==================== 1. HERO IMAGE (NO LOGO) ==================== */
+/* ==================== 1. HERO VIDEO (NO LOGO) ==================== */
 .hero-video-section {
   position: relative;
   width: 100%;
@@ -25,7 +25,6 @@
   overflow: hidden;
 }
 
-/* Note: .hero-video is now an <img>, not a <video> */
 .hero-video {
   position: absolute;
   top: 0;
@@ -571,7 +570,7 @@
 
 /* ==================== DESKTOP ONLY ==================== */
 
-/* Base desktop layout – applies to all ≥1024px */
+/* Base desktop layout – applies to all ≥1024px first */
 @media (min-width: 1024px) {
   .hero-video-section {
     padding-top: 13rem;
@@ -635,7 +634,7 @@
   }
 }
 
-/* Approx “15 inch” range – normal laptops 1280px–1599px */
+/* “15 inch” range – approx normal laptops 1280px–1599px */
 /* → move hero a bit DOWN compared to base */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
@@ -651,10 +650,28 @@
   }
 }
 
-/* Shorter desktop screens – don't move quite as high */
-@media (min-width: 1024px) and (max-height: 880px) {
+/* MEDIUM LAPTOPS — 13" and 14" (1024px–1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-video-section {
+    padding-top: 9rem; /* slightly less padding on smaller laptops */
+  }
+
   .hero-content-centered {
-    transform: translate(-60px, -110px);
+    transform: translate(-60px, -145px); /* move hero higher */
+  }
+}
+
+/* LARGE DESKTOPS — 15.6", 16", 17" (≥1280px) */
+@media (min-width: 1280px) {
+  .hero-content-centered {
+    transform: translate(-60px, -130px); /* slightly less up on big screens */
+  }
+}
+
+/* Shorter screens: don't move quite as high */
+@media (min-width: 1024px) && (max-height: 880px) {
+  .hero-content-centered {
+    transform: translate(-60px, -120px);
   }
 }
 

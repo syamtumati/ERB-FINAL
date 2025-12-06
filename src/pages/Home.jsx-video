@@ -2,21 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-// ⬇️ New: hero IMAGE instead of video
-import heroImage from "../assets/images/hero-message.jpg"; // put your Pexels Frankfurt image here
-
+import heroVideo from "../assets/videos/hero-message.mp4";
 import closingVideo from "../assets/videos/closing-glory.mp4";
 
 function Home() {
   return (
     <div className="home-page">
-      {/* HERO BILD MIT DEUTSCHEM TEXT */}
+      {/* HERO VIDEO MIT LOGO & DEUTSCHEM TEXT */}
       <section className="hero-video-section">
-        <img
+	<video
           className="hero-video"
-          src={heroImage}
-          alt="Gnadenkirche Frankfurt – Stadtansicht"
-        />
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         <div className="hero-overlay">
           <div className="hero-content-centered">
             <h1 className="white-title hero-church-name">
@@ -78,9 +80,9 @@ function Home() {
           <Link to="/über uns" className="matter-block hope">
             <h3>Wer wir sind</h3>
             <p>
-              Dass Christus in seinem Volk Gestalt gewinnt, dass Sünder durch
-              souveräne Gnade gerettet werden und dass Gott in der Gemeinde und
-              unter den Völkern verherrlicht wird – bis er wiederkommt.
+	      Dass Christus in seinem Volk Gestalt gewinnt, dass Sünder durch
+	      souveräne Gnade gerettet werden und dass Gott in der Gemeinde und 
+	      unter den Völkern verherrlicht wird – bis er wiederkommt.
             </p>
             <span className="read-more">Unsere Hirten & Vision kennenlernen</span>
           </Link>
@@ -89,7 +91,7 @@ function Home() {
 
       {/* ABSCHLUSS-VIDEO */}
       <section className="bottom-video-section">
-        <video
+	<video
           className="bottom-video"
           autoPlay
           loop
@@ -115,7 +117,7 @@ function Home() {
           <nav className="footer-nav">
             <Link to="/glaube">Glaube</Link>
             <Link to="/über uns">Über uns</Link>
-            <Link to="/predigten">Predigten</Link>
+	    <Link to="/predigten">Predigten</Link>
             <Link to="/dienst">Dienst & Mission</Link>
             <Link to="/veranstaltungen">Veranstaltungen</Link>
             <Link to="/spenden">Spenden</Link>
@@ -131,4 +133,3 @@ function Home() {
 }
 
 export default Home;
-
