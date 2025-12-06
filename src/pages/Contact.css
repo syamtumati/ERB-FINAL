@@ -309,21 +309,42 @@
 
 /* ================= DESKTOP HERO ADJUSTMENTS ================= */
 @media (min-width: 1024px) {
-  /* shrink & move CONTACT hero only (not Home) */
+  /* baseline for big desktop screens */
   .contact-hero-title {
-    font-size: 4rem;                    /* smaller than base 8rem */
-    transform: translate(-60px, -80px); /* move left & slightly up */
+    font-size: 4rem;
+    transform: translate(-60px, -80px);
   }
 
   .contact-hero-subtitle {
     font-size: 2.2rem;
     max-width: 700px;
-    transform: translate(-40px, -60px); /* follow title, a bit less up */
+    transform: translate(-40px, -60px);
   }
 
   /* Slightly reduce gap between hero and content on desktop */
   .contact-content {
     padding-top: 4rem;
+  }
+}
+
+/* ===================================================== */
+/* 13–14 inch / medium-height laptops fine-tune          */
+/* (width: 1024–1440, height: up to ~860px)             */
+/* This moves KONTAKT a bit DOWN compared to big screens */
+/* ===================================================== */
+@media (min-width: 1024px) and (max-width: 1440px) and (max-height: 860px) {
+  .contact-hero-title {
+    transform: translate(-60px, -40px) !important;  /* less up → appears lower */
+    font-size: 3.8rem !important;
+  }
+
+  .contact-hero-subtitle {
+    transform: translate(-40px, -30px) !important;
+    font-size: 2rem !important;
+  }
+
+  .contact-content {
+    padding-top: 5rem !important;
   }
 }
 
@@ -345,7 +366,7 @@
     font-size: 3.2rem !important;
     letter-spacing: -1px;
     margin-bottom: 0.75rem;
-    transform: none !important;   /* remove translateY / X */
+    transform: none !important;
   }
 
   .contact-hero-subtitle {
@@ -353,7 +374,7 @@
     line-height: 1.4;
     max-width: 90%;
     margin: 0 auto;
-    transform: none !important;   /* remove translateY / X */
+    transform: none !important;
   }
 
   .contact-content {
