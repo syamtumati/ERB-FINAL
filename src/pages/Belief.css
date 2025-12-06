@@ -411,5 +411,13 @@
     max-width: 300px;
     font-size: 1.2rem;
   }
+
+  /* 🔽 FORCE FOOTER LINKS TO ONE COLUMN ON ALL PHONES */
+  .footer-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.2rem; /* slightly smaller gap for column layout */
+  }
 }
 
