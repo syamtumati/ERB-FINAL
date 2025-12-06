@@ -580,7 +580,7 @@
     max-width: 1350px; /* same width as Belief .belief-content */
     margin: 0 auto;    /* true horizontal centering */
     text-align: center;
-    transform: translate(-60px, -20px);
+    transform: translate(-60px, -80px);
   }
   .hero-church-name {
     font-size: 3.6rem !important;   /* reduce from 5.5rem */
