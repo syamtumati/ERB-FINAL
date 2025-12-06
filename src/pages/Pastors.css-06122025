@@ -26,13 +26,7 @@
   position: relative;
 }
 
-/* Better handling on some mobile browsers (Android/iOS) */
-@supports (-webkit-touch-callout: none) {
-  .pastors-page {
-    min-height: -webkit-fill-available;
-  }
-}
-
+/* ORBS */
 /* ORBS */
 .orb {
   position: absolute;
@@ -56,7 +50,7 @@
   width: 520px;
   height: 520px;
   background: rgba(186, 143, 101, 0.3);
-  top: 45%;
+  top: 45%;     /* was bottom: -10% or bottom: 0; */
   right: -8%;
 }
 
@@ -183,7 +177,7 @@
   border-color: #a56733;
 }
 
-/* CLEAN FOOTER – SAME AS OTHER PAGES */
+/* CLEAN FOOTER – SAME AS UPEVENTS, FULL WIDTH BISCUIT */
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
@@ -192,8 +186,6 @@
   margin: 0 !important;
   flex-shrink: 0;
   font-family: "Georgia", serif;
-  width: 100%;
-  margin-top: auto;           /* footer sticks to bottom */
 }
 
 .footer-inner {
@@ -276,7 +268,7 @@
   }
 }
 
-/* MOBILE / SMALL TABLET (≤ 768px) */
+/* MOBILE */
 @media (max-width: 768px) {
   .pastors-page {
     padding-top: 9rem;
@@ -320,11 +312,20 @@
     font-size: 1rem;
   }
 
+  .footer-nav {
+    gap: 1.2rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+  }
+
   .church-name {
     font-size: 2.1rem;
   }
 
-  /* Hide orbs on smaller screens */
+  /* Hide orbs on mobile to avoid any extra scroll area */
   .orb-1,
   .orb-2,
   .orb-3 {
@@ -332,10 +333,10 @@
   }
 }
 
-/* MOBILE (phones ≤ 600px) – match Belief & Contact behavior */
-@media (max-width: 600px) {
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
   .pastors-page {
-    padding-top: 8rem;        /* similar feel to other pages */
+    padding-top: 8rem;
   }
 
   .pastors-container {
@@ -344,7 +345,6 @@
 
   .pastor-card {
     padding: 2rem 1.4rem;
-    margin-bottom: 4rem;
   }
 
   .pastor-photo img {
@@ -358,19 +358,6 @@
   .bio {
     font-size: 1rem;
   }
-
-  /* 🔽 FOOTER: force single-column layout on all phones */
-  .footer-nav {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .footer-nav a {
-    font-size: 0.9rem;
-    letter-spacing: 1.4px;
-  }
 }
 
 /* Hide old footer completely */
@@ -383,25 +370,24 @@
   display: none !important;
 }
 
-/* Desktop only: adjust spacing */
+
+/* Desktop only: Push the pastor cards down slightly */
 @media (min-width: 1024px) {
   .pastors-container {
-    transform: translateX(-5px);
+    transform: translateX(-5px); /* adjust this value */
   }
-
   /* Reduce gap between Pastor 1 and Pastor 2 */
   .pastor-card {
     margin-bottom: 4rem !important;   /* was 8rem */
-    gap: 4rem !important;             /* was 5.5rem */
+    gap: 4rem !important;              /* was 5.5rem */
   }
 
+  /* Reduce extra top gap added to Deacon block */
   .deacon {
-    margin-top: 2rem !important;      /* was 4rem */
-  }
-
+    margin-top: 2rem !important;       /* was 4rem */
+  }  
   .pastors-page {
-    padding-top: 14rem;               /* more space under navbar on desktop */
-    padding-bottom: 0 !important;
+    padding-top: 14rem;  /* was 11rem → increase gap below logo */
+    padding-bottom: 0 !important;   /* add small gap only */
   }
 }
-
