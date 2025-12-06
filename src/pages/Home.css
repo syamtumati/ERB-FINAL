@@ -638,7 +638,7 @@
 /* → move hero a bit DOWN compared to base */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
-    transform: translate(-60px, -110px); /* less negative = lower */
+    transform: translate(-60px, -120px); /* less negative = lower */
   }
 }
 
