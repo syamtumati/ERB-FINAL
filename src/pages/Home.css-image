@@ -451,18 +451,6 @@
 /* MOBILE (phones ≤ 600px) */
 @media (max-width: 600px) {
 
-  /* Show the hero image fully on mobile */
-  .hero-video-section {
-    height: auto;              /* let the section follow the image height */
-  }
-
-  .hero-video {
-    position: relative;        /* not absolute on mobile */
-    width: 100%;
-    height: auto;              /* keep aspect ratio, no cropping */
-    object-fit: contain;       /* ensure the full image is visible */
-  }
-
   /* Anchor hero text near top just like Contact page */
   .home-page .hero-overlay {
     justify-content: flex-start;
