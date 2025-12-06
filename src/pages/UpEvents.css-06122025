@@ -24,27 +24,20 @@
   overflow-x: hidden;
 }
 
-/* Better handling on some mobile browsers (Android/iOS) */
-@supports (-webkit-touch-callout: none) {
-  .upevents-page {
-    min-height: -webkit-fill-available;
-  }
-}
-
 /* MAIN CONTENT */
 .upevents-simple {
-  flex: 1;                        /* pushes footer to the bottom */
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8rem 0;                /* vertical padding only */
+  padding: 8rem 0;           /* ❗ no side padding */
 }
 
 .upevents-simple .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 2rem;                /* consistent inner padding */
+  padding: 0 2rem;           /* consistent inner padding */
 }
 
 .upevents-simple h1 {
@@ -100,8 +93,6 @@
   margin: 0 !important;
   flex-shrink: 0;
   font-family: "Georgia", serif;
-  width: 100%;
-  margin-top: auto;               /* ⭐ push footer to the bottom */
 }
 
 .footer-inner {
@@ -157,14 +148,14 @@
   opacity: 0.9;
 }
 
-/* MOBILE / TABLET (≤ 768px) */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .upevents-simple {
     padding: 6rem 0;
   }
 
-  .upevents-simple .container {
+  .container {
     padding: 0 1.5rem;
   }
 
@@ -185,49 +176,6 @@
     font-size: 1.15rem;
     width: 100%;
     max-width: 320px;
-  }
-}
-
-/* MOBILE (phones ≤ 600px) – match all other pages */
-@media (max-width: 600px) {
-  .upevents-simple {
-    padding: 5.5rem 0;
-  }
-
-  .upevents-simple .container {
-    padding: 0 1.4rem;
-  }
-
-  .upevents-simple h1 {
-    font-size: 2.4rem;
-  }
-
-  .message {
-    font-size: 1.3rem;
-    line-height: 1.9;
-  }
-
-  .sub-message {
-    font-size: 1.1rem;
-  }
-
-  .home-btn {
-    width: 100%;
-    max-width: 300px;
-    font-size: 1.1rem;
-  }
-
-  /* 🔽 FOOTER: force single-column layout on all phones */
-  .footer-nav {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .footer-nav a {
-    font-size: 0.9rem;
-    letter-spacing: 1.4px;
   }
 }
 
@@ -261,11 +209,11 @@
   /* Fix button width + alignment + one-line text */
   .home-btn {
     display: inline-block;
-    width: 400px;        /* keep text on one line */
+    width: 400px;        /* ⭐ Increase width so text stays on one line */
     position: relative;
-    left: -10px;         /* align with logo text baseline */
-    text-align: center;
-    white-space: nowrap;
+    left: -10px;         /* same alignment as logo */
+    text-align: center;  /* center text in the new wider button */
+    white-space: nowrap; /* prevents line break */
     margin-bottom: 0 !important;
   }
 
@@ -276,4 +224,3 @@
     left: -60px;
   }
 }
-
