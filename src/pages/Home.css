@@ -570,19 +570,22 @@
 
 /* Desktop-only: pull hero UP slightly + align sections with logo */
 @media (min-width: 1024px) {
+  /* give the hero the same vertical offset philosophy as Belief (padding-top) */
   .hero-video-section {
-    padding-top: 7rem; /* identical offset to Belief page */
+    padding-top: 13rem;           /* same as .belief-page padding-top on desktop */
+    height: 100vh;
   }
 
   .hero-overlay {
-    align-items: flex-start;
+    align-items: flex-start;      /* content starts near the top */
+    justify-content: flex-start;  /* avoid any vertical re-centering */
   }
 
   .hero-content-centered {
-    max-width: 1350px;
+    max-width: 1350px;            /* same width line as Belief content */
     margin: 0 auto;
     text-align: center;
-    transform: translate(-60px, -145px) !important;
+    transform: translateX(-60px); /* ONLY horizontal shift, like .belief-hero */
   }
 
   .hero-church-name {
