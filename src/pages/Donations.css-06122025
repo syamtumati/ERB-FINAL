@@ -21,16 +21,6 @@
   font-family: "Georgia", serif;
   color: #fff;
   overflow-x: hidden;
-
-  display: flex;
-  flex-direction: column;
-}
-
-/* Better handling on some mobile browsers (Android/iOS) */
-@supports (-webkit-touch-callout: none) {
-  .donations-page {
-    min-height: -webkit-fill-available;
-  }
 }
 
 /* No more dark overlay necessary */
@@ -45,7 +35,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  flex: 1; /* let inner grow so footer can stick to bottom */
 }
 
 /* -------------------------------------------------- */
@@ -56,9 +45,11 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;         /* center vertically on desktop */
   align-items: flex-start;
   padding: 10rem 1.5rem 6rem;  /* top | left/right | bottom */
 }
+
 
 /* Outer card wrapper */
 .donations-card {
@@ -98,7 +89,7 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
 }
 
-/* horizontal divider (visible on small screens) */
+/* hide divider on larger screens; we visually separate with two boxes now */
 .divider {
   border-top: 1px solid #eee;
   margin: 2rem 0;
@@ -252,73 +243,47 @@
 }
 
 /* -------------------------------------------------- */
-/* FOOTER – UNIFIED WITH OTHER PAGES                  */
+/* FOOTER – keep clean and simple                     */
 /* -------------------------------------------------- */
 
 .clean-footer {
   background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
   padding: 4rem 2rem 3rem;
   text-align: center;
-  margin-top: auto;                    /* ⭐ push footer to bottom */
+  margin-top: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  font-family: "Georgia", serif;
-  width: 100%;
-  flex-shrink: 0;
 }
 
 .footer-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  align-items: center;
-}
-
-.church-name {
-  font-size: 2.6rem;
-  margin-bottom: 0;
-  font-weight: 900;
-  color: #8b4513;
-  letter-spacing: -1px;
-}
-
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.4rem;
-  justify-content: center;
   max-width: 900px;
   margin: 0 auto;
 }
 
-@media (min-width: 640px) {
-  .footer-nav {
-    flex-wrap: nowrap;
-    gap: 3rem;
-  }
-}
-
-.footer-nav a {
-  color: #5d4037;
-  font-size: 1.05rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: none;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-}
-
-.footer-nav a:hover {
+.church-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
   color: #8b4513;
 }
 
+.footer-nav a {
+  margin: 0 1.2rem;
+  color: #5d4037;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
 .copyright {
-  margin-top: 0;
+  margin-top: 1.2rem;
   color: #6d4c41;
-  font-size: 0.88rem;
-  opacity: 0.9;
+  font-size: 0.9rem;
 }
 
 /* -------------------------------------------------- */
@@ -350,19 +315,18 @@
   .divider {
     display: none;         /* no horizontal divider needed */
   }
-
-  /* ⭐ Desktop extra top spacing so it clears navbar nicely */
+  /* ⭐ Added: increase desktop top spacing */
   .donations-main {
-    padding-top: 14rem;
+    padding-top: 14rem;   /* adjust 12–16rem as needed */
   }
 }
 
-/* Tablet & below (≤ 899px) */
+/* Tablet & below */
 @media (max-width: 899px) {
 
   .donations-main {
     padding: 9rem 1rem 4rem;
-    align-items: flex-start;
+    align-items: flex-start;       /* card a bit higher on small screens */
   }
 
   .donations-card {
@@ -378,7 +342,7 @@
     font-size: 1.05rem;
   }
 
-  /* On mobile/tablet, form & bank are stacked */
+  /* On mobile/tablet, form & bank are just stacked, so soften the box feel */
   .donations-form,
   .other-ways {
     background: #ffffff;
@@ -398,14 +362,14 @@
   }
 }
 
-/* MOBILE (phones ≤ 600px) – match other pages */
-@media (max-width: 600px) {
+/* Small phones */
+@media (max-width: 480px) {
   .donations-main {
-    padding: 8rem 1rem 4rem;
+    padding: 9rem 1rem 4rem;
   }
 
   .donations-card {
-    padding: 2rem 1.6rem;
+    padding: 2rem 1.4rem;
   }
 
   .donations-card h1 {
@@ -414,38 +378,6 @@
 
   .donations-intro {
     font-size: 1.02rem;
-  }
-
-  /* Footer: force single-column links on mobile */
-  .footer-nav {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .footer-nav a {
-    font-size: 0.9rem;
-    letter-spacing: 1.4px;
-  }
-}
-
-/* Small phones (extra tweaks ≤ 480px) */
-@media (max-width: 480px) {
-  .donations-main {
-    padding: 8rem 1rem 4rem;
-  }
-
-  .donations-card {
-    padding: 1.8rem 1.4rem;
-  }
-
-  .donations-card h1 {
-    font-size: 1.9rem;
-  }
-
-  .donations-intro {
-    font-size: 1rem;
   }
 }
 
