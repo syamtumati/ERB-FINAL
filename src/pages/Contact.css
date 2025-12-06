@@ -334,7 +334,7 @@
   /* Anchor the hero text near the top (same position on all phones) */
   .contact-page .hero-overlay {
     justify-content: flex-start;  /* no full vertical centering */
-    padding-top: 5rem;            /* adjust 4–6rem to taste */
+    padding-top: 3rem;            /* adjust 4–6rem to taste */
   }
 
   .contact-hero-title {
