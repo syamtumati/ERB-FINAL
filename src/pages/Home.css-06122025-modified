@@ -439,24 +439,22 @@
 
 /* MOBILE (phones ≤ 600px) */
 @media (max-width: 600px) {
-
   /* === HOME HERO TITLE / SUBTITLE === */
   .hero-church-name {
     font-size: 3.2rem !important;
     letter-spacing: -1px !important;
     padding: 0 1rem;
     line-height: 1.1;
-    margin-bottom: 0.5rem; /* tightened so it fits well after moving up */
   }
 
   .hero-subtitle {
     font-size: 1.4rem;
     letter-spacing: 2px;
-    margin-bottom: 1.5rem; /* slightly reduced so hero text fits nicely */
+    margin-bottom: 2rem;
   }
 
   .hero-content-centered {
-    transform: translateY(-140px); /* moved UP more on all phones */
+    transform: translateY(-80px); /* move hero up slightly on all phones */
   }
 
   /* === SECTION TITLES (HeartCry, Was uns wichtig ist, etc.) === */
@@ -513,7 +511,7 @@
     margin: 0 0 2.5rem;
     border-radius: 0;
     border-width: 6px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.55);
   }
 
   .heartcry-section .video-container::before {
