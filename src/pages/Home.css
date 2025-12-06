@@ -283,7 +283,7 @@
     max-width: 1350px;
     margin: 0 auto;
 /*    transform: translateX(-60px);*/ /* NO VERTICAL movement */
-    transform: translate(-60px, -135px);
+    transform: translate(-60px, -140px);
   }
 
   .hero-church-name { font-size: 3.6rem !important; }
@@ -292,7 +292,7 @@
 
 @media (min-width: 1024px) and (max-height: 880px) {
   .hero-content-centered {
-    transform: translate(-60px, -110px); /* slightly less up */
+    transform: translate(-60px, -120px); /* slightly less up */
   }
 }
 
