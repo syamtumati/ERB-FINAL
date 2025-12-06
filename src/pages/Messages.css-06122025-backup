@@ -87,12 +87,11 @@
   padding: 1rem 1.4rem 0.2rem;
 }
 
-/* "Keine Videos..." message */
 .no-videos {
   max-width: 900px;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto 4rem; /* centered block */
   padding: 0 2rem;
-  text-align: center;      /* base: centered (mobile/tablet) */
+  text-align: center;
   font-size: 1.35rem;
   color: #ffffff;
 }
@@ -333,12 +332,6 @@
 
   .video-grid {
     transform: translateX(-10px); /* align with hero / logo */
-  }
-
-  /* ⬅️ Move "Keine Videos..." a little left on desktop + left-align text */
-  .no-videos {
-    transform: translateX(-10px);
-    text-align: left;
   }
 
   .clean-footer .copyright {
