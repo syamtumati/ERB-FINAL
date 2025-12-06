@@ -337,7 +337,7 @@
 
   /* ⬅️ Move "Keine Videos..." a little left on desktop + left-align text */
   .no-videos {
-    transform: translateX(-10px);
+    transform: translateX(-30px);
     text-align: left;
   }
 
