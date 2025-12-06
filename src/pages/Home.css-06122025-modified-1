@@ -5,16 +5,6 @@
 
 .home-page {
   overflow-x: hidden; /* avoid sideways scroll on mobile */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Better handling on some mobile browsers (Android / iOS) */
-@supports (-webkit-touch-callout: none) {
-  .home-page {
-    min-height: -webkit-fill-available;
-  }
 }
 
 /* ==================== 1. HERO VIDEO (NO LOGO) ==================== */
@@ -408,7 +398,7 @@
 
 /* Generic tablet & big phones */
 @media (max-width: 768px) {
-  /* Home hero – move text a bit up on tablet */
+  /* Home hero – move text a bit up on mobile/tablet */
   .hero-content-centered {
     transform: translateY(-90px);
   }
@@ -450,36 +440,29 @@
 /* MOBILE (phones ≤ 600px) */
 @media (max-width: 600px) {
 
-  /* Anchor hero text near top just like Contact page */
-  .home-page .hero-overlay {
-    justify-content: flex-start;
-    padding-top: 7rem;  /* adjust 6–8rem to taste */
-  }
-
   /* === HOME HERO TITLE / SUBTITLE === */
   .hero-church-name {
     font-size: 3.2rem !important;
     letter-spacing: -1px !important;
     padding: 0 1rem;
     line-height: 1.1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* tightened so it fits well after moving up */
   }
 
   .hero-subtitle {
     font-size: 1.4rem;
     letter-spacing: 2px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* slightly reduced so hero text fits nicely */
   }
 
-  /* no additional vertical transform on phones – stable across devices */
   .hero-content-centered {
-    transform: none;
+    transform: translateY(-120px); /* moved UP more on all phones */
   }
 
   /* === SECTION TITLES (HeartCry, Was uns wichtig ist, etc.) === */
   .section-title,
   .main-title {
-    font-size: 2.8rem !important;
+    font-size: 2.8rem !important;   /* uniform hero size on mobile */
     line-height: 1.2;
     margin-bottom: 1.8rem;
     letter-spacing: -1px;
@@ -545,19 +528,6 @@
   .matter-block p {
     font-size: 1.2rem;
   }
-
-  /* Footer: same pattern as other pages on mobile */
-  .footer-nav {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .footer-nav a {
-    font-size: 0.9rem;
-    letter-spacing: 1.4px;
-  }
 }
 
 /* VERY SMALL DEVICES (optional fine-tune) */
@@ -594,8 +564,8 @@
   .heartcry-section .section-title,
   .heartcry-section .section-subtitle {
     position: relative;
-    left: -60px;
-    text-align: left;
+    left: -60px;        /* adjust: -40px, -60px, -80px */
+    text-align: left;   /* optional: makes it look cleaner */
   }
 
   .heartcry-section .container {
@@ -624,13 +594,6 @@
   .clean-footer .copyright {
     position: relative;
     left: -40px;
-  }
-}
-
-/* Medium-height laptops (13–14 inch) – soften hero offset a bit */
-@media (min-width: 1024px) and (max-width: 1440px) and (max-height: 860px) {
-  .hero-content-centered {
-    transform: translate(-60px, -120px); /* slightly less up than -145px */
   }
 }
 
