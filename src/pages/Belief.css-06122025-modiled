@@ -191,6 +191,7 @@
 
   .belief-hero {
     padding: 0 0.4rem;
+    transform: translateY(-30px); /* ⭐ move hero a bit UP on tablet/large phones */
   }
 
   .belief-hero h1 {
@@ -264,20 +265,23 @@
 
   .belief-hero {
     padding: 0 0.3rem;
+    transform: translateY(-40px); /* ⭐ a bit more up on small phones */
   }
 
+  /* ⭐ match other pages: strong but not huge hero */
   .belief-hero h1 {
-    font-size: 2.5rem;
-    letter-spacing: 0;
+    font-size: 3rem;
+    letter-spacing: -0.5px;
     line-height: 1.2;
+    max-width: 92vw;
   }
 
   .confession-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .tagline {
-    font-size: 1.45rem;
+    font-size: 1.5rem;
   }
 
   .confession-card {
@@ -316,10 +320,12 @@
   .confession-card {
     height: 360px;   /* all cards exactly same height on desktop */
   }
+
   .confession-grid,
   .belief-cta {
     transform: translateX(-10px);
   }
+
   .clean-footer .copyright {
     position: relative;
     left: -60px;

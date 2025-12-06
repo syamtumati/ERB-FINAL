@@ -456,7 +456,7 @@
   }
 
   .hero-content-centered {
-    transform: translateY(-140px); /* moved UP more on all phones */
+    transform: translateY(-120px); /* moved UP more on all phones */
   }
 
   /* === SECTION TITLES (HeartCry, Was uns wichtig ist, etc.) === */
