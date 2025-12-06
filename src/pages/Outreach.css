@@ -237,7 +237,7 @@ body {
 /* MOBILE (phones ≤ 600px) – match other pages */
 @media (max-width: 600px) {
   .outreach-page {
-    padding-top: 7rem;
+    padding-top: 9rem;
   }
 
   .black-title {
