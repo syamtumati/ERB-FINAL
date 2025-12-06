@@ -25,8 +25,15 @@
 
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
+  padding-top: 10rem;   /* desktop base offset below navbar */
   overflow-x: hidden;
+}
+
+/* Better handling on some mobile browsers (Android/iOS) */
+@supports (-webkit-touch-callout: none) {
+  .belief-page {
+    min-height: -webkit-fill-available;
+  }
 }
 
 .belief-content {
@@ -34,7 +41,7 @@
   margin: 0 auto;
   padding: 0 1.5rem;       /* horizontal padding */
   text-align: center;
-  flex: 1;
+  flex: 1;                 /* let content grow, footer at bottom */
 }
 
 /* HERO */
@@ -182,7 +189,7 @@
 
 @media (max-width: 768px) {
   .belief-page {
-    padding-top: 8rem;
+    padding-top: 7rem;   /* same top spacing pattern as Home/Contact mobile */
   }
 
   .belief-content {
@@ -257,41 +264,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .belief-content {
-    padding: 0 0.5rem;
-  }
-
-  .belief-hero {
-    padding: 0 0.3rem;
-  }
-
-  .belief-hero h1 {
-    font-size: 2.5rem;
-    letter-spacing: 0;
-    line-height: 1.2;
-  }
-
-  .confession-title {
-    font-size: 1.6rem;
-  }
-
-  .tagline {
-    font-size: 1.45rem;
-  }
-
-  .confession-card {
-    max-width: 330px;
-    height: 360px;
-    padding: 1.6rem 1.3rem;
-  }
-
-  .coffee-btn {
-    max-width: 300px;
-    font-size: 1.2rem;
-  }
-}
-
 /* ========== DESKTOP OVERRIDE FOR PERFECT EQUAL BOXES ========== */
 
 @media (min-width: 1024px) {
@@ -310,7 +282,7 @@
   }
 
   .belief-page {
-    padding-top: 13rem; /* increase from 10rem → 13rem */
+    padding-top: 13rem; /* increase from 10rem → 13rem on big desktop */
   }
 
   .confession-card {
@@ -333,7 +305,7 @@
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.08);
-  margin-top: 0;
+  margin-top: auto;                 /* footer sticks to bottom like other pages */
   font-family: "Georgia", serif;
   width: 100%;
 }
@@ -399,5 +371,45 @@
 .footer-copyright,
 .latin {
   display: none !important;
+}
+
+/* MOBILE (phones ≤ 600px) – keep same logic as other pages */
+@media (max-width: 600px) {
+  .belief-page {
+    padding-top: 7rem; /* similar top spacing pattern as Home & Contact */
+  }
+
+  .belief-content {
+    padding: 0 0.5rem;
+  }
+
+  .belief-hero {
+    padding: 0 0.3rem;
+  }
+
+  .belief-hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  .confession-title {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    font-size: 1.45rem;
+  }
+
+  .confession-card {
+    max-width: 330px;
+    height: 360px;
+    padding: 1.6rem 1.3rem;
+  }
+
+  .coffee-btn {
+    max-width: 300px;
+    font-size: 1.2rem;
+  }
 }
 
