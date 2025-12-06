@@ -571,26 +571,26 @@
 /* Desktop-only: pull hero UP slightly + align sections with logo */
 @media (min-width: 1024px) {
   .hero-video-section {
-    padding-top: 13rem; /* match Belief page padding-top */
+    padding-top: 7rem; /* identical offset to Belief page */
   }
 
   .hero-overlay {
-    align-items: flex-start;  /* keep hero near top area */
+    align-items: flex-start;
   }
 
   .hero-content-centered {
-    max-width: 1350px; /* same width as Belief .belief-content */
-    margin: 0 auto;    /* true horizontal centering */
+    max-width: 1350px;
+    margin: 0 auto;
     text-align: center;
-    transform: translateX(-60px); /* only move LEFT, no vertical shift */
+    transform: translate(-60px, -145px) !important;
   }
 
   .hero-church-name {
-    font-size: 3.6rem !important;   /* same visual scale as Belief h1 */
+    font-size: 3.6rem !important;
   }
 
   .hero-subtitle {
-    font-size: 1.9rem !important;   /* similar to Belief/Contact subtitles */
+    font-size: 1.9rem !important;
   }
   /* Move entire HeartCry block left */
   .heartcry-section .section-title,
