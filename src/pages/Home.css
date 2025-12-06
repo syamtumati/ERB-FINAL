@@ -292,7 +292,7 @@
 
 @media (min-width: 1024px) and (max-height: 880px) {
   .hero-content-centered {
-    transform: translate(-60px, -130px); /* slightly less up */
+    transform: translate(-60px, -120px); /* slightly less up */
   }
 }
 
