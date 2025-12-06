@@ -568,24 +568,26 @@
   }
 }
 
-/* Desktop-only: pull hero UP slightly + align sections with logo */
+/* ==================== DESKTOP ONLY ==================== */
+/* Base desktop layout (keeps original left alignment & section shifts) */
 @media (min-width: 1024px) {
   /* give the hero the same vertical offset philosophy as Belief (padding-top) */
   .hero-video-section {
-    padding-top: 13rem;           /* same as .belief-page padding-top on desktop */
+    padding-top: 13rem;
     height: 100vh;
   }
 
   .hero-overlay {
-    align-items: flex-start;      /* content starts near the top */
-    justify-content: flex-start;  /* avoid any vertical re-centering */
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .hero-content-centered {
-    max-width: 1350px;            /* same width line as Belief content */
+    max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translateX(-60px); /* ONLY horizontal shift, like .belief-hero */
+    /* default desktop transform, overridden by more specific rules below */
+    transform: translate(-60px, -145px);
   }
 
   .hero-church-name {
@@ -595,6 +597,7 @@
   .hero-subtitle {
     font-size: 1.9rem !important;
   }
+
   /* Move entire HeartCry block left */
   .heartcry-section .section-title,
   .heartcry-section .section-subtitle {
@@ -631,3 +634,29 @@
     left: -40px;
   }
 }
+
+/* MEDIUM LAPTOPS — 13" and 14" (1024px–1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-video-section {
+    padding-top: 9rem; /* slightly less padding on smaller laptops */
+  }
+
+  .hero-content-centered {
+    transform: translate(-60px, -145px); /* move hero higher */
+  }
+}
+
+/* LARGE DESKTOPS — 15.6", 16", 17" (≥1280px) */
+@media (min-width: 1280px) {
+  .hero-content-centered {
+    transform: translate(-60px, -130px); /* slightly less up on big screens */
+  }
+}
+
+/* Shorter screens: don't move quite as high */
+@media (min-width: 1024px) && (max-height: 880px) {
+  .hero-content-centered {
+    transform: translate(-60px, -120px);
+  }
+}
+
