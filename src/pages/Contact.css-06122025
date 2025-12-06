@@ -295,6 +295,25 @@
   }
 }
 
+@media (max-width: 600px) {
+  .contact-hero-image {
+    height: 70vh;
+    min-height: 480px;
+    background-attachment: scroll;
+  }
+
+  .contact-hero-title {
+    font-size: 3.8rem;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .contact-content {
+    padding: 3.5rem 1.5rem 5rem;
+  }
+}
 
 /* Hide any old legacy footer bits if they exist */
 .biscuit-footer,
@@ -323,37 +342,18 @@
   }
 }
 
-/* MOBILE (phones ≤ 600px) */
+/* MOBILE: move KONTAKT title + subtitle UP a bit */
 @media (max-width: 600px) {
-  .contact-hero-image {
-    height: 70vh;
-    min-height: 480px;
-    background-attachment: scroll;
-  }
-
-  /* Anchor the hero text near the top (same position on all phones) */
-  .contact-page .hero-overlay {
-    justify-content: flex-start;  /* no full vertical centering */
-    padding-top: 5rem;            /* adjust 4–6rem to taste */
-  }
-
   .contact-hero-title {
-    font-size: 3.2rem !important;
+    font-size: 3rem !important;   /* smaller mobile title */
     letter-spacing: -1px;
-    margin-bottom: 0.75rem;
-    transform: none !important;   /* remove translateY */
+    transform: translateY(-35px);   /* move UP slightly */
   }
 
   .contact-hero-subtitle {
-    font-size: 1.4rem !important;
+    font-size: 1.4rem !important;   /* smaller subtitle */
     line-height: 1.4;
     max-width: 90%;
-    margin: 0 auto;
-    transform: none !important;   /* remove translateY */
-  }
-
-  .contact-content {
-    padding: 3.5rem 1.5rem 5rem;
+    transform: translateY(-20px);   /* move UP slightly */
   }
 }
-
