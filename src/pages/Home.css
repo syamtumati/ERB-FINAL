@@ -569,9 +569,9 @@
 }
 
 /* ==================== DESKTOP ONLY ==================== */
-/* Base desktop layout (keeps original left alignment & section shifts) */
+
+/* Base desktop layout – applies to all ≥1024px first */
 @media (min-width: 1024px) {
-  /* give the hero the same vertical offset philosophy as Belief (padding-top) */
   .hero-video-section {
     padding-top: 13rem;
     height: 100vh;
@@ -586,8 +586,7 @@
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    /* default desktop transform, overridden by more specific rules below */
-    transform: translate(-60px, -145px);
+    transform: translate(-60px, -130px); /* base desktop position */
   }
 
   .hero-church-name {
@@ -617,7 +616,7 @@
     left: -5px;
   }
 
-  /* === BOTTOM VIDEO TEXT LEFT === */
+  /* Bottom video text left */
   .bottom-video-text {
     position: relative;
     left: -60px;
@@ -632,6 +631,22 @@
   .clean-footer .copyright {
     position: relative;
     left: -40px;
+  }
+}
+
+/* “15 inch” range – approx normal laptops 1280px–1599px */
+/* → move hero a bit DOWN compared to base */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .hero-content-centered {
+    transform: translate(-60px, -110px); /* less negative = lower */
+  }
+}
+
+/* “17.3 inch / very large” – very wide screens ≥1600px */
+/* → move hero a bit UP compared to base */
+@media (min-width: 1600px) {
+  .hero-content-centered {
+    transform: translate(-60px, -160px); /* more negative = higher */
   }
 }
 
