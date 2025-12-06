@@ -296,3 +296,32 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .hero-video-section {
+    padding-top: 13rem;
+    height: 100vh;
+  }
+
+  .hero-overlay {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .hero-content-centered {
+    max-width: 1350px;
+    margin: 0 auto;
+    text-align: center;
+    transform: translate(-60px, -140px); /* default: 17"+ / tall screens */
+  }
+
+  .hero-church-name {
+    font-size: 3.6rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.9rem !important;
+  }
+
+  /* keep the rest as-is */
+}
+
