@@ -25,13 +25,6 @@
   overflow-x: hidden;
 }
 
-/* Better handling on some mobile browsers (Android/Samsung) */
-@supports (-webkit-touch-callout: none) {
-  .contact-page {
-    min-height: -webkit-fill-available;
-  }
-}
-
 /* ================= HERO SECTION ===================== */
 
 .contact-hero-image {
@@ -80,15 +73,12 @@
 /* ================= CONTENT SECTION ================== */
 
 .contact-content {
-  flex-grow: 1;                 /* ensures content pushes footer down */
+  flex: 1;
   max-width: 1350px;
   width: 100%;
   margin: 0 auto;
-  padding: 5rem 2rem 8rem;      /* slightly closer to hero */
+  padding: 5rem 2rem 8rem;  /* slightly closer to hero */
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .contact-grid {
@@ -230,7 +220,6 @@
   border-top:1px solid rgba(0,0,0,0.08);
   margin:0 !important;
   flex-shrink:0;
-  margin-top: auto !important;      /* ensures footer sits at bottom */
 }
 
 .footer-inner {
@@ -306,6 +295,14 @@
   }
 }
 
+
+/* Hide any old legacy footer bits if they exist */
+.biscuit-footer,
+.footer-links,
+.latin {
+  display:none !important;
+}
+
 /* ================= DESKTOP HERO ADJUSTMENTS ================= */
 @media (min-width: 1024px) {
   /* shrink & move CONTACT hero only (not Home) */
@@ -337,7 +334,7 @@
   /* Anchor the hero text near the top (same position on all phones) */
   .contact-page .hero-overlay {
     justify-content: flex-start;  /* no full vertical centering */
-    padding-top: 7rem;            /* tune this: 6–8rem as you like */
+    padding-top: 7rem;            /* adjust 4–6rem to taste */
   }
 
   .contact-hero-title {
@@ -358,12 +355,5 @@
   .contact-content {
     padding: 3.5rem 1.5rem 5rem;
   }
-}
-
-/* Hide any old legacy footer bits if they exist */
-.biscuit-footer,
-.footer-links,
-.latin {
-  display:none !important;
 }
 
