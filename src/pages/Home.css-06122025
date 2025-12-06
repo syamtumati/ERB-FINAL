@@ -67,14 +67,6 @@
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
 }
 
-.hero-motto {
-  font-size: 2.4rem;
-  color: #f0e8ff;
-  font-weight: 500;
-  letter-spacing: 1.2px;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
-}
-
 /* ==================== 2. HEARTCRY FILM SECTION ==================== */
 .heartcry-section {
   padding: 4rem 2rem 4rem;  /* top, sides, bottom */
@@ -322,6 +314,87 @@
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* ==================== 7. RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .hero-church-name {
+    font-size: 6rem !important;
+  }
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+  .main-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-church-name {
+    font-size: 3.6rem !important;
+  }
+  .hero-subtitle {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+  }
+  .section-title {
+    font-size: 3.6rem;
+  }
+  .hero-content-centered {
+    transform: translateY(-115px); /* try -120px so it’s clearly visible */
+  }
+
+  /* reduce padding so content doesn't look pushed off-screen */
+  .heartcry-section,
+  .what-matters-section {
+    padding: 4rem 1.5rem 3rem !important;
+  }
+
+  /* single-column grid on tablets/phones */
+  .what-matters-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .matter-block {
+    padding: 2.4rem 1.8rem;
+  }
+
+  .bottom-video-text h2 {
+    font-size: 4.8rem;
+  }
+  .bottom-video-text p {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-church-name {
+    font-size: 3.6rem !important;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .main-title {
+    font-size: 3.2rem;
+  }
+
+  .matter-block h3 {
+    font-size: 2.1rem;
+  }
+
+  .matter-block p {
+    font-size: 1.2rem;
+  }
+
+  .bottom-video-text h2 {
+    font-size: 3.8rem;
+  }
+  .bottom-video-text p {
+    font-size: 1.5rem;
+  }
+}
+
 /* SAME CLEAN FOOTER AS ALL OTHER PAGES – ALL LINKS IN ONE LINE */
 
 .footer-inner {
@@ -387,80 +460,108 @@
   display: none !important;
 }
 
-/* ==================== 7. RESPONSIVE ==================== */
-
-/* Tablet / small laptop */
-@media (max-width: 1024px) {
-  .main-title {
-    font-size: 3.6rem;
-  }
-}
-
-/* Generic tablet & big phones */
-@media (max-width: 768px) {
-  /* Home hero – move text a bit up on mobile/tablet */
-  .hero-content-centered {
-    transform: translateY(-90px);
-  }
-
-  .section-title {
-    font-size: 3.2rem;
-  }
-
-  /* reduce padding so content doesn't look pushed off-screen */
-  .heartcry-section,
-  .what-matters-section {
-    padding: 4rem 1.5rem 3rem !important;
-  }
-
-  /* single-column grid on tablets/phones */
-  .what-matters-grid {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
-  }
-
-  .matter-block {
-    padding: 2.4rem 1.8rem;
-  }
-
-  /* Make HeartCry video a bit taller on tablet */
-  .video-container::before {
-    padding-top: 70% !important;
-  }
-
-  /* Bottom video text smaller on tablet */
-  .bottom-video-text h2 {
-    font-size: 3.8rem;
-  }
-  .bottom-video-text p {
-    font-size: 1.7rem;
-  }
-}
-
-/* MOBILE (phones ≤ 600px) */
-@media (max-width: 600px) {
-  /* === HOME HERO TITLE / SUBTITLE === */
+/* --- EXTRA MOBILE FIX FOR HERO TITLE --- */
+@media (max-width: 480px) {
   .hero-church-name {
     font-size: 3.2rem !important;
     letter-spacing: -1px !important;
     padding: 0 1rem;
     line-height: 1.1;
   }
+}
+
+@media (max-width: 380px) {
+  .hero-church-name {
+    font-size: 2.8rem !important;
+    padding: 0 0.8rem;
+  }
+}
+
+/* --- MOBILE FIX: Make HeartCry video taller --- */
+@media (max-width: 768px) {
+  .video-container::before {
+    padding-top: 70% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container::before {
+    padding-top: 85% !important;
+  }
+}
+
+/* Desktop-only: pull hero UP slightly */
+@media (min-width: 1024px) {
+  .hero-video-section {
+    padding-top: 8rem; /* same as Belief page */
+  }
+  .hero-overlay {
+    align-items: flex-start;  /* keep hero near top */
+  }
+  .hero-content-centered {
+/*    transform: translateY(20px);*/ /* move hero UP */
+    max-width: 1350px; /* same width as Belief .belief-content */
+    margin: 0 auto;    /* true horizontal centering */
+    text-align: center;
+    transform: translate(-60px, -145px);
+/*    transform: translateX(-50px);*/
+    /* if it needs to go right instead of left, use +20px */
+  }
+  .hero-church-name {
+    font-size: 4rem !important;   /* reduce from 5.5rem */
+  }
 
   .hero-subtitle {
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
+    font-size: 2rem !important;     /* slightly smaller */
   }
 
-  .hero-content-centered {
-    transform: translateY(-80px); /* move hero up slightly on all phones */
+  /* Move entire HeartCry block left */
+  .heartcry-section .section-title,
+  .heartcry-section .section-subtitle {
+    position: relative;
+    left: -60px;        /* adjust: -40px, -60px, -80px */
+    text-align: left;   /* optional: makes it look cleaner */
   }
 
-  /* === SECTION TITLES (HeartCry, Was uns wichtig ist, etc.) === */
+  .heartcry-section .container {
+    position: relative;
+    left: -5px;      /* adjust to -40px or -80px as needed */
+  }
+
+  /* Move “Was uns wichtig ist” title + grid left */
+  .what-matters-grid {
+    position: relative;
+    left: -5px;      /* adjust as needed */
+  }
+  /* === BOTTOM VIDEO TEXT LEFT === */
+  .bottom-video-text {
+    position: relative;
+    left: -60px;
+  }
+
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
+
+  /* === FOOTER CHURCH NAME LEFT === */
+  .clean-footer .church-name {
+    position: relative;
+    left: -60px;
+  }
+
+  /* OPTIONAL: move footer nav and copyright too (looks nicer) */
+  .clean-footer .footer-nav,
+  .clean-footer .copyright {
+    position: relative;
+    left: -40px;
+  }
+}
+
+@media (max-width: 600px) {
   .section-title,
   .main-title {
-    font-size: 2.8rem !important;   /* uniform hero size on mobile */
+    font-size: 3rem !important;   /* uniform small size */
     line-height: 1.2;
     margin-bottom: 1.8rem;
     letter-spacing: -1px;
@@ -472,8 +573,6 @@
     line-height: 1.5;
     margin-bottom: 2rem;
   }
-
-  /* === SOLI DEO GLORIA (bottom hero) === */
   .bottom-video-text h2 {
     font-size: 3rem !important;
     line-height: 1.1;
@@ -481,11 +580,12 @@
     margin-bottom: 0.8rem;
   }
 
+  /* Reduce Soli Deo Gloria subtitle */
   .bottom-video-text p {
     font-size: 1.4rem !important;
   }
 
-  /* === HeartCry mobile styling – stylish but not huge === */
+  /* HeartCry title + subtitle (we keep your nice styles) */
   .heartcry-section .section-title {
     font-size: 2.6rem !important;
     margin-bottom: 1.2rem;
@@ -499,7 +599,7 @@
     margin-bottom: 1.8rem;
   }
 
-  /* Make HeartCry video full-width, no empty side corners */
+  /* 🔧 HeartCry video – fill width, remove empty side corners */
   .heartcry-section {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -507,91 +607,16 @@
 
   .heartcry-section .video-container {
     max-width: none;
-    width: 100%;
-    margin: 0 0 2.5rem;
-    border-radius: 0;
-    border-width: 6px;
+    width: calc(100% + 2rem);   /* make it a bit wider than screen */
+    margin: 0 -1rem 2.5rem;     /* pull it out to the sides */
+    border-radius: 1.2rem;      /* slightly softer corners */
+    border-width: 8px;          /* not too thick */
     box-shadow: 0 35px 80px rgba(0,0,0,0.55);
+    transform: none;            /* ⬅ important: no scaling anymore */
   }
 
   .heartcry-section .video-container::before {
-    padding-top: 85% !important; /* nice tall / cinematic */
+    padding-top: 90% !important; /* keep nice tall look */
   }
 
-  /* What-matters text slightly smaller on small phones */
-  .matter-block h3 {
-    font-size: 2.1rem;
-  }
-
-  .matter-block p {
-    font-size: 1.2rem;
-  }
 }
-
-/* VERY SMALL DEVICES (optional fine-tune) */
-@media (max-width: 380px) {
-  .hero-church-name {
-    font-size: 2.8rem !important;
-    padding: 0 0.8rem;
-  }
-}
-
-/* Desktop-only: pull hero UP slightly + align sections with logo */
-@media (min-width: 1024px) {
-  .hero-video-section {
-    padding-top: 8rem; /* same as Belief page */
-  }
-  .hero-overlay {
-    align-items: flex-start;  /* keep hero near top */
-  }
-  .hero-content-centered {
-    max-width: 1350px; /* same width as Belief .belief-content */
-    margin: 0 auto;    /* true horizontal centering */
-    text-align: center;
-    transform: translate(-60px, -145px);
-  }
-  .hero-church-name {
-    font-size: 4rem !important;   /* reduce from 5.5rem */
-  }
-
-  .hero-subtitle {
-    font-size: 2rem !important;   /* slightly smaller */
-  }
-
-  /* Move entire HeartCry block left */
-  .heartcry-section .section-title,
-  .heartcry-section .section-subtitle {
-    position: relative;
-    left: -60px;        /* adjust: -40px, -60px, -80px */
-    text-align: left;   /* optional: makes it look cleaner */
-  }
-
-  .heartcry-section .container {
-    position: relative;
-    left: -5px;
-  }
-
-  /* Move “Was uns wichtig ist” title + grid left */
-  .what-matters-grid {
-    position: relative;
-    left: -5px;
-  }
-
-  /* === BOTTOM VIDEO TEXT LEFT === */
-  .bottom-video-text {
-    position: relative;
-    left: -60px;
-  }
-
-  .clean-footer .church-name {
-    position: relative;
-    left: -60px;
-  }
-
-  .clean-footer .footer-nav,
-  .clean-footer .copyright {
-    position: relative;
-    left: -40px;
-  }
-}
-
