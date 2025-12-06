@@ -571,7 +571,7 @@
 /* Desktop-only: pull hero UP slightly + align sections with logo */
 @media (min-width: 1024px) {
   .hero-video-section {
-    padding-top: 13rem; /* same as Belief page */
+    padding-top: 7rem; /* same as Belief page */
   }
   .hero-overlay {
     align-items: flex-start;  /* keep hero near top */
