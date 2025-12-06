@@ -281,7 +281,8 @@
   .hero-content-centered {
     max-width: 1350px;
     margin: 0 auto;
-    transform: translateX(-60px); /* NO VERTICAL movement */
+/*    transform: translateX(-60px);*/ /* NO VERTICAL movement */
+    transform: translate(-60px, -40px);
   }
 
   .hero-church-name { font-size: 3.6rem !important; }
