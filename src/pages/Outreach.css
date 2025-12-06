@@ -191,7 +191,7 @@ body {
 
 @media (max-width: 768px) {
   .outreach-page {
-    padding-top: 5.5rem;
+    padding-top: 7rem;
   }
 
   .outreach-saturday {
@@ -237,7 +237,7 @@ body {
 /* MOBILE (phones ≤ 600px) – match other pages */
 @media (max-width: 600px) {
   .outreach-page {
-    padding-top: 5.5rem;
+    padding-top: 7rem;
   }
 
   .black-title {
