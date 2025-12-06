@@ -1,5 +1,5 @@
 /* ===================================================== */
-/* MESSAGES PAGE – FINAL CLEAN VERSION (NO GAP)          */
+/* MESSAGES PAGE – FINAL CLEAN VERSION (NO GAP)        */
 /* ===================================================== */
 
 .messages-page {
@@ -24,13 +24,6 @@
   overflow-x: hidden;
 }
 
-/* Better handling on some mobile browsers (Android/iOS) */
-@supports (-webkit-touch-callout: none) {
-  .messages-page {
-    min-height: -webkit-fill-available;
-  }
-}
-
 /* HERO */
 .messages-hero {
   max-width: 900px;
@@ -42,12 +35,14 @@
 .messages-hero h1 {
   font-size: 3.6rem;
   font-weight: 900;
+  /* color: #2b1a0f; */
   color: #ffffff !important;
   margin-bottom: 1rem;
 }
 
 .messages-hero p {
   font-size: 1.4rem;
+  /* color: #5d4037; */
   color: #ffffff !important;
   margin-bottom: 3rem;
 }
@@ -91,7 +86,7 @@
   max-width: 900px;
   margin: 2rem auto 4rem; /* centered block */
   padding: 0 2rem;
-  text-align: center;
+  text-align: center;     /* ✅ centered text */
   font-size: 1.35rem;
   color: #ffffff;
 }
@@ -99,12 +94,12 @@
 .video-date {
   font-size: 1rem;
   color: #6d4c41;
-  padding: 0 1.4rem 1rem;
+  padding: 0 1.4rem 1rem;  /* ✅ same nice left/right padding on mobile + desktop */
 }
 
 /* SUBSCRIBE BUTTON (space before footer) */
 .subscribe-button {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem;      /* only this controls the space above footer */
   padding: 0 2rem;
   text-align: center;
 }
@@ -159,8 +154,6 @@
   margin: 0 !important;
   flex-shrink: 0;
   font-family: "Georgia", serif;
-  width: 100%;
-  margin-top: auto;              /* push footer to bottom like other pages */
 }
 
 .footer-inner {
@@ -216,7 +209,7 @@
   opacity: 0.9;
 }
 
-/* RESPONSIVE – TABLET & SMALL SCREENS */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .messages-hero {
     margin-top: 5rem;
@@ -250,53 +243,6 @@
   }
 }
 
-/* MOBILE (phones ≤ 600px) – match Belief / Contact / Pastors */
-@media (max-width: 600px) {
-  .messages-hero {
-    margin-top: 5rem;
-    padding: 0 1.5rem;
-    transform: none;              /* avoid odd shifts on some phones */
-  }
-
-  .messages-hero h1 {
-    font-size: 2.4rem;
-  }
-
-  .messages-hero p {
-    font-size: 1.15rem;
-    margin-bottom: 2.2rem;
-    transform: none;
-  }
-
-  .video-grid {
-    padding: 0 1.3rem;
-  }
-
-  .subscribe-button {
-    margin-bottom: 3rem;
-    padding: 0 1.3rem;
-  }
-
-  .gold-btn {
-    width: 100%;
-    max-width: 300px;
-    font-size: 1.1rem;
-  }
-
-  /* 🔽 FOOTER: force single-column layout on all phones */
-  .footer-nav {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .footer-nav a {
-    font-size: 0.9rem;
-    letter-spacing: 1.4px;
-  }
-}
-
 /* KILL EVERYTHING FROM THE OLD FOOTER */
 .biscuit-footer,
 .footer-container,
@@ -307,11 +253,13 @@
   display: none !important;
 }
 
-/* DESKTOP ADJUSTMENTS */
 @media (min-width: 1024px) {
   .messages-hero {
     /* Move hero slightly LEFT + DOWN */
     transform: translate(-60px, 45px);
+    /* -35px = move left
+       25px = move down
+       adjust as needed */
   }
 
   .messages-hero h1 {
@@ -320,23 +268,24 @@
 
   .messages-hero p {
     font-size: 1.8rem !important; /* reduce subtitle size */
-    transform: translateX(-60px); /* align with hero */
+    transform: translateX(-60px); /* adjust this value */
   }
-
   .subscribe-button {
+/*    transform: translate(-55px, -35px); */
     position: relative;
     left: -15px;
-    margin-top: -20px;
+    margin-top: -20px; /* adjust this value */
     margin-bottom: 60px;
   }
-
   .video-grid {
     transform: translateX(-10px); /* align with hero / logo */
   }
-
+  
   .clean-footer .copyright {
     position: relative;
     left: -60px;
   }
+  
 }
+
 
