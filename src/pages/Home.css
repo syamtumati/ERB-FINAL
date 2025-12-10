@@ -458,7 +458,7 @@
 /* Move hero slightly UP (higher resolution, more vertical space) */
 @media (min-width: 1600px) {
   .hero-content-centered {
-    transform: translate(-60px, -20px);
+    transform: translate(-40px, -20px);
   }
   .hero-visit-box {
     transform: translateX(-10px);
