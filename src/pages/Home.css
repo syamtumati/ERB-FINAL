@@ -284,27 +284,50 @@
 /* Zero effect on desktop (≥993px) */
 /* ——————————————————————————————— */
 
+/* ——————————————————————————————— */
+/* MOBILE ONLY – FINAL CLEAN FIX (2025 standard) */
+/* Removes grey bar + black bar above header */
+/* ——————————————————————————————— */
 @media (max-width: 992px) {
-  html, body, #root, .home-page {
-    height: 100dvh;                     /* modern standard – respects mobile UI chrome */
-    min-height: -webkit-fill-available; /* iOS Safari fallback */
-    background: #000A1F !important;     /* dark color of your hero – kills the grey/white flash */
+  /* 1. Kill the grey/white bar at the very top */
+  html,
+  body,
+  #root,
+  .home-page {
+    height: 100dvh;
+    min-height: -webkit-fill-available;
+    background: #000A1F !important;   /* matches your hero */
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* Make sure the hero section really fills everything */
-  .hero-video-section,
-  .hero-video-section img {
+  /* 2. Hero fills the real viewport */
+  .hero-video-section {
     min-height: 100dvh;
     min-height: -webkit-fill-available;
     background: #000A1F;
   }
 
-  /* Extra safety for iOS Safari */
+  /* 3. CRITICAL: Push page content down under the fixed header */
+  .page-wrapper {
+    padding-top: 115px !important;   /* exactly the height needed for your logo + spacing */
+  }
+
+  /* iOS Safari extra safety */
   @supports (-webkit-touch-callout: none) {
-    html, body, #root, .home-page {
+    html,
+    body,
+    #root,
+    .home-page,
+    .hero-video-section {
       min-height: -webkit-fill-available;
+    }
+  }
+
+  /* Optional: tighter on very small phones */
+  @media (max-width: 480px) {
+    .page-wrapper {
+      padding-top: 100px !important;
     }
   }
 }
