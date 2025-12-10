@@ -398,8 +398,3 @@ body {
   }
 }
 
-@media (max-width: 992px) {
-  .page-wrapper {
-    padding-top: 150px;
-  }
-}
