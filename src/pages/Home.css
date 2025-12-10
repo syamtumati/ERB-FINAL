@@ -224,6 +224,20 @@
   box-shadow: 0 30px 75px rgba(0, 0, 0, 0.15);
 }
 
+/* TITLES */
+
+.white-title {
+  color: #ffffff !important;
+  font-weight: 900;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.black-title {
+  color: #1a1208 !important;
+  font-weight: 900;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
 /* ==================== RESPONSIVE ==================== */
 
 @media (max-width: 1024px) {
@@ -264,32 +278,37 @@
   }
 }
 
+
 /* ——————————————————————————————— */
-/* MOBILE FIX */
+/* MOBILE ONLY – FINAL CLEAN FIX (2025 standard) */
+/* Removes grey bar + black bar above header */
 /* ——————————————————————————————— */
 @media (max-width: 992px) {
-
+  /* 1. Kill the grey/white bar at the very top */
   html,
   body,
   #root,
   .home-page {
     height: 100dvh;
     min-height: -webkit-fill-available;
-    background: #000A1F !important;
+    background: #000A1F !important;   /* matches your hero */
     margin: 0 !important;
     padding: 0 !important;
   }
 
+  /* 2. Hero fills the real viewport */
   .hero-video-section {
     min-height: 100dvh;
     min-height: -webkit-fill-available;
     background: #000A1F;
   }
 
+  /* 3. CRITICAL: Push page content down under the fixed header */
   .page-wrapper {
-    padding-top: 115px !important;
+    padding-top: 115px !important;   /* exactly the height needed for your logo + spacing */
   }
 
+  /* iOS Safari extra safety */
   @supports (-webkit-touch-callout: none) {
     html,
     body,
@@ -298,6 +317,20 @@
     .hero-video-section {
       min-height: -webkit-fill-available;
     }
+  }
+
+  /* Optional: tighter on very small phones */
+  @media (max-width: 480px) {
+    .page-wrapper {
+      padding-top: 100px !important;
+    }
+  }
+}
+
+/* Optional: completely remove your old hack */
+@media (max-width: 600px) {
+  .hero-video-section {
+    margin-top: 0 !important;   /* removes the old -60px hack */
   }
 }
 
@@ -310,25 +343,29 @@
 
   .home-page .hero-overlay {
     justify-content: flex-start;
-    padding-top: 7rem !important;
+    padding-top: 7rem !important;   /* moved up */
   }
 
   .hero-church-name {
     font-size: 3.2rem !important;
+    letter-spacing: -1px !important;
+    padding: 0 1rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
   }
 
   .hero-subtitle {
     font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
   }
 
   .hero-content-centered {
-    padding-top: 3rem !important;
+    padding-top: 3rem !important;   /* move content higher */
   }
 
   .hero-visit-box {
     padding: 2rem 1.6rem;
-    margin-top: 10rem;
-    transform: none;
   }
 
   .hero-visit-title {
@@ -342,37 +379,61 @@
 
   .main-title {
     font-size: 2.8rem !important;
+    line-height: 1.2;
+    margin-bottom: 1.8rem;
+    letter-spacing: -1px;
+  }
+
+  .what-matters-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* --------------- FIX WHITE TOP BAR ON MOBILE ONLY --------------- */
+  .hero-video-section {
+    margin-top: -60px !important;
   }
 }
 
-/* ==================== DESKTOP ONLY (RESTORED ORIGINAL) ==================== */
+@media (max-width: 380px) {
+  .hero-church-name {
+    font-size: 2.8rem !important;
+    padding: 0 0.8rem;
+  }
+}
 
-/* Base desktop */
+/* DESKTOP ALIGNMENT (for hero section) */
 @media (min-width: 1024px) {
 
+  /* Hero takes full height */
   .hero-video-section {
-    padding-top: 13rem;
     height: 100vh;
   }
 
   .hero-overlay {
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
+  /* MAIN FIX — consistent text placement on all laptops & desktops */
   .hero-content-centered {
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translate(-60px, -130px);
+    padding-top: 12rem;     /* ← adjust this to move text up/down */
+    transform: none !important;  /* remove shifting */
   }
 
   .hero-church-name {
-    font-size: 3.6rem !important;
+    font-size: 4.2rem !important;
+    margin-bottom: 1rem;
+    transform: none !important;  /* remove shifting */
   }
 
   .hero-subtitle {
-    font-size: 1.9rem !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 2.5rem;
+    transform: none !important;  /* remove shifting */
   }
 
   .what-matters-grid {
@@ -383,27 +444,6 @@
   .what-matters-section .main-title {
     position: relative;
     left: -60px;
-  }
-}
-
-/* 15" laptop tuning */
-@media (min-width: 1280px) and (max-width: 1599px) {
-  .hero-content-centered {
-    transform: translate(-60px, -120px);
-  }
-}
-
-/* 17" and large desktop */
-@media (min-width: 1600px) {
-  .hero-content-centered {
-    transform: translate(-60px, -160px);
-  }
-}
-
-/* Short desktop height */
-@media (min-width: 1024px) and (max-height: 880px) {
-  .hero-content-centered {
-    transform: translate(-60px, -110px);
   }
 }
 
