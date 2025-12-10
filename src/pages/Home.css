@@ -480,15 +480,26 @@
 /* ==================== LARGE DESKTOPS (17-inch, widescreens ≥1600px) ==================== */
 @media (min-width: 1600px) {
   .hero-content-centered {
-    transform: translate(-40px, -25px);
+    transform: translate(-40px, 80px);
   }
 
-  .hero-church-name,
+  
+  /* Reduce text size */
+  .hero-church-name {
+    font-size: 3.4rem !important; /* smaller */
+    transform: translate(-40px, 80px); /* ↓ same move down */
+  }
+
   .hero-subtitle {
-    transform: translate(-40px, -40px);
+    font-size: 1.6rem !important; /* smaller */
+    transform: translate(-40px, 80px); /* ↓ same move down */
   }
 
+   /* Visit box smaller + moved lower */
   .hero-visit-box {
-    margin-top: 7rem;
+    transform: translateX(-10px);
+    margin-top: 6rem; /* ↓ move DOWN */
+    padding: 2.6rem 3rem; /* reduce size */
+    max-width: 520px;    /* slightly narrower */
   }
 }
