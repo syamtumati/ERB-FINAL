@@ -402,12 +402,10 @@
   }
 }
 
-/* ==================== DESKTOP ONLY (RESTORED ORIGINAL) ==================== */
+/* ==================== DESKTOP BASE (ALL ≥1024px) ==================== */
 
-/* ==================== DESKTOP ONLY (push hero text DOWN) ==================== */
 @media (min-width: 1024px) {
 
-  /* Keeps hero full height */
   .hero-video-section {
     height: 100vh;
   }
@@ -417,40 +415,46 @@
     justify-content: center;
   }
 
-  /* MAIN FIX – Move hero text DOWN */
   .hero-content-centered {
-    max-width: 1350px;
-    margin: 0 auto;
-    text-align: center;
-    transform: translate(-30px, 60px);  /* <-- MOVE DOWN MORE */
+    transform: translate(-30px, 60px);
   }
 
-  .hero-church-name {
-    font-size: 3.6rem !important;
-    transform: translate(-30px, 40px);  /* <-- MOVE DOWN MORE */
-  }
-
+  .hero-church-name,
   .hero-subtitle {
-    font-size: 1.9rem !important;
-    transform: translate(-30px, 40px);  /* <-- MOVE DOWN MORE */
+    transform: translate(-30px, 40px);
   }
 
-  /* Welcome box — restored original desktop position */
   .hero-visit-box {
     transform: translateX(-10px);
-    margin-top: 9rem;     /* same as before */
+    margin-top: 9rem;
   }
 }
 
-/* ==================== LAPTOP RANGE (15 inch) ==================== */
-/* Moves hero DOWN a little (because -120px is less than -130px) */
+/* ==================== SHORT HEIGHT DESKTOPS (≤880px height) ==================== */
+@media (min-width: 1024px) and (max-height: 880px) {
+  .hero-content-centered {
+    transform: translate(-60px, -110px);
+  }
+
+  .hero-visit-box {
+    margin-top: 9rem;
+  }
+}
+
+/* ==================== LAPTOP RANGE — 15-inch (1280–1599px) ==================== */
+/* MUST COME LAST — overrides all above */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
+    transform: translate(-60px, -30px); /* THIS WILL NOW APPLY */
+  }
+
+  .hero-church-name,
+  .hero-subtitle {
     transform: translate(-60px, -30px);
   }
+
   .hero-visit-box {
-    transform: translateX(-20px);
-    margin-top: 4rem;     /* same as before */
+    margin-top: 4rem;
   }
 }
 
@@ -465,16 +469,3 @@
     margin-top: 7rem;     /* same as before */
   }
 }
-
-/* ==================== SHORT HEIGHT DESKTOPS ==================== */
-/* Don't move hero too high */
-@media (min-width: 1024px) and (max-height: 880px) {
-  .hero-content-centered {
-    transform: translate(-60px, -110px);
-  }
-  .hero-visit-box {
-    transform: translateX(-20px);
-    margin-top: 9rem;     /* same as before */
-  }
-}
-
