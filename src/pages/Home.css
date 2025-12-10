@@ -423,12 +423,12 @@
 
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-40px, 100px); /* moves DOWN */
+    transform: translate(-30px, 180px); /* moves DOWN */
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-40px, 100px); /* moves DOWN */
+    transform: translate(-30px, 180px); /* moves DOWN */
   }
 
   .what-matters-grid {
