@@ -410,7 +410,7 @@
 
   /* Hero layout */
   .hero-video-section {
-    padding-top: 13rem;
+    padding-top: 9rem;
     height: 100vh;
   }
 
@@ -424,7 +424,7 @@
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translate(-60px, -130px); /* Base position */
+    transform: translate(-60px, -180px); /* Base position */
   }
 
   /* Hero fonts restored */
