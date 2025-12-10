@@ -638,10 +638,17 @@
   }
 
   /* Prevent title from cutting */
+
   .pastor-content h1 {
-    font-size: 1.9rem !important;
+    font-size: 1.7rem !important;   /* smaller so it fits */
+    line-height: 1.15 !important;
     word-break: break-word !important;
     max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .pastor-content h2 {
+    font-size: 1.05rem !important;
   }
 
   /* Prevent horizontal scroll */
