@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useEffect, useState } from "react";
 import { Routes, Route, NavLink, Link, useLocation } from "react-router-dom";
 
@@ -14,6 +15,7 @@ import AdminEvents from "./pages/AdminEvents";
 import Belief from "./pages/Belief";
 
 import heartcryLogo from "./assets/partners/heartcry-logo.png";
+
 import "./App.css";
 
 function App() {
@@ -30,12 +32,12 @@ function App() {
     <>
       <ScrollToTop />
 
+      {/* HEADER */}
       <header className="heartcry-header">
         <div className="header-container">
+
           <nav className="menu-left desktop-nav">
-            <NavLink to="/" className="menu-item" end>
-              Startseite
-            </NavLink>
+            <NavLink to="/" className="menu-item" end>Startseite</NavLink>
             <NavLink to="/glaube" className="menu-item">Glaube</NavLink>
             <NavLink to="/Über uns" className="menu-item">Über uns</NavLink>
             <NavLink to="/predigten" className="menu-item">Predigten</NavLink>
@@ -59,10 +61,10 @@ function App() {
           <button
             className="mobile-menu-toggle"
             onClick={() => setMobileOpen(o => !o)}
-            aria-label="Menü öffnen"
           >
             <span /><span /><span />
           </button>
+
         </div>
       </header>
 
@@ -95,22 +97,38 @@ function App() {
         </Routes>
       </main>
 
+      {/* PARTNER SECTION */}
       <section className="partner-heartcry">
         <div className="partner-inner">
+
+          {/* RESTORED TITLE */}
+          <div className="partner-heading">
+            <span className="partner-line" />
+            <span className="partner-heartcry-title">UNSERE PARTNER</span>
+            <span className="partner-line" />
+          </div>
+
           <a
             href="https://heartcrymissionary.com"
             target="_blank"
             rel="noreferrer"
             className="heartcry-logo-link"
           >
-            <img src={heartcryLogo} alt="HeartCry Missionary Society" className="heartcry-logo" />
+            <img
+              src={heartcryLogo}
+              alt="HeartCry Missionary Society"
+              className="heartcry-logo"
+            />
           </a>
+
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="clean-footer">
         <div className="footer-inner">
           <div className="church-name">Gnadenkirche Frankfurt</div>
+
           <nav className="footer-nav">
             <Link to="/glaube">Glaube</Link>
             <Link to="/Über uns">Über uns</Link>
@@ -120,8 +138,13 @@ function App() {
             <Link to="/spenden">Spenden</Link>
             <Link to="/kontakt">Kontakt</Link>
           </nav>
+
+          <div className="copyright">
+            © {new Date().getFullYear()} Gnadenkirche Frankfurt
+          </div>
         </div>
       </footer>
+
     </>
   );
 }

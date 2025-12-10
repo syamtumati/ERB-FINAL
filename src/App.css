@@ -19,7 +19,7 @@ html, body {
 /* ======================= */
 
 .heartcry-header {
-  position: fixed; /* OLD WORKING BEHAVIOR */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +29,7 @@ html, body {
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
-  background: transparent;
+  background: transparent; /* KEEP DESKTOP AS BEFORE */
 }
 
 .header-container {
@@ -125,7 +125,6 @@ html, body {
   border-radius: 999px;
 }
 
-/* Backdrop */
 .mobile-backdrop {
   position: fixed;
   inset: 0;
@@ -133,7 +132,6 @@ html, body {
   z-index: 950;
 }
 
-/* Sidebar drawer */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -142,19 +140,15 @@ html, body {
   width: 78%;
   max-width: 320px;
   background: rgba(6, 6, 12, 0.97);
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   padding: 2rem 2.5rem;
   gap: 1.8rem;
-
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
-
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 960;
 }
@@ -171,7 +165,6 @@ html, body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-  text-decoration: none;
 }
 
 .mobile-close {
@@ -216,7 +209,6 @@ html, body {
     height: 95px;
   }
 
-  /* Restore old working spacing */
   .page-wrapper {
     padding-top: 150px;
   }
@@ -257,6 +249,30 @@ html, body {
   margin: 0 auto;
 }
 
+/* RESTORED TITLE */
+.partner-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.partner-heartcry-title {
+  font-family: "Georgia", serif;
+  text-transform: uppercase;
+  color: #8b4513;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.partner-line {
+  width: 60px;
+  height: 1px;
+  background: #8b4513;
+}
+
 .heartcry-logo-link {
   display: inline-block;
   position: relative;
@@ -286,7 +302,7 @@ html, body {
 }
 
 /* ======================= */
-/* GLOBAL FOOTER           */
+/* FOOTER                  */
 /* ======================= */
 
 .clean-footer {
@@ -337,15 +353,25 @@ html, body {
   opacity: 0.9;
 }
 
+/* DESKTOP FIX: icons in one line */
 @media (min-width: 1024px) {
-  .clean-footer .church-name {
-    position: relative;
-    left: -30px;
+  .footer-nav {
+    flex-wrap: nowrap !important;
+    gap: 3rem !important;
   }
-  .clean-footer .footer-nav,
-  .clean-footer .copyright {
-    position: relative;
-    left: -40px;
+}
+
+/* ======================= */
+/* MOBILE ONLY HEADER FIX  */
+/* ======================= */
+
+@media (max-width: 992px) {
+  .heartcry-header {
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0)
+    ) !important;
   }
 }
 
