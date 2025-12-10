@@ -422,23 +422,23 @@
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translate(-40px, 120px);  /* <-- MOVE DOWN MORE */
+    transform: translate(-30px, 140px);  /* <-- MOVE DOWN MORE */
   }
 
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-30px, 120px);  /* <-- MOVE DOWN MORE */
+    transform: translate(-30px, 140px);  /* <-- MOVE DOWN MORE */
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-30px, 120px);  /* <-- MOVE DOWN MORE */
+    transform: translate(-30px, 140px);  /* <-- MOVE DOWN MORE */
   }
 
   /* Welcome box — restored original desktop position */
   .hero-visit-box {
     transform: translateX(-20px);
-    margin-top: 24rem;     /* same as before */
+    margin-top: 9rem;     /* same as before */
   }
 }
 
