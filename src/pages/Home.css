@@ -280,7 +280,12 @@
 
 @media (max-width: 992px) {
   .hero-video-section {
-    margin-top: -100px !important;
+    margin-top: -160px !important;
+  }
+
+  html, body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 }
 
