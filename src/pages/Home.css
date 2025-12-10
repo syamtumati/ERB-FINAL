@@ -446,7 +446,7 @@
 /* Moves hero DOWN a little (because -120px is less than -130px) */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
-    transform: translate(-60px, -180px);
+    transform: translate(-60px, 120px);
   }
 }
 
