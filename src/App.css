@@ -18,8 +18,9 @@ html, body {
 /* HEARTCRY-STYLE HEADER   */
 /* ======================= */
 
+/* DESKTOP → scrolls with page */
 .heartcry-header {
-  position: fixed;
+  position: absolute; /* ← CHANGED ONLY FOR DESKTOP */
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +30,7 @@ html, body {
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
-  background: transparent; /* KEEP DESKTOP AS BEFORE */
+  background: transparent !important;
 }
 
 .header-container {
@@ -125,6 +126,7 @@ html, body {
   border-radius: 999px;
 }
 
+/* Backdrop */
 .mobile-backdrop {
   position: fixed;
   inset: 0;
@@ -132,6 +134,7 @@ html, body {
   z-index: 950;
 }
 
+/* Sidebar drawer */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -140,15 +143,19 @@ html, body {
   width: 78%;
   max-width: 320px;
   background: rgba(6, 6, 12, 0.97);
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
   padding: 2rem 2.5rem;
   gap: 1.8rem;
+
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
+
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 960;
 }
@@ -165,6 +172,7 @@ html, body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
 .mobile-close {
@@ -209,8 +217,19 @@ html, body {
     height: 95px;
   }
 
+  /* MOBILE: page push-down */
   .page-wrapper {
     padding-top: 150px;
+  }
+
+  /* MOBILE HEADER FIXED (ONLY HERE) */
+  .heartcry-header {
+    position: fixed !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0)
+    ) !important;
   }
 }
 
@@ -249,7 +268,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* RESTORED TITLE */
+/* RESTORED UNSERE PARTNER TITLE */
 .partner-heading {
   display: flex;
   align-items: center;
@@ -302,7 +321,7 @@ html, body {
 }
 
 /* ======================= */
-/* FOOTER                  */
+/* GLOBAL FOOTER           */
 /* ======================= */
 
 .clean-footer {
@@ -353,25 +372,11 @@ html, body {
   opacity: 0.9;
 }
 
-/* DESKTOP FIX: icons in one line */
+/* DESKTOP FOOTER FIX: one line */
 @media (min-width: 1024px) {
   .footer-nav {
     flex-wrap: nowrap !important;
     gap: 3rem !important;
-  }
-}
-
-/* ======================= */
-/* MOBILE ONLY HEADER FIX  */
-/* ======================= */
-
-@media (max-width: 992px) {
-  .heartcry-header {
-    background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0)
-    ) !important;
   }
 }
 
