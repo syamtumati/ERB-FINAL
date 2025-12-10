@@ -78,6 +78,63 @@
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
 }
 
+/* ========== VISIT CARD DIRECTLY UNDER TITLE ========== */
+
+.hero-visit-box {
+  margin-top: 24rem;
+  max-width: 640px;
+  width: 100%;
+  background: #f9f6ef;
+  border: 2px solid #d7a955;
+  border-radius: 18px;
+  padding: 3.4rem 4rem;
+  text-align: center;
+  transform: translateX(-20px);
+  color: #2b2620;
+  font-family: "Georgia", serif;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.75);
+}
+
+.hero-visit-title {
+  font-size: 2.6rem;
+  line-height: 1.4;
+  margin: 0 0 1.8rem 0;
+  font-weight: 700;
+}
+
+.hero-visit-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.hero-visit-divider span {
+  flex: 1;
+  height: 2px;
+  background: rgba(215, 169, 85, 0.6);
+  border-radius: 2px;
+}
+
+.hero-visit-icon {
+  flex: 0;
+  font-size: 1.1rem;
+  color: #d7a955;
+}
+
+.hero-visit-time {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-visit-address {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
 /* ==================== 2. WHAT MATTERS SECTION ==================== */
 
 .container {
@@ -90,6 +147,7 @@
 
 .what-matters-section {
   padding: 4rem 2rem 4rem;
+
   background:
     repeating-linear-gradient(
       0deg,
@@ -99,6 +157,7 @@
       rgba(3, 15, 35, 0.40) 8px
     ),
     radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
+
   background-attachment: fixed;
   text-align: center;
 }
@@ -177,26 +236,74 @@
   .hero-content-centered {
     transform: none !important;
   }
+
+  .hero-visit-box {
+    padding: 2.2rem 2.2rem;
+    max-width: 90%;
+  }
+
+  .hero-visit-title {
+    font-size: 1.8rem;
+  }
+
   .main-title {
     font-size: 3.2rem;
   }
+
+  .what-matters-section {
+    padding: 4rem 1.5rem 3rem !important;
+  }
+
+  .what-matters-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .matter-block {
+    padding: 2.4rem 1.8rem;
+  }
 }
 
-/* MOBILE CLEAN FIX */
+/* ——————————————————————————————— */
+/* MOBILE FIX */
+/* ——————————————————————————————— */
 @media (max-width: 992px) {
-  html, body, #root, .home-page {
+
+  html,
+  body,
+  #root,
+  .home-page {
+    height: 100dvh;
+    min-height: -webkit-fill-available;
     background: #000A1F !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
+  .hero-video-section {
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    background: #000A1F;
+  }
+
   .page-wrapper {
     padding-top: 115px !important;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    html,
+    body,
+    #root,
+    .home-page,
+    .hero-video-section {
+      min-height: -webkit-fill-available;
+    }
   }
 }
 
 /* MOBILE (≤ 600px) */
 @media (max-width: 600px) {
+
   .hero-video {
     object-position: center top;
   }
@@ -217,9 +324,30 @@
   .hero-content-centered {
     padding-top: 3rem !important;
   }
+
+  .hero-visit-box {
+    padding: 2rem 1.6rem;
+    margin-top: 10rem;
+    transform: none;
+  }
+
+  .hero-visit-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 0.98rem;
+  }
+
+  .main-title {
+    font-size: 2.8rem !important;
+  }
 }
 
-/* DESKTOP ONLY (FINAL, CORRECT WORKING BLOCK) */
+/* ==================== DESKTOP ONLY (RESTORED ORIGINAL) ==================== */
+
+/* Base desktop */
 @media (min-width: 1024px) {
 
   .hero-video-section {
@@ -251,16 +379,21 @@
     position: relative;
     left: -5px;
   }
+
+  .what-matters-section .main-title {
+    position: relative;
+    left: -60px;
+  }
 }
 
-/* 15-inch screens (normal laptops) */
+/* 15" laptop tuning */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
     transform: translate(-60px, -120px);
   }
 }
 
-/* 17-inch / very large screens */
+/* 17" and large desktop */
 @media (min-width: 1600px) {
   .hero-content-centered {
     transform: translate(-60px, -160px);
