@@ -230,10 +230,6 @@ html, body {
       rgba(0,0,0,0.55),
       rgba(0,0,0,0)
     ) !important;
-    height: 90px !important;     /* ADDED */
-  }
-  .logo-image {
-    height: 60px !important;     /* ADDED */
   }
 }
 
