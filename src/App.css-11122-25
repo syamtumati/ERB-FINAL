@@ -17,9 +17,8 @@ body {
 /* HEARTCRY-STYLE HEADER   */
 /* ======================= */
 
-/* Use absolute like in the old working version */
 .heartcry-header {
-  position: absolute;      /* ← like old ERB-FINAL-1 */
+  position: absolute; /* ← restore FIXED */
   top: 0;
   left: 0;
   width: 100%;
@@ -33,10 +32,9 @@ body {
   background: transparent;
 }
 
-/* (header-hidden class kept in case you ever re-add scroll-hide) */
 .heartcry-header.header-hidden {
-  transform: translateY(-100%);
-  opacity: 0;
+  transform: none;
+  opacity: 1;
 }
 
 .header-container {
@@ -114,10 +112,9 @@ body {
 /* ======================= */
 /* HERO TOP PADDING        */
 /* ======================= */
-/* This keeps the Home hero from sitting under the header */
 
 .hero-video-section {
-  padding-top: 150px !important;
+  /* layout handled in Home.css */
 }
 
 /* ======================= */
@@ -230,10 +227,6 @@ body {
   .logo-image {
     height: 95px;
   }
-
-  .hero-video-section {
-    padding-top: 120px !important;
-  }
 }
 
 @media (max-width: 768px) {
@@ -245,12 +238,8 @@ body {
     height: 80px;
   }
 
-  .hero-video-section {
-    padding-top: 110px !important;
-  }
-
   .partner-inner {
-    transform: none !important; /* stay centered on mobile */
+    transform: none !important;   /* stay centered on mobile */
   }
 }
 
@@ -261,10 +250,6 @@ body {
 
   .logo-image {
     height: 70px;
-  }
-
-  .hero-video-section {
-    padding-top: 100px !important;
   }
 }
 
@@ -303,7 +288,7 @@ body {
 .church-name {
   font-size: 2.6rem;
   font-weight: 900;
-  color: #8b4513 !important;
+  color: #8b4513 !important;  /* brown, matches HeartCry style */
   letter-spacing: -1px;
 }
 
@@ -367,28 +352,11 @@ body {
   margin: 0 auto;
 }
 
-/* New heading layout ("UNSERE PARTNER" with lines) */
-.partner-heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 0.9rem;
-}
-
-.partner-line {
-  display: inline-block;
-  width: 80px;
-  height: 1px;
-  background: #8b4513;
-}
-
-.partner-heartcry-title {
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  font-weight: 700;
-  color: #8b4513;
+.partner-label {
+  font-size: 0.9rem;
   text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #8b4513 !important;
 }
 
 /* HeartCry logo + underline */
@@ -404,7 +372,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  width: 140px;
+  width: 140px;     /* length of line */
   height: 1px;
   background: #8b4513;
 }
@@ -424,7 +392,7 @@ body {
     max-width: 200px;
   }
 
-  .partner-heartcry-title {
+  .partner-label {
     font-size: 0.8rem;
     letter-spacing: 2px;
   }
