@@ -18,7 +18,7 @@ body {
 /* ======================= */
 
 .heartcry-header {
-  position: fixed; /* ← restore FIXED */
+  position: absolute; /* ← restore FIXED */
   top: 0;
   left: 0;
   width: 100%;
