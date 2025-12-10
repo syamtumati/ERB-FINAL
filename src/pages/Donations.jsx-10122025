@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Donations.css";
 
 const Donations = () => {
@@ -37,7 +38,10 @@ const Donations = () => {
 
   return (
     <div className="donations-page">
+      <div className="donations-bg-overlay" />
+
       <div className="donations-inner">
+        {/* MAIN */}
         <main className="donations-main">
           <section className="donations-card">
             <h1>Unterstütze unseren Dienst</h1>
@@ -46,7 +50,6 @@ const Donations = () => {
               Menschen zu erreichen und die Gemeinde zu stärken.
             </p>
 
-            {/* LEFT BOX */}
             <form onSubmit={handleSubmit} className="donations-form">
               <label className="field-label">Betrag wählen</label>
               <div className="amount-row">
@@ -82,7 +85,6 @@ const Donations = () => {
               </div>
 
               <label className="field-label">Zahlungsart</label>
-
               <div className="method-row">
                 <button
                   type="button"
@@ -107,6 +109,7 @@ const Donations = () => {
               <button type="submit" className="primary-btn">
                 Jetzt spenden – €{amount || "—"}
               </button>
+
               <p className="secure-text">
                 Sicher & verschlüsselt über Stripe und PayPal.
               </p>
@@ -114,7 +117,6 @@ const Donations = () => {
 
             <div className="divider" />
 
-            {/* RIGHT BOX */}
             <div className="other-ways">
               <h2>Banküberweisung</h2>
               <p className="small-text">
@@ -146,6 +148,27 @@ const Donations = () => {
             </div>
           </section>
         </main>
+
+        {/* FOOTER */}
+        <footer className="clean-footer">
+          <div className="footer-inner">
+            <div className="church-name">Gnadenkirche Frankfurt</div>
+
+            <nav className="footer-nav">
+              <Link to="/glaube">Glaube</Link>
+              <Link to="/Über uns">Über uns</Link>
+	      <Link to="/predigten">Predigten</Link>
+              <Link to="/dienst">Dienst</Link>
+              <Link to="/veranstaltungen">Veranstaltungen</Link>
+              <Link to="/kontakt">Kontakt</Link>
+            </nav>
+
+            <div className="copyright">
+              © {new Date().getFullYear()} Gnadenkirche Frankfurt · Soli Deo
+              Gloria
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );

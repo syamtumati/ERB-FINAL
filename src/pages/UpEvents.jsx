@@ -22,30 +22,10 @@ function UpEvents() {
         </div>
       </div>
 
-      {/* SAME CLEAN FOOTER AS ALL OTHER PAGES */}
-      <footer className="clean-footer">
-        <div className="footer-inner">
-          <div className="church-name">
-            Gnadenkirche Frankfurt
-          </div>
-
-          <nav className="footer-nav">
-            <Link to="/glaube">Glaube</Link>
-            <Link to="/über uns">Über uns</Link>
-	    <Link to="/predigten">Predigten</Link>
-            <Link to="/dienst">Dienst & Mission</Link>
-            <Link to="/veranstaltungen">Veranstaltungen</Link>
-            <Link to="/spenden">Spenden</Link>
-            <Link to="/kontakt">Kontakt</Link>
-          </nav>
-
-          <div className="copyright">
-            © {new Date().getFullYear()} Gnadenkirche Frankfurt. Alle Rechte vorbehalten.
-          </div>
-        </div>
-      </footer>
+      {/* Footer & HeartCry partner strip now come globally from App.jsx/App.css */}
     </div>
   );
 }
 
 export default UpEvents;
+

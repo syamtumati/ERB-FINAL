@@ -36,9 +36,10 @@ body {
   }
 }
 
-/* optional hero section */
+/* (Optional) empty hero section if it still exists in JSX */
 .outreach-hero {
   width: 100%;
+  /* no image, no extra height needed */
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -160,7 +161,7 @@ body {
 
 @media (max-width: 1024px) {
   .outreach-page {
-    padding-top: 10rem;
+    padding-top: 10rem;  /* tablets / small laptops */
   }
 
   .black-title {
@@ -233,7 +234,7 @@ body {
   }
 }
 
-/* MOBILE (phones ≤ 600px) */
+/* MOBILE (phones ≤ 600px) – match other pages */
 @media (max-width: 600px) {
   .outreach-page {
     padding-top: 7rem;
@@ -276,22 +277,117 @@ body {
     max-width: 300px;
     font-size: 1.2rem;
   }
+
+  /* 🔽 FOOTER: force single-column layout on all phones */
+  .footer-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+    letter-spacing: 1.4px;
+  }
 }
 
-/* DESKTOP ALIGNMENT WITH LOGO */
+/* ========== FOOTER (BISCUIT) ========== */
+
+.clean-footer {
+  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 0 !important;
+  flex-shrink: 0;
+  font-family: "Georgia", serif;
+  width: 100%;
+  margin-top: auto;          /* push footer to bottom, like other pages */
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+}
+
+.footer-nav a {
+  color: #5d4037;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #8b4513;
+}
+
+.copyright {
+  font-size: 0.88rem;
+  color: #6d4c41;
+  opacity: 0.9;
+}
+
+/* ========== DESKTOP ALIGNMENT WITH LOGO ========== */
 @media (min-width: 1024px) {
+  /* more top space on desktop to clear navbar */
   .outreach-page {
     padding-top: 9rem;
   }
 
+  /* push boxes a bit down */
   .outreach-saturday {
     padding-top: 5rem;
   }
 
-  .outreach-saturday .container,
+  /* Align top boxes with logo */
+  .outreach-saturday .container {
+    position: relative;
+    left: -10px;
+  }
+
+  /* Align bottom "Mach mit..." box with same baseline */
   .join-us {
     position: relative;
     left: -10px;
+  }
+
+  /* Align footer text with same vertical line */
+  .clean-footer .church-name,
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
   }
 }
 

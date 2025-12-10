@@ -1,9 +1,10 @@
+// src/pages/Home.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-// Static hero IMAGE
 import heroImage from "../assets/images/hero-message.jpg";
+import heartcryLogo from "../assets/partners/heartcry-logo.png";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
           alt="Gnadenkirche Frankfurt – Stadtansicht"
         />
         <div className="hero-overlay">
+          {/* Titel in der Mitte */}
           <div className="hero-content-centered">
             <h1 className="white-title hero-church-name">
               Gnadenkirche Frankfurt
@@ -23,24 +25,24 @@ function Home() {
             <p className="hero-subtitle">
               Evangelisch-Reformierte Baptistengemeinde
             </p>
+          </div>
 
-            {/* Visit-us card directly under title + subtitle */}
-            <div className="hero-visit-box">
-              <h2 className="hero-visit-title">
-                Besuchen Sie uns diesen Sonntag!
-              </h2>
+          {/* Willkommensbox unten rechts im Bild */}
+          <div className="hero-welcome-box">
+            <h2 className="hero-welcome-title">Herzlich willkommen!</h2>
+            <p className="hero-welcome-text">
+              Wir sind eine evangelisch-reformierte Baptistengemeinde im Herzen
+              des Rhein-Main-Gebiets. Unser größtes Anliegen ist es, dass Gottes
+              Wort klar verkündigt wird, dass Menschen zum lebendigen Glauben an
+              Jesus Christus kommen und dass Gott in allem verherrlicht wird.
+            </p>
 
-              <div className="hero-visit-divider">
-                <span />
-                <span className="hero-visit-icon">✧</span>
-                <span />
-              </div>
-
-              <p className="hero-visit-time">um 16:30 Uhr</p>
-              <p className="hero-visit-address">
-                Hohemarkstraße 75
+            <div className="hero-address">
+              <h3>Gnadenkirche Frankfurt</h3>
+              <p>
+                Frankfurt am Main
                 <br />
-                61440 Oberursel
+                Deutschland
               </p>
             </div>
           </div>
@@ -50,7 +52,7 @@ function Home() {
       {/* WAS UNS WICHTIG IST */}
       <section className="what-matters-section">
         <div className="container what-matters-grid">
-          <h2 className="main-title">Was uns wichtig ist</h2>
+          <h2 className="main-title black-title">Was uns wichtig ist</h2>
 
           <Link to="/glaube" className="matter-block doctrine">
             <h3>Unsere Lehre</h3>
@@ -87,6 +89,49 @@ function Home() {
               Unsere Hirten &amp; Vision kennenlernen
             </span>
           </Link>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="clean-footer">
+        <div className="footer-inner">
+          <div className="church-name">Gnadenkirche Frankfurt</div>
+          <nav className="footer-nav">
+            <Link to="/glaube">Glaube</Link>
+            <Link to="/über uns">Über uns</Link>
+            <Link to="/predigten">Predigten</Link>
+            <Link to="/dienst">Dienst &amp; Mission</Link>
+            <Link to="/veranstaltungen">Veranstaltungen</Link>
+            <Link to="/spenden">Spenden</Link>
+            <Link to="/kontakt">Kontakt</Link>
+          </nav>
+          <div className="copyright">
+            © {new Date().getFullYear()} Gnadenkirche Frankfurt. Alle Rechte
+            vorbehalten.
+          </div>
+        </div>
+      </footer>
+
+      {/* PARTNER-LEISTE MIT LOGO (HeartCry) */}
+      <section className="partner-heartcry">
+        <div className="partner-inner">
+          <div className="partner-heading">
+            <span className="partner-line" />
+            <span className="partner-label">UNSERE PARTNER</span>
+            <span className="partner-line" />
+          </div>
+          <a
+            href="https://heartcrymissionary.com"
+            target="_blank"
+            rel="noreferrer"
+            className="heartcry-logo-link"
+          >
+            <img
+              src={heartcryLogo}
+              alt="HeartCry Missionary Society"
+              className="heartcry-logo"
+            />
+          </a>
         </div>
       </section>
     </div>

@@ -33,7 +33,7 @@
 
 /* MAIN CONTENT */
 .upevents-simple {
-  flex: 1;                        /* pushes global footer to the bottom */
+  flex: 1;                        /* pushes footer to the bottom */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,6 +89,72 @@
   transform: translateY(-8px);
   background: linear-gradient(90deg, #8c6b47, #a07d5b);
   box-shadow: 0 35px 80px rgba(107, 78, 49, 0.8);
+}
+
+/* CLEAN FOOTER (Same as all other pages) */
+.clean-footer {
+  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 0 !important;
+  flex-shrink: 0;
+  font-family: "Georgia", serif;
+  width: 100%;
+  margin-top: auto;               /* ⭐ push footer to the bottom */
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+}
+
+.footer-nav a {
+  color: #5d4037;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #8b4513;
+}
+
+.copyright {
+  font-size: 0.88rem;
+  color: #6d4c41;
+  opacity: 0.9;
 }
 
 /* MOBILE / TABLET (≤ 768px) */
@@ -150,6 +216,29 @@
     max-width: 300px;
     font-size: 1.1rem;
   }
+
+  /* 🔽 FOOTER: force single-column layout on all phones */
+  .footer-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+    letter-spacing: 1.4px;
+  }
+}
+
+/* Remove old footer classes if they exist */
+.biscuit-footer,
+.footer-container,
+.footer-logo,
+.footer-links,
+.footer-copyright,
+.latin {
+  display: none !important;
 }
 
 /* ===================================================== */
@@ -158,25 +247,33 @@
 @media (min-width: 1024px) {
   .upevents-simple {
     padding-top: 10rem !important;
-    padding-bottom: 4rem !important;
+    padding-bottom: 4rem !important;  /* was 8rem */
   }
 
-  /* Align the hero (title + text) with logo baseline */
+  /* 1️⃣ Align the HERO (title + text) with logo */
   .upevents-simple .container {
     position: relative;
-    left: -60px;     /* same global alignment offset as other pages */
+    left: -60px;     /* same global alignment offset */
     margin-bottom: 1.5rem;
   }
 
-  /* Align the button with same left baseline */
+  /* 2️⃣ Align the button with the same left baseline */
+  /* Fix button width + alignment + one-line text */
   .home-btn {
     display: inline-block;
     width: 400px;        /* keep text on one line */
     position: relative;
-    left: -10px;
+    left: -10px;         /* align with logo text baseline */
     text-align: center;
     white-space: nowrap;
     margin-bottom: 0 !important;
+  }
+
+  /* 3️⃣ Align footer church-name + copyright */
+  .clean-footer .church-name,
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
   }
 }
 

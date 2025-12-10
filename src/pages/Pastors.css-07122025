@@ -5,16 +5,22 @@
 .pastors-page {
   min-height: 100vh;
 
-  /* === LYNCH COLOR BACKGROUND === */
+  /* NAVY LINEN TEXTURE BACKGROUND */
   background:
-    linear-gradient(180deg, #697D89 0%, #5E717D 45%, #4C5A63 100%);
-
+    repeating-linear-gradient(
+      0deg,
+      rgba(5, 20, 45, 0.40),
+      rgba(5, 20, 45, 0.40) 4px,
+      rgba(3, 15, 35, 0.40) 4px,
+      rgba(3, 15, 35, 0.40) 8px
+    ),
+    radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
   background-attachment: fixed;
 
-  color: #eaf1ff;
+  color: #EAF1FF;
   font-family: "Georgia", serif;
   overflow-x: hidden;
-  padding-top: 0;
+  padding-top: 11rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -45,6 +51,7 @@
   left: -10%;
 }
 
+/* ⬇️ Move this orb higher so it doesn't glow under the footer */
 .orb-2 {
   width: 520px;
   height: 520px;
@@ -61,24 +68,13 @@
   left: 70%;
 }
 
-/* =================== PASTORS SECTION (BLOCK 2) =================== */
-
 .pastors-container {
   max-width: 1180px;
-  margin: 3rem auto 0 auto; /* gap after HeartCry block */
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 0 2rem;      /* inner side padding */
   position: relative;
   z-index: 2;
-  flex: 1;
-}
-
-.pastors-heading {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 3rem;
-  text-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
+  flex: 1;              /* pushes footer to bottom */
 }
 
 /* CARD STYLES */
@@ -187,6 +183,44 @@
   border-color: #a56733;
 }
 
+/* CLEAN FOOTER – SAME AS OTHER PAGES */
+.clean-footer {
+  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 0 !important;
+  flex-shrink: 0;
+  font-family: "Georgia", serif;
+  width: 100%;
+  margin-top: auto;           /* footer sticks to bottom */
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 @media (min-width: 640px) {
   .footer-nav {
     flex-wrap: nowrap;
@@ -244,9 +278,12 @@
 
 /* MOBILE / SMALL TABLET (≤ 768px) */
 @media (max-width: 768px) {
+  .pastors-page {
+    padding-top: 9rem;
+  }
+
   .pastors-container {
     padding: 0 1.5rem;
-    margin-top: 2.5rem;
   }
 
   .pastor-card {
@@ -287,6 +324,7 @@
     font-size: 2.1rem;
   }
 
+  /* Hide orbs on smaller screens */
   .orb-1,
   .orb-2,
   .orb-3 {
@@ -294,11 +332,14 @@
   }
 }
 
-/* MOBILE (phones ≤ 600px) */
+/* MOBILE (phones ≤ 600px) – match Belief & Contact behavior */
 @media (max-width: 600px) {
+  .pastors-page {
+    padding-top: 8rem;        /* similar feel to other pages */
+  }
+
   .pastors-container {
     padding: 0 1.2rem;
-    margin-top: 2rem;
   }
 
   .pastor-card {
@@ -318,6 +359,7 @@
     font-size: 1rem;
   }
 
+  /* 🔽 FOOTER: force single-column layout on all phones */
   .footer-nav {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -347,155 +389,19 @@
     transform: translateX(-5px);
   }
 
+  /* Reduce gap between Pastor 1 and Pastor 2 */
   .pastor-card {
-    margin-bottom: 4rem !important;
-    gap: 4rem !important;
+    margin-bottom: 4rem !important;   /* was 8rem */
+    gap: 4rem !important;             /* was 5.5rem */
   }
 
   .deacon {
-    margin-top: 2rem !important;
+    margin-top: 2rem !important;      /* was 4rem */
   }
 
   .pastors-page {
-    padding-top: 0 !important; /* ensure no extra top padding on desktop */
+    padding-top: 14rem;               /* more space under navbar on desktop */
     padding-bottom: 0 !important;
-  }
-}
-
-
-/* ================= HEARTCRY SECTION (BLOCK 1) ================= */
-
-/* New teal / canvas-like background */
-.heartcry-section {
-  padding: 9rem 2rem 3.5rem;
-  margin-bottom: 2.8rem;
-
-  /* === BELIEF PAGE BLUE BACKGROUND === */
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(5, 20, 45, 0.40),
-      rgba(5, 20, 45, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 8px
-    ),
-    radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
-  
-  background-attachment: fixed;
-
-  color: #eaf1ff;
-  text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
-  position: relative;
-  z-index: 1;
-}
-
-.heartcry-section .container {
-  max-width: 1350px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.section-title {
-  font-size: 3.4rem;
-  font-weight: 900;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
-}
-
-.section-subtitle {
-  font-size: 1.7rem;
-  color: #d9e4ea;
-  margin-bottom: 2.8rem;
-  max-width: 1000px;
-}
-
-/* VIDEO FRAME */
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 1450px;
-  margin: 0 auto 3rem auto;
-  border-radius: 2.5rem;
-  overflow: hidden;
-  box-shadow: 0 80px 190px rgba(0, 0, 0, 0.95);
-  border: 14px solid rgba(232, 192, 160, 0.42);
-}
-
-.video-container::before {
-  content: "";
-  display: block;
-  padding-top: 56.25%; /* 16:9 */
-}
-
-.youtube-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-.video-description {
-  font-size: 1.35rem;
-  color: #eff6fb;
-  max-width: 950px;
-  margin: 2.2rem auto 0;
-  line-height: 2.1;
-}
-
-/* Responsive HeartCry tweaks */
-@media (max-width: 768px) {
-  .heartcry-section {
-    padding: 8rem 1.5rem 3rem !important;
-    margin-bottom: 2.4rem;
-  }
-
-  .section-title {
-    font-size: 2.8rem;
-  }
-
-  .video-container::before {
-    padding-top: 70% !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .heartcry-section {
-    padding: 7.5rem 0 3rem !important;
-  }
-
-  .section-title {
-    font-size: 2.3rem !important;
-  }
-
-  .section-subtitle {
-    font-size: 1.3rem !important;
-  }
-
-  .heartcry-section .video-container {
-    max-width: none;
-    width: 100%;
-    margin: 0 0 2.5rem;
-    border-radius: 0;
-    border-width: 6px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7);
-  }
-
-  .video-container::before {
-    padding-top: 85% !important;
-  }
-}
-
-/* Move ONLY "HeartCry Film" title a little left on desktop */
-@media (min-width: 1024px) {
-  .heartcry-section .section-title {
-    margin-left: -80px; /* adjust: -20, -30, -40 depending how far you want */
   }
 }
 

@@ -221,6 +221,67 @@
   color:#6b4e31;
 }
 
+/* ================= FOOTER ========================== */
+
+.clean-footer {
+  background:linear-gradient(135deg,#f9f3e8,#fdf8f0,#f5efe2);
+  padding:5rem 2rem 3rem;
+  text-align:center;
+  border-top:1px solid rgba(0,0,0,0.08);
+  margin:0 !important;
+  flex-shrink:0;
+  margin-top: auto !important;      /* ensures footer sits at bottom */
+  width: 100%;
+}
+
+.footer-inner {
+  max-width:1000px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1.8rem;
+}
+
+.church-name {
+  font-size:2.6rem;
+  font-weight:900;
+  color:#8b4513;
+}
+
+.footer-nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:2.4rem;
+  justify-content:center;
+}
+
+@media (min-width:640px) {
+  .footer-nav {
+    flex-wrap:nowrap;
+    gap:3rem;
+  }
+}
+
+.footer-nav a {
+  color:#5d4037;
+  font-size:1.05rem;
+  text-transform:uppercase;
+  font-weight:600;
+  text-decoration:none;
+  letter-spacing:2px;
+}
+
+.footer-nav a:hover {
+  color:#8b4513;
+}
+
+.copyright {
+  font-size:0.88rem;
+  color:#6d4c41;
+  opacity:0.9;
+}
+
 /* ================= RESPONSIVE ====================== */
 
 @media (max-width: 968px) {
@@ -251,7 +312,7 @@
   /* baseline for big desktop screens */
   .contact-hero-title {
     font-size: 4rem;
-    transform: translate(-60px, -175px);
+    transform: translate(-60px, -80px);
   }
 
   .contact-hero-subtitle {
@@ -318,6 +379,19 @@
 
   .contact-content {
     padding: 3.5rem 1.5rem 5rem;
+  }
+
+  /* 🔽 FOOTER: force single-column layout on all phones */
+  .footer-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+    letter-spacing: 1.4px;
   }
 }
 

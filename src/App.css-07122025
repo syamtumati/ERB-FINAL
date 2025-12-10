@@ -18,32 +18,38 @@ body {
 /* ======================= */
 
 .heartcry-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 160px;
-  z-index: 900;
+  z-index: 900; /* header under mobile menu/backdrop */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.3s ease;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0);
   opacity: 1;
+
   background: transparent;
 }
 
 .heartcry-header.header-hidden {
-  transform: none;
-  opacity: 1;
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
+/* Inner header layout */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1700px;
+/*  max-width: 1350px;*/   /* match with other pages */
   width: 100%;
   padding: 0 1.5rem;
+/*  margin: 0 auto; */
 }
 
 /* LOGO */
@@ -56,11 +62,22 @@ body {
   height: 130px;
   width: auto;
   filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.8));
-  transition: transform 0.3s ease;
+  animation: logo-float 10s ease-in-out infinite;
+  transition: transform 0.4s ease;
 }
 
 .logo-image:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+}
+
+@keyframes logo-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* ======================= */
@@ -113,14 +130,16 @@ body {
 /* HERO TOP PADDING        */
 /* ======================= */
 
+/* Pages with a hero at the top should not sit behind the header */
 .hero-video-section {
-  /* layout handled in Home.css */
+  padding-top: 150px !important;
 }
 
 /* ======================= */
 /* MOBILE NAVIGATION       */
 /* ======================= */
 
+/* Hamburger button (hidden on desktop) */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -138,13 +157,15 @@ body {
   border-radius: 999px;
 }
 
+/* Dark backdrop behind sidebar */
 .mobile-backdrop {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  z-index: 950;
+  z-index: 950; /* between header(900) and sidebar(960) */
 }
 
+/* Side-drawer mobile menu (slides from the right) */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -159,11 +180,12 @@ body {
   justify-content: center;
   padding: 2rem 2.5rem;
   gap: 1.8rem;
+
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 960;
+  z-index: 960; /* above everything */
 }
 
 .mobile-menu.open {
@@ -181,6 +203,7 @@ body {
   font-size: 1.2rem;
 }
 
+/* Close button inside sidebar */
 .mobile-close {
   position: absolute;
   top: 1.2rem;
@@ -212,6 +235,7 @@ body {
 }
 
 @media (max-width: 992px) {
+  /* Hide full desktop nav, show hamburger */
   .desktop-nav {
     display: none;
   }
@@ -227,6 +251,10 @@ body {
   .logo-image {
     height: 95px;
   }
+
+  .hero-video-section {
+    padding-top: 120px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -238,8 +266,8 @@ body {
     height: 80px;
   }
 
-  .partner-inner {
-    transform: none !important;   /* stay centered on mobile */
+  .hero-video-section {
+    padding-top: 110px !important;
   }
 }
 
@@ -251,6 +279,10 @@ body {
   .logo-image {
     height: 70px;
   }
+
+  .hero-video-section {
+    padding-top: 100px !important;
+  }
 }
 
 /* Keep header & nav fully transparent */
@@ -261,140 +293,23 @@ body {
   box-shadow: none;
 }
 
-/* ======================= */
-/* GLOBAL FOOTER           */
-/* ======================= */
-
 .clean-footer {
   padding: 4rem 2rem 3rem;
   text-align: center;
-  border-top: none;
+  border-top: 1px solid rgba(0,0,0,0.08);
   margin: 0 !important;
   flex-shrink: 0;
   font-family: "Georgia", serif;
-  background: #f4f3f1;
-  color: #2d1b0a;
-}
 
-.footer-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  align-items: center;
-}
-
-.church-name {
-  font-size: 2.6rem;
-  font-weight: 900;
-  color: #8b4513 !important;  /* brown, matches HeartCry style */
-  letter-spacing: -1px;
-}
-
-.footer-nav a {
-  color: #8b4513;
-  font-size: 1.05rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: none;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-}
-
-.footer-nav a:visited {
-  color: #8b4513;
-}
-
-.footer-nav a:hover {
-  color: #e8c0a0;
-}
-
-.copyright {
-  font-size: 0.88rem;
-  color: #8b4513 !important;
-  opacity: 0.9;
-}
-
-/* Desktop alignment tweaks */
-@media (min-width: 1024px) {
-  .clean-footer .church-name {
-    position: relative;
-    left: -30px;
-  }
-
-  .clean-footer .footer-nav,
-  .clean-footer .copyright {
-    position: relative;
-    left: -40px;
-  }
-
-  .partner-inner {
-    transform: translateX(-30px);
-  }
-}
-
-/* ======================= */
-/* PARTNER STRIP (Unified) */
-/* ======================= */
-
-.partner-heartcry {
-  background: #f4f3f1;
-  padding: 1.8rem 1.5rem 2.4rem;
-  text-align: center;
-  font-family: "Georgia", serif;
-  color: #2d1b0a;
-}
-
-.partner-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.partner-label {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #8b4513 !important;
-}
-
-/* HeartCry logo + underline */
-.heartcry-logo-link {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 0.8rem; /* space for line */
-}
-
-.heartcry-logo-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 140px;     /* length of line */
-  height: 1px;
-  background: #8b4513;
-}
-
-.heartcry-logo {
-  max-width: 260px;
-  height: auto;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .partner-heartcry {
-    padding: 1.5rem 1.2rem 2rem;
-  }
-
-  .heartcry-logo {
-    max-width: 200px;
-  }
-
-  .partner-label {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-  }
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(235, 230, 220, 0.6),
+      rgba(235, 230, 220, 0.6) 4px,
+      rgba(225, 218, 205, 0.6) 4px,
+      rgba(225, 218, 205, 0.6) 8px
+    ),
+    linear-gradient(180deg, #f7f3ec, #ede7de);
+  background-attachment: fixed;
 }
 

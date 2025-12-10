@@ -1,4 +1,4 @@
-/* === BELIEF PAGE – NAVY BACKGROUND + CARDS === */
+/* === BELIEF PAGE – BISCUIT / COFFEE THEME === */
 
 .belief-page,
 .belief-page * {
@@ -25,10 +25,11 @@
 
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;   /* base offset below navbar */
+  padding-top: 10rem;   /* desktop base offset below navbar */
   overflow-x: hidden;
 }
 
+/* Better handling on some mobile browsers (Android/iOS) */
 @supports (-webkit-touch-callout: none) {
   .belief-page {
     min-height: -webkit-fill-available;
@@ -38,15 +39,16 @@
 .belief-content {
   max-width: 1350px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem;       /* horizontal padding */
   text-align: center;
-  flex: 1;
+  flex: 1;                 /* let content grow, footer at bottom */
 }
 
 /* HERO */
 
 .belief-hero {
-  max-width: 100%;
+/*  max-width: 1000px; */
+  max-width: 100%;   /* or just remove max-width entirely */
   margin: 0 auto;
 }
 
@@ -64,8 +66,8 @@
   color: #ffffff;
   margin: 0 0 1.5rem 0;
   letter-spacing: -1.5px;
-  max-width: 90vw;
-  overflow-wrap: break-word;
+  max-width: 90vw;             /* never wider than screen */
+  overflow-wrap: break-word;   /* long German words can wrap */
 }
 
 .confession-title {
@@ -93,11 +95,10 @@
   gap: 2.8rem;
   margin: 5rem auto 3.5rem;
   max-width: 1300px;
-  align-items: stretch;      /* make grid items match row height */
+  align-items: stretch;
 }
 
-/* CARDS */
-
+/* 🔴 CARDS: BASE HEIGHT (overridden on desktop & mobile) */
 .confession-card {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
@@ -110,8 +111,8 @@
 
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 380px;          /* 🔹 equal visual height baseline */
+  height: 340px;          /* base fixed height */
+  overflow: hidden;
 }
 
 .confession-card:hover {
@@ -152,9 +153,10 @@
   color: #3a2a18;
   margin: 0;
   margin-top: 0.4rem;
+  overflow: hidden;
 }
 
-/* BUTTON */
+/* COFFEE BROWN BUTTON */
 
 .belief-cta {
   margin-bottom: 3.5rem;
@@ -187,7 +189,7 @@
 
 @media (max-width: 768px) {
   .belief-page {
-    padding-top: 7rem;
+    padding-top: 7rem;   /* same top spacing pattern as Home/Contact mobile */
   }
 
   .belief-content {
@@ -214,6 +216,7 @@
     max-width: 92vw;
   }
 
+  /* MOBILE GRID: single column, centered cards */
   .confession-grid {
     grid-template-columns: 1fr;
     max-width: 100%;
@@ -224,11 +227,13 @@
     justify-items: center;
   }
 
+  /* 🔴 MOBILE CARDS: SAME HEIGHT, RECTANGULAR, CENTERED */
   .confession-card {
     padding: 1.8rem 1.5rem;
     width: 100%;
-    min-height: auto;           /* 🔹 mobile: cards grow naturally */
-    height: auto;
+    max-width: 360px;
+    height: 360px;          /* fixed height on mobile */
+    overflow: hidden;
     box-shadow: 0 14px 40px rgba(0,0,0,0.15);
   }
 
@@ -259,42 +264,119 @@
   }
 }
 
-/* ========== DESKTOP OVERRIDES ========== */
+/* ========== DESKTOP OVERRIDE FOR PERFECT EQUAL BOXES ========== */
 
 @media (min-width: 1024px) {
   .confession-grid {
     max-width: 1200px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));  /* always 3 equal columns */
     gap: 2.5rem;
   }
 
   .belief-hero {
-    transform: translateX(-60px);
+    transform: translateX(-60px); /* adjust this value */
   }
 
   .belief-hero h1 {
-    font-size: 3.6rem;
+    font-size: 3.6rem; /* reduce size – adjust as you want */
   }
 
   .belief-page {
-    padding-top: 13rem;
+    padding-top: 13rem; /* increase from 10rem → 13rem on big desktop */
   }
 
   .confession-card {
-    min-height: 420px;          /* 🔹 nice tall uniform tiles on desktop */
+    height: 360px;   /* all cards exactly same height on desktop */
   }
-
   .confession-grid,
   .belief-cta {
     transform: translateX(-10px);
   }
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
 }
 
-/* EXTRA SMALL (≤ 600px) */
+/* FOOTER – FULL WIDTH BISCUIT */
 
+.clean-footer {
+  background: linear-gradient(135deg, #f9f3e8, #fdf8f0, #f5efe2);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin-top: auto;                 /* footer sticks to bottom like other pages */
+  font-family: "Georgia", serif;
+  width: 100%;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+}
+
+.footer-nav a {
+  color: #5d4037;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #8b4513;
+}
+
+.copyright {
+  font-size: 0.88rem;
+  color: #6d4c41;
+  opacity: 0.9;
+}
+
+/* Hide old footer artifacts if any */
+.biscuit-footer,
+.footer-container,
+.footer-logo,
+.footer-links,
+.footer-copyright,
+.latin {
+  display: none !important;
+}
+
+/* MOBILE (phones ≤ 600px) – keep same logic as other pages */
 @media (max-width: 600px) {
   .belief-page {
-    padding-top: 7rem;
+    padding-top: 7rem; /* similar top spacing pattern as Home & Contact */
   }
 
   .belief-content {
@@ -320,12 +402,22 @@
   }
 
   .confession-card {
+    max-width: 330px;
+    height: 360px;
     padding: 1.6rem 1.3rem;
   }
 
   .coffee-btn {
     max-width: 300px;
     font-size: 1.2rem;
+  }
+
+  /* 🔽 FORCE FOOTER LINKS TO ONE COLUMN ON ALL PHONES */
+  .footer-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.2rem; /* slightly smaller gap for column layout */
   }
 }
 

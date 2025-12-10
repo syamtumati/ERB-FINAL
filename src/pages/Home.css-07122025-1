@@ -16,7 +16,6 @@
 }
 
 /* ==================== 1. HERO IMAGE ==================== */
-
 .hero-video-section {
   position: relative;
   width: 100%;
@@ -57,7 +56,6 @@
   align-items: center;
   justify-content: center;
   max-width: 90%;
-  padding-top: 10rem;
 }
 
 .hero-church-name {
@@ -74,65 +72,92 @@
   color: #e8c0a0;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin: 0 0 2.2rem 0;
+  margin: 0 0 3rem 0;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
 }
 
-/* ========== VISIT CARD DIRECTLY UNDER TITLE ========== */
+/* ==================== 1b. WELCOME SECTION ==================== */
 
-.hero-visit-box {
-  margin-top: 24rem;              /* keep vertical position */
-  max-width: 640px;               /* bigger card */
-  width: 100%;
-  background: #f9f6ef;
-  border: 2px solid #d7a955;
-  border-radius: 18px;
-  padding: 3.4rem 4rem;           /* more padding = bigger, airier */
-  text-align: center;
-  transform: translateX(-20px);  /* move left */
-  color: #2b2620;
-  font-family: "Georgia", serif;
-  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.75);
+.hero-welcome-box {
+  position: absolute;
+  right: 4rem;
+  bottom: 3rem;
+  max-width: 520px; /* bigger box */
+  background: rgba(0, 0, 0, 0.55); /* deeper transparency */
+  border: 1px solid rgba(232, 192, 160, 0.55);
+  border-radius: 1.8rem;
+  padding: 2.4rem 2.6rem; /* bigger padding */
+  color: #fdf5e6;
+  text-align: left;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  font-family: "Georgia", serif; /* classic elegant serif */
 }
 
-.hero-visit-title {
-  font-size: 2.6rem;
-  line-height: 1.4;
-  margin: 0 0 1.8rem 0;
-  font-weight: 700;
+/* Beautiful, premium Serif title */
+.hero-welcome-title {
+  font-size: 2.1rem; /* bigger font */
+  font-weight: 900;
+  margin: 0 0 1.2rem 0;
+  letter-spacing: -0.5px;
+  color: #ffe9cc;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  font-family: "Playfair Display", serif;
 }
 
-.hero-visit-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-bottom: 1.8rem;
-}
-
-.hero-visit-divider span {
-  flex: 1;
-  height: 2px;
-  background: rgba(215, 169, 85, 0.6);
-  border-radius: 2px;
-}
-
-.hero-visit-icon {
-  flex: 0;
-  font-size: 1.1rem;
-  color: #d7a955;
-}
-
-.hero-visit-time {
-  margin: 0 0 0.8rem 0;
-  font-size: 1.5rem;      /* bigger */
-  font-weight: 500;
-}
-
-.hero-visit-address {
-  margin: 0;
-  font-size: 1.35rem;     /* bigger */
+/* Smooth readable paragraph */
+.hero-welcome-text {
+  font-size: 1.25rem; /* larger */
   line-height: 1.8;
+  margin: 0 0 1.6rem 0;
+  color: #f7eee2;
+  font-family: "Georgia", serif;
+}
+
+/* Church address */
+.hero-address h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffe3c4;
+  font-family: "Playfair Display", serif;
+}
+
+.hero-address p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: #f4e7d6;
+}
+
+/* Responsive: Still elegant on phones */
+@media (max-width: 768px) {
+  .hero-welcome-box {
+    left: 1.2rem;
+    right: 1.2rem;
+    bottom: 1.6rem;
+    max-width: none;
+    padding: 1.8rem 1.4rem;
+  }
+
+  .hero-welcome-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-welcome-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* On desktop: align welcome block slightly left like other content */
+@media (min-width: 1024px) {
+  .welcome-inner {
+    text-align: left;
+  }
+
+  .welcome-title {
+    text-align: left;
+  }
 }
 
 /* ==================== 2. WHAT MATTERS SECTION ==================== */
@@ -147,20 +172,16 @@
 
 .what-matters-section {
   padding: 4rem 2rem 4rem;
-
-  /* === SAME BLUE TEXTURED BACKGROUND FROM BELIEF PAGE === */
   background:
     repeating-linear-gradient(
       0deg,
-      rgba(5, 20, 45, 0.40),
-      rgba(5, 20, 45, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 4px,
-      rgba(3, 15, 35, 0.40) 8px
+      rgba(235, 230, 220, 0.6),
+      rgba(235, 230, 220, 0.6) 4px,
+      rgba(225, 218, 205, 0.6) 4px,
+      rgba(225, 218, 205, 0.6) 8px
     ),
-    radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
-
+    linear-gradient(180deg, #f7f3ec, #ede7de);
   background-attachment: fixed;
-
   text-align: center;
 }
 
@@ -176,7 +197,7 @@
   grid-column: 1 / -1;
   font-size: 4rem;
   font-weight: 900;
-  color: #ffffff !important;     /* ← FORCE white */
+  color: #8b4513;
   margin-bottom: 4rem;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -226,7 +247,12 @@
   box-shadow: 0 30px 75px rgba(0, 0, 0, 0.15);
 }
 
-/* TITLES */
+/* bottom video section is no longer used */
+.bottom-video-section {
+  display: none;
+}
+
+/* ==================== TITLE & FOOTER ==================== */
 
 .white-title {
   color: #ffffff !important;
@@ -240,27 +266,91 @@
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+}
+
+.footer-nav a {
+  color: #5d4037;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #8b4513;
+}
+
+.copyright {
+  font-size: 0.88rem;
+  color: #6d4c41;
+  opacity: 0.9;
+}
+
+.biscuit-footer,
+.footer-container,
+.footer-logo,
+.footer-links,
+.footer-copyright,
+.latin {
+  display: none !important;
+}
+
 /* ==================== RESPONSIVE ==================== */
 
 @media (max-width: 1024px) {
   .main-title {
     font-size: 3.6rem;
   }
+
+  .welcome-title {
+    font-size: 2.6rem;
+  }
+
+  .welcome-text {
+    font-size: 1.25rem;
+  }
+
+  .welcome-address {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   .hero-content-centered {
-/*    transform: translateY(-40px);*/
-    transform: none !important;  /* keep centered on mobile */
-  }
-
-  .hero-visit-box {
-    padding: 2.2rem 2.2rem;
-    max-width: 90%;
-  }
-
-  .hero-visit-title {
-    font-size: 1.8rem;
+    transform: translateY(-90px);
   }
 
   .main-title {
@@ -278,6 +368,10 @@
 
   .matter-block {
     padding: 2.4rem 1.8rem;
+  }
+
+  .welcome-section {
+    padding: 3.5rem 1.5rem 3rem;
   }
 }
 
@@ -310,19 +404,6 @@
     transform: none;
   }
 
-  .hero-visit-box {
-    padding: 2rem 1.6rem;
-  }
-
-  .hero-visit-title {
-    font-size: 1.6rem;
-  }
-
-  .hero-visit-time,
-  .hero-visit-address {
-    font-size: 0.98rem;
-  }
-
   .main-title {
     font-size: 2.8rem !important;
     line-height: 1.2;
@@ -334,6 +415,22 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  .footer-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+    letter-spacing: 1.4px;
+  }
+
+  .welcome-address {
+    padding: 1.4rem 1.6rem;
+  }
 }
 
 @media (max-width: 380px) {
@@ -343,7 +440,8 @@
   }
 }
 
-/* DESKTOP ALIGNMENT (for cards) */
+/* ==================== DESKTOP ALIGNMENT ==================== */
+
 @media (min-width: 1024px) {
   .hero-video-section {
     height: 100vh;
@@ -358,17 +456,14 @@
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translateX(-40px);  /* moved DOWN 70px */
   }
 
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-40px, 40px); /* moved DOWN 70px */
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-40px, 40px); /* moved DOWN 70px */
   }
 
   .what-matters-grid {
@@ -379,6 +474,89 @@
   .what-matters-section .main-title {
     position: relative;
     left: -60px;
+  }
+
+  .clean-footer .church-name {
+    position: relative;
+    left: -60px;
+  }
+
+  .clean-footer .footer-nav,
+  .clean-footer .copyright {
+    position: relative;
+    left: -40px;
+  }
+
+  .partner-heading,
+  .heartcry-logo-link {
+    position: relative;
+    left: -60px;
+  }
+
+  .heartcry-logo {
+    max-width: 260px;
+    height: auto;
+  }
+}
+
+/* ==================== PARTNER STRIP ==================== */
+
+.partner-heartcry {
+  background: #020817;
+  color: #1a1a1a;
+  padding: 1.8rem 1.5rem 2.4rem;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+.partner-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.partner-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+  gap: 1.2rem;
+}
+
+.partner-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.partner-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffffff !important;
+}
+
+.heartcry-logo-link {
+  display: inline-block;
+}
+
+.heartcry-logo {
+  max-width: 260px;
+  height: auto;
+}
+
+/* smaller on phones */
+@media (max-width: 600px) {
+  .partner-heartcry {
+    padding: 1.5rem 1.2rem 2rem;
+  }
+
+  .heartcry-logo {
+    max-width: 200px;
+  }
+
+  .partner-label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
   }
 }
 
