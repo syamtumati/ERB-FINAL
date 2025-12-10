@@ -380,3 +380,9 @@ html, body {
   }
 }
 
+/* REMOVE WHITE GAP BEHIND HEADER ON ALL MOBILE SCREENS */
+@media (max-width: 992px) {
+  .page-wrapper {
+    padding-top: 0 !important;   /* remove the white block */
+  }
+}
