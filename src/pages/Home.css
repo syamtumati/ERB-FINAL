@@ -432,13 +432,13 @@
   /* Move hero name DOWN (same perfect old version) */
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-30px, 40px) !important;  /* moves DOWN */
+    transform: translate(-30px, 20px) !important;  /* moves DOWN */
   }
 
   /* Move subtitle DOWN (matching old design) */
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-30px, 40px) !important;  /* moves DOWN */
+    transform: translate(-30px, 20px) !important;  /* moves DOWN */
   }
 
   /* Keep original card/grid alignment */
@@ -456,14 +456,14 @@
 /* Laptop screens (15 inch) */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
-    transform: translate(-60px, -120px);
+    transform: translate(-60px, -100px);
   }
 }
 
 /* Larger screens (17 inch and up) */
 @media (min-width: 1600px) {
   .hero-content-centered {
-    transform: translate(-60px, -160px);
+    transform: translate(-60px, -100px);
   }
 }
 
