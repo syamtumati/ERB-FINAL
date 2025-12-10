@@ -419,10 +419,16 @@
     transform: translate(-30px, 60px);
   }
 
-  .hero-church-name,
-  .hero-subtitle {
+  .hero-church-name {
+    font-size: 3.6rem !important;
     transform: translate(-30px, 40px);
   }
+
+  .hero-subtitle {
+    font-size: 1.9rem !important;
+    transform: translate(-30px, 40px);
+  }
+
 
   .hero-visit-box {
     transform: translateX(-10px);
@@ -436,6 +442,11 @@
     transform: translate(-60px, -110px);
   }
 
+  .hero-church-name,
+  .hero-subtitle {
+    transform: translate(-60px, -110px);
+  }
+
   .hero-visit-box {
     margin-top: 9rem;
   }
@@ -445,12 +456,18 @@
 /* MUST COME LAST — overrides all above */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
-    transform: translate(-60px, -30px); /* THIS WILL NOW APPLY */
+    transform: translate(-60px, -30px);
   }
 
+  /* KEEP correct desktop font size */
   .hero-church-name,
   .hero-subtitle {
+    font-size: 3.6rem !important;
     transform: translate(-60px, -30px);
+  }
+
+  .hero-subtitle {
+    font-size: 1.9rem !important;
   }
 
   .hero-visit-box {
