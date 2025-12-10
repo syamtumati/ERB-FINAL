@@ -18,7 +18,7 @@ body {
 /* ======================= */
 
 .heartcry-header {
-  position: absolute;
+  position: fixed; /* ← restore FIXED */
   top: 0;
   left: 0;
   width: 100%;
@@ -398,3 +398,8 @@ body {
   }
 }
 
+@media (max-width: 992px) {
+  .page-wrapper {
+    padding-top: 150px;
+  }
+}
