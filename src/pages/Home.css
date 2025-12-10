@@ -480,19 +480,19 @@
 /* ==================== LARGE DESKTOPS (17-inch, widescreens ≥1600px) ==================== */
 @media (min-width: 1600px) {
   .hero-content-centered {
-    transform: translate(-40px, -10px);
+    transform: translate(-40px, -5px);
   }
 
   
   /* Reduce text size */
   .hero-church-name {
     font-size: 3.4rem !important; /* smaller */
-    transform: translate(-40px, -10px); /* ↓ same move down */
+    transform: translate(-40px, -5px); /* ↓ same move down */
   }
 
   .hero-subtitle {
     font-size: 1.6rem !important; /* smaller */
-    transform: translate(-40px, -10px); /* ↓ same move down */
+    transform: translate(-40px, -5px); /* ↓ same move down */
   }
 
    /* Visit box smaller + moved lower */
