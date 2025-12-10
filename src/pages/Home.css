@@ -404,70 +404,63 @@
 
 /* ==================== DESKTOP ONLY (RESTORED ORIGINAL) ==================== */
 
-/* ========================= DESKTOP + TABLET LANDSCAPE ========================= */
-/* Applies to: tablets in landscape, laptops (13–17 inch), desktops, ultrawide    */
-/* Breakpoint starts at 1024px and covers ALL larger screens                      */
-
+/* ==================== DESKTOP ONLY ==================== */
+/* Applies to all screens ≥ 1024px */
 @media (min-width: 1024px) {
 
+  /* Hero layout */
   .hero-video-section {
+    padding-top: 13rem;
     height: 100vh;
   }
 
   .hero-overlay {
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
-  /* Correct original desktop center alignment */
+  /* HERO TITLE GROUP (base position for all desktops) */
   .hero-content-centered {
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-
-    /* Horizontal shift only (original working value) */
-    transform: translateX(-40px) !important;
+    transform: translate(-60px, -130px); /* Base position */
   }
 
-  /* Move hero name DOWN (same perfect old version) */
+  /* Hero fonts restored */
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-30px, 20px) !important;  /* moves DOWN */
   }
 
-  /* Move subtitle DOWN (matching old design) */
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-30px, 20px) !important;  /* moves DOWN */
   }
 
-  /* Keep original card/grid alignment */
-  .what-matters-grid {
-    position: relative;
-    left: -5px;
-  }
-
-  .what-matters-section .main-title {
-    position: relative;
-    left: -60px;
+  /* Welcome box — restored original desktop position */
+  .hero-visit-box {
+    transform: translateX(-20px);
+    margin-top: 24rem;     /* same as before */
   }
 }
 
-/* Laptop screens (15 inch) */
+/* ==================== LAPTOP RANGE (15 inch) ==================== */
+/* Moves hero DOWN a little (because -120px is less than -130px) */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
-    transform: translate(-60px, -100px);
+    transform: translate(-60px, -120px);
   }
 }
 
-/* Larger screens (17 inch and up) */
+/* ==================== LARGE DESKTOPS (17 inch+) ==================== */
+/* Move hero slightly UP (higher resolution, more vertical space) */
 @media (min-width: 1600px) {
   .hero-content-centered {
-    transform: translate(-60px, -100px);
+    transform: translate(-60px, -160px);
   }
 }
 
-/* Short-height desktops */
+/* ==================== SHORT HEIGHT DESKTOPS ==================== */
+/* Don't move hero too high */
 @media (min-width: 1024px) and (max-height: 880px) {
   .hero-content-centered {
     transform: translate(-60px, -110px);
