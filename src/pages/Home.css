@@ -278,15 +278,41 @@
   }
 }
 
+/* ——————————————————————————————— */
+/* MOBILE-ONLY FIX – removes the grey/white bar at the very top */
+/* Works on iOS Safari, Chrome Android, Firefox mobile, etc. */
+/* Zero effect on desktop (≥993px) */
+/* ——————————————————————————————— */
+
 @media (max-width: 992px) {
-  .home-page,
+  html, body, #root, .home-page {
+    height: 100dvh;                     /* modern standard – respects mobile UI chrome */
+    min-height: -webkit-fill-available; /* iOS Safari fallback */
+    background: #000A1F !important;     /* dark color of your hero – kills the grey/white flash */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Make sure the hero section really fills everything */
   .hero-video-section,
-  .page-wrapper,
-  #root,
-  body,
-  html {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+  .hero-video-section img {
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    background: #000A1F;
+  }
+
+  /* Extra safety for iOS Safari */
+  @supports (-webkit-touch-callout: none) {
+    html, body, #root, .home-page {
+      min-height: -webkit-fill-available;
+    }
+  }
+}
+
+/* Optional: completely remove your old hack */
+@media (max-width: 600px) {
+  .hero-video-section {
+    margin-top: 0 !important;   /* removes the old -60px hack */
   }
 }
 
