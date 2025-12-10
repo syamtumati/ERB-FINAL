@@ -329,3 +329,26 @@
   }
 }
 
+/* === MOBILE FIX: MAKE ALL CARDS SAME HEIGHT === */
+@media (max-width: 600px) {
+
+  .confession-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: stretch !important;   /* force equal height rows */
+  }
+
+  .confession-card {
+    height: 100% !important;
+    min-height: 380px !important;     /* uniform card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .confession-card p {
+    flex-grow: 1;                      /* push button/footer down */
+  }
+}
+
