@@ -278,59 +278,53 @@
   }
 }
 
-/* ——————— MOBILE ONLY – CLEAN FIXED HEADER (no black bar at top) ——————— */
+
+/* ——————————————————————————————— */
+/* MOBILE ONLY – FINAL CLEAN FIX (2025 standard) */
+/* Removes grey bar + black bar above header */
+/* ——————————————————————————————— */
 @media (max-width: 992px) {
-
-  /* 1. Make the fixed header completely transparent at the top */
-  .heartcry-header {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px !important;        /* adjust this value if needed (90–110px) */
-    background: transparent !important;   /* ← THIS removes the black rectangle */
-    backdrop-filter: none !important;
-    z-index: 900;
+  /* 1. Kill the grey/white bar at the very top */
+  html,
+  body,
+  #root,
+  .home-page {
+    height: 100dvh;
+    min-height: -webkit-fill-available;
+    background: #000A1F !important;   /* matches your hero */
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* 2. Optional: add a subtle gradient only at the bottom of the header */
-  .heartcry-header::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to bottom, 
-      rgba(0,0,0,0.45) 0%, 
-      rgba(0,0,0,0.15) 70%, 
-      transparent 100%
-    );
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  /* 3. Push page content down so it starts exactly under the header */
-  .page-wrapper {
-    padding-top: 100px !important;   /* same or slightly less than header height */
-  }
-
-  /* 4. Make sure hero covers everything */
+  /* 2. Hero fills the real viewport */
   .hero-video-section {
     min-height: 100dvh;
     min-height: -webkit-fill-available;
     background: #000A1F;
   }
 
-  /* 5. Kill any remaining body background flash */
-  html, body, #root, .home-page {
-    background: #000A1F !important;
-    min-height: 100dvh;
-    min-height: -webkit-fill-available;
+  /* 3. CRITICAL: Push page content down under the fixed header */
+  .page-wrapper {
+    padding-top: 115px !important;   /* exactly the height needed for your logo + spacing */
   }
-}
 
-/* Fine-tune for very small phones */
-@media (max-width: 480px) {
-  .heartcry-header { height: 90px !important; }
-  .page-wrapper { padding-top: 90px !important; }
+  /* iOS Safari extra safety */
+  @supports (-webkit-touch-callout: none) {
+    html,
+    body,
+    #root,
+    .home-page,
+    .hero-video-section {
+      min-height: -webkit-fill-available;
+    }
+  }
+
+  /* Optional: tighter on very small phones */
+  @media (max-width: 480px) {
+    .page-wrapper {
+      padding-top: 100px !important;
+    }
+  }
 }
 
 /* Optional: completely remove your old hack */
