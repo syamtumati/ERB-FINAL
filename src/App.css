@@ -251,6 +251,7 @@ html, body {
   }
   .page-wrapper {
     padding-top: 20px !important;
+  }
 }
 
 /* ======================= */
@@ -381,6 +382,4 @@ html, body {
     gap: 3rem !important;
   }
 }
-
-/* REMOVE WHITE GAP BEHIND HEADER ON ALL MOBILE SCREENS */
 
