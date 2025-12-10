@@ -364,17 +364,24 @@
     padding-top: 3rem !important;   /* move content higher */
   }
 
-  .hero-visit-box {
+/*  .hero-visit-box {
     padding: 2rem 1.6rem;
+  }*/
+
+  .hero-visit-box {
+    margin-top: 2rem !important;   /* previously too large, now perfect */
+    padding: 1.8rem 1.4rem !important;
+    max-width: 92% !important;
+    transform: none !important;    /* ensures it does NOT shift off-screen */
   }
 
   .hero-visit-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem !important;
   }
 
   .hero-visit-time,
   .hero-visit-address {
-    font-size: 0.98rem;
+    font-size: 0.98rem !important;
   }
 
   .main-title {
