@@ -404,36 +404,35 @@
 
 /* ==================== DESKTOP ONLY (RESTORED ORIGINAL) ==================== */
 
-/* ==================== DESKTOP ONLY ==================== */
-/* Applies to all screens ≥ 1024px */
+/* ==================== DESKTOP ONLY (push hero text DOWN) ==================== */
 @media (min-width: 1024px) {
 
-  /* Hero layout */
+  /* Keeps hero full height */
   .hero-video-section {
-    padding-top: 9rem;
     height: 100vh;
   }
 
   .hero-overlay {
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* HERO TITLE GROUP (base position for all desktops) */
+  /* MAIN FIX – Move hero text DOWN */
   .hero-content-centered {
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translate(-60px, -180px); /* Base position */
+    transform: translate(-40px, 120px);  /* <-- MOVE DOWN MORE */
   }
 
-  /* Hero fonts restored */
   .hero-church-name {
     font-size: 3.6rem !important;
+    transform: translate(-30px, 120px);  /* <-- MOVE DOWN MORE */
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
+    transform: translate(-30px, 120px);  /* <-- MOVE DOWN MORE */
   }
 
   /* Welcome box — restored original desktop position */
@@ -447,7 +446,7 @@
 /* Moves hero DOWN a little (because -120px is less than -130px) */
 @media (min-width: 1280px) and (max-width: 1599px) {
   .hero-content-centered {
-    transform: translate(-60px, -120px);
+    transform: translate(-60px, -180px);
   }
 }
 
@@ -455,7 +454,7 @@
 /* Move hero slightly UP (higher resolution, more vertical space) */
 @media (min-width: 1600px) {
   .hero-content-centered {
-    transform: translate(-60px, -160px);
+    transform: translate(-60px, -10px);
   }
 }
 
