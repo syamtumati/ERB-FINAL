@@ -402,8 +402,10 @@
   }
 }
 
-/* DESKTOP ALIGNMENT (for cards) */
+/* DESKTOP ALIGNMENT (for hero section) */
 @media (min-width: 1024px) {
+
+  /* Hero takes full height */
   .hero-video-section {
     height: 100vh;
   }
@@ -413,21 +415,25 @@
     justify-content: center;
   }
 
+  /* MAIN FIX — consistent text placement on all laptops & desktops */
   .hero-content-centered {
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translateX(-40px);
+    padding-top: 12rem;     /* ← adjust this to move text up/down */
+    transform: none !important;  /* remove shifting */
   }
 
   .hero-church-name {
-    font-size: 3.6rem !important;
-    transform: translate(-40px, 40px);
+    font-size: 4.2rem !important;
+    margin-bottom: 1rem;
+    transform: none !important;  /* remove shifting */
   }
 
   .hero-subtitle {
-    font-size: 1.9rem !important;
-    transform: translate(-40px, 40px);
+    font-size: 2.2rem !important;
+    margin-bottom: 2.5rem;
+    transform: none !important;  /* remove shifting */
   }
 
   .what-matters-grid {
@@ -440,5 +446,4 @@
     left: -60px;
   }
 }
-
 
