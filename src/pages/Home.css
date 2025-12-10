@@ -81,15 +81,15 @@
 /* ========== VISIT CARD DIRECTLY UNDER TITLE ========== */
 
 .hero-visit-box {
-  margin-top: 24rem;              /* keep vertical position */
-  max-width: 640px;               /* bigger card */
+  margin-top: 24rem;
+  max-width: 640px;
   width: 100%;
   background: #f9f6ef;
   border: 2px solid #d7a955;
   border-radius: 18px;
-  padding: 3.4rem 4rem;           /* more padding = bigger, airier */
+  padding: 3.4rem 4rem;
   text-align: center;
-  transform: translateX(-20px);  /* move left */
+  transform: translateX(-20px);
   color: #2b2620;
   font-family: "Georgia", serif;
   box-shadow: 0 26px 70px rgba(0, 0, 0, 0.75);
@@ -125,13 +125,13 @@
 
 .hero-visit-time {
   margin: 0 0 0.8rem 0;
-  font-size: 1.5rem;      /* bigger */
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .hero-visit-address {
   margin: 0;
-  font-size: 1.35rem;     /* bigger */
+  font-size: 1.35rem;
   line-height: 1.8;
 }
 
@@ -148,7 +148,6 @@
 .what-matters-section {
   padding: 4rem 2rem 4rem;
 
-  /* === SAME BLUE TEXTURED BACKGROUND FROM BELIEF PAGE === */
   background:
     repeating-linear-gradient(
       0deg,
@@ -160,7 +159,6 @@
     radial-gradient(circle at top, #000A1F 0%, #00142E 50%, #000818 100%);
 
   background-attachment: fixed;
-
   text-align: center;
 }
 
@@ -176,7 +174,7 @@
   grid-column: 1 / -1;
   font-size: 4rem;
   font-weight: 900;
-  color: #ffffff !important;     /* ← FORCE white */
+  color: #ffffff !important;
   margin-bottom: 4rem;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -250,8 +248,7 @@
 
 @media (max-width: 768px) {
   .hero-content-centered {
-/*    transform: translateY(-40px);*/
-    transform: none !important;  /* keep centered on mobile */
+    transform: none !important;
   }
 
   .hero-visit-box {
@@ -283,6 +280,7 @@
 
 /* MOBILE (≤ 600px) */
 @media (max-width: 600px) {
+
   .hero-video {
     object-position: center top;
   }
@@ -334,6 +332,11 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  /* --------------- FIX WHITE TOP BAR ON MOBILE ONLY --------------- */
+  .hero-video-section {
+    margin-top: -60px !important;
+  }
 }
 
 @media (max-width: 380px) {
@@ -358,17 +361,17 @@
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translateX(-40px);  /* moved DOWN 70px */
+    transform: translateX(-40px);
   }
 
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-40px, 40px); /* moved DOWN 70px */
+    transform: translate(-40px, 40px);
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-40px, 40px); /* moved DOWN 70px */
+    transform: translate(-40px, 40px);
   }
 
   .what-matters-grid {
