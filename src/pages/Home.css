@@ -405,36 +405,32 @@
 /* ==================== DESKTOP ONLY (RESTORED ORIGINAL) ==================== */
 
 @media (min-width: 1024px) {
-
-  /* Hero spacing correctly lowered for desktop */
   .hero-video-section {
-    padding-top: 13rem;
     height: 100vh;
   }
 
   .hero-overlay {
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Perfect original placement (moves hero text DOWN) */
   .hero-content-centered {
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    transform: translate(-60px, -30px);
+    transform: translateX(-40px);  /* correct horizontal shift */
   }
 
-  /* TRUE original desktop font sizes */
   .hero-church-name {
     font-size: 3.6rem !important;
+    transform: translate(-40px, 10px); /* moves DOWN */
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
+    transform: translate(-40px, 10px); /* moves DOWN */
   }
 
-  /* What-matters grid tuning */
   .what-matters-grid {
     position: relative;
     left: -5px;
