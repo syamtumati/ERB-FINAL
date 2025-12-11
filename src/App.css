@@ -399,7 +399,7 @@ html, body {
   /* Move copyright text left */
   .clean-footer .copyright {
     position: relative;
-    left: -40px;
+    left: -60px;
   }
 
   /* Move entire partner block left */
