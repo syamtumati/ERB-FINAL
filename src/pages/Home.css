@@ -459,28 +459,33 @@
   }
 }
 
+
 /* ==================== LAPTOP RANGE — 15-inch (1280–1599px) ==================== */
 /* MUST COME LAST — overrides all above */
 @media (min-width: 1280px) and (max-width: 1599px) {
+
+  /* Move hero text DOWN */
   .hero-content-centered {
-    transform: translate(-60px, -30px);
+    transform: translate(-40px, 80px);   /* ↓ DOWN by 80px */
   }
 
-  /* KEEP correct desktop font size */
-  .hero-church-name,
-  .hero-subtitle {
+  /* Keep correct font size & move down */
+  .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-60px, -30px);
+    transform: translate(-40px, 80px);   /* ↓ DOWN */
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
+    transform: translate(-40px, 80px);   /* ↓ DOWN */
   }
 
+  /* Adjust welcome box */
   .hero-visit-box {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 }
+
 
 /* ==================== LARGE DESKTOPS (17 inch+) ==================== */
 /* Move hero slightly UP (higher resolution, more vertical space) */
