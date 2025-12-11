@@ -466,23 +466,23 @@
 
   /* Move hero text DOWN */
   .hero-content-centered {
-    transform: translate(-40px, 80px);   /* ↓ DOWN by 80px */
+    transform: translate(-40px, -5px);   /* ↓ DOWN by 80px */
   }
 
   /* Keep correct font size & move down */
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-40px, 80px);   /* ↓ DOWN */
+    transform: translate(-40px, -5px);   /* ↓ DOWN */
   }
 
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-40px, 80px);   /* ↓ DOWN */
+    transform: translate(-40px, -5px);   /* ↓ DOWN */
   }
 
   /* Adjust welcome box */
   .hero-visit-box {
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 }
 
