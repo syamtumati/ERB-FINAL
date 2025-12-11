@@ -481,7 +481,7 @@
   /* Make Visit Box smaller ONLY for 15-inch laptops */
   .hero-visit-box {
     transform: translateX(-10px);
-    margin-top: 6rem;           /* move slightly closer to text */
+    margin-top: 7rem;           /* move slightly closer to text */
     padding: 2.2rem 2.6rem;       /* ↓ smaller padding */
     max-width: 480px;             /* ↓ narrower width */
     border-radius: 14px;          /* ↓ slightly smaller corners */
@@ -521,7 +521,7 @@
    /* Visit box smaller + moved lower */
   .hero-visit-box {
     transform: translateX(-10px);
-    margin-top: 7rem; /* ↓ move DOWN */
+    margin-top: 8rem; /* ↓ move DOWN */
     padding: 2.6rem 3rem; /* reduce size */
     max-width: 520px;    /* slightly narrower */
   }
