@@ -405,19 +405,19 @@ html, body {
   /* Move entire partner block left */
   .partner-heartcry {
     position: relative;
-    left: -40px;   /* adjust as needed */
+    left: -30px;   /* adjust as needed */
   }
 
   /* Move "Unsere Partner" heading left */
   .partner-heading {
     position: relative;
-    left: -40px;
+    left: -30px;
   }
 
   /* Move HeartCry Partner logo left */
   .heartcry-logo-link {
     position: relative;
-    left: -40px;
+    left: -30px;
   }
 }
 
