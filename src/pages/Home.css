@@ -527,7 +527,7 @@
    /* Visit box smaller + moved lower */
   .hero-visit-box {
     transform: translateX(-10px);
-    margin-top: 8rem; /* ↓ move DOWN */
+    margin-top: 9rem; /* ↓ move DOWN */
     padding: 2.6rem 3rem; /* reduce size */
     max-width: 520px;    /* slightly narrower */
   }
