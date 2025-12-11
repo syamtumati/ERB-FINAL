@@ -379,3 +379,45 @@ html, body {
   }
 }
 
+/* ======================================================= */
+/* DESKTOP ONLY — Shift Footer + Partner Section Left      */
+/* ======================================================= */
+@media (min-width: 1024px) {
+
+  /* Move footer church name left */
+  .clean-footer .church-name {
+    position: relative;
+    left: -60px;   /* adjust as needed: -40px, -50px, -80px */
+  }
+
+  /* Move footer navigation left */
+  .clean-footer .footer-nav {
+    position: relative;
+    left: -40px;   /* move links left */
+  }
+
+  /* Move copyright text left */
+  .clean-footer .copyright {
+    position: relative;
+    left: -40px;
+  }
+
+  /* Move entire partner block left */
+  .partner-heartcry {
+    position: relative;
+    left: -50px;   /* adjust as needed */
+  }
+
+  /* Move "Unsere Partner" heading left */
+  .partner-heading {
+    position: relative;
+    left: -60px;
+  }
+
+  /* Move HeartCry Partner logo left */
+  .heartcry-logo-link {
+    position: relative;
+    left: -40px;
+  }
+}
+
