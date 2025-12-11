@@ -441,6 +441,12 @@
     transform: translateX(-10px);
     margin-top: 9rem;
   }
+
+  .what-matters-section .main-title {
+    position: relative;
+    left: -60px;   /* adjust: -40px, -80px depending how much you want */
+    text-align: left;  /* optional: aligns slightly better */
+  }
 }
 
 /* ==================== SHORT HEIGHT DESKTOPS (≤880px height) ==================== */
