@@ -445,7 +445,6 @@
   .what-matters-section .main-title {
     position: relative;
     left: -60px;   /* adjust: -40px, -80px depending how much you want */
-    text-align: left;  /* optional: aligns slightly better */
   }
 }
 
