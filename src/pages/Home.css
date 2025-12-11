@@ -508,7 +508,7 @@
 /* ==================== LARGE DESKTOPS (17-inch, widescreens ≥1600px) ==================== */
 @media (min-width: 1600px) {
   .hero-content-centered {
-    transform: translate(-40px, -5px);
+    transform: translate(-40px, 10px);
   }
 
   
