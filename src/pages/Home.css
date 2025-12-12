@@ -455,14 +455,14 @@
 
   .hero-church-name,
   .hero-subtitle {
-    transform: translate(0, 20px) !important;   /* move DOWN consistently */
+    transform: translate(0, 40px) !important;   /* move DOWN consistently */
   }
 
   /* Smaller visit box */
   .hero-visit-box {
-    padding: 1.6rem 2rem !important;   /* reduced size */
+    padding: 1rem 1rem !important;   /* reduced size */
     max-width: 420px !important;       /* narrower */
-    margin-top: 11rem !important;      /* push DOWN */
+    margin-top: 9rem !important;      /* push DOWN */
     transform: translateX(-20px) !important;
   }
 }
@@ -476,7 +476,7 @@
 
   .hero-church-name {
     font-size: 3.3rem !important;
-    transform: translate(0, -10px) !important;     /* move UP */
+    transform: translate(0, -5px) !important;     /* move UP */
   }
 
   .hero-subtitle {
