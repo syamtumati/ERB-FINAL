@@ -157,21 +157,21 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .upevents-simple {
-    padding-top: 10rem !important;   /* ↑ move hero DOWN */
+    padding-top: 5rem !important;
     padding-bottom: 4rem !important;
   }
 
-  /* Move title + message slightly LEFT (same as old alignment) */
+  /* Align the hero (title + text) with logo baseline */
   .upevents-simple .container {
     position: relative;
-    left: -60px;
+    left: -60px;     /* same global alignment offset as other pages */
     margin-bottom: 1.5rem;
   }
 
-  /* Button alignment */
+  /* Align the button with same left baseline */
   .home-btn {
     display: inline-block;
-    width: 400px;
+    width: 400px;        /* keep text on one line */
     position: relative;
     left: -10px;
     text-align: center;

@@ -294,24 +294,3 @@ body {
     left: -10px;
   }
 }
-
-@media (min-width: 1280px) and (max-width: 1599px) {
-  .black-title {
-    transform: translateY(60px) !important;   /* move DOWN */
-  }
-}
-
-/* ===================================================== */
-/* LARGE DESKTOPS (1920px width – Lenovo T16)            */
-/* Move hero name downward                               */
-/* ===================================================== */
-
-@media (min-width: 1600px) {
-  .black-title {
-    transform: translateY(70px) !important;
-  }
-
-  .detail-card {
-    transform: translateY(40px) !important;
-  }
-}
