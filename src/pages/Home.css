@@ -499,7 +499,7 @@
 
   /* Slight DOWN movement for hero block */
   .hero-content-centered {
-    transform: translate(-40px, 20px) !important;
+    transform: translate(-40px, 30px) !important;
   }
 
   /* Hero name downward */
