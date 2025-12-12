@@ -374,14 +374,14 @@
   /* Move entire 2-column box left */
   .donations-card {
     position: relative;
-    left: -40px;      /* ← adjust this value (20px, 40px, 60px) */
+    left: -20px;      /* ← adjust this value (20px, 40px, 60px) */
   }
 
   /* Also shift heading + intro text to match */
   .donations-card h1,
   .donations-intro {
     position: relative;
-    left: -40px;
+    left: -20px;
   }
 }
 
