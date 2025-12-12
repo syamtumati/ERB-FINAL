@@ -446,50 +446,67 @@
   }
 }
 
+/* ================================================ */
+/* 15-inch laptops (1280–1599px) — Lenovo T16 Range */
+/* ================================================ */
 @media (min-width: 1280px) and (max-width: 1599px) {
 
-  /* Hero slight positioning adjustment */
+  /* Slight text positioning */
   .hero-content-centered {
-    transform: translate(-40px, 20px) !important;
+    transform: translate(-40px, 25px) !important;
   }
 
   .hero-church-name,
   .hero-subtitle {
-    transform: translate(0, 40px) !important;   /* move DOWN consistently */
+    transform: translate(0, 25px) !important;
   }
 
-  /* Smaller visit box */
+  /* SMALLER VISIT BOX */
   .hero-visit-box {
-    padding: 1rem 1rem !important;   /* reduced size */
-    max-width: 420px !important;       /* narrower */
-    margin-top: 9rem !important;      /* push DOWN */
+    padding: 1.2rem 1.6rem !important;     /* smaller padding */
+    max-width: 360px !important;           /* much narrower */
+    margin-top: 10rem !important;          /* move DOWN */
     transform: translateX(-20px) !important;
+  }
+
+  /* Smaller fonts INSIDE the box */
+  .hero-visit-box h3 {
+    font-size: 1.4rem !important;          /* Visit Us This Sunday */
+  }
+
+  .hero-visit-box p {
+    font-size: 1.1rem !important;          /* German text */
+    line-height: 1.45 !important;
   }
 }
 
+
+/* ================================================ */
+/* 17-inch+ desktops (≥1600px)                      */
+/* ================================================ */
 @media (min-width: 1600px) {
 
-  /* Move hero text UP slightly */
+  /* Move hero slightly UP but still aligned */
   .hero-content-centered {
-    transform: translate(-40px, 20px) !important;  /* was 60px, now higher */
+    transform: translate(-40px, 10px) !important;
   }
 
-  .hero-church-name {
-    font-size: 3.3rem !important;
-    transform: translate(0, -5px) !important;     /* move UP */
-  }
-
-  .hero-subtitle {
-    font-size: 1.6rem !important;
-    transform: translate(0, -10px) !important;     /* move UP */
-  }
-
-  /* Visit box small + moved down */
+  /* SMALLER visit box */
   .hero-visit-box {
+    padding: 1.2rem 1.6rem !important;     /* reduced */
+    max-width: 330px !important;           /* narrower */
+    margin-top: 9rem !important;           /* little lower */
     transform: translateX(-20px) !important;
-    margin-top: 10rem !important;                  /* ↓ a bit more DOWN */
-    padding: 1.6rem 2.2rem !important;             /* smaller box */
-    max-width: 430px !important;                   /* narrower */
+  }
+
+  /* Smaller fonts INSIDE visit box */
+  .hero-visit-box h3 {
+    font-size: 1.35rem !important;
+  }
+
+  .hero-visit-box p {
+    font-size: 1.05rem !important;
+    line-height: 1.4 !important;
   }
 }
 
