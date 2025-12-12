@@ -539,3 +539,18 @@
   }
 }
 
+/* ===================================================== */
+/* DESKTOP: Move "Was uns wichtig ist" slightly left     */
+/* ===================================================== */
+@media (min-width: 1024px) {
+
+  .what-matters-section .main-title {
+    position: relative;
+    left: -50px !important;   /* adjust value if needed */
+  }
+
+  .what-matters-grid {
+    position: relative;
+    left: -20px !important;   /* moves the 3 boxes with it */
+  }
+}
