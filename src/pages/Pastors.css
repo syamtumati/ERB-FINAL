@@ -674,6 +674,7 @@
 
   /* Move title further left */
   .heartcry-section .section-title {
+    margin-top: 30px !important;
     margin-left: -100px !important;
   }
 
@@ -693,6 +694,12 @@
   .heartcry-section .video-description {
     position: relative;
     left: -40px !important;
+  }
+
+  .pastors-heading {
+    position: relative;
+    left: -50px !important;          /* adjust as needed (-30, -50, etc.) */
+    text-align: left !important;     /* aligns better visually */
   }
 }
 
