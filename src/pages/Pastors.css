@@ -697,40 +697,51 @@
 }
 
 /* ===================================================== */
-/* FINAL ULTRA-SAFE FIX FOR "Gemeindeleitung" on mobile  */
+/* FINAL FIX — Gemeindeleitung fits perfectly on mobile  */
 /* ===================================================== */
 @media (max-width: 600px) {
 
-  /* Ensure full width available */
+  /* Move the whole text slightly LEFT */
   .pastor-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-    white-space: normal !important;
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+    margin-left: -4px !important;   /* ← small shift left */
+    width: calc(100% + 8px) !important; /* gains extra width */
   }
 
-  /* Fix title cutting */
+  /* Reduce title font more + allow break */
   .pastor-content h1 {
-    font-size: 1.65rem !important;   /* reduce slightly */
-    line-height: 1.2 !important;
+    font-size: 1.45rem !important;  /* smaller */
+    line-height: 1.15 !important;
     word-wrap: break-word !important;
     word-break: break-word !important;
     hyphens: auto !important;
     max-width: 100% !important;
-    white-space: normal !important;
-    text-align: center !important;
+    text-align: center;
   }
 
-  /* Completely reset any left shifts anywhere */
+  /* Ensure card doesn't squeeze the title */
+  .pastor-card {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    overflow: hidden !important;
+  }
+
+  /* Disable ALL desktop shifts */
   .pastors-container,
-  .heartcry-section .container,
+  .pastor-card,
   .section-title,
-  .section-subtitle {
+  .section-subtitle,
+  .heartcry-section .container {
     transform: none !important;
     left: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden !important;
   }
 }
 
