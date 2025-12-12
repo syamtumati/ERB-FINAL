@@ -425,73 +425,45 @@
   }
 }
 
-/* ================= DESKTOP — UNIVERSAL BLOCK (ALL ≥1024px) ================= */
 @media (min-width: 1024px) {
-
-  /* Center hero section */
-  .hero-video-section {
-    height: 100vh;
-  }
-
-  .hero-overlay {
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Move HERO TEXT down slightly on ALL desktops */
   .hero-content-centered {
-    transform: translate(-40px, 40px);
+    transform: translate(-40px, 20px);
   }
 
-  /* Standard hero title for all desktops */
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-40px, 40px);
-    letter-spacing: -1px;
+    transform: translate(-40px, 20px);
   }
 
-  /* Standard hero subtitle for all desktops */
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-40px, 40px);
+    transform: translate(-40px, 20px);
   }
 
-  /* Visit box universal desktop settings */
   .hero-visit-box {
     transform: translateX(-20px);
-    margin-top: 9rem;
-    max-width: 520px;
-    padding: 2.4rem 3rem;
-    border-radius: 16px;
-  }
-
-  /* Move "Was uns wichtig ist" left */
-  .what-matters-section .main-title {
-    position: relative;
-    left: -60px;
+    margin-top: 8rem;
   }
 }
 
-/* Lenovo T16 / 1920px wide screens */
-@media (min-width: 1600px) and (max-width: 2000px) {
+/* Lenovo T16 / 15-inch laptop range */
+@media (min-width: 1280px) and (max-width: 1599px) {
 
   .hero-content-centered {
-    transform: translate(-40px, 0px);  /* move UP 20px */
+    transform: translate(-40px, 0px); /* move UP 20px */
   }
 
   .hero-church-name,
   .hero-subtitle {
-    transform: translate(-40px, 0px);
+    transform: translate(-40px, 0px); /* move UP */
   }
 
   .hero-visit-box {
-    margin-top: 6rem !important;  /* reduce gap */
+    margin-top: 6rem !important; /* prevent overlapping */
   }
 }
 
-/* Extremely large monitors */
-@media (min-width: 2000px) {
-
+@media (min-width: 1600px) {
   .hero-content-centered {
     transform: translate(-40px, -20px);
   }
