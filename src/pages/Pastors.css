@@ -680,19 +680,19 @@
   /* Move subtitle left */
   .heartcry-section .section-subtitle {
     position: relative;
-    left: -120px !important;
+    left: -60px !important;
   }
 
   /* Move YouTube video frame left */
   .heartcry-section .video-container {
     position: relative;
-    left: -80px !important;
+    left: -60px !important;
   }
 
   /* Move text under video left */
   .heartcry-section .video-description {
     position: relative;
-    left: -80px !important;
+    left: -60px !important;
   }
 }
 
