@@ -455,7 +455,7 @@
 
   .hero-church-name,
   .hero-subtitle {
-    transform: translate(-40px, 20px); /* move UP */
+    transform: translate(-40px, 40px); /* move UP */
   }
 
   .hero-visit-box {
