@@ -492,34 +492,34 @@
 }
 
 /* ================================================= */
-/* 15-inch laptops — rectangle box + balanced hero   */
+/* 15-inch laptops — balanced rectangle visit box     */
 /* Screen width: 1280–1599px                         */
 /* ================================================= */
 @media (min-width: 1280px) and (max-width: 1599px) {
 
-  /* Slight DOWN movement for the whole hero block */
+  /* Slight DOWN movement for hero block */
   .hero-content-centered {
-    transform: translate(-40px, 20px) !important;  /* ↓ 20px */
+    transform: translate(-40px, 20px) !important;
   }
 
   /* Hero name downward */
   .hero-church-name {
-    transform: translate(0, 10px) !important;       /* ↓ 10px */
-    font-size: 3.4rem !important;                   /* same as 17-inch style */
+    transform: translate(0, 10px) !important;
+    font-size: 3.4rem !important;
   }
 
   /* Subtitle downward */
   .hero-subtitle {
-    transform: translate(0, 10px) !important;       /* ↓ 10px */
+    transform: translate(0, 10px) !important;
     font-size: 1.7rem !important;
   }
 
-  /* RECTANGLE Visit Box */
+  /* RECTANGLE Visit Box — moved UP a bit */
   .hero-visit-box {
-    max-width: 500px !important;     /* wider */
-    padding: 1.2rem 2rem !important;  /* shorter height */
+    max-width: 500px !important;
+    padding: 1.2rem 2rem !important;
 
-    margin-top: 12rem !important;     /* ↓ move further DOWN */
+    margin-top: 10rem !important;    /* was 12rem → moved UP by 2rem */
     transform: translateX(-20px) !important;
 
     border-radius: 16px !important;
@@ -538,5 +538,4 @@
     line-height: 1.35 !important;
   }
 }
-
 
