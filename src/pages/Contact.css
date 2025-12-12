@@ -328,3 +328,19 @@
   display:none !important;
 }
 
+/* ===================================================== */
+/* Lenovo T16 / 1280–1599px — move hero name DOWN        */
+/* ===================================================== */
+@media (min-width: 1280px) and (max-width: 1599px) {
+
+  /* Move the hero title DOWN */
+  .contact-hero-title {
+    transform: translate(-60px, 20px) !important;  /* ↓ 20px lower */
+  }
+
+  /* Move the subtitle DOWN also */
+  .contact-hero-subtitle {
+    transform: translate(-50px, 40px) !important;  /* ↓ lower */
+  }
+}
+
