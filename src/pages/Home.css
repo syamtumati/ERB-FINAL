@@ -464,17 +464,28 @@
 }
 
 @media (min-width: 1600px) {
+
+  /* Move everything DOWN properly */
   .hero-content-centered {
-    transform: translate(-40px, -20px);
+    transform: translate(-40px, 60px) !important;  /* ↓ 60px down */
   }
 
-  .hero-church-name,
+  .hero-church-name {
+    font-size: 3.3rem !important;                 /* smaller */
+    transform: translate(0, 0) !important;        /* remove conflict */
+  }
+
   .hero-subtitle {
-    transform: translate(-40px, 20px);
+    font-size: 1.6rem !important;                 /* smaller */
+    transform: translate(0, 0) !important;        /* remove conflict */
   }
 
+  /* Make visit box smaller + push down */
   .hero-visit-box {
-    margin-top: 12rem !important;
+    transform: translateX(-20px) !important;
+    margin-top: 14rem !important;                 /* ↓ move DOWN */
+    padding: 1.8rem 2.4rem !important;            /* smaller */
+    max-width: 460px !important;                  /* narrower */
   }
 }
 
