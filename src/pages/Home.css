@@ -515,7 +515,7 @@
   /* Reduce text size */
   .hero-church-name {
     font-size: 3.8rem !important; /* smaller */
-    transform: translate(-40px, -5px); /* ↓ same move down */
+    transform: translate(-40px, -10px); /* ↓ same move down */
   }
 
   .hero-subtitle {
