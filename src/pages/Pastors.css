@@ -674,25 +674,25 @@
 
   /* Move title further left */
   .heartcry-section .section-title {
-    margin-left: -120px !important;
+    margin-left: -100px !important;
   }
 
   /* Move subtitle left */
   .heartcry-section .section-subtitle {
     position: relative;
-    left: -60px !important;
+    left: -40px !important;
   }
 
   /* Move YouTube video frame left */
   .heartcry-section .video-container {
     position: relative;
-    left: -20px !important;
+    left: -10px !important;
   }
 
   /* Move text under video left */
   .heartcry-section .video-description {
     position: relative;
-    left: -60px !important;
+    left: -40px !important;
   }
 }
 
