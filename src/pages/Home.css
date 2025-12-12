@@ -554,3 +554,46 @@
     left: -20px !important;   /* moves the 3 boxes with it */
   }
 }
+
+/* ===================================================== */
+/* FINAL MOBILE FIX — Prevent hero/footer overlap        */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* Allow homepage to grow naturally */
+  .home-page {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  html, body, #root {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  /* Make hero video act as normal block (no fixed height trap) */
+  .hero-video-section {
+    height: auto !important;
+    min-height: 100vh !important;   /* fills screen only once */
+    margin-top: 0 !important;
+  }
+
+  /* Keep hero overlay correctly positioned */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    padding-top: 6rem !important;
+  }
+
+  /* Ensure content below hero stays BELOW hero */
+  .page-wrapper {
+    padding-top: 0 !important;  /* old 115px caused shifting */
+  }
+
+  /* Minor alignment safety */
+  .what-matters-section {
+    margin-top: 2rem !important;
+  }
+}
+
