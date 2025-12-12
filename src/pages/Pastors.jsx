@@ -40,7 +40,7 @@ const Pastors = () => {
       {/* BLOCK 2 – PASTORS DETAILS */}
       <div className="pastors-container">
         {/* 🔹 NEW COMMUNITY LEADERSHIP HEADING */}
-        <h2 className="pastors-heading">Gemeindeleitung</h2>
+        <h2 className="pastors-heading">Unsere Leitung</h2>
 
         {/* PASTOR PETER SCHILD */}
         <section className="pastor-card">
