@@ -455,11 +455,11 @@
 
   .hero-church-name,
   .hero-subtitle {
-    transform: translate(-40px, 0px); /* move UP */
+    transform: translate(-40px, 20px); /* move UP */
   }
 
   .hero-visit-box {
-    margin-top: 6rem !important; /* prevent overlapping */
+    margin-top: 4rem !important; /* prevent overlapping */
   }
 }
 
