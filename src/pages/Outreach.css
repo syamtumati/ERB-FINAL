@@ -297,6 +297,6 @@ body {
 
 @media (min-width: 1280px) and (max-width: 1599px) {
   .black-title {
-    transform: translateY(40px);   /* move DOWN */
+    transform: translateY(60px);   /* move DOWN */
   }
 }
