@@ -446,50 +446,50 @@
   }
 }
 
-/* Lenovo T16 / 15-inch laptop range */
 @media (min-width: 1280px) and (max-width: 1599px) {
 
+  /* Hero slight positioning adjustment */
   .hero-content-centered {
-    transform: translate(-40px, 0px); /* move UP 20px */
+    transform: translate(-40px, 20px) !important;
   }
 
   .hero-church-name,
   .hero-subtitle {
-    transform: translate(-40px, 50px); /* move UP */
+    transform: translate(0, 20px) !important;   /* move DOWN consistently */
   }
 
+  /* Smaller visit box */
   .hero-visit-box {
-    padding: 2rem 2.4rem !important;   /* smaller */
-    max-width: 480px !important;       /* narrower */
-    margin-top: 10rem !important;      /* move DOWN */
-    transform: translateX(-20px) !important; /* slight left alignment */
+    padding: 1.6rem 2rem !important;   /* reduced size */
+    max-width: 420px !important;       /* narrower */
+    margin-top: 11rem !important;      /* push DOWN */
+    transform: translateX(-20px) !important;
   }
-
 }
 
 @media (min-width: 1600px) {
 
-  /* Move everything DOWN properly */
+  /* Move hero text UP slightly */
   .hero-content-centered {
-    transform: translate(-40px, 60px) !important;  /* ↓ 60px down */
+    transform: translate(-40px, 20px) !important;  /* was 60px, now higher */
   }
 
   .hero-church-name {
-    font-size: 3.3rem !important;                 /* smaller */
-    transform: translate(0, 0) !important;        /* remove conflict */
+    font-size: 3.3rem !important;
+    transform: translate(0, -10px) !important;     /* move UP */
   }
 
   .hero-subtitle {
-    font-size: 1.6rem !important;                 /* smaller */
-    transform: translate(0, 0) !important;        /* remove conflict */
+    font-size: 1.6rem !important;
+    transform: translate(0, -10px) !important;     /* move UP */
   }
 
-  /* Make visit box smaller + push down */
+  /* Visit box small + moved down */
   .hero-visit-box {
     transform: translateX(-20px) !important;
-    margin-top: 9rem !important;                 /* ↓ move DOWN */
-    padding: 1.8rem 2.4rem !important;            /* smaller */
-    max-width: 460px !important;                  /* narrower */
+    margin-top: 10rem !important;                  /* ↓ a bit more DOWN */
+    padding: 1.6rem 2.2rem !important;             /* smaller box */
+    max-width: 430px !important;                   /* narrower */
   }
 }
 
