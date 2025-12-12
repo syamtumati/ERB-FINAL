@@ -378,10 +378,13 @@
   }
 
   /* Also shift heading + intro text to match */
-  .donations-card h1,
+  .donations-card h1 {
+    position: relative;
+    left: 40px;
+  }
   .donations-intro {
     position: relative;
-    left: 10px;
+    left: 20px;
   }
 }
 
