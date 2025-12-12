@@ -519,7 +519,7 @@
     max-width: 500px !important;
     padding: 1.2rem 2rem !important;
 
-    margin-top: 10rem !important;    /* was 12rem → moved UP by 2rem */
+    margin-top: 8rem !important;    /* was 12rem → moved UP by 2rem */
     transform: translateX(-20px) !important;
 
     border-radius: 16px !important;
