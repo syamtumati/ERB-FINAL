@@ -667,3 +667,32 @@
   }
 }
 
+/* ===================================================== */
+/* DESKTOP LEFT ALIGNMENT FOR HEARTCRY SECTION           */
+/* ===================================================== */
+@media (min-width: 1024px) {
+
+  /* Move title further left */
+  .heartcry-section .section-title {
+    margin-left: -120px !important;
+  }
+
+  /* Move subtitle left */
+  .heartcry-section .section-subtitle {
+    position: relative;
+    left: -120px !important;
+  }
+
+  /* Move YouTube video frame left */
+  .heartcry-section .video-container {
+    position: relative;
+    left: -80px !important;
+  }
+
+  /* Move text under video left */
+  .heartcry-section .video-description {
+    position: relative;
+    left: -80px !important;
+  }
+}
+
