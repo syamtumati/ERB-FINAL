@@ -686,7 +686,7 @@
   /* Move YouTube video frame left */
   .heartcry-section .video-container {
     position: relative;
-    left: -60px !important;
+    left: -40px !important;
   }
 
   /* Move text under video left */
