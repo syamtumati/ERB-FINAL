@@ -480,35 +480,36 @@
   }
 }
 
-/* ================================================ */
-/* 17-inch & large desktops — refined visit box      */
-/* ================================================ */
+/* ================================================= */
+/* 17-inch screens — WIDER + SHORTER Visit Box       */
+/* ================================================= */
 @media (min-width: 1600px) {
 
-  /* Keep hero text stable */
+  /* Hero text stays same */
   .hero-content-centered {
     transform: translate(-40px, 20px) !important;
   }
 
-  /* --- Small, elegant rectangle box --- */
+  /* Wide + short rectangle */
   .hero-visit-box {
-    max-width: 340px !important;         /* narrower box */
-    padding: 1.4rem 1.8rem !important;    /* tighter padding */
-    margin-top: 11rem !important;         /* keeps below hero title */
+    max-width: 520px !important;        /* WIDER box */
+    padding: 1.2rem 2rem !important;     /* LOWER height */
+    margin-top: 10rem !important;        /* ↓ stays below hero title */
     transform: translateX(-20px) !important;
 
-    border-radius: 18px !important;       /* cleaner rounded corners */
-    box-shadow: 0 18px 40px rgba(0,0,0,0.5) !important; /* softer shadow */
+    border-radius: 16px !important;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.4) !important;
   }
 
-  /* --- Smaller, balanced text inside the box --- */
+  /* Smaller text to reduce height further */
   .hero-visit-box h3 {
-    font-size: 1.35rem !important;
-    line-height: 1.35 !important;
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.8rem !important;
   }
 
   .hero-visit-box p {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
     line-height: 1.35 !important;
     margin-top: 0.6rem !important;
   }
