@@ -381,7 +381,7 @@
   .donations-card h1,
   .donations-intro {
     position: relative;
-    left: -20px;
+    left: 10px;
   }
 }
 
