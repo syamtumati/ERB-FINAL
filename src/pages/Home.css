@@ -505,7 +505,7 @@
   .hero-visit-box {
     max-width: 520px !important;        /* WIDER box */
     padding: 1.2rem 2rem !important;     /* LOWER height */
-    margin-top: 10rem !important;        /* ↓ stays below hero title */
+    margin-top: 12rem !important;        /* ↓ stays below hero title */
     transform: translateX(-20px) !important;
 
     border-radius: 16px !important;
