@@ -493,7 +493,7 @@
   /* Title + subtitle go UP slightly more for balance */
   .hero-church-name {
     transform: translate(0, -20px) !important;
-    font-size: 3.3rem !important;  /* your new font size */
+    font-size: 3.3rem !important;
   }
 
   .hero-subtitle {
@@ -503,9 +503,9 @@
 
   /* Wide + short rectangle */
   .hero-visit-box {
-    max-width: 520px !important;        /* WIDER box */
-    padding: 1.2rem 2rem !important;     /* LOWER height */
-    margin-top: 12rem !important;        /* ↓ stays below hero title */
+    max-width: 520px !important;
+    padding: 1.2rem 2rem !important;
+    margin-top: 12rem !important;   /* ⬅️ MOVED DOWN */
     transform: translateX(-20px) !important;
 
     border-radius: 16px !important;
