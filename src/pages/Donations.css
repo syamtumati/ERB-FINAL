@@ -380,7 +380,7 @@
   /* Also shift heading + intro text to match */
   .donations-card h1 {
     position: relative;
-    left: 180px;
+    left: 190px;
   }
   .donations-intro {
     position: relative;
