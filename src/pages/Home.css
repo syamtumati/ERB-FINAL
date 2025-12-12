@@ -472,3 +472,37 @@
   }
 }
 
+/* Lenovo T16 / 1920px wide screens */
+@media (min-width: 1600px) and (max-width: 2000px) {
+
+  .hero-content-centered {
+    transform: translate(-40px, 0px);  /* move UP 20px */
+  }
+
+  .hero-church-name,
+  .hero-subtitle {
+    transform: translate(-40px, 0px);
+  }
+
+  .hero-visit-box {
+    margin-top: 6rem !important;  /* reduce gap */
+  }
+}
+
+/* Extremely large monitors */
+@media (min-width: 2000px) {
+
+  .hero-content-centered {
+    transform: translate(-40px, -20px);
+  }
+
+  .hero-church-name,
+  .hero-subtitle {
+    transform: translate(-40px, -20px);
+  }
+
+  .hero-visit-box {
+    margin-top: 5rem !important;
+  }
+}
+
