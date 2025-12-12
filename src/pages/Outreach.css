@@ -300,3 +300,13 @@ body {
     transform: translateY(60px);   /* move DOWN */
   }
 }
+
+/* ===================================================== */
+/* LARGE DESKTOPS (1920px width – Lenovo T16)            */
+/* Move hero name downward                               */
+/* ===================================================== */
+@media (min-width: 1600px) {
+  .black-title {
+    transform: translateY(60px);  /* ⬅️ move title DOWN */
+  }
+}
