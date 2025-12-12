@@ -409,6 +409,45 @@
   }
 }
 
+/* ==================== DESKTOP BASE (ALL ≥1024px) ==================== */
+
+@media (min-width: 1024px) {
+
+  .hero-video-section {
+    height: 100vh;
+  }
+
+  .hero-overlay {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content-centered {
+    transform: translate(-30px, 60px);
+  }
+
+  .hero-church-name {
+    font-size: 3.6rem !important;
+    transform: translate(-30px, 40px);
+  }
+
+  .hero-subtitle {
+    font-size: 1.9rem !important;
+    transform: translate(-30px, 40px);
+  }
+
+
+  .hero-visit-box {
+    transform: translateX(-10px);
+    margin-top: 9rem;
+  }
+
+  .what-matters-section .main-title {
+    position: relative;
+    left: -60px;   /* adjust: -40px, -80px depending how much you want */
+  }
+}
+
 /* ==================== SHORT HEIGHT DESKTOPS (≤880px height) ==================== */
 @media (min-width: 1024px) and (max-height: 880px) {
   .hero-content-centered {
@@ -425,50 +464,70 @@
   }
 }
 
-/* ================= DESKTOP — UNIVERSAL BLOCK (ALL ≥1024px) ================= */
-@media (min-width: 1024px) {
+/* ==================== LAPTOP RANGE — 15-inch (1280–1599px) ==================== */
+@media (min-width: 1280px) and (max-width: 1599px) {
 
-  /* Center hero section */
-  .hero-video-section {
-    height: 100vh;
-  }
-
-  .hero-overlay {
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Move HERO TEXT down slightly on ALL desktops */
+  /* Move hero text DOWN */
   .hero-content-centered {
-    transform: translate(-40px, 40px);
+    transform: translate(-40px, 15px);
   }
 
-  /* Standard hero title for all desktops */
+  /* Keep correct font size & move down */
   .hero-church-name {
     font-size: 3.6rem !important;
-    transform: translate(-40px, 40px);
-    letter-spacing: -1px;
+    transform: translate(-40px, -5px);
   }
 
-  /* Standard hero subtitle for all desktops */
   .hero-subtitle {
     font-size: 1.9rem !important;
-    transform: translate(-40px, 40px);
+    transform: translate(-40px, -5px);
   }
 
-  /* Visit box universal desktop settings */
+  /* Make Visit Box smaller ONLY for 15-inch laptops */
   .hero-visit-box {
-    transform: translateX(-20px);
-    margin-top: 9rem;
-    max-width: 520px;
-    padding: 2.4rem 3rem;
-    border-radius: 16px;
+    transform: translateX(-10px);
+    margin-top: 7rem;           /* move slightly closer to text */
+    padding: 2.2rem 2.6rem;       /* ↓ smaller padding */
+    max-width: 480px;             /* ↓ narrower width */
+    border-radius: 14px;          /* ↓ slightly smaller corners */
   }
 
-  /* Move "Was uns wichtig ist" left */
-  .what-matters-section .main-title {
-    position: relative;
-    left: -60px;
+  /* Reduce text sizes inside box */
+  .hero-visit-title {
+    font-size: 2rem;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 1.1rem;
   }
 }
 
+/* ==================== LARGE DESKTOPS (17 inch+) ==================== */
+/* Move hero slightly UP (higher resolution, more vertical space) */
+/* ==================== LARGE DESKTOPS (17-inch, widescreens ≥1600px) ==================== */
+@media (min-width: 1600px) {
+  .hero-content-centered {
+    transform: translate(-40px, 10px);
+  }
+
+  
+  /* Reduce text size */
+  .hero-church-name {
+    font-size: 3.8rem !important; /* smaller */
+    transform: translate(-40px, -10px); /* ↓ same move down */
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem !important; /* smaller */
+    transform: translate(-40px, -5px); /* ↓ same move down */
+  }
+
+   /* Visit box smaller + moved lower */
+  .hero-visit-box {
+    transform: translateX(-20px);
+    margin-top: 12rem; /* ↓ move DOWN */
+    padding: 2.2rem 2.6rem; /* reduce size */
+    max-width: 520px;    /* slightly narrower */
+  }
+}
