@@ -467,7 +467,7 @@
 
   /* Move everything DOWN properly */
   .hero-content-centered {
-    transform: translate(-40px, 50px) !important;  /* ↓ 60px down */
+    transform: translate(-40px, 70px) !important;  /* ↓ 60px down */
   }
 
   .hero-church-name {
@@ -483,7 +483,7 @@
   /* Make visit box smaller + push down */
   .hero-visit-box {
     transform: translateX(-20px) !important;
-    margin-top: 12rem !important;                 /* ↓ move DOWN */
+    margin-top: 10rem !important;                 /* ↓ move DOWN */
     padding: 1.8rem 2.4rem !important;            /* smaller */
     max-width: 460px !important;                  /* narrower */
   }
