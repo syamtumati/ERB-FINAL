@@ -399,9 +399,10 @@
   /* --------------- FIX WHITE TOP BAR ON MOBILE ONLY --------------- */
   /* Give hero extra space so visit box stays inside */
   .hero-video-section {
-    padding-bottom: 6rem !important;
-  } 
-
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 8rem !important;   /* ⬅️ THIS removes the dark block */
+  }
 }
 
 @media (max-width: 380px) {
