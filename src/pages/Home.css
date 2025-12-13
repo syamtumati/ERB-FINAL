@@ -369,7 +369,7 @@
   }*/
 
   .hero-visit-box {
-    margin-top: 3rem !important;   /* previously too large, now perfect */
+    margin-top: 4rem !important;   /* previously too large, now perfect */
     padding: 1.8rem 1.4rem !important;
     max-width: 92% !important;
     transform: none !important;    /* ensures it does NOT shift off-screen */
