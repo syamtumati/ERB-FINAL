@@ -343,7 +343,7 @@
 
   .home-page .hero-overlay {
     justify-content: flex-start;
-    padding-top: 6rem !important;   /* moved up */
+    padding-top: 9rem !important;   /* moved up */
   }
 
   .hero-church-name {
