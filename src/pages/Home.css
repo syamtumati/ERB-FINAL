@@ -475,7 +475,7 @@
     max-width: 520px !important;
     padding: 1.2rem 2rem !important;
 
-    margin-top: 16rem !important;   /* ⬅️ moved DOWN further (was 12rem) */
+    margin-top: 18rem !important;   /* ⬅️ moved DOWN further (was 12rem) */
 
     transform: translateX(5px) !important;
     border-radius: 16px !important;
@@ -607,5 +607,11 @@
     margin-top: 10rem !important;   /* ⬅️ reduced */
     max-width: 500px !important;
     padding: 1.2rem 2rem !important;
+  }
+}
+
+@media (min-width: 1800px) and (max-height: 1100px) {
+  .hero-visit-box {
+    margin-top: 14rem !important;
   }
 }
