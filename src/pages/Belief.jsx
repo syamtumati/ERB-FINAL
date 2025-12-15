@@ -1,108 +1,52 @@
-// src/pages/Belief.jsx
-import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { confessionChapters } from "../data/confessionChapters";
 import "./Belief.css";
 
-const confessionArticles = [
-  {
-    chapter: "1",
-    title: "Von der Heiligen Schrift",
-    summary:
-      "Die Heilige Schrift ist die einzige ausreichende, sichere und unfehlbare Richtschnur für alle zur Errettung notwendige Erkenntnis, für Glauben und Gehorsam.",
-  },
-  {
-    chapter: "2",
-    title: "Von Gott und der heiligen Dreieinigkeit",
-    summary:
-      "Es gibt nur einen lebendigen und wahren Gott, ewig, von unendlicher Macht, Weisheit und Güte.",
-  },
-  {
-    chapter: "3",
-    title: "Von Gottes Ratschluss",
-    summary:
-      "Gott hat von Ewigkeit her frei und unveränderlich alles bestimmt, was geschieht.",
-  },
-  {
-    chapter: "5",
-    title: "Von der göttlichen Vorsehung",
-    summary:
-      "Gott, der große Schöpfer, erhält, lenkt und regiert alle Dinge nach seiner höchst weisen und heiligen Vorsehung.",
-  },
-  {
-    chapter: "8",
-    title: "Von Christus, dem Mittler",
-    summary:
-      "Es hat Gott gefallen, den Herrn Jesus als den einzigen Mittler zwischen Gott und Menschen zu erwählen und einzusetzen.",
-  },
-  {
-    chapter: "11",
-    title: "Von der Rechtfertigung",
-    summary:
-      "Wir werden allein aus Gnade, allein durch den Glauben, allein um Christi willen gerechtfertigt.",
-  },
-  {
-    chapter: "26",
-    title: "Von der Gemeinde",
-    summary:
-      "Die sichtbare Gemeinde besteht aus allen, die überall in der Welt den Glauben des Evangeliums bekennen und Gott durch Christus gehorsam sind.",
-  },
-  {
-    chapter: "28",
-    title: "Von der Taufe und dem Abendmahl des Herrn",
-    summary:
-      "Christus hat zwei Ordnungen eingesetzt: die Glaubenstaufe durch Untertauchen und das Abendmahl des Herrn.",
-  },
-  {
-    chapter: "29",
-    title: "Von der Taufe",
-    summary:
-      "Die Taufe ist nur für bekennende Gläubige bestimmt, durch Untertauchen, als Zeichen der Gemeinschaft mit Christus in seinem Tod und seiner Auferstehung.",
-  },
-];
+export default function Belief() {
+  const navigate = useNavigate();
+  const [openChapter, setOpenChapter] = useState(null);
 
-const Belief = () => {
+  const toggleChapter = (chapter) => {
+    setOpenChapter(openChapter === chapter ? null : chapter);
+  };
+
   return (
-    <section className="belief-page">
-      <div className="belief-content">
-        {/* HERO */}
-        <div className="belief-hero">
-          <h1>Was wir glauben</h1>
-          <p className="confession-title">
-            Das 1689 Zweite Londoner Baptistische Glaubensbekenntnis
-          </p>
-          <p className="tagline">
-            Lehren der Gnade • Glaubenstaufe • Sola Scriptura
-          </p>
-        </div>
+    <section className="belief-grid-section">
+      <h1 className="belief-heading">Bekenntnis</h1>
 
-        {/* CONFESSION ARTICLES GRID */}
-        <div className="confession-grid">
-          {confessionArticles.map((item, index) => (
-            <article key={index} className="confession-card">
-              <div className="card-header">
-                <span className="chapter-num">{item.chapter}</span>
-                <h3>{item.title}</h3>
-              </div>
-              <p>{item.summary}</p>
-            </article>
-          ))}
-        </div>
+      <div className="chapter-grid">
+        {confessionChapters.map(chapter => (
+          <div key={chapter.chapter} className="chapter-wrapper">
 
-        {/* BUTTON */}
-        <div className="belief-cta">
-          <a
-            href="https://www.the1689confession.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="coffee-btn"
-          >
-            Die vollständige 1689er Bekenntnisschrift lesen
-          </a>
-        </div>
+            {/* CHAPTER BOX */}
+            <div
+              className="chapter-rect"
+              onClick={() => toggleChapter(chapter.chapter)}
+            >
+              {chapter.chapter}. {chapter.title}
+            </div>
+
+            {/* EXPANDED POINTS */}
+            {openChapter === chapter.chapter && (
+              <ul className="chapter-points">
+                {chapter.points.map(point => (
+                  <li
+                    key={point.id}
+                    onClick={() =>
+                      navigate(`/bekenntnis/${chapter.chapter}/${point.id}`)
+                    }
+                  >
+                    <strong>{point.id}.</strong> {point.title}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+          </div>
+        ))}
       </div>
-      {/* Footer is now global in App.jsx */}
     </section>
   );
-};
-
-export default Belief;
+}
 

@@ -6,7 +6,6 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import Belief from "./pages/Belief";
-import ConfessionSlide from "./pages/ConfessionSlide"; // ✅ ONLY NEW IMPORT
 import Pastors from "./pages/Pastors";
 import Messages from "./pages/Messages";
 import Donations from "./pages/Donations";
@@ -88,20 +87,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/glaube" element={<Belief />} />
-
-          {/* ✅ BELIEF SLIDE ROUTE (ONLY ADDITION) */}
-          <Route
-            path="/bekenntnis/:chapterId/:pointId"
-            element={<ConfessionSlide />}
-          />
-
           <Route path="/uber-uns" element={<Pastors />} />
           <Route path="/predigten" element={<Messages />} />
           <Route path="/spenden" element={<Donations />} />
           <Route path="/kontakt" element={<Contact />} />
         </Routes>
       </main>
-
+	
       {/* ================= PARTNER SECTION ================= */}
       <section className="partner-heartcry">
         <div className="partner-inner">
@@ -128,12 +120,11 @@ function App() {
         </div>
       </section>
 
+
       {/* ================= FOOTER ================= */}
       <footer className="clean-footer">
         <div className="footer-inner">
-          <div className="church-name">
-            Evangelisch-Reformierte Baptistengemeinde
-          </div>
+          <div className="church-name">Evangelisch-Reformierte Baptistengemeinde</div>
 
           <nav className="footer-nav">
             <Link to="/glaube">Glaube</Link>
