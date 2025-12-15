@@ -333,3 +333,22 @@ body {
 
 }
 
+/* ======================= */
+/* MOBILE HEADER EDGE FIX  */
+/* ======================= */
+
+@media (max-width: 768px) {
+  .header-container {
+    padding-left: 1rem;   /* push logo closer to left */
+    padding-right: 1rem;  /* push hamburger closer to right */
+  }
+
+  .mobile-menu-toggle {
+    justify-self: end; /* ensure hamburger sticks to edge */
+  }
+
+  .logo-center {
+    justify-self: start; /* ensure logo sticks to edge */
+  }
+}
+
