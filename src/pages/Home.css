@@ -475,9 +475,9 @@
     max-width: 520px !important;
     padding: 1.2rem 2rem !important;
 
-    margin-top: 20rem !important;   /* ⬅️ moved DOWN further (was 12rem) */
+    margin-top: 16rem !important;   /* ⬅️ moved DOWN further (was 12rem) */
 
-    transform: translateX(5px) !important;
+    transform: translate(5px, 40px) !important; /* ⬅️ MOVE DOWN */
     border-radius: 16px !important;
     box-shadow: 0 18px 40px rgba(0,0,0,0.4) !important;
   }
