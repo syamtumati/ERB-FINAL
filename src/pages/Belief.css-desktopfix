@@ -126,22 +126,12 @@
     grid-template-columns: 1fr;
   }
 
-  /* Mobile fallback: Not always visible */
+  /* Mobile fallback: always visible */
   .chapter-points-below {
     position: static;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    pointer-events: none;
-    transform: none;
-    margin-top: 0;
-    transition: all 0.25s ease;
-  }
-
-  .chapter-points-below.open {
     opacity: 1;
-    max-height: 1200px; /* enough for all points */
     pointer-events: auto;
+    transform: none;
     margin-top: 0.8rem;
   }
 }
