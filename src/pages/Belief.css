@@ -136,3 +136,14 @@
   }
 }
 
+/* ===== DESKTOP SPACING ADJUSTMENTS ===== */
+@media (min-width: 1024px) {
+  .belief-heading {
+    margin-top: 3rem;
+  }
+
+  .chapter-grid {
+    margin-top: 2.5rem;
+  }
+}
+
