@@ -1,5 +1,5 @@
 /* ======================= */
-/* GLOBAL SAFE RESET       */
+/* GLOBAL RESET            */
 /* ======================= */
 *,
 *::before,
@@ -7,72 +7,72 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden !important;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* ======================= */
-/* HEARTCRY-STYLE HEADER   */
+/* HEADER                  */
 /* ======================= */
 
-/* DESKTOP → scrolls with page */
 .heartcry-header {
-  position: absolute; /* ← CHANGED ONLY FOR DESKTOP */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 88px;
   z-index: 900;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: opacity 0.3s ease;
-  background: transparent !important;
+  background: transparent;
 }
 
+/* Main header container */
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
   max-width: 1700px;
   width: 100%;
-  padding: 0 1.5rem;
-}
-
-/* LOGO */
-.logo-center {
-  flex-shrink: 0;
-}
-
-.logo-image {
-  height: 130px;
-  width: auto;
-  filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.8));
-  transition: transform 0.3s ease;
-}
-
-.logo-image:hover {
-  transform: translateY(-4px);
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem; /* space for hamburger */
 }
 
 /* ======================= */
-/* DESKTOP MENUS           */
+/* MENUS                   */
 /* ======================= */
 
 .menu-left,
 .menu-right {
   display: flex;
-  gap: 3.5rem;
+  align-items: center;
+  gap: 2.2rem;
+  white-space: nowrap;
+}
+
+/* Left menu sticks left */
+.menu-left {
+  margin-right: auto;
+}
+
+/* Right menu sticks right */
+.menu-right {
+  margin-left: auto;
+  padding-right: 3.2rem; /* reserve space for hamburger */
 }
 
 .desktop-nav {
   display: flex;
 }
 
+/* Menu links */
 .menu-item {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
   color: #f0e8ff;
   text-decoration: none;
   font-size: 1.05rem;
@@ -80,7 +80,6 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 1.4px;
   position: relative;
-  transition: color 0.3s;
 }
 
 .menu-item:hover,
@@ -91,12 +90,12 @@ html, body {
 .menu-item::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -6px;
   left: 0;
   width: 0;
   height: 2px;
   background: #e8c0a0;
-  transition: width 0.3s;
+  transition: width 0.3s ease;
 }
 
 .menu-item:hover::after,
@@ -105,28 +104,51 @@ html, body {
 }
 
 /* ======================= */
-/* MOBILE NAVIGATION       */
+/* LOGO (TRUE CENTER)      */
+/* ======================= */
+
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  height: 68px;
+  width: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.7));
+}
+
+/* ======================= */
+/* HAMBURGER (ALL SCREENS) */
 /* ======================= */
 
 .mobile-menu-toggle {
-  display: none;
+  position: absolute;
+  right: 1.5rem;
+  display: block; /* visible on desktop + mobile */
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.3rem;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .mobile-menu-toggle span {
   display: block;
-  width: 26px;
+  width: 24px;
   height: 3px;
   margin: 4px 0;
   background: #f0e8ff;
   border-radius: 999px;
 }
 
-/* Backdrop */
+/* ======================= */
+/* MOBILE DRAWER           */
+/* ======================= */
+
 .mobile-backdrop {
   position: fixed;
   inset: 0;
@@ -134,7 +156,6 @@ html, body {
   z-index: 950;
 }
 
-/* Sidebar drawer */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -146,7 +167,6 @@ html, body {
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
 
   padding: 2rem 2.5rem;
@@ -169,8 +189,8 @@ html, body {
 .mobile-menu a {
   color: #ffffff;
   font-size: 1.2rem;
-  text-transform: uppercase;
   font-weight: 700;
+  text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
 }
@@ -179,27 +199,21 @@ html, body {
   position: absolute;
   top: 1.2rem;
   right: 1.4rem;
+  font-size: 2rem;
   background: none;
   border: none;
   color: white;
-  font-size: 2rem;
   cursor: pointer;
 }
 
 /* ======================= */
-/* RESPONSIVE BREAKPOINTS  */
+/* RESPONSIVE              */
 /* ======================= */
 
 @media (max-width: 1200px) {
-  .header-container {
-    padding: 0 1rem;
-  }
   .menu-left,
   .menu-right {
-    gap: 2rem;
-  }
-  .logo-image {
-    height: 110px;
+    gap: 1.8rem;
   }
 }
 
@@ -207,129 +221,33 @@ html, body {
   .desktop-nav {
     display: none;
   }
-  .mobile-menu-toggle {
-    display: block;
-  }
-  .header-container {
-    padding: 0 0.75rem;
-  }
-  .logo-image {
-    height: 95px;
-  }
 
-  /* MOBILE: page push-down */
-  .page-wrapper {
-    padding-top: 0 !important;   /* remove the white block */
-  }
-
-  /* MOBILE HEADER FIXED (ONLY HERE) */
-  .heartcry-header {
-    position: fixed !important;
-    background: transparent !important;
+  .menu-right {
+    padding-right: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .header-container {
-    padding: 0 0.6rem;
-  }
   .logo-image {
-    height: 80px;
+    height: 60px;
   }
 }
 
 @media (max-width: 480px) {
-  .header-container {
-    padding: 0 0.4rem;
-  }
   .logo-image {
-    height: 70px;
-  }
-  .page-wrapper {
-    padding-top: 20px !important;
+    height: 54px;
   }
 }
 
 /* ======================= */
-/* PARTNER SECTION         */
-/* ======================= */
-
-.partner-heartcry {
-  background: #f4f3f1;
-  padding: 1.8rem 1.5rem 2.4rem;
-  text-align: center;
-  font-family: "Georgia", serif;
-  color: #2d1b0a;
-}
-
-.partner-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* RESTORED UNSERE PARTNER TITLE */
-.partner-heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.3rem;
-}
-
-.partner-heartcry-title {
-  font-family: "Georgia", serif;
-  text-transform: uppercase;
-  color: #8b4513;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.partner-line {
-  width: 60px;
-  height: 1px;
-  background: #8b4513;
-}
-
-.heartcry-logo-link {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 0.8rem;
-}
-
-.heartcry-logo-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 140px;
-  height: 1px;
-  background: #8b4513;
-}
-
-.heartcry-logo {
-  max-width: 260px;
-  height: auto;
-}
-
-@media (max-width: 600px) {
-  .heartcry-logo {
-    max-width: 200px;
-  }
-}
-
-/* ======================= */
-/* GLOBAL FOOTER           */
+/* FOOTER                  */
 /* ======================= */
 
 .clean-footer {
+  background: #f4f3f1;
   padding: 4rem 2rem 3rem;
   text-align: center;
-  margin: 0 !important;
   font-family: "Georgia", serif;
-  background: #f4f3f1;
-  color: #2d1b0a;
 }
 
 .footer-inner {
@@ -345,7 +263,6 @@ html, body {
   font-size: 2.6rem;
   font-weight: 900;
   color: #8b4513;
-  letter-spacing: -1px;
 }
 
 .footer-nav {
@@ -361,63 +278,12 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
-  font-weight: 600;
-  white-space: nowrap;
 }
 
-.copyright {
-  font-size: 0.88rem;
-  color: #8b4513;
-  opacity: 0.9;
-}
-
-/* DESKTOP FOOTER FIX: one line */
 @media (min-width: 1024px) {
   .footer-nav {
-    flex-wrap: nowrap !important;
-    gap: 3rem !important;
-  }
-}
-
-/* ======================================================= */
-/* DESKTOP ONLY — Shift Footer + Partner Section Left      */
-/* ======================================================= */
-@media (min-width: 1024px) {
-
-  /* Move footer church name left */
-  .clean-footer .church-name {
-    position: relative;
-    left: -60px;   /* adjust as needed: -40px, -50px, -80px */
-  }
-
-  /* Move footer navigation left */
-  .clean-footer .footer-nav {
-    position: relative;
-    left: -40px;   /* move links left */
-  }
-
-  /* Move copyright text left */
-  .clean-footer .copyright {
-    position: relative;
-    left: -60px;
-  }
-
-  /* Move entire partner block left */
-  .partner-heartcry {
-    position: relative;
-    left: -30px;   /* adjust as needed */
-  }
-
-  /* Move "Unsere Partner" heading left */
-  .partner-heading {
-    position: relative;
-    left: -30px;
-  }
-
-  /* Move HeartCry Partner logo left */
-  .heartcry-logo-link {
-    position: relative;
-    left: -30px;
+    flex-wrap: nowrap;
+    gap: 3rem;
   }
 }
 
