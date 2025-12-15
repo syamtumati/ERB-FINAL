@@ -138,6 +138,9 @@
 
 /* ===== DESKTOP SPACING ADJUSTMENTS ===== */
 @media (min-width: 1024px) {
+  .belief-grid-section {
+    padding-top: 8.5rem; /* 👈 was 6rem */
+  }
   .belief-heading {
     margin-top: 3rem;
   }
