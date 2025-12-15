@@ -58,7 +58,7 @@ body {
   justify-self: end;
 
   /* ⬇️ subtle space from logo */
-  margin-right: 0.8rem;
+  margin-right: 2rem;
 }
 
 /* ======================= */
@@ -86,7 +86,7 @@ body {
   justify-self: start;
 
   /* ⬇️ subtle space from logo */
-  margin-left: 0.8rem;
+  margin-left: 2rem;
 }
 
 /* ======================= */
