@@ -124,7 +124,7 @@ function App() {
       {/* ================= FOOTER ================= */}
       <footer className="clean-footer">
         <div className="footer-inner">
-          <div className="church-name">Gnadenkirche Frankfurt</div>
+          <div className="church-name">Evangelisch-Reformierte Baptistengemeinde</div>
 
           <nav className="footer-nav">
             <Link to="/glaube">Glaube</Link>
@@ -135,7 +135,7 @@ function App() {
           </nav>
 
           <div className="copyright">
-            © {new Date().getFullYear()} Gnadenkirche Frankfurt
+            © {new Date().getFullYear()} Evangelisch-Reformierte Baptistengemeinde
           </div>
         </div>
       </footer>
