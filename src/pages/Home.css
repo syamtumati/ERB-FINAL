@@ -473,3 +473,48 @@
   }
 }
 
+/* ==================== FINAL MOBILE HERO FIX ==================== */
+@media (max-width: 600px) {
+
+  /* Push hero below header clearly */
+  .hero-overlay {
+    padding-top: 160px !important; /* header + safe space */
+    align-items: flex-start;
+  }
+
+  .hero-content-centered {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Make full church name fit screen */
+  .hero-church-name {
+    font-size: 2.4rem !important;   /* 👈 key fix */
+    line-height: 1.2 !important;
+    letter-spacing: -0.4px !important;
+
+    padding: 0 1.25rem !important;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-align: center;
+  }
+
+  /* Keep subtitle visible */
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+    margin-top: 0.6rem;
+    padding: 0 1.25rem;
+  }
+}
+
+/* Extra safety for very small phones */
+@media (max-width: 380px) {
+  .hero-church-name {
+    font-size: 2.1rem !important;
+  }
+}
+
