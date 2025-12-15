@@ -340,9 +340,10 @@
   .hero-church-name {
     font-size: 3.2rem !important;
     letter-spacing: -1px !important;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
     line-height: 1.1;
     margin-bottom: 0.5rem;
+    box-sizing: border-box;
   }
 
   .hero-subtitle {
@@ -360,7 +361,7 @@
   }*/
 
   .hero-visit-box {
-    margin-top: 4rem !important;   /* previously too large, now perfect */
+    margin-top: 1.8rem !important;   /* previously too large, now perfect */
     padding: 1.8rem 1.4rem !important;
     max-width: 92% !important;
     transform: none !important;    /* ensures it does NOT shift off-screen */
@@ -383,8 +384,11 @@
   }
 
   .what-matters-section {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 1.25 !important;
+    padding-right: 1.25 !important;
+  }
+  .clean-footer {
+    padding: 4rem 1.25rem 3rem;
   }
 
   /* --------------- FIX WHITE TOP BAR ON MOBILE ONLY --------------- */
