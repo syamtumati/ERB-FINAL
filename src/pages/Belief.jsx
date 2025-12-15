@@ -24,20 +24,20 @@ export default function Belief() {
               className="chapter-rect"
               onClick={() => toggleChapter(chapter.chapter)}
             >
-              <span className="chapter-number">{chapter.chapter}.</span>
+              <span className="chapter-number">{chapter.chapter}</span>
+              <span className="chapter-separator">.</span>
               <span className="chapter-title">{chapter.title}</span>
             </div>
 
-            {/* POINT LIST */}
+            {/* EXPANDED POINTS */}
             {openChapter === chapter.chapter && (
               <ul className="chapter-points">
                 {chapter.points.map((point) => (
                   <li
                     key={point.id}
-                    onClick={(e) => {
-                      e.stopPropagation(); // 🔑 VERY IMPORTANT
-                      navigate(`/bekenntnis/${chapter.chapter}/${point.id}`);
-                    }}
+                    onClick={() =>
+                      navigate(`/bekenntnis/${chapter.chapter}/${point.id}`)
+                    }
                   >
                     <strong>{point.id}.</strong> {point.title}
                   </li>

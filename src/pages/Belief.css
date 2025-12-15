@@ -17,25 +17,23 @@
 .chapter-grid {
   max-width: 1600px;
   margin: 0 auto;
-
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)); /* SAFE */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
-
-  box-sizing: border-box;
 }
 
 /* ===== WRAPPER ===== */
 .chapter-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
-/* ===== CHAPTER RECT ===== */
+/* ===== RECTANGLE (FIXED SIZE + WRAPPING) ===== */
 .chapter-rect {
   background: rgba(255, 255, 255, 0.07);
-  border: 2px solid rgba(255, 255, 255, 0.75);
-  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
 
   padding: 1.6rem 2rem;
   cursor: pointer;
@@ -45,13 +43,13 @@
   font-weight: 600;
   line-height: 1.35;
 
+  /* 🔑 REQUIRED FIXES */
+  min-height: 100px;
   display: flex;
-  gap: 0.4rem;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  /* 🔑 FIXES OVERFLOW */
   white-space: normal;
   word-break: break-word;
 
@@ -59,14 +57,20 @@
 }
 
 .chapter-rect:hover {
-  transform: translateY(-3px);
   border-color: #e8c0a0;
-  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
-/* ===== NUMBER ===== */
-.chapter-number {
+/* ===== NUMBER ALIGNMENT FIX ===== */
+.chapter-number,
+.chapter-separator {
   font-weight: 700;
+  margin-right: 0.15rem;
+  white-space: nowrap;
+}
+
+.chapter-title {
+  display: inline;
 }
 
 /* ===== POINT LIST ===== */
@@ -74,16 +78,16 @@
   margin: 1.2rem 0 0;
   padding: 0;
   list-style: none;
-  border-left: 2px solid rgba(255,255,255,0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-/* ===== POINT ITEM ===== */
+/* ===== POINT ===== */
 .chapter-points li {
   padding: 0.6rem 0 0.6rem 1.2rem;
   cursor: pointer;
   font-family: "Georgia", serif;
   font-size: 1.05rem;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .chapter-points li:hover {
@@ -93,7 +97,7 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
   .chapter-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
