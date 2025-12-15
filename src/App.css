@@ -343,8 +343,9 @@ body {
     padding-right: 0rem;  /* push hamburger closer to right */
   }
 
+  /* PUSH HAMBURGER MORE TO THE RIGHT */
   .mobile-menu-toggle {
-    justify-self: end; /* ensure hamburger sticks to edge */
+    margin-right: -0.5rem; /* 👈 key line */
   }
 
   .logo-center {
