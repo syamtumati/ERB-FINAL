@@ -9,7 +9,7 @@
 /* ===== CONTAINER ===== */
 .slide-container {
   max-width: 900px;
-  margin: 2.5rem auto 0; /* ✅ moved down */
+  margin: 0 auto;
   color: white;
 }
 
@@ -17,7 +17,6 @@
 .slide-title {
   font-size: 2.4rem;
   font-weight: 900;
-  margin-top: 1rem;      /* ✅ slight extra drop */
   margin-bottom: 2rem;
   color: white;
 }
