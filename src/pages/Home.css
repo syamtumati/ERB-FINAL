@@ -318,55 +318,87 @@
   }
 }
 
+/* Optional: completely remove your old hack */
+@media (max-width: 600px) {
+  .hero-video-section {
+    margin-top: 0 !important;   /* removes the old -60px hack */
+  }
+}
+
+/* MOBILE (≤ 600px) */
 @media (max-width: 600px) {
 
-  /* Remove phantom black bar */
-  .hero-video-section {
-    min-height: auto !important;
-    height: auto !important;
+  .hero-video {
+    object-position: center top;
   }
 
-  .hero-overlay {
-    position: relative !important;
-    padding-bottom: 3rem;
+  .home-page .hero-overlay {
+    justify-content: flex-start;
+    padding-top: 3.5rem !important;   /* moved up */
   }
 
-  /* Prevent text cutting */
-  .hero-content-centered {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+  .hero-church-name {
+    font-size: 3.2rem !important;
+    letter-spacing: -1px !important;
+    padding: 0 1.25rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
   }
 
-  .hero-church-name,
   .hero-subtitle {
-    max-width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
   }
 
-  /* Push visit box slightly DOWN */
+  .hero-content-centered {
+    padding-top: 3rem !important;   /* move content higher */
+  }
+
+/*  .hero-visit-box {
+    padding: 2rem 1.6rem;
+  }*/
+
   .hero-visit-box {
-    margin-top: 11rem !important;
+    margin-top: 9rem !important;   /* previously too large, now perfect */
+    padding: 1.8rem 1.4rem !important;
+    max-width: 92% !important;
+    transform: none !important;    /* ensures it does NOT shift off-screen */
   }
 
-  /* Prevent next section touching screen edges */
-  .home-belief-section {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+  .hero-visit-title {
+    font-size: 1.4rem !important;
   }
 
-  /* Footer text safety */
-  .clean-footer,
-  .footer-inner {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 0.98rem !important;
   }
 
-  .church-name {
-    max-width: 100%;
-    text-align: center;
-    word-break: break-word;
+  .main-title {
+    font-size: 2.8rem !important;
+    line-height: 1.2;
+    margin-bottom: 1.8rem;
+    letter-spacing: -1px;
   }
+
+  .what-matters-section {
+    padding-left: 1.25 !important;
+    padding-right: 1.25 !important;
+  }
+  .clean-footer {
+    padding: 4rem 1.25rem 3rem;
+  }
+
+  /* --------------- FIX WHITE TOP BAR ON MOBILE ONLY --------------- */
+  /* Give hero extra space so visit box stays inside */
+  .hero-video-section {
+    height: auto !important;      /* ⬅️ KEY */
+    min-height: 100vh !important; /* still full screen */
+    padding-bottom: 8rem !important;
+  }
+
 }
 
 @media (max-width: 380px) {
