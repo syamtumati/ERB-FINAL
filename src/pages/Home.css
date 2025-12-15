@@ -551,7 +551,7 @@
 
   .what-matters-section .main-title {
     position: relative;
-    left: -30px !important;   /* adjust value if needed */
+    left: -20px !important;   /* adjust value if needed */
   }
 
   .what-matters-grid {
