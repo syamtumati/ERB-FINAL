@@ -1,12 +1,10 @@
-/* ======================= */
-/* GLOBAL RESET            */
-/* ======================= */
+/* src/App.css – Fixed Hybrid Version: Current menu style + old layout (flex space-between) */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 html,
 body {
   margin: 0;
@@ -16,15 +14,14 @@ body {
 }
 
 /* ======================= */
-/* HEADER (FINAL CORRECT)  */
+/* HEADER */
 /* ======================= */
-
 .heartcry-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 96px;                 /* balanced height */
+  height: 96px; /* current balanced height */
   z-index: 900;
   display: flex;
   justify-content: center;
@@ -34,56 +31,48 @@ body {
 .header-container {
   max-width: 1700px;
   width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  /* left | logo | right | hamburger */
+  display: flex;
   align-items: center;
-  column-gap: 1.2rem;           /* ⬅️ THIS removes big gaps */
+  justify-content: space-between; /* old layout: left menu - logo - right menu */
   padding: 0 2rem;
 }
 
 /* ======================= */
-/* LEFT MENU               */
+/* LEFT MENU */
 /* ======================= */
-
 .menu-left {
   display: flex;
   align-items: center;
-  gap: 1.8rem;                  /* tighter */
-  justify-self: start;
+  gap: 1.8rem; /* current tighter spacing */
 }
 
 /* ======================= */
-/* LOGO (BIGGER & CENTERED)*/
+/* LOGO */
 /* ======================= */
-
 .logo-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
 .logo-image {
-  height: 92px;                 /* ⬅️ BIGGER LOGO */
+  height: 92px; /* current bigger logo */
   width: auto;
   filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.6));
 }
 
 /* ======================= */
-/* RIGHT MENU              */
+/* RIGHT MENU */
 /* ======================= */
-
 .menu-right {
   display: flex;
   align-items: center;
-  gap: 1.8rem;                  /* tighter */
-  justify-self: start;
+  gap: 1.8rem; /* current tighter spacing */
 }
 
 /* ======================= */
-/* MENU ITEMS              */
+/* MENU ITEMS (current style) */
 /* ======================= */
-
 .menu-item {
   line-height: 1;
   margin: 0;
@@ -96,12 +85,10 @@ body {
   letter-spacing: 1.4px;
   position: relative;
 }
-
 .menu-item:hover,
 .menu-item.active {
   color: #e8c0a0;
 }
-
 .menu-item::after {
   content: "";
   position: absolute;
@@ -112,25 +99,20 @@ body {
   background: #e8c0a0;
   transition: width 0.25s ease;
 }
-
 .menu-item:hover::after,
 .menu-item.active::after {
   width: 100%;
 }
 
 /* ======================= */
-/* HAMBURGER (SEPARATE)    */
+/* HAMBURGER */
 /* ======================= */
-
 .mobile-menu-toggle {
-  display: block;
-  justify-self: end;
-  margin-left: 1rem;
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
 }
-
 .mobile-menu-toggle span {
   display: block;
   width: 24px;
@@ -141,16 +123,14 @@ body {
 }
 
 /* ======================= */
-/* MOBILE DRAWER           */
+/* MOBILE DRAWER (kept from current) */
 /* ======================= */
-
 .mobile-backdrop {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 950;
 }
-
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -170,13 +150,11 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 960;
 }
-
 .mobile-menu.open {
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
 }
-
 .mobile-menu a {
   color: #ffffff;
   font-size: 1.2rem;
@@ -185,7 +163,6 @@ body {
   letter-spacing: 2px;
   text-decoration: none;
 }
-
 .mobile-close {
   position: absolute;
   top: 1.2rem;
@@ -198,44 +175,175 @@ body {
 }
 
 /* ======================= */
-/* RESPONSIVE              */
+/* RESPONSIVE */
 /* ======================= */
-
 @media (max-width: 992px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  .header-container {
-    grid-template-columns: auto auto;
-  }
-
   .menu-left,
   .menu-right {
     display: none;
   }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .logo-center {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
   .logo-image {
     height: 80px;
   }
 }
 
 @media (max-width: 480px) {
+  .header-container {
+    padding: 0 0.6rem;
+  }
   .logo-image {
     height: 70px;
   }
 }
 
 /* ======================= */
-/* FOOTER (UNCHANGED)      */
+/* PARTNER SECTION (restored from old) */
 /* ======================= */
+.partner-heartcry {
+  background: #f4f3f1;
+  padding: 1.8rem 1.5rem 2.4rem;
+  text-align: center;
+  font-family: "Georgia", serif;
+  color: #2d1b0a;
+}
+.partner-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.partner-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+.partner-heartcry-title {
+  font-family: "Georgia", serif;
+  text-transform: uppercase;
+  color: #8b4513;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.partner-line {
+  width: 60px;
+  height: 1px;
+  background: #8b4513;
+}
+.heartcry-logo-link {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+.heartcry-logo-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 140px;
+  height: 1px;
+  background: #8b4513;
+}
+.heartcry-logo {
+  max-width: 260px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .heartcry-logo {
+    max-width: 200px;
+  }
+}
 
+/* ======================= */
+/* FOOTER (restored from old) */
+/* ======================= */
 .clean-footer {
   background: #f4f3f1;
   padding: 4rem 2rem 3rem;
   text-align: center;
   font-family: "Georgia", serif;
+  color: #2d1b0a;
+}
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+}
+.church-name {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #8b4513;
+  letter-spacing: -1px;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+}
+.footer-nav a {
+  color: #8b4513;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.copyright {
+  font-size: 0.88rem;
+  color: #8b4513;
+  opacity: 0.9;
+}
+@media (min-width: 1024px) {
+  .footer-nav {
+    flex-wrap: nowrap !important;
+    gap: 3rem !important;
+  }
 }
 
+/* Desktop left shift (from old) */
+@media (min-width: 1024px) {
+  .clean-footer .church-name {
+    position: relative;
+    left: -60px;
+  }
+  .clean-footer .footer-nav {
+    position: relative;
+    left: -40px;
+  }
+  .clean-footer .copyright {
+    position: relative;
+    left: -60px;
+  }
+  .partner-heartcry {
+    position: relative;
+    left: -30px;
+  }
+  .partner-heading {
+    position: relative;
+    left: -30px;
+  }
+  .heartcry-logo-link {
+    position: relative;
+    left: -30px;
+  }
+}
