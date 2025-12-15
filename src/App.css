@@ -340,7 +340,7 @@ body {
 @media (max-width: 768px) {
   .header-container {
     padding-left: 0.25rem;   /* push logo closer to left */
-    padding-right: 0rem;  /* push hamburger closer to right */
+    padding-right: -0.75rem;  /* push hamburger closer to right */
   }
 
   .mobile-menu-toggle {
