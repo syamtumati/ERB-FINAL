@@ -1,10 +1,12 @@
-/* src/App.css – Ultra-Tight Gaps, Perfect Match to Screenshot */
-
+/* ======================= */
+/* GLOBAL RESET            */
+/* ======================= */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
@@ -13,7 +15,10 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER */
+/* ======================= */
+/* HEADER (FINAL SOLUTION) */
+/* ======================= */
+
 .heartcry-header {
   position: fixed;
   top: 0;
@@ -26,45 +31,62 @@ body {
   background: transparent;
 }
 
+/*
+  GRID LAYOUT:
+  [ left menu ] [ logo ] [ right menu ] [ hamburger ]
+*/
 .header-container {
   max-width: 1700px;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto max-content auto max-content;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 3rem; /* Wider padding pushes menus outward */
-  position: relative;
-  height: 100%;
+  column-gap: 1.4rem; /* ⬅️ controls spacing near logo */
+  padding: 0 2.5rem;
 }
 
-/* LEFT MENU – Pushed far left */
+/* ======================= */
+/* LEFT MENU               */
+/* ======================= */
 .menu-left {
   display: flex;
   align-items: center;
-  gap: 2.8rem; /* Slightly wider item spacing for elegance */
+  gap: 2rem;
+  justify-self: end; /* ⬅️ pull toward logo */
 }
 
-/* LOGO – Large & Centered */
+/* ======================= */
+/* LOGO (BIG + CENTERED)   */
+/* ======================= */
 .logo-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .logo-image {
-  height: 110px;
+  height: 110px; /* ⬅️ BIG LOGO */
   width: auto;
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.7));
 }
 
-/* RIGHT MENU – Pushed far right */
+/* ======================= */
+/* RIGHT MENU              */
+/* ======================= */
 .menu-right {
   display: flex;
   align-items: center;
-  gap: 2.8rem;
+  gap: 2rem;
+  justify-self: start; /* ⬅️ pull toward logo */
 }
 
-/* MENU ITEMS */
+/* ======================= */
+/* MENU ITEMS              */
+/* ======================= */
 .menu-item {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
   color: #f0e8ff;
   text-decoration: none;
   font-size: 1.05rem;
@@ -73,10 +95,12 @@ body {
   letter-spacing: 1.4px;
   position: relative;
 }
+
 .menu-item:hover,
 .menu-item.active {
   color: #e8c0a0;
 }
+
 .menu-item::after {
   content: "";
   position: absolute;
@@ -87,18 +111,23 @@ body {
   background: #e8c0a0;
   transition: width 0.25s ease;
 }
+
 .menu-item:hover::after,
 .menu-item.active::after {
   width: 100%;
 }
 
-/* HAMBURGER */
+/* ======================= */
+/* HAMBURGER (DESKTOP + MOBILE) */
+/* ======================= */
 .mobile-menu-toggle {
-  display: none;
+  display: block;              /* ⬅️ ALWAYS visible */
+  justify-self: end;
   background: none;
   border: none;
   cursor: pointer;
 }
+
 .mobile-menu-toggle span {
   display: block;
   width: 26px;
@@ -108,40 +137,100 @@ body {
   border-radius: 999px;
 }
 
-/* MOBILE */
+/* ======================= */
+/* MOBILE DRAWER           */
+/* ======================= */
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 950;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 78%;
+  max-width: 320px;
+  background: rgba(6, 6, 12, 0.97);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 2rem 2.5rem;
+  gap: 1.8rem;
+
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 960;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ======================= */
+/* RESPONSIVE              */
+/* ======================= */
 @media (max-width: 992px) {
   .menu-left,
   .menu-right {
     display: none;
   }
-  .mobile-menu-toggle {
-    display: block;
-    position: absolute;
-    right: 2rem; /* Matches side padding */
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .logo-center {
-    position: static;
-    transform: none;
-  }
+
   .header-container {
-    justify-content: center;
-    padding: 0 3rem;
+    grid-template-columns: max-content 1fr max-content;
   }
 }
 
 @media (max-width: 768px) {
-  .heartcry-header { height: 100px; }
-  .logo-image { height: 90px; }
-  .mobile-menu-toggle { right: 1.5rem; }
+  .logo-image {
+    height: 90px;
+  }
 }
 
 @media (max-width: 480px) {
-  .heartcry-header { height: 90px; }
-  .logo-image { height: 80px; }
-  .header-container { padding: 0 2rem; }
-  .mobile-menu-toggle { right: 1rem; }
+  .logo-image {
+    height: 80px;
+  }
 }
 
-/* Rest of file (partner + footer) remains unchanged */
+/* ======================= */
+/* FOOTER (UNCHANGED)      */
+/* ======================= */
+.clean-footer {
+  background: #f4f3f1;
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  font-family: "Georgia", serif;
+  color: #2d1b0a;
+}
+
