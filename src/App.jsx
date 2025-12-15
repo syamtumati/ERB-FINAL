@@ -93,6 +93,33 @@ function App() {
           <Route path="/kontakt" element={<Contact />} />
         </Routes>
       </main>
+	
+      {/* ================= PARTNER SECTION ================= */}
+      <section className="partner-heartcry">
+        <div className="partner-inner">
+
+          <div className="partner-heading">
+            <span className="partner-line" />
+            <span className="partner-heartcry-title">UNSERE PARTNER</span>
+            <span className="partner-line" />
+          </div>
+
+          <a
+            href="https://heartcrymissionary.com"
+            target="_blank"
+            rel="noreferrer"
+            className="heartcry-logo-link"
+          >
+            <img
+              src={heartcryLogo}
+              alt="HeartCry Missionary Society"
+              className="heartcry-logo"
+            />
+          </a>
+
+        </div>
+      </section>
+
 
       {/* ================= FOOTER ================= */}
       <footer className="clean-footer">
