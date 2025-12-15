@@ -221,7 +221,7 @@
 /* DESKTOP ADJUSTMENTS */
 @media (min-width: 1024px) {
   .messages-hero {
-    transform: translate(-20px, 45px);
+    transform: translate(-60px, 45px);
   }
 
   .messages-hero h1 {
@@ -235,7 +235,7 @@
 
   .subscribe-button {
     position: relative;
-    left: -40px;
+    left: -60px;
     margin-top: -20px;
     margin-bottom: 60px;
   }
