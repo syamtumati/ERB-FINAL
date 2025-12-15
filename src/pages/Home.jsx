@@ -17,7 +17,7 @@ function Home() {
         />
         <div className="hero-overlay">
           <div className="hero-content-centered">
-            <h1 className="white-title hero-church-name">
+            <h1 className=" hero-church-name">
 	      Evangelisch-Reformierte Baptistengemeinde
             </h1>
             {/* Visit-us card directly under title + subtitle */}
