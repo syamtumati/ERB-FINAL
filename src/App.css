@@ -345,7 +345,7 @@ body {
 
   /* PUSH HAMBURGER MORE TO THE RIGHT */
   .mobile-menu-toggle {
-    margin-right: -0.5rem; /* 👈 key line */
+    margin-right: -1rem; /* 👈 key line */
   }
 
   .logo-center {
