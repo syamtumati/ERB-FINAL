@@ -326,9 +326,5 @@ body {
     gap: 3rem;
   }
 
-  .partner-heartcry {
-    position: relative;
-    left: -20px; /* adjust: -10px to -30px */
-  }
 }
 
