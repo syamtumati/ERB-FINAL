@@ -24,8 +24,7 @@ export default function Belief() {
               className="chapter-rect"
               onClick={() => toggleChapter(chapter.chapter)}
             >
-              <span className="chapter-number">{chapter.chapter}</span>
-              <span className="chapter-separator">.</span>
+              <span className="chapter-number">{chapter.chapter}.</span>
               <span className="chapter-title">{chapter.title}</span>
             </div>
 

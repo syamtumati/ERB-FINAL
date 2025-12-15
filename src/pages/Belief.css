@@ -26,10 +26,9 @@
 .chapter-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
 }
 
-/* ===== RECTANGLE (FIXED SIZE + WRAPPING) ===== */
+/* ===== RECTANGLE (FIXED) ===== */
 .chapter-rect {
   background: rgba(255, 255, 255, 0.07);
   border: 2px solid rgba(255, 255, 255, 0.7);
@@ -38,20 +37,16 @@
   padding: 1.6rem 2rem;
   cursor: pointer;
 
+  display: grid;
+  grid-template-columns: 2.5rem 1fr; /* number | title */
+  column-gap: 0.8rem;
+  align-items: center;
+
+  min-height: 92px; /* 🔑 SAME HEIGHT FOR ALL BOXES */
+
   font-family: "Georgia", serif;
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.35;
-
-  /* 🔑 REQUIRED FIXES */
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  white-space: normal;
-  word-break: break-word;
 
   transition: all 0.25s ease;
 }
@@ -61,16 +56,18 @@
   transform: translateY(-2px);
 }
 
-/* ===== NUMBER ALIGNMENT FIX ===== */
-.chapter-number,
-.chapter-separator {
+/* ===== NUMBER ===== */
+.chapter-number {
+  text-align: right;
   font-weight: 700;
-  margin-right: 0.15rem;
   white-space: nowrap;
 }
 
+/* ===== TITLE ===== */
 .chapter-title {
-  display: inline;
+  line-height: 1.35;
+  white-space: normal; /* allow wrapping */
+  word-break: break-word;
 }
 
 /* ===== POINT LIST ===== */
