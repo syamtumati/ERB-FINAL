@@ -7,10 +7,12 @@ export default function Belief() {
 
   return (
     <section className="belief-grid-section">
+      {/* HERO TITLE */}
       <h1 className="belief-heading">
         The Baptist Confession of Faith of 1689
       </h1>
 
+      {/* GRID */}
       <div className="chapter-grid">
         {confessionChapters.map((chapter) => (
           <div key={chapter.chapter} className="chapter-wrapper">
@@ -22,7 +24,7 @@ export default function Belief() {
             </div>
 
             {/* POINTS (HOVER ONLY) */}
-            <ul className="chapter-points-below">
+            <ul className="chapter-points">
               {chapter.points.map((point) => (
                 <li
                   key={point.id}

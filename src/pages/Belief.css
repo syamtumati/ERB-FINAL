@@ -1,113 +1,116 @@
 /* ===== SECTION ===== */
 .belief-grid-section {
   background: linear-gradient(135deg, #0c2340, #1e3a5f);
-  padding: 6.5rem 2rem 8rem; /* ⬇ push content lower */
+  padding: 6rem 2rem 8rem;
   color: white;
 }
 
-/* ===== HERO HEADING ===== */
+/* ===== HEADING ===== */
 .belief-heading {
   text-align: center;
   font-size: 3rem;
   font-family: "Georgia", serif;
-  margin-bottom: 5rem; /* more space before boxes */
+  margin-bottom: 5rem;
 }
 
 /* ===== GRID ===== */
 .chapter-grid {
   max-width: 1600px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
-
-  grid-auto-rows: 1fr;
-  align-items: stretch;
 }
 
 /* ===== WRAPPER ===== */
 .chapter-wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
-/* ===== RECTANGLE ===== */
+/* ===== RECTANGLE (SAME SIZE) ===== */
 .chapter-rect {
-  background: rgba(255, 255, 255, 0.07);
+  height: 120px;                /* ✅ fixed height */
+  padding: 1.5rem 1.8rem;
+
+  background: rgba(255, 255, 255, 0.08);
   border: 2px solid rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
+  border-radius: 14px;
 
-  padding: 1.6rem 2rem;
-  cursor: pointer;
-
-  display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  column-gap: 0.8rem;
+  display: flex;
   align-items: center;
+  gap: 0.6rem;
 
-  height: 100%;
   font-family: "Georgia", serif;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  line-height: 1.3;
 
+  cursor: default;
   transition: all 0.25s ease;
 }
 
-.chapter-rect:hover {
+.chapter-wrapper:hover .chapter-rect {
   border-color: #e8c0a0;
   transform: translateY(-2px);
 }
 
-/* ===== NUMBER ===== */
+/* ===== NUMBER ALIGNMENT ===== */
 .chapter-number {
+  min-width: 2.2rem;
   text-align: right;
-  font-weight: 700;
-  white-space: nowrap;
 }
 
 /* ===== TITLE ===== */
 .chapter-title {
-  line-height: 1.35;
-  white-space: normal;
-  word-break: break-word;
+  flex: 1;
 }
 
-/* ===== POINT LIST (HOVER) ===== */
-.chapter-points {
-  margin: 0.8rem 0 0;
-  padding: 0;
-  list-style: none;
+/* ===== POINTS DROPDOWN ===== */
+.chapter-points-below {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
 
-  border-left: 2px solid rgba(255,255,255,0.4);
+  margin-top: 0.6rem;
+  padding: 1rem;
+
+  background: rgba(12, 35, 64, 0.96);
+  border-radius: 12px;
+
+  list-style: none;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
 
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
   pointer-events: none;
-
+  transform: translateY(6px);
   transition: all 0.25s ease;
+
+  height: auto;        /* ✅ NO SCROLL */
+  overflow: visible;  /* ✅ NO SCROLL */
+  z-index: 20;
 }
 
-/* SHOW ON HOVER */
-.chapter-wrapper:hover .chapter-points {
+/* ===== SHOW ON HOVER ===== */
+.chapter-wrapper:hover .chapter-points-below {
   opacity: 1;
-  max-height: 600px;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
-/* ===== POINT ===== */
-.chapter-points li {
-  padding: 0.6rem 0 0.6rem 1.2rem;
+/* ===== POINT ITEM ===== */
+.chapter-points-below li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
   cursor: pointer;
-  font-family: "Georgia", serif;
-  font-size: 1.05rem;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.chapter-points li:hover {
+.chapter-points-below li:last-child {
+  border-bottom: none;
+}
+
+.chapter-points-below li:hover {
   color: #e8c0a0;
 }
 
@@ -121,6 +124,15 @@
 @media (max-width: 768px) {
   .chapter-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Mobile fallback: always visible */
+  .chapter-points-below {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    margin-top: 0.8rem;
   }
 }
 
