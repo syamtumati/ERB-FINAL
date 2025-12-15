@@ -19,7 +19,6 @@ export default function Belief() {
         {confessionChapters.map((chapter) => (
           <div key={chapter.chapter} className="chapter-wrapper">
 
-            {/* CHAPTER BOX */}
             <div
               className="chapter-rect"
               onClick={() => toggleChapter(chapter.chapter)}
@@ -28,7 +27,6 @@ export default function Belief() {
               <span className="chapter-title">{chapter.title}</span>
             </div>
 
-            {/* EXPANDED POINTS */}
             {openChapter === chapter.chapter && (
               <ul className="chapter-points">
                 {chapter.points.map((point) => (

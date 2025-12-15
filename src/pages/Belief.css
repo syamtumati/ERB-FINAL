@@ -13,22 +13,27 @@
   margin-bottom: 4rem;
 }
 
-/* ===== GRID ===== */
+/* ===== GRID (FIXED) ===== */
 .chapter-grid {
   max-width: 1600px;
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
+
+  grid-auto-rows: 1fr; /* 🔑 FORCE EQUAL HEIGHT ROWS */
+  align-items: stretch;
 }
 
 /* ===== WRAPPER ===== */
 .chapter-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-/* ===== RECTANGLE (FIXED) ===== */
+/* ===== RECTANGLE (FINAL FIX) ===== */
 .chapter-rect {
   background: rgba(255, 255, 255, 0.07);
   border: 2px solid rgba(255, 255, 255, 0.7);
@@ -38,11 +43,11 @@
   cursor: pointer;
 
   display: grid;
-  grid-template-columns: 2.5rem 1fr; /* number | title */
+  grid-template-columns: 2.5rem 1fr;
   column-gap: 0.8rem;
   align-items: center;
 
-  min-height: 92px; /* 🔑 SAME HEIGHT FOR ALL BOXES */
+  height: 100%; /* 🔑 FILL GRID CELL */
 
   font-family: "Georgia", serif;
   font-size: 1.25rem;
@@ -66,7 +71,7 @@
 /* ===== TITLE ===== */
 .chapter-title {
   line-height: 1.35;
-  white-space: normal; /* allow wrapping */
+  white-space: normal;
   word-break: break-word;
 }
 
