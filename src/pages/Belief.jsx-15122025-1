@@ -16,7 +16,7 @@ export default function Belief() {
       <h1 className="belief-heading">Bekenntnis</h1>
 
       <div className="chapter-grid">
-        {confessionChapters.map((chapter) => (
+        {confessionChapters.map(chapter => (
           <div key={chapter.chapter} className="chapter-wrapper">
 
             {/* CHAPTER BOX */}
@@ -24,20 +24,18 @@ export default function Belief() {
               className="chapter-rect"
               onClick={() => toggleChapter(chapter.chapter)}
             >
-              <span className="chapter-number">{chapter.chapter}.</span>
-              <span className="chapter-title">{chapter.title}</span>
+              {chapter.chapter}. {chapter.title}
             </div>
 
-            {/* POINT LIST */}
+            {/* EXPANDED POINTS */}
             {openChapter === chapter.chapter && (
               <ul className="chapter-points">
-                {chapter.points.map((point) => (
+                {chapter.points.map(point => (
                   <li
                     key={point.id}
-                    onClick={(e) => {
-                      e.stopPropagation(); // 🔑 VERY IMPORTANT
-                      navigate(`/bekenntnis/${chapter.chapter}/${point.id}`);
-                    }}
+                    onClick={() =>
+                      navigate(`/bekenntnis/${chapter.chapter}/${point.id}`)
+                    }
                   >
                     <strong>{point.id}.</strong> {point.title}
                   </li>

@@ -6,17 +6,10 @@ export default function ConfessionSlide() {
   const { chapterId, pointId } = useParams();
   const navigate = useNavigate();
 
-  const chapter = confessionChapters.find(
-    (c) => String(c.chapter) === String(chapterId)
-  );
-
-  if (!chapter) return null;
-
-  const index = chapter.points.findIndex(
-    (p) => String(p.id) === String(pointId)
-  );
-
+  const chapter = confessionChapters.find(c => c.chapter === chapterId);
+  const index = chapter.points.findIndex(p => p.id === pointId);
   const point = chapter.points[index];
+
   if (!point) return null;
 
   return (
@@ -29,7 +22,7 @@ export default function ConfessionSlide() {
         <p className="slide-text">{point.text}</p>
 
         <ul className="slide-references">
-          {point.references.map((ref) => (
+          {point.references.map(ref => (
             <li key={ref}>{ref}</li>
           ))}
         </ul>
