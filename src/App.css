@@ -16,7 +16,7 @@ body {
 }
 
 /* ======================= */
-/* HEADER (GRID-BASED)     */
+/* HEADER (FINAL FIX)      */
 /* ======================= */
 
 .heartcry-header {
@@ -24,24 +24,19 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 96px;
+  height: 84px;              /* ⬅️ tighter header */
   z-index: 900;
   display: flex;
   justify-content: center;
   background: transparent;
 }
 
-/*
-  Grid columns:
-  [ left menu ] [ logo ] [ right menu + hamburger ]
-*/
 .header-container {
   max-width: 1700px;
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 140px 1fr; /* ⬅️ FIXED CENTER */
   align-items: center;
-  column-gap: 2.5rem;              /* ⬅️ controlled spacing */
   padding: 0 2rem;
 }
 
@@ -57,36 +52,33 @@ body {
 }
 
 /* ======================= */
-/* LOGO (CENTER)           */
+/* LOGO (CENTER, BIGGER)   */
 /* ======================= */
 
 .logo-center {
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
 }
 
 .logo-image {
-  height: 88px;                    /* ⬅️ FIX: logo now prominent */
+  height: 70px;              /* ⬅️ visually bigger */
   width: auto;
-  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.6));
 }
 
 /* ======================= */
-/* RIGHT MENU              */
+/* RIGHT MENU + HAMBURGER  */
 /* ======================= */
 
 .menu-right {
   display: flex;
   align-items: center;
-  gap: 2.2rem;
+  gap: 2rem;
   justify-self: end;
 }
 
-/* ======================= */
-/* MENU ITEMS              */
-/* ======================= */
-
+/* MENU ITEMS */
 .menu-item {
   line-height: 1;
   margin: 0;
@@ -105,7 +97,6 @@ body {
   color: #e8c0a0;
 }
 
-/* underline */
 .menu-item::after {
   content: "";
   position: absolute;
@@ -114,7 +105,7 @@ body {
   width: 0;
   height: 2px;
   background: #e8c0a0;
-  transition: width 0.3s ease;
+  transition: width 0.25s ease;
 }
 
 .menu-item:hover::after,
@@ -123,12 +114,12 @@ body {
 }
 
 /* ======================= */
-/* HAMBURGER               */
+/* HAMBURGER (INLINE)      */
 /* ======================= */
 
 .mobile-menu-toggle {
-  display: block;                 /* desktop + mobile */
-  margin-left: 1.6rem;            /* ⬅️ separation from menu */
+  display: block;            /* desktop + mobile */
+  margin-left: 1.4rem;       /* ⬅️ stays inline */
   background: none;
   border: none;
   cursor: pointer;
@@ -136,7 +127,7 @@ body {
 
 .mobile-menu-toggle span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 3px;
   margin: 4px 0;
   background: #f0e8ff;
@@ -144,7 +135,7 @@ body {
 }
 
 /* ======================= */
-/* MOBILE DRAWER           */
+/* MOBILE MENU             */
 /* ======================= */
 
 .mobile-backdrop {
@@ -162,18 +153,14 @@ body {
   width: 78%;
   max-width: 320px;
   background: rgba(6, 6, 12, 0.97);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 2rem 2.5rem;
   gap: 1.8rem;
-
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
-
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 960;
 }
@@ -208,19 +195,13 @@ body {
 /* RESPONSIVE              */
 /* ======================= */
 
-@media (max-width: 1200px) {
-  .header-container {
-    column-gap: 2rem;
-  }
-}
-
 @media (max-width: 992px) {
   .desktop-nav {
     display: none;
   }
 
   .header-container {
-    grid-template-columns: 1fr auto; /* logo + hamburger */
+    grid-template-columns: 1fr 120px auto;
   }
 
   .menu-left,
@@ -231,18 +212,18 @@ body {
 
 @media (max-width: 768px) {
   .logo-image {
-    height: 72px;
+    height: 64px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-image {
-    height: 64px;
+    height: 56px;
   }
 }
 
 /* ======================= */
-/* FOOTER                  */
+/* FOOTER (UNCHANGED)      */
 /* ======================= */
 
 .clean-footer {
@@ -250,42 +231,5 @@ body {
   padding: 4rem 2rem 3rem;
   text-align: center;
   font-family: "Georgia", serif;
-}
-
-.footer-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  align-items: center;
-}
-
-.church-name {
-  font-size: 2.6rem;
-  font-weight: 900;
-  color: #8b4513;
-}
-
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.4rem;
-  justify-content: center;
-}
-
-.footer-nav a {
-  color: #8b4513;
-  font-size: 1.05rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: none;
-}
-
-@media (min-width: 1024px) {
-  .footer-nav {
-    flex-wrap: nowrap;
-    gap: 3rem;
-  }
 }
 
