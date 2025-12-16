@@ -107,6 +107,7 @@
   .belief-heading {
     font-size: 2.4rem;
     margin-bottom: 3rem;
+    margin-top: -1.2rem; /* move UP */
   }
 
   .chapter-text-row {
@@ -125,6 +126,13 @@
 @media (max-width: 480px) {
   .belief-heading {
     font-size: 2.2rem;
+  }
+}
+
+/* Desktop: move heading DOWN */
+@media (min-width: 1024px) {
+  .belief-heading {
+    margin-top: 2.5rem; /* increase to move further down */
   }
 }
 
