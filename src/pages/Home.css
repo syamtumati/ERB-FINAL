@@ -619,9 +619,11 @@
     transform: translateX(-10px);
   }
 
-  /* Visit box — independent */
+  /* ✅ Visit box moved WITHOUT affecting hero */
   .hero-visit-box {
-    margin-top: 10rem !important;
+    margin-top: 0 !important;
+    position: relative;
+    top: 10rem;   /* adjust freely */
   }
 }
 
