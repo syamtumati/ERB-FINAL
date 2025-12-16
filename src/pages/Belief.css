@@ -138,6 +138,7 @@
 @media (min-width: 1024px) {
   .belief-heading {
     margin-top: 6rem; /* increase to move further down */
+    transform: translateX(-24px); /* adjust: -12px to -40px */
   }
 
   .chapter-text-row {
