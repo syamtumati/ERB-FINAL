@@ -494,6 +494,7 @@
 
     padding: 0 1.2rem !important;
     max-width: 100%;
+    transform: translateX(-12px);
 
     /* 🚫 DISABLE breaking */
     word-break: normal !important;
