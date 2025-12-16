@@ -519,44 +519,48 @@
   }
 }
 
-/* ================= HERO NAME — EXACT FOOTER BEHAVIOR (MOBILE) ================= */
+/* ================= HERO NAME — FOOTER-IDENTICAL BEHAVIOR (MOBILE) ================= */
 @media (max-width: 600px) {
 
-  /* Make hero overlay behave like a normal section */
+  /* Header height compensation (logo + hamburger) */
+  .hero-video-section {
+    height: 100vh;
+  }
+
   .hero-overlay {
     position: relative;
-    padding-top: 140px;      /* below logo + hamburger */
-    padding-left: 0;
-    padding-right: 0;
+    padding-top: 150px; /* ⬅️ pushes text BELOW logo & menu */
+    align-items: flex-start;
+    justify-content: flex-start;
     text-align: center;
   }
 
-  /* NEW: footer-like inner container */
+  /* EXACT equivalent of .footer-inner */
   .hero-content-centered {
-    max-width: 1000px;       /* SAME IDEA as footer-inner */
+    max-width: 1000px;      /* SAME as footer-inner */
     margin: 0 auto;
-    padding: 0 2rem;         /* SAME SIDE SAFETY as footer */
+    padding: 0 2rem;        /* SAME side padding */
     box-sizing: border-box;
-    align-items: center;
+    width: 100%;
   }
 
-  /* Hero church name = footer church name behavior */
+  /* Hero church name = footer church name */
   .hero-church-name {
     font-size: 2.2rem !important;   /* SAME as footer */
     font-weight: 900;
     line-height: 1.25;
 
-    max-width: 100%;
     margin: 0 auto 1.2rem auto;
+    max-width: 100%;
 
-    color: #e8c0a0;
     text-align: center;
+    color: #e8c0a0;
 
-    /* absolutely critical */
+    /* CRITICAL: remove all positioning tricks */
     position: static !important;
     transform: none !important;
 
-    /* wrapping exactly like footer */
+    /* CRITICAL: wrapping behavior */
     white-space: normal;
     word-break: normal;
     overflow-wrap: normal;
@@ -565,8 +569,9 @@
 
   /* If Baptistengemeinde is wrapped in span */
   .hero-baptist {
-    font-size: inherit;
     display: inline;
+    font-size: inherit;
+    line-height: inherit;
     transform: none !important;
   }
 }
