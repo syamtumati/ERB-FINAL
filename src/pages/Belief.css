@@ -168,7 +168,7 @@
 @media (max-width: 600px) {
   .belief-heading {
     font-size: 2.4rem;
-    margin-top: -1rem;   /* 👈 moves headline UP */
+    margin-top: 1rem;   /* 👈 moves headline UP */
     margin-bottom: 3rem;
     padding: 0 1rem; /* prevents edge cutting */
   }
