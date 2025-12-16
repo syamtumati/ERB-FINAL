@@ -132,7 +132,7 @@
 /* Desktop: move heading DOWN */
 @media (min-width: 1024px) {
   .belief-heading {
-    margin-top: 5rem; /* increase to move further down */
+    margin-top: 7rem; /* increase to move further down */
   }
 }
 
