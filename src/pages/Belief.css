@@ -134,5 +134,9 @@
   .belief-heading {
     margin-top: 6rem; /* increase to move further down */
   }
+
+  .chapter-text-row {
+    padding-left: 1.2rem; /* adjust: 0.8rem – 1.6rem */
+  }
 }
 
