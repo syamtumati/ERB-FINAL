@@ -583,5 +583,9 @@
     margin-top: 0.2rem;
     transform: translateX(-10px);
   }
+
+  .hero-visit-box {
+    margin-top: 11rem !important;   /* 👈 move DOWN */
+  }
 }
 
