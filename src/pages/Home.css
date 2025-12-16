@@ -547,7 +547,7 @@
   .hero-baptist {
     display: block;      /* 👈 THIS creates the line break */
     margin-top: 0.2rem;
-    transform: translateX(-20px); /* 👈 adjust: -6px to -14px */
+    transform: translateX(-30px); /* 👈 adjust: -6px to -14px */
   }
 }
 
