@@ -590,3 +590,45 @@
   }
 }
 
+@media (max-width: 600px) {
+
+  .hero-content-centered {
+    padding-top: 0 !important;
+  }
+
+  .hero-church-name {
+    font-size: 2.2rem !important;
+    line-height: 1.25;
+    padding: 0 2rem;
+    text-align: center;
+
+    /* MOVE HERO NAME UP — NO LAYOUT SHIFT */
+    transform: translateY(-2.2rem) !important;
+
+    margin: 0 auto 1.2rem auto;
+
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .hero-baptist {
+    display: block;
+    margin-top: 0.2rem;
+    transform: translateX(-10px);
+  }
+
+  /* Visit box — independent */
+  .hero-visit-box {
+    margin-top: 10rem !important;
+  }
+}
+
+/* Extra small phones only */
+@media (max-width: 380px) {
+  .hero-baptist {
+    transform: translateX(-6px) !important;
+  }
+}
+
