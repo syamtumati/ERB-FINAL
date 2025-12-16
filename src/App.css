@@ -358,11 +358,11 @@ body {
 /* GLOBAL STAR BACKGROUND  */
 /* ======================= */
 
-.bg-starry {
-  background-image: url("/src/assets/bg/fabric-blue.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #0b1a3a; /* fallback */
-}
+/*.bg-starry {*/
+/*  background-image: url("/src/assets/bg/fabric-blue.png");*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
+/*  background-color: #0b1a3a; /* fallback */
+/*}*/
 
