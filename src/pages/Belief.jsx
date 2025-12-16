@@ -16,7 +16,7 @@ export default function Belief() {
   return (
     <section className="belief-grid-section">
       <h1 className="belief-heading">
-        The Baptist Confession of Faith of 1689
+	Das Baptistische Glaubensbekenntnis von 1689
       </h1>
 
       <div className="chapter-grid">
