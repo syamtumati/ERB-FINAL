@@ -519,3 +519,34 @@
   }
 }
 
+/* ================= HERO NAME MOBILE-ONLY LINE BREAK ================= */
+@media (max-width: 600px) {
+
+  .hero-church-name {
+    font-size: 2.2rem !important;
+    font-weight: 900;
+    line-height: 1.25;
+
+    max-width: 100%;
+    margin: 0 auto 1.2rem auto;
+    padding: 0 2rem;
+
+    text-align: center;
+
+    /* reset old transforms */
+    transform: none !important;
+    position: static !important;
+
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  /* FORCE line break ONLY on mobile */
+  .hero-baptist {
+    display: block;      /* 👈 THIS creates the line break */
+    margin-top: 0.2rem;
+  }
+}
+

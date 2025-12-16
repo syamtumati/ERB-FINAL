@@ -18,7 +18,8 @@ function Home() {
         <div className="hero-overlay">
           <div className="hero-content-centered">
             <h1 className=" hero-church-name">
-	      Evangelisch-Reformierte Baptistengemeinde
+	      Evangelisch-Reformierte
+	      <span className="hero-baptist"> Baptistengemeinde</span>
             </h1>
             {/* Visit-us card directly under title + subtitle */}
             <div className="hero-visit-box">
