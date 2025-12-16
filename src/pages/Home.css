@@ -519,3 +519,62 @@
   }
 }
 
+/* ==================== FINAL MOBILE HERO STABILITY FIX ==================== */
+@media (max-width: 600px) {
+
+  /* Header-safe positioning */
+  .hero-overlay {
+    padding-top: 140px !important; /* header height + safe space */
+    align-items: flex-start;
+  }
+
+  .hero-content-centered {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* HERO TITLE – stable, readable, no overlap */
+  .hero-church-name {
+    font-size: 2.4rem !important;
+    line-height: 1.25 !important;
+
+    /* IMPORTANT: no transforms */
+    transform: none !important;
+
+    padding: 0 1.25rem !important;
+    margin: 0 auto 1rem auto;
+
+    max-width: 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    /* prevent weird breaks */
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    white-space: normal;
+  }
+
+  /* Subtitle stays below title */
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+    margin-top: 0.5rem;
+    padding: 0 1.25rem;
+    transform: none !important;
+  }
+
+  /* Visit box spacing */
+  .hero-visit-box {
+    margin-top: 6.5rem !important;
+    transform: none !important;
+  }
+}
+
+/* Extra-small phones safety */
+@media (max-width: 380px) {
+  .hero-church-name {
+    font-size: 2.1rem !important;
+  }
+}
+
