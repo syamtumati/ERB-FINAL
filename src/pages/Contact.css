@@ -250,12 +250,12 @@
 @media (min-width: 1024px) {
   /* baseline for big desktop screens */
   .contact-hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
     transform: translate(-40px, -100px);
   }
 
   .contact-hero-subtitle {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     max-width: 700px;
     transform: translate(-40px, -20px);
   }
