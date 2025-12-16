@@ -489,20 +489,23 @@
 
   /* Make full church name fit screen */
   .hero-church-name {
-  font-size: 2.4rem !important;
-  line-height: 1.25 !important;
+    font-size: 2.2rem !important;   /* 👈 smaller so it fits */
+    line-height: 1.25 !important;
 
-  padding: 0 1.5rem !important;
-  max-width: 100%;
+    padding: 0 1.2rem !important;
+    max-width: 100%;
 
-  /* 🔥 THIS IS THE KEY FIX */
-  word-break: break-word !important;
-  overflow-wrap: anywhere !important;
-  hyphens: auto;
+    /* 🚫 DISABLE breaking */
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
 
-  text-align: center;
-  box-sizing: border-box;
+    white-space: normal; /* allow line breaks ONLY at spaces */
+    text-align: center;
+    box-sizing: border-box;
   }
+
+
   /* Keep subtitle visible */
   .hero-subtitle {
     font-size: 1.2rem !important;
