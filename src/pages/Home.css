@@ -603,7 +603,7 @@
     text-align: center;
 
     /* MOVE HERO NAME UP — NO LAYOUT SHIFT */
-    transform: translateY(1rem) !important;
+    transform: translateY(1.5rem) !important;
 
     margin: 0 auto 1.2rem auto;
 
