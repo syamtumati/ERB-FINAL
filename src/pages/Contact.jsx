@@ -80,7 +80,7 @@ const Contact = () => {
   /* MAIN CONTACT PAGE                                         */
   /* --------------------------------------------------------- */
   return (
-    <div className="contact-page">
+    <div className="contact-page bg-starry">
       <div className="contact-hero-image">
         <div className="hero-overlay">
           <h1 className="contact-hero-title">Kontakt</h1>
