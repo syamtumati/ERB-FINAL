@@ -505,11 +505,10 @@
     text-align: center;
     box-sizing: border-box;
   }
-  .hero-baptist {
-    display: inline-block;
-    transform: translateX(-10px); /* 👈 only this word moves */
-  }
-
+/*  .hero-baptist {
+/*    display: inline-block;
+/*    transform: translateX(-10px); /* 👈 only this word moves */
+/*  }
 
   /* Keep subtitle visible */
   .hero-subtitle {
