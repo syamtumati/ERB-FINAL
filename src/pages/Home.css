@@ -519,28 +519,54 @@
   }
 }
 
-/* ================= HERO NAME – FOOTER-LIKE MOBILE FIX ================= */
+/* ================= HERO NAME — EXACT FOOTER BEHAVIOR (MOBILE) ================= */
 @media (max-width: 600px) {
 
-  /* Let overlay behave like footer container */
+  /* Make hero overlay behave like a normal section */
   .hero-overlay {
-    position: relative;              /* stop absolute clipping */
-    padding-top: 140px;              /* below logo + hamburger */
-    padding-left: 2rem;
-    padding-right: 2rem;
+    position: relative;
+    padding-top: 140px;      /* below logo + hamburger */
+    padding-left: 0;
+    padding-right: 0;
     text-align: center;
   }
 
-  .church-name {
-    font-size: 2.2rem;
+  /* NEW: footer-like inner container */
+  .hero-content-centered {
+    max-width: 1000px;       /* SAME IDEA as footer-inner */
+    margin: 0 auto;
+    padding: 0 2rem;         /* SAME SIDE SAFETY as footer */
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  /* Hero church name = footer church name behavior */
+  .hero-church-name {
+    font-size: 2.2rem !important;   /* SAME as footer */
     font-weight: 900;
-    color: #8b4513;
+    line-height: 1.25;
+
+    max-width: 100%;
+    margin: 0 auto 1.2rem auto;
+
+    color: #e8c0a0;
+    text-align: center;
+
+    /* absolutely critical */
+    position: static !important;
+    transform: none !important;
+
+    /* wrapping exactly like footer */
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
   }
 
   /* If Baptistengemeinde is wrapped in span */
   .hero-baptist {
+    font-size: inherit;
     display: inline;
-    font-size: inherit;              /* behave like footer text */
     transform: none !important;
   }
 }
