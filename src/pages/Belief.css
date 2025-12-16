@@ -1,6 +1,6 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-  --chapter-indent: 16px;
+  --chapter-indent: 48px;
 }
 
 /* ================= SECTION ================= */
@@ -141,7 +141,7 @@
   }
 
   .chapter-text-row {
-    padding-left: 16rem; /* adjust: 0.8rem – 1.6rem */
+    padding-left: var(--chapter-indent);
   }
 
   .chapter-points-below {
