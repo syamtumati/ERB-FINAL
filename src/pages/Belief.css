@@ -1,108 +1,96 @@
-/* ===== SECTION ===== */
+/* ================= SECTION ================= */
 .belief-grid-section {
   background: linear-gradient(135deg, #0c2340, #1e3a5f);
-  padding: 6rem 2rem 8rem;
+  padding: 7rem 2rem 10rem;
   color: white;
 }
 
-/* ===== HEADING ===== */
+/* ================= HEADING ================= */
 .belief-heading {
   text-align: center;
   font-size: 3rem;
   font-family: "Georgia", serif;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
-/* ===== GRID ===== */
+/* ================= LIST GRID ================= */
 .chapter-grid {
-  max-width: 1600px;
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
 }
 
-/* ===== WRAPPER ===== */
+/* ================= ROW ================= */
 .chapter-wrapper {
   position: relative;
 }
 
-/* ===== RECTANGLE (SAME SIZE) ===== */
-.chapter-rect {
-  height: 120px;                /* ✅ fixed height */
-  padding: 1.5rem 1.8rem;
-
-  background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  border-radius: 14px;
-
+/* ================= TEXT ROW ================= */
+.chapter-text-row {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
 
   font-family: "Georgia", serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.4;
 
-  cursor: default;
-  transition: all 0.25s ease;
+  cursor: pointer;
+  transition: color 0.25s ease;
 }
 
-.chapter-wrapper:hover .chapter-rect {
-  border-color: #e8c0a0;
-  transform: translateY(-2px);
+.chapter-text-row:hover {
+  color: #e8c0a0;
 }
 
-/* ===== NUMBER ALIGNMENT ===== */
-.chapter-number {
-  min-width: 2.2rem;
-  text-align: right;
+/* ================= ARROW ================= */
+.chapter-arrow {
+  font-size: 1.6rem;
+  color: #e8c0a0;
+  min-width: 1.5rem;
+  transition: transform 0.25s ease;
 }
 
-/* ===== TITLE ===== */
-.chapter-title {
+/* ================= TEXT ================= */
+.chapter-text {
   flex: 1;
 }
 
-/* ===== POINTS DROPDOWN ===== */
+/* ================= POINTS ================= */
 .chapter-points-below {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-
-  margin-top: 0.6rem;
-  padding: 1rem;
-
-  background: rgba(12, 35, 64, 0.96);
-  border-radius: 12px;
-
+  margin-left: 2.8rem;
+  margin-top: 0.4rem;
   list-style: none;
-  font-family: "Georgia", serif;
-  font-size: 0.95rem;
 
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+
+  background: rgba(12, 35, 64, 0.92);
+  border-radius: 10px;
+
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(6px);
-  transition: all 0.25s ease;
 
-  height: auto;        /* ✅ NO SCROLL */
-  overflow: visible;  /* ✅ NO SCROLL */
-  z-index: 20;
+  transition: all 0.3s ease;
 }
 
-/* ===== SHOW ON HOVER ===== */
-.chapter-wrapper:hover .chapter-points-below {
+.chapter-points-below.open {
+  padding: 0.8rem 1rem;
+  max-height: 2000px;
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
 }
 
-/* ===== POINT ITEM ===== */
+/* ================= POINT ITEM ================= */
 .chapter-points-below li {
   padding: 0.45rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
 }
 
@@ -114,70 +102,29 @@
   color: #e8c0a0;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1200px) {
-  .chapter-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .chapter-grid {
-    grid-template-columns: 1fr;
-    gap: 0.6rem; /* 👈 tight mobile spacing */
-  }
-
-  /* CLOSED STATE */
-  .chapter-points-below {
-    position: static;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    pointer-events: none;
-    transform: none;
-    margin-top: 0;
-    padding: 0;              /* ✅ IMPORTANT */
-    border-radius: 12px;
-    transition: all 0.25s ease;
-  }
-
-  /* OPEN STATE */
-  .chapter-points-below.open {
-    opacity: 1;
-    max-height: 2000px;      /* enough for all points */
-    pointer-events: auto;
-    margin-top: 0.8rem;
-    padding: 1rem;           /* ✅ padding ONLY when open */
-  }
-}
-
-/* ===== DESKTOP SPACING ADJUSTMENTS ===== */
-@media (min-width: 1024px) {
-  .belief-grid-section {
-    padding-top: 10rem; /* 👈 was 6rem */
-  }
-  .belief-heading {
-    margin-top: 3rem;
-  }
-
-  .chapter-grid {
-    margin-top: 2.5rem;
-  }
-}
-
-@media (max-width: 600px) {
   .belief-heading {
     font-size: 2.4rem;
-    margin-top: 0.5rem;   /* 👈 moves headline UP */
     margin-bottom: 3rem;
-    padding: 0 1rem; /* prevents edge cutting */
+  }
+
+  .chapter-text-row {
+    font-size: 1.15rem;
+  }
+
+  .chapter-arrow {
+    font-size: 1.3rem;
+  }
+
+  .chapter-points-below {
+    margin-left: 2.2rem;
   }
 }
 
-/* ===== MOVE HEADING SLIGHTLY LEFT (DESKTOP ONLY) ===== */
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
   .belief-heading {
-    transform: translateX(-40px); /* 👈 adjust: -20px to -60px */
+    font-size: 2.2rem;
   }
 }
 

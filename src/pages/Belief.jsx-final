@@ -5,6 +5,8 @@ import "./Belief.css";
 
 export default function Belief() {
   const navigate = useNavigate();
+
+  // ✅ Track open chapter (for mobile)
   const [openChapter, setOpenChapter] = useState(null);
 
   const toggleChapter = (chapterId) => {
@@ -13,23 +15,21 @@ export default function Belief() {
 
   return (
     <section className="belief-grid-section">
-      <h1 className="belief-heading">Unser Bekenntnis</h1>
+      <h1 className="belief-heading">
+	Unser Bekenntnis
+      </h1>
 
       <div className="chapter-grid">
         {confessionChapters.map((chapter) => (
           <div key={chapter.chapter} className="chapter-wrapper">
 
-            {/* TEXT ROW */}
+            {/* CHAPTER BOX */}
             <div
-              className="chapter-text-row"
+              className="chapter-rect"
               onClick={() => toggleChapter(chapter.chapter)}
             >
-              <span className="chapter-arrow">
-                {openChapter === chapter.chapter ? "▾" : "›"}
-              </span>
-              <span className="chapter-text">
-                {chapter.chapter}. {chapter.title}
-              </span>
+              <span className="chapter-number">{chapter.chapter}.</span>
+              <span className="chapter-title">{chapter.title}</span>
             </div>
 
             {/* POINTS */}
@@ -45,7 +45,7 @@ export default function Belief() {
                     navigate(`/bekenntnis/${chapter.chapter}/${point.id}`)
                   }
                 >
-                  {point.id}. {point.title}
+                  <strong>{point.id}.</strong> {point.title}
                 </li>
               ))}
             </ul>
