@@ -1,3 +1,8 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  --chapter-indent: 16px;
+}
+
 /* ================= SECTION ================= */
 .belief-grid-section {
   background: linear-gradient(135deg, #0c2340, #1e3a5f);
@@ -137,6 +142,11 @@
 
   .chapter-text-row {
     padding-left: 16rem; /* adjust: 0.8rem – 1.6rem */
+  }
+
+  .chapter-points-below {
+    margin-left: var(--chapter-indent);
+    width: calc(100% - var(--chapter-indent));
   }
 }
 
