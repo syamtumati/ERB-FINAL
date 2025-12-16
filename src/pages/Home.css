@@ -628,7 +628,7 @@
 /* Extra small phones only */
 @media (max-width: 380px) {
   .hero-baptist {
-    transform: translateX(-6px) !important;
+    transform: translateX(-10px) !important;
   }
 }
 
