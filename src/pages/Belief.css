@@ -173,3 +173,11 @@
     padding: 0 1rem; /* prevents edge cutting */
   }
 }
+
+/* ===== MOVE HEADING SLIGHTLY LEFT (DESKTOP ONLY) ===== */
+@media (min-width: 1024px) {
+  .belief-heading {
+    transform: translateX(-40px); /* 👈 adjust: -20px to -60px */
+  }
+}
+
