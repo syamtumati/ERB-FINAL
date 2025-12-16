@@ -507,7 +507,7 @@
   }
   .hero-baptist {
     display: inline-block;
-    transform: translateX(-9px); /* 👈 only this word moves */
+    transform: translateX(-10px); /* 👈 only this word moves */
   }
 
 
