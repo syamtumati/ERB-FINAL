@@ -489,7 +489,7 @@
 
   /* Make full church name fit screen */
   .hero-church-name {
-    font-size: 3.2rem !important;
+    font-size: 2.6rem !important;
     line-height: 1.25 !important;
     padding: 0 1.2rem !important;
     max-width: 100%;
@@ -506,7 +506,7 @@
 
   .hero-baptist {
     display: inline-block;
-    font-size: 3.2rem;            /* ✅ increase size */
+    font-size: 2.6rem;            /* ✅ increase size */
     line-height: 1.25;
     transform: translateX(-20px); /* 👈 only this word moves */
   }
