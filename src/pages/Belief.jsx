@@ -14,7 +14,7 @@ export default function Belief() {
   };
 
   return (
-    <section className="belief-grid-section">
+    <section className="belief-grid-section bg-starry">
       <h1 className="belief-heading">
 	Unser Bekenntnis
       </h1>
