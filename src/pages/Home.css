@@ -551,3 +551,36 @@
   }
 }
 
+/* existing desktop + tablet rules */
+/* existing mobile rules */
+
+/* ⬇️ ADD THIS LAST — NOTHING AFTER IT */
+@media (max-width: 600px) {
+
+  .hero-church-name {
+    font-size: 2.2rem !important;
+    font-weight: 900;
+    line-height: 1.25;
+
+    max-width: 100%;
+    margin: -1rem auto 1.2rem auto; /* 👈 moved UP */
+    padding: 0 2rem;
+
+    text-align: center;
+
+    transform: none !important;
+    position: static !important;
+
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .hero-baptist {
+    display: block;
+    margin-top: 0.2rem;
+    transform: translateX(-10px);
+  }
+}
+
