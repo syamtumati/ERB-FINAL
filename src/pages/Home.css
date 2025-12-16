@@ -634,3 +634,17 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding-top: calc(100px + 1.5rem);
+  }
+
+  .hero-church-name {
+    transform: none !important;
+  }
+
+  .hero-visit-box {
+    margin-top: 6rem !important; /* adjust freely */
+  }
+}
+
