@@ -494,7 +494,7 @@
     padding: 0 1.2rem !important;
     max-width: 100%;
 
-    transform: translate(-20px, -50px) !important; /* ✅ FORCE */
+    transform: translate(-10px, -50px) !important; /* ✅ FORCE */
 
     word-break: normal !important;
     overflow-wrap: normal !important;
@@ -502,6 +502,11 @@
     white-space: normal;
     text-align: center;
     box-sizing: border-box;
+  }
+
+  .hero-baptist {
+    display: inline-block;
+    transform: translateX(-20px); /* 👈 only this word moves */
   }
 
   /* Keep subtitle visible */
