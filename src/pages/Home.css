@@ -489,19 +489,17 @@
 
   /* Make full church name fit screen */
   .hero-church-name {
-    font-size: 2.2rem !important;   /* 👈 smaller so it fits */
+    font-size: 2.2rem !important;
     line-height: 1.25 !important;
-
     padding: 0 1.2rem !important;
     max-width: 100%;
-    transform: translate(-12px, -12px); /* more left + more up */
 
-    /* 🚫 DISABLE breaking */
+    transform: translate(-12px, -12px) !important; /* ✅ FORCE */
+
     word-break: normal !important;
     overflow-wrap: normal !important;
     hyphens: none !important;
-
-    white-space: normal; /* allow line breaks ONLY at spaces */
+    white-space: normal;
     text-align: center;
     box-sizing: border-box;
   }
