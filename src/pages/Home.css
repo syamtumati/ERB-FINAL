@@ -559,7 +559,7 @@
   /* MOVE THE ENTIRE HERO TEXT BLOCK UP */
   .hero-content-centered {
     padding-top: 0 !important;
-    transform: translateY(-2.6rem) !important;
+    transform: translateY(-2.8rem) !important;
   }
 
   .hero-church-name {
