@@ -531,10 +531,31 @@
     text-align: center;
   }
 
-  .church-name {
-    font-size: 2.2rem;
+  /* Make hero title behave like .church-name */
+  .hero-church-name {
+    font-size: 2.2rem !important;     /* SAME as footer */
     font-weight: 900;
-    color: #8b4513;
+    line-height: 1.25;
+
+    color: #e8c0a0;
+
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+
+    padding: 0;                      /* footer-style */
+    box-sizing: border-box;
+
+    text-align: center;
+
+    /* CRITICAL: disable all positioning tricks */
+    transform: none !important;
+    position: static !important;
+
+    /* Natural wrapping like footer */
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    white-space: normal;
   }
 
   /* If Baptistengemeinde is wrapped in span */
