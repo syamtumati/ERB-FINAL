@@ -336,3 +336,10 @@
   }
 }
 
+@media (min-width: 1600px) {
+
+  /* Move the hero title DOWN */
+  .contact-hero-title {
+    transform: translate(-40px, -40px) !important;  /* ↓ 20px lower */
+  }
+}
