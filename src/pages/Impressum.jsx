@@ -2,9 +2,9 @@ import "./Impressum.css";
 
 export default function Impressum() {
   return (
-    <div className="impressum-wrapper">
-      <main className="impressum-page">
-        <h1>Impressum</h1>
+    <section className="impressum-section">
+      <div className="impressum-content">
+        <h1 className="impressum-heading">Impressum</h1>
 
         <p>
           <strong>Evangelisch-Reformierte Baptistengemeinde Frankfurt e.V.</strong><br />
@@ -55,8 +55,8 @@ export default function Impressum() {
           Die Nutzung unserer Webseite ist grundsätzlich ohne Angabe
           personenbezogener Daten möglich.
         </p>
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }
 

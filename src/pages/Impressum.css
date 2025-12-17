@@ -1,49 +1,61 @@
-/* ======================= */
-/* FULL PAGE BACKGROUND    */
-/* ======================= */
-
-.impressum-wrapper {
-  min-height: 100vh;
+/* ================= SECTION ================= */
+.impressum-section {
   background: linear-gradient(135deg, #0c2340, #1e3a5f);
-  padding-bottom: 4rem;
+  padding: 7rem 2rem 10rem;
+  color: white;
 }
 
-/* ======================= */
-/* CONTENT AREA            */
-/* ======================= */
-
-.impressum-page {
+/* ================= CONTENT ================= */
+.impressum-content {
   max-width: 900px;
-  margin: 9rem auto 0;
-  padding: 2.5rem 2rem 3rem;
-  background: transparent;
-  color: #ffffff;
+  margin: 0 auto;
   font-family: "Georgia", serif;
   line-height: 1.75;
 }
 
-/* TITLE */
-.impressum-page h1 {
-  font-size: 2.4rem;
+/* ================= HEADING ================= */
+.impressum-heading {
+  font-size: 3rem;
   font-weight: 900;
-  text-align: left;
-  padding-left: 0.4rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+
+  /* match belief desktop offset feeling */
+  transform: translateX(-24px);
 }
 
-/* HEADINGS */
-.impressum-page h2 {
+/* ================= SUBHEADINGS ================= */
+.impressum-content h2 {
+  margin-top: 2.6rem;
+  font-size: 1.4rem;
   color: #e6d6ff;
-  margin-top: 2.4rem;
 }
 
-/* LINKS */
-.impressum-page a {
-  color: #f2d2b0;
+/* ================= TEXT ================= */
+.impressum-content p {
+  margin-bottom: 1.1rem;
+  font-size: 1.05rem;
+}
+
+/* ================= LINKS ================= */
+.impressum-content a {
+  color: #e8c0a0;
   text-decoration: underline;
+  font-weight: 600;
 }
 
-.impressum-page a:hover {
+.impressum-content a:hover {
   color: #ffffff;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .impressum-section {
+    padding: 6rem 1.5rem 8rem;
+  }
+
+  .impressum-heading {
+    font-size: 2.2rem;
+    transform: translateX(-10px);
+  }
 }
 
