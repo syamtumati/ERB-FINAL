@@ -37,13 +37,12 @@ export default function Impressum() {
         <h2>Haftung für Inhalte</h2>
         <p>
           Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte
-          auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+          verantwortlich.
         </p>
 
         <h2>Haftung für Links</h2>
         <p>
-          Unser Angebot enthält Links zu externen Websites Dritter, auf deren
-          Inhalte wir keinen Einfluss haben.
+          Unser Angebot enthält Links zu externen Websites Dritter.
         </p>
 
         <h2>Urheberrecht</h2>

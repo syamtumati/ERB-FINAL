@@ -1,11 +1,37 @@
 /* ======================= */
+/* IMPRESSUM HEADER STYLE  */
+/* ======================= */
+
+/* Make header blue ONLY on Impressum page */
+.impressum-wrapper ~ header,
+.impressum-wrapper header,
+.impressum-wrapper .heartcry-header {
+  background: linear-gradient(135deg, #0c2340, #1e3a5f);
+}
+
+/* Menu text stays readable */
+.impressum-wrapper .menu-item {
+  color: #ffffff;
+}
+
+.impressum-wrapper .menu-item:hover,
+.impressum-wrapper .menu-item.active {
+  color: #f2d2b0;
+}
+
+/* Hamburger */
+.impressum-wrapper .mobile-menu-toggle span {
+  background: #ffffff;
+}
+
+/* ======================= */
 /* FULL PAGE BACKGROUND    */
 /* ======================= */
 
 .impressum-wrapper {
   min-height: 100vh;
   background: linear-gradient(135deg, #0c2340, #1e3a5f);
-  padding-bottom: 4rem; /* space before footer */
+  padding-bottom: 4rem;
 }
 
 /* ======================= */
@@ -14,12 +40,10 @@
 
 .impressum-page {
   max-width: 900px;
-  margin: 9rem auto 0; /* push below header */
+  margin: 9rem auto 0;
   padding: 2.5rem 2rem 3rem;
-
   background: transparent;
   color: #ffffff;
-
   font-family: "Georgia", serif;
   line-height: 1.75;
 }
@@ -29,33 +53,21 @@
   font-size: 2.4rem;
   font-weight: 900;
   color: #ffffff;
-
   text-align: left;
   padding-left: 0.4rem;
-
   margin-bottom: 2.5rem;
 }
 
 /* SECTION HEADINGS */
 .impressum-page h2 {
-  margin-top: 2.4rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.4rem;
-  font-weight: 700;
   color: #e6d6ff;
-}
-
-/* TEXT */
-.impressum-page p {
-  margin-bottom: 1rem;
-  font-size: 1.02rem;
+  margin-top: 2.4rem;
 }
 
 /* LINKS */
 .impressum-page a {
   color: #f2d2b0;
   text-decoration: underline;
-  font-weight: 600;
 }
 
 .impressum-page a:hover {
@@ -67,11 +79,6 @@
   .impressum-page {
     margin-top: 10rem;
     padding: 2rem 1.4rem 2.5rem;
-  }
-
-  .impressum-page h1 {
-    font-size: 2rem;
-    padding-left: 0.2rem;
   }
 }
 
