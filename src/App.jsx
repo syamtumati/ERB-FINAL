@@ -168,9 +168,9 @@ function App() {
       {/* ================= FOOTER ================= */}
       <footer className="clean-footer">
         <div className="footer-inner">
-          <div className="church-name">
+	  <Link to="/" className="church-name church-name-link">
             Evangelisch-Reformierte Baptistengemeinde
-          </div>
+          </Link>
 
           <nav className="footer-nav">
             <Link to="/glaube">Glaube</Link>
