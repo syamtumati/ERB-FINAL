@@ -1,0 +1,60 @@
+/* ======================= */
+/* IMPRESSUM PAGE          */
+/* ======================= */
+
+.impressum-page {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 1.8rem 3rem;
+  font-family: "Georgia", serif;
+  color: #2d1b0a;
+  line-height: 1.75;
+}
+
+/* TITLE */
+.impressum-page h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #8b4513;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* SECTION HEADINGS */
+.impressum-page h2 {
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #8b4513;
+}
+
+/* TEXT */
+.impressum-page p {
+  margin-bottom: 1rem;
+  font-size: 1.02rem;
+}
+
+/* LINKS */
+.impressum-page a {
+  color: #8b4513;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.impressum-page a:hover {
+  color: #5a2d0c;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .impressum-page {
+    margin-top: 4rem;
+    padding: 0 1.2rem 2rem;
+  }
+
+  .impressum-page h1 {
+    font-size: 2rem;
+  }
+}
+

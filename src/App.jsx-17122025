@@ -146,9 +146,7 @@ function App() {
           </nav>
 
           <div className="copyright">
-            © Copyright {new Date().getFullYear()} Evangelisch-Reformierte Baptistengemeinde
-            <span className="copyright-sep"> | </span>
-            <Link to="/impressum" className="impressum-link">Impressum</Link>
+            © {new Date().getFullYear()} Evangelisch-Reformierte Baptistengemeinde
           </div>
         </div>
       </footer>
