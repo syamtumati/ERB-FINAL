@@ -638,7 +638,7 @@
 /* Fix short-height large screens (e.g. 1920×1080) */
 @media (min-width: 1600px) and (max-height: 1100px) {
   .hero-visit-box {
-    margin-top: 10rem !important; /* was too large */
+    margin-top: 8rem !important; /* was too large */
     transform: translateX(5px) !important;
   }
 }
