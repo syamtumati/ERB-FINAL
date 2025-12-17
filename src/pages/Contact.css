@@ -340,6 +340,6 @@
 
   /* Move the hero title DOWN */
   .contact-hero-title {
-    transform: translate(-40px, -60px) !important;  /* ↓ 20px lower */
+    transform: translate(-40px, -80px) !important;  /* ↓ 20px lower */
   }
 }
