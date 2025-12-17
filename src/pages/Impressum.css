@@ -4,20 +4,29 @@
 
 .impressum-page {
   max-width: 900px;
-  margin: 9rem auto 5rem; /* 👈 pushes content below header */
-  padding: 0 1.8rem 3rem;
+  margin: 9rem auto 5rem;
+  padding: 2.5rem 2rem 3rem;
+
+  /* NEW */
+  background: #0b1a3a; /* deep church blue */
+  color: #ffffff;
+
   font-family: "Georgia", serif;
-  color: #2d1b0a;
   line-height: 1.75;
+  border-radius: 6px;
 }
 
 /* TITLE */
 .impressum-page h1 {
   font-size: 2.4rem;
   font-weight: 900;
-  color: #8b4513;
+  color: #ffffff;
+
+  /* MOVE LEFT */
+  text-align: left;
+  padding-left: 0.5rem;
+
   margin-bottom: 2.5rem;
-  text-align: center;
 }
 
 /* SECTION HEADINGS */
@@ -26,7 +35,7 @@
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #8b4513;
+  color: #e6d6ff;
 }
 
 /* TEXT */
@@ -37,24 +46,25 @@
 
 /* LINKS */
 .impressum-page a {
-  color: #8b4513;
+  color: #f2d2b0;
   text-decoration: underline;
   font-weight: 600;
 }
 
 .impressum-page a:hover {
-  color: #5a2d0c;
+  color: #ffffff;
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .impressum-page {
-    margin-top: 4rem;
-    padding: 0 1.2rem 2rem;
+    margin-top: 10rem;
+    padding: 2rem 1.4rem 2.5rem;
   }
 
   .impressum-page h1 {
     font-size: 2rem;
+    padding-left: 0.2rem;
   }
 }
 
