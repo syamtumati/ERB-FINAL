@@ -1,19 +1,27 @@
 /* ======================= */
-/* IMPRESSUM PAGE          */
+/* FULL PAGE BACKGROUND    */
+/* ======================= */
+
+.impressum-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0c2340, #1e3a5f);
+  padding-bottom: 4rem; /* space before footer */
+}
+
+/* ======================= */
+/* CONTENT AREA            */
 /* ======================= */
 
 .impressum-page {
   max-width: 900px;
-  margin: 9rem auto 5rem;
+  margin: 9rem auto 0; /* push below header */
   padding: 2.5rem 2rem 3rem;
 
-  /* NEW */
-  background: #0b1a3a; /* deep church blue */
+  background: transparent;
   color: #ffffff;
 
   font-family: "Georgia", serif;
   line-height: 1.75;
-  border-radius: 6px;
 }
 
 /* TITLE */
@@ -22,9 +30,8 @@
   font-weight: 900;
   color: #ffffff;
 
-  /* MOVE LEFT */
   text-align: left;
-  padding-left: 0.5rem;
+  padding-left: 0.4rem;
 
   margin-bottom: 2.5rem;
 }
