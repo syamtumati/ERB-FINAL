@@ -4,7 +4,7 @@
 
 .impressum-page {
   max-width: 900px;
-  margin: 5rem auto;
+  margin: 9rem auto 5rem; /* 👈 pushes content below header */
   padding: 0 1.8rem 3rem;
   font-family: "Georgia", serif;
   color: #2d1b0a;
