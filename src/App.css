@@ -384,3 +384,84 @@ body {
   margin: 0 0.4rem;
   opacity: 0.7;
 }
+
+
+/* ======================= */
+/* THEOLOGISCH VERBUNDENE  */
+/* GEMEINDEN SECTION       */
+/* ======================= */
+
+.related-churches {
+  background: #f4f3f1;
+  padding: 2.8rem 1.5rem 3.5rem;
+  text-align: center;
+  font-family: "Georgia", serif;
+  color: #2d1b0a;
+}
+
+.related-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* HEADING */
+.related-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.related-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8b4513;
+}
+
+.related-line {
+  width: 60px;
+  height: 1px;
+  background: #8b4513;
+}
+
+/* CHURCH LINKS */
+.related-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.15rem;
+}
+
+.related-church {
+  color: #8b4513;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.related-church:hover {
+  text-decoration: underline;
+}
+
+/* SEPARATOR DOT */
+.related-separator {
+  color: #8b4513;
+  opacity: 0.7;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .related-list {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .related-separator {
+    display: none;
+  }
+}
+

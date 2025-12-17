@@ -129,6 +129,41 @@ function App() {
 
         </div>
       </section>
+      
+      {/* ================= THEOLOGISCH VERBUNDENE GEMEINDEN ================= */}
+      <section className="related-churches">
+        <div className="related-inner">
+
+          <div className="related-heading">
+            <span className="related-line" />
+            <span className="related-title">THEOLOGISCH VERBUNDENE GEMEINDEN</span>
+            <span className="related-line" />
+          </div>
+
+          <div className="related-list">
+            <a
+              href="https://ebc-waiblingen.de/"
+              target="_blank"
+              rel="noreferrer"
+              className="related-church"
+            >
+              EBC Waiblingen
+            </a>
+
+            <span className="related-separator">·</span>
+
+            <a
+              href="https://www.erb-basel.ch/"
+              target="_blank"
+              rel="noreferrer"
+              className="related-church"
+            >
+              ERB Basel
+            </a>
+          </div>
+
+        </div>
+      </section>
 
       {/* ================= FOOTER ================= */}
       <footer className="clean-footer">
