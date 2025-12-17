@@ -465,3 +465,8 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .related-inner {
+    transform: translateX(-24px); /* adjust: -12px to -40px if needed */
+  }
+}
