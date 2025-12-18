@@ -242,6 +242,31 @@
     font-size: 3.6rem;
   }
 }
+@media (max-width: 768px) {
+  .hero-content-centered {
+    transform: none !important;
+  }
+  .hero-visit-box {
+    padding: 2.2rem 2.2rem;
+    max-width: 90%;
+  }
+  .hero-visit-title {
+    font-size: 1.8rem;
+  }
+  .main-title {
+    font-size: 3.2rem;
+  }
+  .what-matters-section {
+    padding: 4rem 1.5rem 3rem;
+  }
+  .what-matters-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .matter-block {
+    padding: 2.4rem 1.8rem;
+  }
+}
 
 @media (max-width: 380px) {
   .hero-church-name {
@@ -376,6 +401,31 @@
   }
 }
 
+@media (max-width: 600px) {
+  .hero-content-centered {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-church-name {
+    font-size: 2.3rem !important;
+    line-height: 1.25;
+    margin: 0 auto 1.2rem auto !important;
+    transform: none !important;
+  }
+
+  .hero-baptist {
+    display: block;
+    margin-top: 0.2rem;
+    transform: translateX(-10px);
+  }
+
+  .hero-visit-box {
+    margin-top: 8rem !important;
+    transform: none !important;
+  }
+}
+
 /* ===== SAFE HERO TUNING (ALL SCREENS, NO BREAKAGE) ===== */
 
 /* Slightly lower hero title */
@@ -389,86 +439,42 @@
   max-width: 580px;       /* was 640px */
 }
 
-/* ===== LARGE PHONES ===== */
-@media (max-width: 768px) and (min-width: 601px) {
+/* ================= MOBILE HERO ADJUSTMENT ================= */
+@media (max-width: 768px) {
 
-  .hero-content-centered {
-    padding-top: 8rem;
-  }
-
+  /* Move the whole hero title slightly down */
   .hero-church-name {
-    font-size: 2.6rem;
-    margin-left: 1.2rem;
-  }
-
-  .hero-baptist {
-    margin-left: 2rem;
-  }
-
-  .hero-visit-box {
-    margin-top: 3.5rem;
-    padding: 1.6rem 1.8rem;
-    max-width: 88%;
-  }
-}
-
-/* ===== MEDIUM PHONES ===== */
-@media (max-width: 600px) and (min-width: 481px) {
-
-  .hero-content-centered {
-    padding-top: 7.2rem;
-  }
-
-  .hero-church-name {
+    margin-top: 1.2rem !important;
+    margin-left: 0.5rem !important;   /* move title right */
+    text-align: left;
     font-size: 2.3rem;
-    margin-left: 1rem;
-  }
-
-  .hero-baptist {
-    margin-left: 2.2rem;
-  }
-
-  .hero-visit-box {
-    margin-top: 3rem;
-    padding: 1.4rem 1.6rem;
-    max-width: 86%;
-  }
-}
-
-/* ===== SMALL PHONES ===== */
-@media (max-width: 480px) {
-
-  .hero-overlay {
-    min-height: 100svh; /* stable height */
-  }
-
-  .hero-content-centered {
-    padding-top: 6.5rem;
-  }
-
-  .hero-church-name {
-    font-size: 2.05rem;
-    margin-left: 0.8rem;
     line-height: 1.22;
   }
 
+  /* Move ONLY Baptistengemeinde more to the right */
   .hero-baptist {
-    margin-left: 2rem;
+    display: block;
+    margin-left: -4.6rem !important;   /* 👈 key line */
+    margin-top: 0.25rem;
+    transform: none !important;
   }
 
+  /* Push visit box down and make it shorter */
   .hero-visit-box {
-    margin-top: 2.5rem;
-    padding: 1.2rem 1.4rem;
-    max-width: 90%;
+    margin-top: 5.5rem !important;    /* move down */
+    padding: 1.2rem 1.4rem !important; /* reduce height */
+    max-width: 85%;
   }
 
   .hero-visit-title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
+    margin-bottom: 0.7rem;
   }
 
   .hero-visit-time,
   .hero-visit-address {
     font-size: 0.95rem;
+    line-height: 1.35;
   }
 }
 
