@@ -728,3 +728,10 @@
   }
 }
 
+@media (max-width: 600px) {
+  .hero-baptist {
+    display: inline-block;
+    position: relative;
+    left: -28px;
+  }
+}
