@@ -717,7 +717,7 @@
   .hero-baptist {
     display: block;
     position: relative;
-    left: -30px; /* 👈 move only this word left */
+    left: -32px; /* 👈 move only this word left */
   }
 
   /* VISIT BOX – move DOWN safely */
