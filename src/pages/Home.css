@@ -772,15 +772,18 @@
 @media (min-width: 1600px) and (min-height: 1000px) {
 
   /* Push hero name slightly DOWN */
-  .hero-church-name {
-    margin-top: 2.5rem; /* adjust: 2rem–3rem if needed */
+  .hero-overlay .hero-church-name {
+    margin-top: 2.5rem !important;
   }
 
-  /* Reduce visit box size */
-  .hero-visit-box {
-    padding: 1.8rem 2rem;   /* smaller box */
-    max-width: 440px;       /* narrower */
-    margin-top: 4rem;       /* pulls it up */
+  /* Force visit box to be smaller */
+  .hero-overlay .hero-visit-box {
+    padding: 1.6rem 1.8rem !important;  /* clearly smaller */
+    max-width: 420px !important;        /* force narrower */
+    margin-top: 3.5rem !important;
+
+    /* in case height/transform was used */
+    transform: none !important;
   }
 
 }
