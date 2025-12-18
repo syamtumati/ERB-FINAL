@@ -722,7 +722,7 @@
 
   /* VISIT BOX – move DOWN safely */
   .hero-visit-box {
-    margin-top: 9rem !important;
+    margin-top: 10rem !important;
     position: static !important;
     transform: none !important;
   }
