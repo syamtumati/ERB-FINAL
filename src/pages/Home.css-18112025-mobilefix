@@ -479,18 +479,19 @@
 }
 
 /* ==================== MOBILE FIXES – UNIFIED & FINAL (≤ 600px) ==================== */
+/* This replaces ALL your previous conflicting @media (max-width: 600px) blocks for hero */
 @media (max-width: 600px) {
-  /* Reliable Android/mobile viewport – prevent cutoff */
+  /* Reliable Android/mobile viewport */
   .hero-video-section {
     min-height: 100svh;
     min-height: -webkit-fill-available;
   }
 
-  /* Clear header safely without hiding hero content */
+  /* Push content below header safely */
   .hero-overlay {
-    padding-top: 100px !important;  /* Reduced from 140px+ – clears header but keeps hero visible */
-    align-items: center;            /* Restore vertical centering */
-    justify-content: center;        /* Restore horizontal centering */
+    padding-top: 140px !important; /* Consistent header clearance */
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .hero-content-centered {
@@ -499,18 +500,14 @@
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;        /* Ensure content is centered in visible area */
   }
 
-  /* HERO CHURCH NAME – Consistent fit on A52, S20 FE */
+  /* HERO CHURCH NAME – Consistent fit on A52, S20 FE, and similar */
   .hero-church-name {
-    font-size: 2.35rem !important;
+    font-size: 2.35rem !important;     /* Perfect balance between A52 and S20 FE */
     line-height: 1.22 !important;
     margin: 0 auto 1.4rem auto !important;
-    padding: 0 1.8rem !important;
+    padding: 0 1.8rem !important;      /* Safe side margins – prevents edge cut */
     text-align: center;
     max-width: 100%;
     box-sizing: border-box;
@@ -518,21 +515,21 @@
     overflow-wrap: normal !important;
     hyphens: none !important;
     white-space: normal;
-    transform: none !important;
+    transform: none !important;        /* No risky transforms */
     position: static !important;
   }
 
-  /* Clean line break for Baptistengemeinde */
+  /* Baptistengemeinde – clean line break and alignment */
   .hero-baptist {
-    display: block;
+    display: block;                    /* Forces clean line break */
     margin-top: 0.3rem;
     margin-left: 0 !important;
     transform: none !important;
   }
 
-  /* Visit box – visible and well-positioned */
+  /* Visit box – compact and well-positioned */
   .hero-visit-box {
-    margin-top: 8rem !important;
+    margin-top: 8rem !important;       /* Good vertical spacing */
     padding: 2rem 1.8rem !important;
     max-width: 90% !important;
     transform: none !important;
@@ -549,11 +546,8 @@
   }
 }
 
-/* Extra small phones */
+/* Extra small phones – slight reduction if needed */
 @media (max-width: 380px) {
-  .hero-overlay {
-    padding-top: 90px !important;  /* Slightly less on very small screens */
-  }
   .hero-church-name {
     font-size: 2.15rem !important;
     padding: 0 1.2rem !important;
@@ -563,11 +557,8 @@
   }
 }
 
-/* Medium phones – smooth transition */
+/* Medium phones (601px – 768px) – smooth transition */
 @media (max-width: 768px) and (min-width: 601px) {
-  .hero-overlay {
-    padding-top: 110px !important;
-  }
   .hero-church-name {
     font-size: 2.8rem !important;
     padding: 0 2rem;
