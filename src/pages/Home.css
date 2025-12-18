@@ -445,7 +445,7 @@
   /* Move the whole hero title slightly down */
   .hero-church-name {
     margin-top: 1.2rem !important;
-    margin-left: 1.6rem !important;   /* move title right */
+    margin-left: 0.5rem !important;   /* move title right */
     text-align: left;
     font-size: 2.3rem;
     line-height: 1.22;
@@ -454,7 +454,7 @@
   /* Move ONLY Baptistengemeinde more to the right */
   .hero-baptist {
     display: block;
-    margin-left: -5.2rem !important;   /* 👈 key line */
+    margin-left: -5.3rem !important;   /* 👈 key line */
     margin-top: 0.25rem;
     transform: none !important;
   }
