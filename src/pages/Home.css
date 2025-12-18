@@ -167,18 +167,18 @@
 @media (max-width: 768px) {
   /* Move hero content DOWN slightly */
   .hero-content-centered {
-    padding-top: 4.5rem; /* moves hero name down */
+    padding-top: 3.6rem; /* moves hero name down */
   }
 
   /* HERO NAME */
   .hero-church-name {
     font-size: 2.3rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
   }
 
   /* VISIT BOX – SMALL RECTANGLE */
   .hero-visit-box {
-    margin-top: 2.2rem;
+    margin-top: 3rem;
     padding: 1.2rem 1.4rem;
     max-width: 92%;
     border-radius: 10px;
