@@ -237,31 +237,42 @@
   }
 }
 
-/* ================= LAPTOP VISIT BOX (13″–14″) ================= */
-@media (min-width: 1024px) and (max-width: 1440px) {
+/* ================= LAPTOP VISIT BOX (13″–17″) ================= */
+@media (min-width: 1024px) and (max-width: 1799px) {
   .hero-visit-box {
-    margin-top: 6.5rem;        /* controlled spacing */
-    max-width: 440px;          /* ⬅️ smaller width */
-    padding: 1.6rem 2rem;      /* ⬅️ reduced height */
+    max-width: 420px;        /* ⬅️ narrower */
+    padding: 1.4rem 1.8rem; /* ⬅️ shorter height */
+    margin-top: 6.2rem;     /* ⬅️ controlled spacing */
     border-radius: 14px;
   }
 
   .hero-visit-title {
-    font-size: 1.45rem;
-    margin-bottom: 0.7rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
   }
 
   .hero-visit-time,
   .hero-visit-address {
-    font-size: 1.05rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.35;
   }
 }
 
-@media (min-width: 1600px) {
+/* ================= LARGE DESKTOP ONLY ================= */
+@media (min-width: 1800px) {
   .hero-visit-box {
     max-width: 520px;
     padding: 2.4rem 2.8rem;
     margin-top: 8rem;
   }
+
+  .hero-visit-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 1.15rem;
+  }
 }
+
