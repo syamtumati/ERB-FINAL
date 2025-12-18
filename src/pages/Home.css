@@ -445,7 +445,7 @@
   /* Move the whole hero title slightly down */
   .hero-church-name {
     margin-top: 1.2rem !important;
-    margin-left: 1.4rem !important;   /* move title right */
+    margin-left: 1.6rem !important;   /* move title right */
     text-align: left;
     font-size: 2.3rem;
     line-height: 1.22;
