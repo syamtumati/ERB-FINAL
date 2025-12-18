@@ -439,34 +439,36 @@
   max-width: 580px;       /* was 640px */
 }
 
-/* ================= MOBILE HERO FINAL FIX ================= */
+/* ================= MOBILE HERO ADJUSTMENT ================= */
 @media (max-width: 768px) {
 
-  /* Move hero text to the RIGHT */
+  /* Move the whole hero title slightly down */
   .hero-church-name {
-    margin-left: 1.2rem !important;
+    margin-top: 1.2rem !important;
+    margin-left: 1.4rem !important;   /* move title right */
     text-align: left;
     font-size: 2.3rem;
     line-height: 1.22;
   }
 
+  /* Move ONLY Baptistengemeinde more to the right */
   .hero-baptist {
     display: block;
-    margin-left: 1.2rem;
-    margin-top: 0.2rem;
+    margin-left: 2.2rem !important;   /* 👈 key line */
+    margin-top: 0.25rem;
     transform: none !important;
   }
 
-  /* Reduce visit box HEIGHT clearly */
+  /* Push visit box down and make it shorter */
   .hero-visit-box {
-    margin-top: 3.5rem !important;
-    padding: 1.2rem 1.4rem !important; /* 👈 BIG reduction */
+    margin-top: 5.5rem !important;    /* move down */
+    padding: 1.2rem 1.4rem !important; /* reduce height */
     max-width: 85%;
   }
 
   .hero-visit-title {
     font-size: 1.45rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
   }
 
   .hero-visit-time,
