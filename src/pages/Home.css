@@ -232,12 +232,36 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .hero-church-name {
-    margin-top: 7rem; /* ⬇️ moves hero + baptist name down */
-    transform: translateX(-24px); /* ⬅️ move left */
+    margin-top: 6rem; /* ⬇️ moves hero + baptist name down */
+    transform: none;    /* ❌ no translate on desktop */
   }
-  /* Move visit box slightly down */
+}
+
+/* ================= LAPTOP VISIT BOX (13″–14″) ================= */
+@media (min-width: 1024px) and (max-width: 1440px) {
   .hero-visit-box {
-    margin-top: 11rem;
-    transform: translateX(-30px); /* ⬅️ move left */
+    margin-top: 6.5rem;        /* controlled spacing */
+    max-width: 440px;          /* ⬅️ smaller width */
+    padding: 1.6rem 2rem;      /* ⬅️ reduced height */
+    border-radius: 14px;
+  }
+
+  .hero-visit-title {
+    font-size: 1.45rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-visit-box {
+    max-width: 520px;
+    padding: 2.4rem 2.8rem;
+    margin-top: 8rem;
   }
 }
