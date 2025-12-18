@@ -231,8 +231,12 @@
 /* DESKTOP REFINEMENTS */
 /* ===================================================== */
 @media (min-width: 1024px) {
+  .hero-church-name {
+    transform: translateX(-24px); /* ⬅️ move left */
+  }
   /* Move visit box slightly down */
   .hero-visit-box {
-    margin-top: 7.5rem;
+    margin-top: 9rem;
+    transform: translateX(-20px); /* ⬅️ move left */
   }
 }
