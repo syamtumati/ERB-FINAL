@@ -58,7 +58,16 @@
   font-size: 5.5rem !important;
   font-weight: 900;
 /*  color: #e8c0a0;*/
-  color: #d9a441 !important;
+  background: linear-gradient(
+    180deg,
+    #f0d28a 0%,
+    #d4a24c 45%,
+    #b88a32 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   line-height: 1.05;
   margin: 0 0 1rem 0 !important;
   letter-spacing: -2px;
