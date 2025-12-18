@@ -1,7 +1,4 @@
-/* ===================================================== */
-/* HOME PAGE – SAFE RESPONSIVE VERSION */
-/* ===================================================== */
-
+/* ================= ROOT ================= */
 .home-page {
   min-height: 100vh;
   overflow-x: hidden;
@@ -9,7 +6,7 @@
   flex-direction: column;
 }
 
-/* ==================== HERO ==================== */
+/* ================= HERO ================= */
 .hero-video-section {
   position: relative;
   width: 100%;
@@ -67,18 +64,18 @@
 
 /* VISIT BOX */
 .hero-visit-box {
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   max-width: 520px;
   background: #f9f6ef;
   border: 2px solid #d7a955;
   border-radius: 18px;
-  padding: 2.6rem 2.8rem;
+  padding: 2.4rem;
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
   color: #2b2620;
 }
 
 .hero-visit-title {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   margin-bottom: 1.2rem;
 }
 
@@ -101,14 +98,15 @@
 
 .hero-visit-time,
 .hero-visit-address {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 
-/* ==================== WHAT MATTERS ==================== */
+/* ================= WHAT MATTERS ================= */
 .what-matters-section {
   background: linear-gradient(135deg, #0c2340, #1e3a5f);
-  padding: 5rem 2rem;
+  padding: 4rem 1.5rem;
+  text-align: center;
 }
 
 .container {
@@ -117,134 +115,68 @@
 }
 
 .main-title {
-  font-size: 3.4rem;
+  font-size: 3.2rem;
   color: white;
-  text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .what-matters-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
 }
 
 .matter-block {
   background: white;
-  padding: 3.2rem 2.8rem;
-  border-radius: 2.4rem;
+  padding: 2.6rem 2rem;
+  border-radius: 2rem;
   text-decoration: none;
   color: #2d1b0a;
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: transform 0.35s ease;
+  transition: transform 0.3s ease;
 }
 
 .matter-block:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .matter-block h3 {
-  font-size: 2.3rem;
-  margin-bottom: 1.6rem;
-  color: #8b4513;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .matter-block p {
-  font-size: 1.3rem;
-  line-height: 2;
+  font-size: 1.2rem;
+  line-height: 1.7;
   flex-grow: 1;
 }
 
 .read-more {
-  margin-top: 2rem;
+  margin-top: 1.4rem;
   font-weight: 700;
   color: #c19a6b;
   text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 2px;
+  font-size: 0.95rem;
 }
 
-/* ===================================================== */
-/* DESKTOP REFINEMENTS */
-/* ===================================================== */
-@media (min-width: 1024px) {
-  /* Move visit box slightly down */
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero-church-name {
+    font-size: 2.4rem;
+  }
+
   .hero-visit-box {
-    margin-top: 6.5rem;
-  }
-}
-
-/* ===================================================== */
-/* TABLET & MOBILE (IMAGE 2 STYLE) */
-/* ===================================================== */
-@media (max-width: 1024px) {
-  /* Hero adjustments */
-  .hero-content-centered {
-    padding-top: 3.5rem;
-  }
-
-  /* WHAT MATTERS – LEFT TITLE */
-  .what-matters-section {
-    padding: 4.5rem 1.8rem;
+    margin-top: 3rem;
+    padding: 2rem;
   }
 
   .main-title {
-    text-align: left;
-    font-size: 2.6rem;
-    margin-bottom: 3rem;
-    max-width: 320px;
-  }
-
-  .what-matters-grid {
-    grid-template-columns: 1fr;
-    gap: 2.6rem;
-  }
-
-  .matter-block {
-    padding: 3.4rem 2.6rem;
-    border-radius: 28px;
-  }
-
-  .matter-block h3 {
-    font-size: 2.1rem;
-  }
-
-  .matter-block p {
-    font-size: 1.25rem;
-    line-height: 1.9;
-  }
-}
-
-/* ===================================================== */
-/* MOBILE HERO COMPACT */
-/* ===================================================== */
-@media (max-width: 768px) {
-  .hero-visit-box {
-    margin-top: 3.5rem;
-    padding: 1.6rem 1.8rem;
-    max-width: 90%;
-    border-radius: 14px;
-  }
-
-  .hero-visit-title {
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .hero-visit-time,
-  .hero-visit-address {
-    font-size: 1rem;
-    line-height: 1.45;
-  }
-
-  .hero-church-name {
     font-size: 2.4rem;
   }
 }
 
-/* EXTRA SMALL */
 @media (max-width: 480px) {
   .hero-overlay {
     padding-top: 70px;
