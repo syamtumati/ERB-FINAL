@@ -688,3 +688,43 @@
   }
 }
 
+/* ==================== MOBILE HERO FINAL TUNING ==================== */
+@media (max-width: 600px) {
+
+  /* Push hero content slightly UP (safe) */
+  .hero-content-centered {
+    margin-top: -1.5rem !important;
+    padding-top: 0 !important;
+  }
+
+  /* HERO NAME */
+  .hero-church-name {
+    font-size: 2.3rem !important;
+    line-height: 1.25;
+    margin: 0 auto 1.2rem auto !important;
+    padding: 0 1.4rem !important;
+    text-align: center;
+
+    /* subtle LEFT shift */
+    position: relative;
+    left: -6px;
+
+    /* IMPORTANT: no transforms */
+    transform: none !important;
+  }
+
+  /* If you wrapped "Baptistengemeinde" in a span */
+  .hero-baptist {
+    display: block;
+    position: relative;
+    left: -10px; /* 👈 move only this word left */
+  }
+
+  /* VISIT BOX – move DOWN safely */
+  .hero-visit-box {
+    margin-top: 4.5rem !important;
+    position: static !important;
+    transform: none !important;
+  }
+}
+
