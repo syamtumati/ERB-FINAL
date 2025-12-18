@@ -458,7 +458,7 @@
 
   .hero-visit-box {
     margin-top: 2.4rem !important;
-    margin-left: 0.8rem;     /* 👈 move left */
+    margin-left: 3rem;     /* 👈 move left */
     margin-right: auto;
     padding: 1.05rem 1.2rem; /* reduce height */
     max-width: 82%;          /* reduce width */
