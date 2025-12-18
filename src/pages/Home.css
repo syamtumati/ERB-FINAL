@@ -474,3 +474,22 @@
   }
 }
 
+/* ================= MOBILE TEXT EDGE FIX ================= */
+@media (max-width: 480px) {
+
+  /* Prevent text from touching screen edges */
+  .what-matters-section {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+
+  /* Ensure headings stay inside viewport */
+  .what-matters-section .main-title {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    word-break: normal;
+  }
+}
+
