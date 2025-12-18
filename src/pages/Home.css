@@ -47,8 +47,24 @@
   text-align: center;
 }
 
-/* HERO TITLE */
-.hero-church-name,
+/* HERO TITLE – GRADIENT ONLY (SAFE) */
+.hero-church-name {
+  background: linear-gradient(
+    180deg,
+    #cfa88a 0%,
+    #b78f66 40%,
+    #7a4c2f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* 🔒 Lock font size so it NEVER shrinks */
+  font-size: 3.4rem;
+  line-height: 1.2;
+}
+
 .hero-church-name .hero-baptist {
   background: linear-gradient(
     180deg,
@@ -60,11 +76,10 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-}
 
-.hero-baptist {
   display: block;
   margin-top: 0.3rem;
+  font-size: inherit; /* 🔒 inherit parent size */
 }
 
 /* VISIT BOX */
