@@ -643,3 +643,48 @@
   }
 }
 
+
+/* ==================== ANDROID / MOBILE HERO STABILITY FIX ==================== */
+@media (max-width: 600px) {
+
+  /* Reset ALL transforms that cause overlap */
+  .hero-content-centered,
+  .hero-church-name,
+  .hero-subtitle,
+  .hero-visit-box {
+    transform: none !important;
+  }
+
+  /* Proper vertical flow */
+  .hero-overlay {
+    padding-top: 140px !important; /* header height */
+    align-items: flex-start;
+  }
+
+  .hero-content-centered {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Hero title – NO movement hacks */
+  .hero-church-name {
+    font-size: 2.3rem !important;
+    line-height: 1.25;
+    margin: 0 auto 1.4rem auto !important;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  /* Subtitle stays below title */
+  .hero-subtitle {
+    margin-bottom: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  /* Visit box – pushed down using margin (layout-safe) */
+  .hero-visit-box {
+    margin-top: 3.5rem !important;
+    position: static !important;
+  }
+}
+
