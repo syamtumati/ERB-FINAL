@@ -454,7 +454,7 @@
   /* Move ONLY Baptistengemeinde more to the right */
   .hero-baptist {
     display: block;
-    margin-left: -4.8rem !important;   /* 👈 key line */
+    margin-left: -4.6rem !important;   /* 👈 key line */
     margin-top: 0.25rem;
     transform: none !important;
   }
