@@ -161,22 +161,34 @@
   font-size: 0.95rem;
 }
 
-/* ================= MOBILE ================= */
+/* ===================================================== */
+/* MOBILE HERO COMPACT */
+/* ===================================================== */
 @media (max-width: 768px) {
-  .hero-church-name {
-    font-size: 2.4rem;
-  }
-
   .hero-visit-box {
-    margin-top: 3rem;
-    padding: 2rem;
+    margin-top: 3.5rem;
+    padding: 1.6rem 1.8rem;
+    max-width: 90%;
+    border-radius: 14px;
   }
 
-  .main-title {
+  .hero-visit-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .hero-church-name {
     font-size: 2.4rem;
   }
 }
 
+/* EXTRA SMALL */
 @media (max-width: 480px) {
   .hero-overlay {
     padding-top: 70px;
