@@ -479,7 +479,7 @@
 
   /* Prevent text from touching screen edges */
   .what-matters-section {
-    padding-left: 2rem;
+    padding-left: 1rem;
     padding-right: 1.4rem;
   }
 
