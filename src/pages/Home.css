@@ -89,6 +89,11 @@
   color: transparent;
 }
 
+/* HERO TEXT SPACING */
+.hero-baptist {
+  margin-left: 0.4rem;
+}
+
 .hero-subtitle {
   font-size: 2.5rem;
   font-weight: 600;
