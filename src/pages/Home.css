@@ -242,41 +242,6 @@
     font-size: 3.6rem;
   }
 }
-@media (max-width: 768px) {
-  .hero-content-centered {
-    transform: none !important;
-  }
-  .hero-visit-box {
-    padding: 2.2rem 2.2rem;
-    max-width: 90%;
-  }
-  .hero-visit-title {
-    font-size: 1.8rem;
-  }
-  .main-title {
-    font-size: 3.2rem;
-  }
-  .what-matters-section {
-    padding: 4rem 1.5rem 3rem;
-  }
-  .what-matters-grid {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
-  }
-  .matter-block {
-    padding: 2.4rem 1.8rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero-church-name {
-    font-size: 2.8rem !important;
-    padding: 0 1rem !important;
-  }
-  .hero-visit-box {
-    margin-top: 7rem !important;
-  }
-}
 
 /* All your original desktop/large screen rules remain unchanged below */
 /* (Kept exactly as in your original file) */
