@@ -162,40 +162,63 @@
 }
 
 /* ===================================================== */
-/* MOBILE HERO COMPACT */
+/* MOBILE HERO – COMPACT & RECTANGULAR */
 /* ===================================================== */
 @media (max-width: 768px) {
-  .hero-visit-box {
-    margin-top: 3.5rem;
-    padding: 1.6rem 1.8rem;
-    max-width: 90%;
-    border-radius: 14px;
+  /* Move hero content DOWN slightly */
+  .hero-content-centered {
+    padding-top: 4.5rem; /* moves hero name down */
   }
 
-  .hero-visit-title {
-    font-size: 1.4rem;
+  /* HERO NAME */
+  .hero-church-name {
+    font-size: 2.3rem;
     margin-bottom: 0.8rem;
   }
 
-  .hero-visit-time,
-  .hero-visit-address {
-    font-size: 1rem;
-    line-height: 1.45;
+  /* VISIT BOX – SMALL RECTANGLE */
+  .hero-visit-box {
+    margin-top: 2.2rem;
+    padding: 1.2rem 1.4rem;
+    max-width: 92%;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
   }
 
-  .hero-church-name {
-    font-size: 2.4rem;
+  .hero-visit-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .hero-visit-divider {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-visit-time {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-visit-address {
+    font-size: 0.95rem;
+    line-height: 1.35;
   }
 }
 
-/* EXTRA SMALL */
+/* EXTRA SMALL PHONES */
 @media (max-width: 480px) {
-  .hero-overlay {
-    padding-top: 70px;
+  .hero-content-centered {
+    padding-top: 5.2rem; /* a bit more for notch phones */
   }
 
   .hero-church-name {
-    font-size: 2.1rem;
+    font-size: 2.05rem;
+  }
+
+  .hero-visit-box {
+    padding: 1rem 1.2rem;
+    max-width: 94%;
   }
 }
 
