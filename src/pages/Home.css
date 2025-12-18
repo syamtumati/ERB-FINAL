@@ -786,3 +786,8 @@
   }
 }
 
+.hero-visit-box {
+  padding: clamp(1.6rem, 2vw, 2.4rem);
+  max-width: clamp(420px, 35vw, 520px);
+}
+
