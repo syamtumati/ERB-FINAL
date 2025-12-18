@@ -511,3 +511,22 @@
   }
 }
 
+/* ================= SMALL PHONES CARD STABILIZER ================= */
+@media (max-width: 480px) {
+
+  .matter-block {
+    max-width: 88%;
+    margin: 0 auto;
+
+    /* Control vertical size */
+    padding: clamp(1.3rem, 2.5vw, 1.6rem)
+             clamp(1.2rem, 2.8vw, 1.4rem);
+
+    line-height: 1.45; /* 👈 key: stops vertical stretching */
+  }
+
+  .matter-block p {
+    line-height: 1.45;
+  }
+}
+
