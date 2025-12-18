@@ -242,6 +242,41 @@
     font-size: 3.6rem;
   }
 }
+@media (max-width: 768px) {
+  .hero-content-centered {
+    transform: none !important;
+  }
+  .hero-visit-box {
+    padding: 2.2rem 2.2rem;
+    max-width: 90%;
+  }
+  .hero-visit-title {
+    font-size: 1.8rem;
+  }
+  .main-title {
+    font-size: 3.2rem;
+  }
+  .what-matters-section {
+    padding: 4rem 1.5rem 3rem;
+  }
+  .what-matters-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .matter-block {
+    padding: 2.4rem 1.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-church-name {
+    font-size: 2.8rem !important;
+    padding: 0 1rem !important;
+  }
+  .hero-visit-box {
+    margin-top: 7rem !important;
+  }
+}
 
 /* All your original desktop/large screen rules remain unchanged below */
 /* (Kept exactly as in your original file) */
@@ -359,11 +394,87 @@
   }
 }
 
-/* Fix short-height large screens (e.g. 1920×1080) */
-@media (min-width: 1600px) and (max-height: 1100px) {
+/* Extra safety for very small phones */
+@media (max-width: 380px) {
+  .hero-church-name {
+    font-size: 2.1rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content-centered {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-church-name {
+    font-size: 2.3rem !important;
+    line-height: 1.25;
+    margin: 0 auto 1.2rem auto !important;
+    transform: none !important;
+  }
+
+  .hero-baptist {
+    display: block;
+    margin-top: 0.2rem;
+    transform: translateX(-10px);
+  }
+
   .hero-visit-box {
-    margin-top: 13rem !important; /* was too large */
-    transform: translateX(5px) !important;
+    margin-top: 8rem !important;
+    transform: none !important;
+  }
+}
+
+/* ===== SAFE HERO TUNING (ALL SCREENS, NO BREAKAGE) ===== */
+
+/* Slightly lower hero title */
+.hero-church-name {
+  margin-top: 1.5rem;
+}
+
+/* Slightly reduce visit box height */
+.hero-visit-box {
+  padding: 2.6rem 3.2rem; /* was 3.4rem 4rem */
+  max-width: 580px;       /* was 640px */
+}
+
+/* ================= MOBILE HERO ADJUSTMENT ================= */
+@media (max-width: 768px) {
+
+  /* Move the whole hero title slightly down */
+  .hero-church-name {
+    margin-top: 1.2rem !important;
+    margin-left: 0.5rem !important;   /* move title right */
+    text-align: left;
+    font-size: 2.3rem;
+    line-height: 1.22;
+  }
+
+  /* Move ONLY Baptistengemeinde more to the right */
+  .hero-baptist {
+    display: block;
+    margin-left: -4.6rem !important;   /* 👈 key line */
+    margin-top: 0.25rem;
+    transform: none !important;
+  }
+
+  /* Push visit box down and make it shorter */
+  .hero-visit-box {
+    margin-top: 5.5rem !important;    /* move down */
+    padding: 1.2rem 1.4rem !important; /* reduce height */
+    max-width: 85%;
+  }
+
+  .hero-visit-title {
+    font-size: 1.45rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 0.95rem;
+    line-height: 1.35;
   }
 }
 
