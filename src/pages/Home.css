@@ -242,115 +242,6 @@
     font-size: 3.6rem;
   }
 }
-@media (max-width: 768px) {
-  .hero-content-centered {
-    transform: none !important;
-  }
-  .hero-visit-box {
-    padding: 2.2rem 2.2rem;
-    max-width: 90%;
-  }
-  .hero-visit-title {
-    font-size: 1.8rem;
-  }
-  .main-title {
-    font-size: 3.2rem;
-  }
-  .what-matters-section {
-    padding: 4rem 1.5rem 3rem;
-  }
-  .what-matters-grid {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
-  }
-  .matter-block {
-    padding: 2.4rem 1.8rem;
-  }
-}
-
-/* ==================== MOBILE FIXES (≤ 600px) – CLEAN & FINAL ==================== */
-@media (max-width: 600px) {
-  /* Prevent any black gap or overflow */
-  .hero-video-section {
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
-    padding-bottom: 0 !important;
-    margin: 0 !important;
-  }
-
-  .hero-video {
-    object-position: center top;
-  }
-
-  .hero-overlay {
-    justify-content: flex-start;
-    padding-top: 8.5rem; /* Balanced start position */
-    padding-left: 1rem;
-    padding-right: 1rem;
-    box-sizing: border-box;
-  }
-
-  .hero-content-centered {
-    padding-top: 0 !important;;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Fix church name cutting at edges */
-  .hero-church-name {
-    max-width: 100%;
-    text-align: center;
-    font-size: 3.2rem !important;
-    letter-spacing: -1px;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    padding: 0 1.5rem !important; /* Safe side margins */
-    box-sizing: border-box;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* Visit box – well positioned, no shift */
-  .hero-visit-box {
-    margin-top: 8rem !important;
-    padding: 2rem 1.6rem !important;
-    max-width: 92% !important;
-    transform: none !important;
-  }
-
-  .hero-visit-title {
-    font-size: 1.5rem !important;
-  }
-
-  .hero-visit-time,
-  .hero-visit-address {
-    font-size: 1rem !important;
-  }
-
-  /* Section title */
-  .main-title {
-    font-size: 2.8rem !important;
-    margin-bottom: 2rem;
-  }
-
-  /* Side padding for content */
-  .what-matters-section {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero-church-name {
-    font-size: 2.8rem !important;
-    padding: 0 1rem !important;
-  }
-  .hero-visit-box {
-    margin-top: 7rem !important;
-  }
-}
 
 /* All your original desktop/large screen rules remain unchanged below */
 /* (Kept exactly as in your original file) */
@@ -468,205 +359,6 @@
   }
 }
 
-/* ==================== MOBILE HERO HEADER FIX ==================== */
-@media (max-width: 600px) {
-
-  /* Push hero content below header */
-  .hero-overlay {
-    padding-top: 130px; /* header height + breathing room */
-    align-items: flex-start;
-  }
-
-  .hero-content-centered {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  /* Fix church name breaking & overlap */
-  .hero-church-name {
-    font-size: 2.8rem !important;
-    line-height: 1.15 !important;
-    letter-spacing: -0.5px !important;
-
-    /* THIS is critical */
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: normal;
-
-    padding: 0 1.25rem !important;
-    max-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  /* Ensure subtitle stays below title */
-  .hero-subtitle {
-    margin-top: 0.5rem;
-    padding: 0 1.25rem;
-  }
-}
-
-/* ==================== FINAL MOBILE HERO FIX ==================== */
-@media (max-width: 600px) {
-
-  /* Push hero below header clearly */
-  .hero-overlay {
-    padding-top: 160px !important; /* header + safe space */
-    align-items: flex-start;
-  }
-
-  .hero-content-centered {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  /* Make full church name fit screen */
-  .hero-church-name {
-    font-size: 2.4rem !important;
-    line-height: 1.25 !important;
-    padding: 0 1.2rem !important;
-    max-width: 100%;
-
-    transform: translate(-30px, -50px) !important; /* ✅ FORCE */
-
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-    hyphens: none !important;
-    white-space: normal;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  /* Keep subtitle visible */
-  .hero-subtitle {
-    font-size: 1.2rem !important;
-    margin-top: 0.6rem;
-    padding: 0 1.25rem;
-  }
-}
-
-/* Extra safety for very small phones */
-@media (max-width: 380px) {
-  .hero-church-name {
-    font-size: 2.1rem !important;
-  }
-}
-
-/* ================= HERO NAME MOBILE-ONLY LINE BREAK ================= */
-@media (max-width: 600px) {
-
-  .hero-church-name {
-    font-size: 2.2rem !important;
-    font-weight: 900;
-    line-height: 1.25;
-
-    max-width: 100%;
-    margin: 0 auto 1.2rem auto;
-    padding: 0 2rem;
-
-    text-align: center;
-
-    /* reset old transforms */
-    transform: none !important;
-    position: static !important;
-
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-
-  /* FORCE line break ONLY on mobile */
-  .hero-baptist {
-    display: block;      /* 👈 THIS creates the line break */
-    margin-top: 0.2rem;
-    transform: translateX(-10px); /* 👈 adjust: -6px to -14px */
-  }
-}
-
-/* existing desktop + tablet rules */
-/* existing mobile rules */
-
-@media (max-width: 600px) {
-
-  /* MOVE THE ENTIRE HERO TEXT BLOCK UP */
-  .hero-content-centered {
-    padding-top: 0 !important;
-/*    transform: translateY(-1.6rem) !important;*/
-  }
-
-  .hero-church-name {
-    font-size: 2.2rem !important;
-    line-height: 1.25;
-    margin: 0 auto 1.2rem auto;
-    padding: 0 2rem;
-    text-align: center;
-    margin-top: -3.5rem !important;
-
-    transform: none !important;
-    position: static !important;
-
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-
-  .hero-baptist {
-    display: block;
-    margin-top: 0.2rem;
-    transform: translateX(-10px);
-  }
-
-  .hero-visit-box {
-    margin-top: 10rem !important;   /* 👈 move DOWN */
-  }
-}
-
-@media (max-width: 600px) {
-
-  .hero-content-centered {
-    padding-top: 0 !important;
-  }
-
-  .hero-church-name {
-    font-size: 2.2rem !important;
-    line-height: 1.25;
-    padding: 0 2rem;
-    text-align: center;
-
-    /* MOVE HERO NAME UP — NO LAYOUT SHIFT */
-    transform: translateY(-8.5rem) !important;
-
-    margin: 0 auto 1.2rem auto;
-
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-
-  .hero-baptist {
-    display: block;
-    margin-top: 0.2rem;
-    transform: translateX(-10px);
-  }
-
-  /* ✅ Visit box moved WITHOUT affecting hero */
-  .hero-visit-box {
-    margin-top: 0 !important;
-    position: relative;
-    top: 8rem;   /* adjust freely */
-  }
-}
-
-/* Extra small phones only */
-@media (max-width: 380px) {
-  .hero-baptist {
-    transform: translateX(-10px) !important;
-  }
-}
-
 /* Fix short-height large screens (e.g. 1920×1080) */
 @media (min-width: 1600px) and (max-height: 1100px) {
   .hero-visit-box {
@@ -675,95 +367,93 @@
   }
 }
 
-
-/* ==================== ANDROID / MOBILE HERO STABILITY FIX ==================== */
+/* ==================== MOBILE FIXES – UNIFIED & FINAL (≤ 600px) ==================== */
+/* This replaces ALL your previous conflicting @media (max-width: 600px) blocks for hero */
 @media (max-width: 600px) {
-
-  /* Reset ALL transforms that cause overlap */
-  .hero-content-centered,
-  .hero-church-name,
-  .hero-subtitle,
-  .hero-visit-box {
-    transform: none !important;
+  /* Reliable Android/mobile viewport */
+  .hero-video-section {
+    min-height: 100svh;
+    min-height: -webkit-fill-available;
   }
 
-  /* Proper vertical flow */
+  /* Push content below header safely */
   .hero-overlay {
-    padding-top: 140px !important; /* header height */
+    padding-top: 140px !important; /* Consistent header clearance */
     align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .hero-content-centered {
-    margin-top: 0 !important;
     padding-top: 0 !important;
+    margin-top: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  /* Hero title – NO movement hacks */
+  /* HERO CHURCH NAME – Consistent fit on A52, S20 FE, and similar */
   .hero-church-name {
-    font-size: 2.3rem !important;
-    line-height: 1.25;
+    font-size: 2.35rem !important;     /* Perfect balance between A52 and S20 FE */
+    line-height: 1.22 !important;
     margin: 0 auto 1.4rem auto !important;
-    padding: 0 1.5rem;
+    padding: 0 1.8rem !important;      /* Safe side margins – prevents edge cut */
     text-align: center;
-  }
-
-  /* Subtitle stays below title */
-  .hero-subtitle {
-    margin-bottom: 2.5rem;
-    padding: 0 1.5rem;
-  }
-
-  /* Visit box – pushed down using margin (layout-safe) */
-  .hero-visit-box {
-    margin-top: 3.5rem !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    white-space: normal;
+    transform: none !important;        /* No risky transforms */
     position: static !important;
+  }
+
+  /* Baptistengemeinde – clean line break and alignment */
+  .hero-baptist {
+    display: block;                    /* Forces clean line break */
+    margin-top: 0.3rem;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  /* Visit box – compact and well-positioned */
+  .hero-visit-box {
+    margin-top: 8rem !important;       /* Good vertical spacing */
+    padding: 2rem 1.8rem !important;
+    max-width: 90% !important;
+    transform: none !important;
+    position: static !important;
+  }
+
+  .hero-visit-title {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 1.05rem !important;
   }
 }
 
-/* ==================== MOBILE HERO FINAL TUNING ==================== */
-@media (max-width: 600px) {
-
-  /* Push hero content slightly UP (safe) */
-  .hero-content-centered {
-    margin-top: -1.5rem !important;
-    padding-top: 0 !important;
-  }
-
-  /* HERO NAME */
+/* Extra small phones – slight reduction if needed */
+@media (max-width: 380px) {
   .hero-church-name {
-    font-size: 2.3rem !important;
-    line-height: 1.25;
-    margin: 0 auto 1.2rem auto !important;
-    padding: 0 1.4rem !important;
-    text-align: center;
-
-    /* subtle LEFT shift */
-    position: relative;
-    left: -6px;
-
-    /* IMPORTANT: no transforms */
-    transform: none !important;
+    font-size: 2.15rem !important;
+    padding: 0 1.2rem !important;
   }
-
-  /* If you wrapped "Baptistengemeinde" in a span */
-  .hero-baptist {
-    display: block;
-    position: relative;
-    left: -32px; /* 👈 move only this word left */
+  .hero-visit-box {
+    margin-top: 7rem !important;
   }
+}
 
-  /* VISIT BOX – move DOWN safely */
+/* Medium phones (601px – 768px) – smooth transition */
+@media (max-width: 768px) and (min-width: 601px) {
+  .hero-church-name {
+    font-size: 2.8rem !important;
+    padding: 0 2rem;
+  }
   .hero-visit-box {
     margin-top: 10rem !important;
-    position: static !important;
-    transform: none !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-baptist {
-    display: inline-block;
-    position: relative;
-    left: -43px;
+    padding: 2.2rem 2.4rem;
   }
 }
