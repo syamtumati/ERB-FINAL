@@ -478,3 +478,43 @@
   }
 }
 
+/* ================= MOBILE HERO STABILIZER ================= */
+@media (max-width: 768px) {
+
+  /* Lock hero vertical behavior */
+  .hero-overlay {
+    min-height: 100svh; /* stable viewport height */
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* Anchor content consistently */
+  .hero-content-centered {
+    width: 100%;
+    padding-top: 7.5rem;   /* controls hero title vertical position */
+    padding-bottom: 3rem;
+  }
+
+  /* Hero title tuning */
+  .hero-church-name {
+    margin: 0 0 2.5rem 1.4rem !important;
+    text-align: left;
+    font-size: 2.3rem;
+    line-height: 1.22;
+  }
+
+  .hero-baptist {
+    display: block;
+    margin-left: 2.2rem;
+    margin-top: 0.25rem;
+  }
+
+  /* Visit box: stable & compact */
+  .hero-visit-box {
+    margin: 0 auto;
+    margin-top: 2rem !important;
+    padding: 1.2rem 1.4rem !important;
+    max-width: 86%;
+  }
+}
+
