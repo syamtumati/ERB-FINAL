@@ -768,23 +768,9 @@
   }
 }
 
-/* ================= 1920×1200 DESKTOP FIX ONLY ================= */
 @media (min-width: 1600px) and (min-height: 1000px) {
-
-  /* Push hero name slightly DOWN */
-  .hero-overlay .hero-church-name {
-    margin-top: 2.5rem !important;
+  body {
+    outline: 10px solid red !important;
   }
-
-  /* Force visit box to be smaller */
-  .hero-overlay .hero-visit-box {
-    padding: 1.6rem 1.8rem !important;  /* clearly smaller */
-    max-width: 420px !important;        /* force narrower */
-    margin-top: 3.5rem !important;
-
-    /* in case height/transform was used */
-    transform: none !important;
-  }
-
 }
 
