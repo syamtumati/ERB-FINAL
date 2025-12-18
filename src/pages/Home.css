@@ -401,74 +401,41 @@
   }
 }
 
-/* ==================== MOBILE HERO FINAL TUNING ==================== */
 @media (max-width: 600px) {
-
-  /* Push hero content slightly UP (safe) */
   .hero-content-centered {
-    margin-top: -1.5rem !important;
     padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 
-  /* HERO NAME */
   .hero-church-name {
     font-size: 2.3rem !important;
     line-height: 1.25;
     margin: 0 auto 1.2rem auto !important;
-    padding: 0 1.4rem !important;
-    text-align: center;
-
-    /* subtle LEFT shift */
-    position: relative;
-    left: -6px;
-
-    /* IMPORTANT: no transforms */
     transform: none !important;
   }
 
-  /* If you wrapped "Baptistengemeinde" in a span */
   .hero-baptist {
     display: block;
-    position: relative;
-    left: -32px; /* 👈 move only this word left */
+    margin-top: 0.2rem;
+    transform: translateX(-10px);
   }
 
-  /* VISIT BOX – move DOWN safely */
   .hero-visit-box {
-    margin-top: 10rem !important;
-    position: static !important;
+    margin-top: 8rem !important;
     transform: none !important;
   }
 }
 
-@media (max-width: 600px) {
-  .hero-baptist {
-    display: inline-block;
-    position: relative;
-    left: -43px;
-  }
+/* ===== SAFE HERO TUNING (ALL SCREENS, NO BREAKAGE) ===== */
+
+/* Slightly lower hero title */
+.hero-church-name {
+  margin-top: 1.5rem;
 }
 
-/* ================= LARGE DESKTOP (1920×1200 SAFE FIX) ================= */
-@media (min-width: 1600px) and (min-aspect-ratio: 8/5) {
-
-  /* Push hero name slightly DOWN */
-  .hero-church-name {
-    margin-top: 2.5rem !important;
-  }
-
-  /* Reduce visit box size (VISUAL GUARANTEE) */
-  .hero-visit-box {
-    transform: scale(0.9) !important;
-    transform-origin: top center;
-
-    padding: 1.6rem 1.8rem !important;
-    max-width: 390px !important;
-  }
-}
-
+/* Slightly reduce visit box height */
 .hero-visit-box {
-  padding: clamp(1.6rem, 2vw, 2.4rem);
-  max-width: clamp(420px, 35vw, 520px);
+  padding: 2.6rem 3.2rem; /* was 3.4rem 4rem */
+  max-width: 580px;       /* was 640px */
 }
 
