@@ -454,15 +454,15 @@
   /* Move ONLY Baptistengemeinde more to the right */
   .hero-baptist {
     display: block;
-    margin-left: 2.2rem !important;   /* 👈 key line */
+    margin-left: 2.6rem !important;   /* 👈 key line */
     margin-top: 0.25rem;
     transform: none !important;
   }
 
   /* Push visit box down and make it shorter */
   .hero-visit-box {
-    margin-top: 5.5rem !important;    /* move down */
-    padding: 1.2rem 1.4rem !important; /* reduce height */
+    margin-top: 6rem !important;    /* move down */
+    padding: 1rem 1.2rem !important; /* reduce height */
     max-width: 85%;
   }
 
