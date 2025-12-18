@@ -232,7 +232,7 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .hero-church-name {
-    margin-top: 4rem; /* ⬇️ moves hero + baptist name down */
+    margin-top: 7rem; /* ⬇️ moves hero + baptist name down */
     transform: translateX(-24px); /* ⬅️ move left */
   }
   /* Move visit box slightly down */
