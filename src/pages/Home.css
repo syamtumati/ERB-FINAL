@@ -54,24 +54,41 @@
   max-width: 90%;
   padding-top: 10rem;
 }
+
+/* ================= HERO GOLD TEXT (MOBILE SAFE) ================= */
+
+.hero-church-name,
+.hero-church-name .hero-baptist {
+  display: inline-block;
+}
+
+/* Apply gradient to BOTH */
 .hero-church-name {
-  font-size: 5.5rem !important;
-  font-weight: 900;
-/*  color: #e8c0a0;*/
   background: linear-gradient(
     180deg,
-    #cfa88a 0%,   /* darker highlight */
-    #b78f66 40%,  /* rich mid gold */
-    #7a4c2f 100%  /* deep gold base */
+    #cfa88a 0%,
+    #b78f66 40%,
+    #7a4c2f 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  line-height: 1.05;
-  margin: 0 0 1rem 0 !important;
-  letter-spacing: -2px;
 }
+
+.hero-church-name .hero-baptist {
+  background: linear-gradient(
+    180deg,
+    #cfa88a 0%,
+    #b78f66 40%,
+    #7a4c2f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 .hero-subtitle {
   font-size: 2.5rem;
   font-weight: 600;
