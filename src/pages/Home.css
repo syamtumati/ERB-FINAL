@@ -239,6 +239,11 @@
 
 /* ================= LAPTOP VISIT BOX (13″–17″) ================= */
 @media (min-width: 1024px) and (max-width: 1799px) {
+  .hero-church-name,
+  .hero-visit-box {
+    margin-left: -24px;
+  }
+
   .hero-visit-box {
     max-width: 420px;        /* ⬅️ narrower */
     padding: 1.4rem 1.8rem; /* ⬅️ shorter height */
@@ -260,6 +265,11 @@
 
 /* ================= LARGE DESKTOP ONLY ================= */
 @media (min-width: 1800px) {
+  .hero-church-name,
+  .hero-visit-box {
+    margin-left: -32px;
+  }
+
   .hero-visit-box {
     max-width: 520px;
     padding: 2.4rem 2.8rem;
