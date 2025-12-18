@@ -779,8 +779,8 @@
   /* Reduce visit box size */
   .hero-visit-box {
     padding: 1.8rem 2rem;   /* smaller box */
-    max-width: 460px;       /* narrower */
-    margin-top: 2rem;       /* pulls it up */
+    max-width: 440px;       /* narrower */
+    margin-top: 4rem;       /* pulls it up */
   }
 
 }
