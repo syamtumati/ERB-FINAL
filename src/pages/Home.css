@@ -769,8 +769,8 @@
 }
 
 @media (min-width: 1600px) and (min-height: 1000px) {
-  body {
-    outline: 10px solid red !important;
+  .hero-visit-box {
+    background: red !important;
+    color: white !important;
   }
 }
-
