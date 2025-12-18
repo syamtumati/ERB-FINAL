@@ -493,3 +493,21 @@
   }
 }
 
+/* ================= MOBILE CARD SIZE FIX ================= */
+@media (max-width: 480px) {
+
+  /* Reduce overall grid width */
+  .what-matters-grid {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Make cards smaller and centered */
+  .matter-block {
+    max-width: 88%;          /* 👈 key: narrower cards */
+    margin: 0 auto;          /* center */
+    padding: 1.6rem 1.4rem;  /* smaller padding */
+  }
+}
+
