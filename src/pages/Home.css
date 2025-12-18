@@ -768,9 +768,21 @@
   }
 }
 
-@media (min-width: 1600px) and (min-height: 1000px) {
+/* ================= LARGE DESKTOP (1920×1200 SAFE FIX) ================= */
+@media (min-width: 1600px) and (min-aspect-ratio: 8/5) {
+
+  /* Push hero name slightly DOWN */
+  .hero-church-name {
+    margin-top: 2.5rem !important;
+  }
+
+  /* Reduce visit box size (VISUAL GUARANTEE) */
   .hero-visit-box {
-    background: red !important;
-    color: white !important;
+    transform: scale(0.9) !important;
+    transform-origin: top center;
+
+    padding: 1.6rem 1.8rem !important;
+    max-width: 420px !important;
   }
 }
+
