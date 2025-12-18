@@ -717,12 +717,12 @@
   .hero-baptist {
     display: block;
     position: relative;
-    left: -10px; /* 👈 move only this word left */
+    left: -12px; /* 👈 move only this word left */
   }
 
   /* VISIT BOX – move DOWN safely */
   .hero-visit-box {
-    margin-top: 4.5rem !important;
+    margin-top: 6rem !important;
     position: static !important;
     transform: none !important;
   }
