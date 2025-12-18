@@ -236,7 +236,7 @@
   }
   /* Move visit box slightly down */
   .hero-visit-box {
-    margin-top: 9rem;
+    margin-top: 11rem;
     transform: translateX(-30px); /* ⬅️ move left */
   }
 }
