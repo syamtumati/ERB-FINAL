@@ -407,23 +407,25 @@
   max-width: 580px;       /* was 640px */
 }
 
-/* ==================== MOBILE FIXES – UNIFIED & FINAL (≤ 600px) ==================== */
-@media (max-width: 600px) {
-  /* Reliable Android/mobile viewport */
+/* ==================== MOBILE FIXES – COMPLETE & WORKING (≤ 768px) ==================== */
+/* This replaces ALL previous mobile media queries. Delete any old @media (max-width: 768px), (max-width: 600px), (max-width: 380px) related to hero. */
+
+@media (max-width: 768px) {
+  /* Reliable height for Android to avoid cutoff */
   .hero-video-section {
     min-height: 100svh !important;
     min-height: -webkit-fill-available !important;
   }
 
-  /* No padding-top – use pure centering to clear header without pushing content down */
+  /* Clear fixed header (logo + menu) without hiding content – adjust 80px if your header is taller/shorter */
   .hero-overlay {
-    padding-top: 0 !important;
-    align-items: center;
-    justify-content: center;
+    padding-top: 80px !important;  /* Key: clears header, keeps hero visible */
+    align-items: flex-start;       /* Start from top after padding */
+    justify-content: flex-start;
   }
 
   .hero-content-centered {
-    padding-top: 0 !important;
+    padding-top: 4rem !important;  /* Extra starting space for nice look */
     margin-top: 0 !important;
     width: 100%;
     max-width: 100%;
@@ -431,76 +433,87 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem; /* Flexible spacing between title and visit box */
   }
 
-  /* HERO CHURCH NAME – Visible and perfectly fitted */
+  /* Hero church name – centered, fits perfectly on A52 & S20 FE */
   .hero-church-name {
-    font-size: 2.35rem !important;
-    line-height: 1.22 !important;
-    margin: 0 auto !important;
-    padding: 0 1.8rem !important;
+    font-size: 2.6rem !important;
+    line-height: 1.2 !important;
+    margin: 0 auto 1.5rem auto !important;
+    padding: 0 2rem !important;
     text-align: center;
     max-width: 100%;
     box-sizing: border-box;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-    hyphens: none !important;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
     white-space: normal;
     transform: none !important;
-    position: static !important;
   }
 
-  /* Clean line break for Baptistengemeinde */
+  /* Clean line break for "Baptistengemeinde" */
   .hero-baptist {
     display: block;
-    margin-top: 0.3rem;
+    margin-top: 0.4rem;
     margin-left: 0 !important;
-    transform: none !important;
   }
 
-  /* Visit box – compact, not pushed too far down */
+  /* Visit box – compact and properly spaced */
   .hero-visit-box {
-    margin-top: 0 !important; /* Removed large margin – gap from flex handles spacing */
-    padding: 2rem 1.8rem !important;
-    max-width: 90% !important;
+    margin-top: 4rem !important;
+    padding: 2rem 2.2rem !important;
+    max-width: 88% !important;
     transform: none !important;
-    position: static !important;
   }
 
   .hero-visit-title {
-    font-size: 1.6rem !important;
+    font-size: 1.7rem !important;
   }
 
   .hero-visit-time,
   .hero-visit-address {
-    font-size: 1.05rem !important;
+    font-size: 1.1rem !important;
   }
 }
 
-/* Extra small phones – fine-tune if needed */
+/* Smaller phones – fine-tune font and spacing */
+@media (max-width: 480px) {
+  .hero-overlay {
+    padding-top: 70px !important;  /* Slightly less on small screens */
+  }
+
+  .hero-content-centered {
+    padding-top: 3rem !important;
+  }
+
+  .hero-church-name {
+    font-size: 2.3rem !important;
+    padding: 0 1.5rem !important;
+  }
+
+  .hero-visit-box {
+    margin-top: 3.5rem !important;
+    padding: 1.8rem 2rem !important;
+    max-width: 85% !important;
+  }
+
+  .hero-visit-title {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 1rem !important;
+  }
+}
+
+/* Very small phones */
 @media (max-width: 380px) {
   .hero-church-name {
-    font-size: 2.15rem !important;
-    padding: 0 1.2rem !important;
+    font-size: 2.1rem !important;
   }
-  .hero-content-centered {
-    gap: 1.5rem;
-  }
-}
 
-/* Medium phones (tablets/small landscape) – smooth */
-@media (max-width: 768px) and (min-width: 601px) {
-  .hero-church-name {
-    font-size: 2.8rem !important;
-    padding: 0 2rem;
-  }
-  .hero-content-centered {
-    gap: 3rem;
-  }
   .hero-visit-box {
-    padding: 2.2rem 2.4rem;
-    max-width: 85%;
+    margin-top: 3rem !important;
   }
 }
