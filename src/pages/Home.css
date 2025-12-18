@@ -443,7 +443,7 @@
   }
 
   .hero-content-centered {
-    padding-top: 7rem;
+    padding-top: 5.8rem;
   }
 
   .hero-church-name {
@@ -457,9 +457,11 @@
   }
 
   .hero-visit-box {
-    margin-top: 2.5rem;
-    padding: 1.2rem 1.4rem;
-    max-width: 90%;
+    margin-top: 2.4rem !important;
+    margin-left: 0.8rem;     /* 👈 move left */
+    margin-right: auto;
+    padding: 1.05rem 1.2rem; /* reduce height */
+    max-width: 82%;          /* reduce width */
   }
 
   .hero-visit-title {
