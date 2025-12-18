@@ -60,9 +60,9 @@
 /*  color: #e8c0a0;*/
   background: linear-gradient(
     180deg,
-    #f1d2bc 0%,   /* lighter highlight (derived from e8c0a0) */
-    #e8c0a0 45%,  /* your base gold */
-    #c89a73 100%  /* darker, richer gold */
+    #efd0b8 0%,
+    #e8c0a0 40%,
+    #b88762 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
