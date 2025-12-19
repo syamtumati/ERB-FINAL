@@ -227,6 +227,6 @@
     text-align: center;
 
     /* 👈 move hero slightly left */
-    transform: translateX(-20px);
+    transform: translateX(-40px);
   }
 }
