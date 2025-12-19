@@ -294,8 +294,9 @@
     text-align: center;
   }
 
-  .what-matters-grid {
-    margin-right: 120px; /* ⬅️ moves boxes LEFT toward center */
+  .matter-block {
+    padding: 3.2rem 2.6rem;   /* ⬆️ slightly bigger */
+    max-width: 460px;         /* ⬆️ wider box */
   }
 
   .what-matters-grid .main-title {
