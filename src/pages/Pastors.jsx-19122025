@@ -59,6 +59,12 @@ const Pastors = () => {
               Evangelische Theologie, wurde 2014 als Missionar nach Frankfurt
               ausgesandt und dient seit 2016 als Pastor der Gnadenkirche.
             </p>
+            <div className="contact">
+              <strong>E-Mail:</strong>{" "}
+              <a href="mailto:info@gnadenkirche-frankfurt.de">
+                info@gnadenkirche-frankfurt.de
+              </a>
+            </div>
           </div>
         </section>
 
@@ -73,7 +79,7 @@ const Pastors = () => {
             <h1>Hans Ewert</h1>
             <h2>Diakon der Gnadenkirche Frankfurt</h2>
             <p className="bio">
-              Hans Ewert ist verheiratet und Vater von drei Kindern. Er wurde in
+              Hans Ewert ist verheiratet und Vater von zwei Kindern. Er wurde in
               eine russlanddeutsche Baptistengemeinde hineingeboren und
               bekehrte sich mit zehn Jahren. Er arbeitet im technischen
               Kundensupport und dient seit 2023 als Diakon in der Gnadenkirche
