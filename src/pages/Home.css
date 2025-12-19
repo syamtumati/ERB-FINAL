@@ -288,7 +288,7 @@
 
 }
 
-/* ================= WHAT MATTERS – DESKTOP (TRULY CENTERED) ================= */
+/* ================= WHAT MATTERS – DESKTOP CENTER FIX ================= */
 @media (min-width: 1025px) {
   .what-matters-section {
     text-align: center;
@@ -296,13 +296,13 @@
 
   .what-matters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, max-content));
+
+    /* 🔑 two cards side-by-side, sized by content */
+    grid-template-columns: max-content max-content;
     gap: 3rem;
 
-    /* 🔑 THIS is what actually centers the two cards */
-    max-width: fit-content;
+    /* 🔑 THIS centers the pair */
     margin: 0 auto;
-    justify-content: center;
   }
 
   .what-matters-grid .main-title {
