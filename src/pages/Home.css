@@ -47,24 +47,16 @@
   text-align: center;
 }
 
-/* HERO TITLE – CLEAN & SOLID */
 .hero-church-name {
-  color: #e6c3a0;          /* warm gold tone */
+  color: #d2b184; /* matches logo gold */
   font-size: 3.4rem;
   line-height: 1.2;
-  text-align: center;
-
-  /* optional: very soft depth for readability */
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
-/* BAPTIST LINE – SAME STYLE AS ABOVE */
 .hero-church-name .hero-baptist {
-  display: block;
-  margin-top: 0.3rem;
+  color: inherit;
   font-size: inherit;
-  color: inherit;         /* EXACT same color */
-  text-shadow: inherit;  /* EXACT same shadow */
 }
 
 /* VISIT BOX */
