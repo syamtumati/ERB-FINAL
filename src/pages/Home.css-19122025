@@ -142,10 +142,8 @@
 
 .what-matters-grid {
   display: grid;
-  grid-template-columns: repeat(2, 420px); /* fixed card width */
-  gap: 3rem;
-  justify-content: center; /* true centering */
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
 }
 
 .matter-block {
@@ -215,10 +213,6 @@
   .hero-visit-address {
     font-size: 0.95rem;
     line-height: 1.35;
-  }
-
-  .what-matters-grid {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -292,5 +286,24 @@
     font-size: 1.15rem;
   }
 
+}
+
+/* ================= WHAT MATTERS – DESKTOP (CLEAN CENTERED) ================= */
+@media (min-width: 1025px) {
+  .what-matters-section {
+    text-align: center;
+  }
+
+  .what-matters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 420px); /* stable card width */
+    gap: 3rem;
+    justify-content: center; /* centers cards */
+  }
+
+  .main-title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 }
 
