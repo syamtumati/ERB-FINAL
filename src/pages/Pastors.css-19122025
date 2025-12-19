@@ -114,13 +114,12 @@
 }
 
 .pastor-photo img {
-  display: block;        /* 🔑 removes inline image gap */
   width: 100%;
   height: 520px;
   object-fit: cover;
   object-position: center 20%;
+  transition: transform 1s;
 }
-
 
 .pastor-photo:hover img {
   transform: scale(1.06);
