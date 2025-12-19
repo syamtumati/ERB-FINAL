@@ -57,7 +57,7 @@ const Pastors = () => {
               in Vernachlässigung auf und lebte in tiefer Gottlosigkeit, bis er
               als Teenager durch ein Traktat zum Glauben kam. Er studierte
               Evangelische Theologie, wurde 2014 als Missionar nach Frankfurt
-              ausgesandt und dient seit 2016 als Pastor der Gnadenkirche.
+              ausgesandt und dient seit 2016 als Pastor der Evangelisch-Reformierte Baptistengemeinde.
             </p>
           </div>
         </section>
@@ -76,7 +76,7 @@ const Pastors = () => {
               Hans Ewert ist verheiratet und Vater von drei Kindern. Er wurde in
               eine russlanddeutsche Baptistengemeinde hineingeboren und
               bekehrte sich mit zehn Jahren. Er arbeitet im technischen
-              Kundensupport und dient seit 2023 als Diakon in der Gnadenkirche
+              Kundensupport und dient seit 2023 als Diakon in der Evangelisch-Reformierte Baptistengemeinde.
               Frankfurt.
             </p>
           </div>
