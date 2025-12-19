@@ -51,7 +51,7 @@ const Pastors = () => {
           <div className="pastor-content">
             <span className="label">Gemeindeleitung</span>
             <h1>Peter Schild</h1>
-            <h2>Pastor der Gnadenkirche Frankfurt</h2>
+            <h2>Pastor der Evangelisch-Reformierte Baptistengemeinde</h2>
             <p className="bio">
               Peter Schild ist verheiratet und Vater von fünf Kindern. Er wuchs
               in Vernachlässigung auf und lebte in tiefer Gottlosigkeit, bis er
@@ -71,7 +71,7 @@ const Pastors = () => {
           <div className="pastor-content">
             <span className="label">Diakon</span>
             <h1>Hans Ewert</h1>
-            <h2>Diakon der Gnadenkirche Frankfurt</h2>
+            <h2>Diakon der Evangelisch-Reformierte Baptistengemeinde</h2>
             <p className="bio">
               Hans Ewert ist verheiratet und Vater von drei Kindern. Er wurde in
               eine russlanddeutsche Baptistengemeinde hineingeboren und
