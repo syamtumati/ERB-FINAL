@@ -164,6 +164,30 @@
   transform: translateY(-8px);
 }
 
+/* ================= READ MORE – CLASSIC HIGHLIGHT ================= */
+.read-more {
+  margin-top: auto;                 /* pushes it to bottom */
+  padding-top: 1.8rem;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+
+  color: #c19a6b;                   /* warm gold like before */
+  text-align: center;
+
+  opacity: 1;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Hover effect (subtle, premium) */
+.matter-block:hover .read-more {
+  color: #a87d4f;
+  letter-spacing: 2.6px;
+}
+
+
 /* Mobile */
 @media (max-width: 768px) {
   .what-matters-grid {
@@ -306,10 +330,7 @@
   }
 
   .read-more {
-    margin-top: 2rem;
-    font-size: 1.05rem;
-    letter-spacing: 1.8px;
-    opacity: 0.9;
+    font-size: 1.1rem;
   }
 }
 
