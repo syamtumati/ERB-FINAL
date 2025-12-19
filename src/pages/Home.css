@@ -270,7 +270,7 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .hero-church-name {
-    margin-top: 4rem; /* ⬇️ moves hero + baptist name down */
+    margin-top: 2rem; /* ⬇️ moves hero + baptist name down */
     transform: none;    /* ❌ no translate on desktop */
   }
 
