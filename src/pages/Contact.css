@@ -297,7 +297,7 @@
     font-size: 2.4rem !important;
     letter-spacing: -1px;
     margin-bottom: 0.75rem;
-    transform: translateY(-10px); /* 👈 move title UP */
+    transform: translateY(-40px); /* 👈 move title UP */
   }
 
   .contact-hero-subtitle {
@@ -340,6 +340,6 @@
 
   /* Move the hero title DOWN */
   .contact-hero-title {
-    transform: translate(-40px, -60px) !important;  /* ↓ 20px lower */
+    transform: translate(-40px, -90px) !important;  /* ↓ 20px lower */
   }
 }
