@@ -195,10 +195,14 @@
 
 .bank-row strong {
   font-size: 1.05rem;
-  line-height: 1.4;
   font-weight: 700;
   font-family: "Georgia", serif;
-  font-variant-numeric: tabular-nums;
+
+  /* 🔑 FIX uneven numbers (IBAN / BIC) */
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+
+  line-height: 1.3;
 }
 
 .bank-row:last-child {
