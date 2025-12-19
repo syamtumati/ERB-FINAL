@@ -1,21 +1,22 @@
 /* -------------------------------------------------- */
-/* DONATIONS PAGE – CLEAN FINAL VERSION               */
+/* DONATIONS PAGE – STABLE, RESPONSIVE, CLEAN         */
 /* -------------------------------------------------- */
 
 .donations-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #0c2340, #1e3a5f);
+  background-attachment: fixed;
+
   font-family: "Georgia", serif;
   color: #fff;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
-.donations-inner {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+/* -------------------------------------------------- */
+/* MAIN WRAPPER                                       */
+/* -------------------------------------------------- */
 
 .donations-main {
   flex: 1;
@@ -25,64 +26,60 @@
   padding: 12rem 1.5rem 6rem;
 }
 
-/* CARD */
 .donations-card {
   width: 100%;
   max-width: 1100px;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   color: #222;
   border-radius: 24px;
-  padding: 3rem 2.6rem;
+  padding: 2.8rem 2.6rem;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65);
 }
 
-/* TITLE */
+/* -------------------------------------------------- */
+/* TITLE & INTRO                                      */
+/* -------------------------------------------------- */
+
 .donations-card h1 {
   font-size: 2.4rem;
-  font-weight: 800;
   margin-bottom: 0.6rem;
+  font-weight: 800;
 }
 
 .donations-intro {
   font-size: 1.15rem;
   line-height: 1.7;
   color: #444;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.4rem;
 }
 
-/* DESKTOP GRID */
-@media (min-width: 900px) {
-  .donations-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-  }
+/* -------------------------------------------------- */
+/* TWO MAIN BOXES                                     */
+/* -------------------------------------------------- */
 
-  .donations-card h1,
-  .donations-intro {
-    grid-column: 1 / -1;
-  }
-
-  .divider {
-    display: none;
-  }
-}
-
-/* FORM + BANK BOX */
 .donations-form,
 .other-ways {
   background: #f9f5ee;
   border-radius: 18px;
-  padding: 2rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  padding: 1.9rem 1.7rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* FORM */
+/* -------------------------------------------------- */
+/* FORM                                               */
+/* -------------------------------------------------- */
+
+.donations-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .field-label {
   font-size: 0.85rem;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #555;
+  letter-spacing: 0.14em;
+  color: #666;
 }
 
 .amount-row {
@@ -92,11 +89,13 @@
 }
 
 .chip {
-  padding: 0.6rem 1.1rem;
   border-radius: 999px;
   border: 1px solid #ccc;
-  background: #f7f7f7;
+  padding: 0.55rem 1.1rem;
+  font-size: 1.05rem;
+  background: #fff;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .chip.active {
@@ -104,61 +103,85 @@
   color: #fff;
 }
 
+/* ---------- CUSTOM AMOUNT (FIXED) ---------- */
+
 .custom-amount {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  border: 1px solid #ccc;
+  gap: 0.6rem;
+
+  border: 1px solid #d5c4af;
+  background: #ffffff;
   border-radius: 999px;
-  padding: 0.7rem 1rem;
-  background: #fff;
+
+  padding: 0.85rem 1.2rem;
+  min-height: 52px;
+}
+
+.currency {
+  font-size: 1.2rem;
+  color: #666;
 }
 
 .custom-amount input {
+  flex: 1;
+  font-size: 1.25rem;
   border: none;
   outline: none;
   background: transparent;
-  font-size: 1.2rem;
-  flex: 1;
+  min-width: 0;
 }
+
+/* ---------- BUTTON ---------- */
 
 .primary-btn {
   width: 100%;
-  margin-top: 1.2rem;
   padding: 1rem;
   background: #222;
   color: #fff;
-  border-radius: 999px;
   border: none;
-  font-size: 1.1rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
 }
 
-.secure-text {
-  margin-top: 0.6rem;
-  font-size: 0.9rem;
-  color: #666;
+.primary-btn:hover {
+  background: #000;
 }
 
-/* BANK */
+.secure-text {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* -------------------------------------------------- */
+/* BANK TRANSFER BOX                                  */
+/* -------------------------------------------------- */
+
 .other-ways h2 {
   font-size: 1.6rem;
   margin-bottom: 0.4rem;
 }
 
+.small-text {
+  font-size: 1.05rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
 .bank-box {
   border: 1px solid #e2d3c1;
-  border-radius: 14px;
-  padding: 1.2rem;
+  border-radius: 12px;
+  padding: 1rem;
   background: #fefaf4;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .bank-row {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 0.8rem;
+  grid-template-columns: 140px 1fr;
+  gap: 0.6rem;
   padding: 0.6rem 0;
   font-size: 1.05rem;
   border-bottom: 1px solid #eee;
@@ -183,15 +206,58 @@
   color: #fff;
 }
 
-/* MOBILE */
+/* -------------------------------------------------- */
+/* DESKTOP – TWO COLUMNS                              */
+/* -------------------------------------------------- */
+
+@media (min-width: 900px) {
+  .donations-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.4rem;
+  }
+
+  .donations-card h1,
+  .donations-intro {
+    grid-column: 1 / -1;
+  }
+}
+
+/* -------------------------------------------------- */
+/* TABLET & MOBILE                                    */
+/* -------------------------------------------------- */
+
 @media (max-width: 899px) {
+  .donations-main {
+    padding: 8rem 1rem 4rem;
+  }
+
   .donations-card {
     max-width: 560px;
+    padding: 2.2rem 1.8rem;
   }
 
   .bank-row {
     grid-template-columns: 1fr;
     gap: 0.3rem;
+  }
+}
+
+/* -------------------------------------------------- */
+/* SMALL PHONES                                       */
+/* -------------------------------------------------- */
+
+@media (max-width: 480px) {
+  .donations-main {
+    padding: 7.5rem 1rem 4rem;
+  }
+
+  .donations-card h1 {
+    font-size: 2rem;
+  }
+
+  .donations-intro {
+    font-size: 1rem;
   }
 }
 
