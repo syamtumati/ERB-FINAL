@@ -84,7 +84,7 @@ const Contact = () => {
 
             <div className="address-block">
               <p>
-                <strong>Gnadenkirche Frankfurt</strong><br />
+                <strong>Evangelisch-Reformierte Baptistengemeinde</strong><br />
                 Hohemarkstraße 75<br />
                 61440 Oberursel
               </p>
