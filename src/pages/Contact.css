@@ -217,7 +217,7 @@
 /* MOBILE: move hero title slightly down */
 @media (max-width: 768px) {
   .contact-hero-title {
-    margin-top: 1.6rem; /* 👈 adjust: 1–1.6rem */
+    margin-top: 3rem; /* 👈 adjust: 1–1.6rem */
   }
 }
 
