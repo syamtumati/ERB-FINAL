@@ -79,7 +79,12 @@
   font-size: 1.3rem;
   line-height: 2;
   margin-bottom: 1.2rem;
+
+  /* 🔑 FIX NUMBER ALIGNMENT */
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
 }
+
 
 .map-container {
   margin-top: auto;
