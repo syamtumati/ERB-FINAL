@@ -1,5 +1,5 @@
 /* ===================================================== */
-/* CONTACT PAGE – FINAL CLEAN (NO OVERLAP, NO HACKS)     */
+/* CONTACT PAGE – CLEAN & STABLE (NO IMAGE HERO)         */
 /* ===================================================== */
 
 .contact-page {
@@ -9,82 +9,63 @@
   color: #EAF1FF;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
-/* ================= HERO SECTION ===================== */
+/* ===================================================== */
+/* HERO (TEXT ONLY)                                      */
+/* ===================================================== */
 
-.contact-hero-image {
-  position: relative;
-  width: 100%;
-  min-height: 90vh;          /* flexible height */
-  background: url("/images/contact-hero.jpg") center/cover no-repeat;
-}
-
-/* Overlay stays INSIDE hero height */
-.hero-overlay {
-  position: relative;        /* 🔑 NOT absolute */
-  min-height: 90vh;
-  background: rgba(10, 8, 15, 0.58);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+.contact-hero {
   text-align: center;
-  padding: 10rem 2rem 6rem;  /* 🔑 moves hero text DOWN */
+  padding: 4.5rem 2rem 2rem;
 }
 
-/* Hero text */
 .contact-hero-title {
   font-size: 3.6rem;
   font-weight: 900;
+  margin-bottom: 1rem;
   color: #ffffff;
-  margin-bottom: 1.4rem;
-  letter-spacing: -2px;
-  text-shadow: 0 12px 50px rgba(0,0,0,0.9);
 }
 
 .contact-hero-subtitle {
-  font-size: 1.9rem;
-  max-width: 720px;
-  line-height: 1.5;
+  font-size: 1.6rem;
   color: #f0e8ff;
-  text-shadow: 0 8px 30px rgba(0,0,0,0.9);
 }
 
-/* ================= CONTENT SECTION ================== */
+/* ===================================================== */
+/* CONTENT SECTION                                       */
+/* ===================================================== */
 
 .contact-content {
   max-width: 1350px;
-  width: 100%;
   margin: 0 auto;
-  padding: 6rem 2rem 8rem;   /* 🔑 clear separation */
+  padding: 3rem 2rem 7rem;
+  width: 100%;
   box-sizing: border-box;
 }
 
-/* Grid */
+/* GRID */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
+  align-items: stretch;
 }
 
-/* ================= CARDS ============================ */
-
-.address-card,
-.form-card {
-  background: rgba(255,255,255,0.95);
-  padding: 2.6rem 2.4rem;
-  border-radius: 2.4rem;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.14);
-  display: flex;
-  flex-direction: column;
-}
+/* ===================================================== */
+/* ADDRESS CARD                                         */
+/* ===================================================== */
 
 .address-card {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 2.6rem 2.4rem 2.2rem;
+  border-radius: 2.4rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
   text-align: center;
+  color: #2d1b0a;
+  display: flex;
+  flex-direction: column;
 }
 
 .address-card h3 {
@@ -97,17 +78,29 @@
 .address-block p {
   font-size: 1.3rem;
   line-height: 2;
-  color: #3a2a18;
+  margin-bottom: 1.2rem;
 }
 
 .map-container {
   margin-top: auto;
   border-radius: 1.8rem;
   overflow: hidden;
-  height: 320px;
+  height: 280px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.2);
 }
 
-/* ================= FORM ============================ */
+/* ===================================================== */
+/* FORM CARD                                            */
+/* ===================================================== */
+
+.form-card {
+  background: rgba(255,255,255,0.96);
+  padding: 2.8rem 2.6rem 2.4rem;
+  border-radius: 2.4rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+}
 
 .form-card form {
   display: flex;
@@ -117,80 +110,107 @@
 
 .form-card input,
 .form-card textarea {
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.6rem;
-  border-radius: 1.6rem;
+  width: 100%;
+  padding: 1.5rem 1.7rem;
+  margin-bottom: 1.8rem;
+  background: #ffffff;
   border: 2px solid rgba(107,78,49,0.25);
+  border-radius: 1.6rem;
   font-size: 1.15rem;
   font-family: "Georgia", serif;
+  color: #1a1208;
+  transition: all 0.3s ease;
 }
 
 .form-card textarea {
-  min-height: 180px;
   resize: vertical;
+  min-height: 180px;
 }
 
-.form-card .coffee-btn {
+.form-card input:focus,
+.form-card textarea:focus {
+  border-color: #8b4513;
+  box-shadow: 0 0 20px rgba(139,69,19,0.25);
+  outline: none;
+}
+
+/* BUTTON */
+
+.coffee-btn {
   margin-top: auto;
+  width: 100%;
   padding: 1.5rem;
   background: linear-gradient(90deg,#6b4e31,#8c6b47);
-  color: #fff;
-  font-weight: 900;
-  font-size: 1.3rem;
-  border-radius: 999px;
-  border: none;
-  text-transform: uppercase;
-  cursor: pointer;
+  color:#fff;
+  font-weight:900;
+  font-size:1.3rem;
+  letter-spacing:1.6px;
+  border-radius:999px;
+  border:none;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 22px 60px rgba(107,78,49,0.6);
+  transition:all .4s;
 }
 
-/* ================= RESPONSIVE ====================== */
+.coffee-btn:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(90deg,#8c6b47,#a07d5b);
+}
 
-@media (max-width: 968px) {
+/* ===================================================== */
+/* SUCCESS MESSAGE                                       */
+/* ===================================================== */
+
+.success-message {
+  text-align:center;
+  padding:6rem 3rem;
+  background:rgba(255,255,255,0.96);
+  border-radius:3rem;
+  box-shadow:0 30px 80px rgba(0,0,0,0.2);
+  max-width:800px;
+  margin:4rem auto;
+  color:#2d1b0a;
+}
+
+.success-message h2 {
+  font-size:3.4rem;
+  color:#6b4e31;
+}
+
+/* ===================================================== */
+/* RESPONSIVE                                           */
+/* ===================================================== */
+
+@media (max-width: 980px) {
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
   .contact-hero-title {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 
   .contact-hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
-  .hero-overlay {
-    padding-top: 7rem;
+  .contact-content {
+    padding-top: 2.5rem;
   }
 }
 
 @media (max-width: 600px) {
-  .contact-hero-image {
-    min-height: 70vh;
-  }
-
-  .hero-overlay {
-    justify-content: flex-start;
-    padding-top: 6rem;
+  .contact-hero {
+    padding-top: 3.5rem;
   }
 
   .contact-hero-title {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
 
   .contact-hero-subtitle {
-    font-size: 1.3rem;
-    max-width: 90%;
+    font-size: 1.25rem;
   }
-
-  .contact-content {
-    padding: 4rem 1.5rem 5rem;
-  }
-}
-
-/* Hide legacy elements */
-.biscuit-footer,
-.footer-links,
-.latin {
-  display: none !important;
 }
 
