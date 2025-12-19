@@ -61,7 +61,19 @@ function Home() {
             </span>
           </Link>
 
-          <Link to="/uber-uns" className="matter-block hope">
+          <Link to="/dienst" className="matter-block focus">
+            <h3>Unser Dienst</h3>
+            <p>
+              Christus durch schriftgemäße Predigt groß machen, die Gläubigen
+              zum Dienst ausrüsten und das Evangelium vor Ort und unter den
+              Völkern verkündigen – durch von der Gemeinde getragene Mission.
+            </p>
+            <span className="read-more">
+              Unsere Dienste &amp; Missionen kennenlernen
+            </span>
+          </Link>
+
+          <Link to="/über uns" className="matter-block hope">
             <h3>Wer wir sind</h3>
             <p>
               Dass Christus in seinem Volk Gestalt gewinnt, dass Sünder durch
