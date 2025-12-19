@@ -88,7 +88,7 @@ const Messages = () => {
 
         {videos.length === 0 && (
           <p className="no-videos">
-            Keine Videos für &quot;&quot; gefunden.
+            Keine Videos gefunden.
           </p>
         )}
       </div>
