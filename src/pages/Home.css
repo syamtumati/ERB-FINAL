@@ -288,26 +288,10 @@
 
 }
 
-/* ================= WHAT MATTERS – DESKTOP (TRULY CENTERED) ================= */
+/* ================= WHAT MATTERS – DESKTOP ALIGNMENT ONLY ================= */
 @media (min-width: 1025px) {
-  .what-matters-section {
-    text-align: center;
-  }
   .what-matters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, max-content));
-    gap: 3rem;
-
-    max-width: fit-content;
-    margin: 0 auto;
-    justify-content: center;
-    transform: translateX(100px);
-  }
-
-  .what-matters-grid .main-title {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 4rem;
+    justify-items: center;
   }
 }
 
