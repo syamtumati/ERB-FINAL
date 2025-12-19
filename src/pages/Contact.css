@@ -224,5 +224,9 @@
 @media (min-width: 1024px) {
   .contact-hero {
     padding-top: 10rem; /* adjust 7–9rem */
+    text-align: center;
+
+    /* 👈 move hero slightly left */
+    transform: translateX(-20px);
   }
 }
