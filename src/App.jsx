@@ -136,7 +136,7 @@ function App() {
 
           <div className="related-heading">
             <span className="related-line" />
-            <span className="related-title">THEOLOGISCH VERBUNDENE GEMEINDEN</span>
+            <span className="related-title">VERBUNDENE GEMEINDEN</span>
             <span className="related-line" />
           </div>
 
