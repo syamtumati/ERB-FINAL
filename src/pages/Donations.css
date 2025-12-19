@@ -180,8 +180,8 @@
 
 .bank-row {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr); /* ⬅ wider label column */
-  gap: 1.2rem;
+  grid-template-columns: 140px 1fr; /* label | value */
+  gap: 1rem;
   padding: 0.7rem 0;
   font-size: 1.05rem;
   border-bottom: 1px solid #eee;
@@ -193,9 +193,8 @@
 }
 
 .bank-row strong {
+  word-break: break-word;
   font-family: "Georgia", serif;
-  word-break: normal;
-  overflow-wrap: normal;
 }
 
 .secondary-btn {
