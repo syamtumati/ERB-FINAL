@@ -200,7 +200,7 @@
   /* HERO NAME – MOVE DOWN */
   .hero-church-name {
     font-size: 2.3rem;
-    margin-top: 2.2rem;   /* 🔽 moves hero name DOWN clearly */
+    margin-top: 0.5rem;   /* 🔽 moves hero name DOWN clearly */
     margin-bottom: 0.8rem;
   }
 
