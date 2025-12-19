@@ -293,10 +293,14 @@
   .what-matters-section {
     text-align: center;
   }
+  .what-matters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, max-content));
+    gap: 3rem;
 
-  .matter-block {
-    padding: 3.2rem 2.6rem;   /* ⬆️ slightly bigger */
-    max-width: 460px;         /* ⬆️ wider box */
+    max-width: fit-content;
+    margin: 0 auto;
+    justify-content: center;
   }
 
   .what-matters-grid .main-title {
