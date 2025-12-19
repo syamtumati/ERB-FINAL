@@ -282,3 +282,34 @@
 
 }
 
+/* ================= WHAT MATTERS – DESKTOP ENHANCEMENT ================= */
+@media (min-width: 1025px) {
+  .what-matters-grid {
+    grid-template-columns: repeat(2, 460px); /* ⬅ bigger cards */
+    gap: 3.5rem;
+    justify-content: center;
+  }
+
+  .matter-block {
+    padding: 3.4rem 3rem; /* ⬅ more breathing room */
+    border-radius: 2.4rem;
+  }
+
+  .matter-block h3 {
+    font-size: 2.4rem; /* ⬅ larger heading */
+    margin-bottom: 1.6rem;
+  }
+
+  .matter-block p {
+    font-size: 1.35rem; /* ⬅ larger body text */
+    line-height: 1.85;
+  }
+
+  .read-more {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+    letter-spacing: 1.8px;
+    opacity: 0.9;
+  }
+}
+
