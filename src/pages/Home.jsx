@@ -49,18 +49,6 @@ function Home() {
         <div className="container what-matters-grid">
           <h2 className="main-title">Was uns wichtig ist</h2>
 
-          <Link to="/glaube" className="matter-block doctrine">
-            <h3>Unsere Lehre</h3>
-            <p>
-              Wir bekennen uns freudig zum Londoner Baptistenbekenntnis von 1689
-              – dem klassischen Ausdruck reformiert-baptistischer Überzeugungen
-              zur Schrift, zur Gnade allein und zur Herrlichkeit Gottes in allem.
-            </p>
-            <span className="read-more">
-              Unser vollständiges Bekenntnis lesen
-            </span>
-          </Link>
-
           <Link to="/uber-uns" className="matter-block hope">
             <h3>Wer wir sind</h3>
             <p>
@@ -70,6 +58,18 @@ function Home() {
             </p>
             <span className="read-more">
               Unsere Hirten &amp; Vision kennenlernen
+            </span>
+          </Link>
+
+	  <Link to="/glaube" className="matter-block doctrine">
+            <h3>Unsere Lehre</h3>
+            <p>
+              Wir bekennen uns freudig zum Londoner Baptistenbekenntnis von 1689
+              – dem klassischen Ausdruck reformiert-baptistischer Überzeugungen
+              zur Schrift, zur Gnade allein und zur Herrlichkeit Gottes in allem.
+            </p>
+            <span className="read-more">
+              Unser vollständiges Bekenntnis lesen
             </span>
           </Link>
         </div>
