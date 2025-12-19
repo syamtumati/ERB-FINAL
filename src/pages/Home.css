@@ -288,10 +288,22 @@
 
 }
 
-/* ================= WHAT MATTERS – DESKTOP ALIGNMENT ONLY ================= */
+/* ================= WHAT MATTERS – DESKTOP (CLEAN CENTERED) ================= */
 @media (min-width: 1025px) {
+  .what-matters-section {
+    text-align: center;
+  }
+
   .what-matters-grid {
-    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 420px); /* stable card width */
+    gap: 3rem;
+    justify-content: center; /* centers cards */
+  }
+
+  .main-title {
+    text-align: center;
+    margin-bottom: 4rem;
   }
 }
 
