@@ -295,7 +295,7 @@
   }
 
   .what-matters-grid {
-    justify-items: center;
+    margin-right: 120px; /* ⬅️ moves boxes LEFT toward center */
   }
 
   .what-matters-grid .main-title {
