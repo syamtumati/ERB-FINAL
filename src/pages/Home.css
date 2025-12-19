@@ -232,6 +232,20 @@
   .what-matters-grid {
     grid-template-columns: 1fr;
   }
+
+  .matter-block h3 {
+    font-size: 1.85rem;   /* ⬆ slightly bigger heading */
+  }
+
+  .matter-block p {
+    font-size: 1.15rem;   /* ⬆ body text more readable */
+    line-height: 1.75;
+  }
+
+  .read-more {
+    font-size: 1rem;      /* ⬆ clearer CTA */
+    letter-spacing: 2px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -242,6 +256,14 @@
 
   .hero-visit-box {
     margin-top: 7.6rem;
+  }
+
+  .matter-block h3 {
+    font-size: 1.7rem;
+  }
+
+  .matter-block p {
+    font-size: 1.1rem;
   }
 }
 
