@@ -42,12 +42,14 @@ cat src/pages/Contact.css
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;          /* centers text horizontally */
   justify-content: center;
   text-align: center;
 
   padding: 2rem;
   width: 100%;
+  left: 50%;
+  transform: translateX(-50%);  /* keeps overlay perfectly centered */
 }
 
 /* ⚠️ Contact-only hero classes (no conflict with Home) */
