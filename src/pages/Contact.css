@@ -214,3 +214,17 @@
   }
 }
 
+/* MOBILE: move hero title slightly down */
+@media (max-width: 768px) {
+  .contact-hero-title {
+    margin-top: 1.4rem; /* 👈 adjust: 1–1.6rem */
+  }
+}
+
+/* DESKTOP: move hero title slightly down */
+@media (min-width: 769px) {
+  .contact-hero-title {
+    margin-top: 1.4rem; /* 👈 adjust: 0.6–1.2rem if needed */
+  }
+}
+
