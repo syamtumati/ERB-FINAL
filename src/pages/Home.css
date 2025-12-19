@@ -240,18 +240,21 @@
     text-align: center;
   }
 
+  .what-matters-section .container {
+    display: block;
+  }
+
   .what-matters-grid {
-    position: relative;
-    left: 40px; /* ⬅️ same as before */
+    margin: 0 auto;
+    transform: translateX(-20px); /* optional aesthetic offset */
   }
 
   .what-matters-grid .main-title {
-    grid-column: 1 / -1;   /* ⬅️ ensure title is above */
+    grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 4rem;
-    position: relative;
-    left: 0;              /* ⬅️ IMPORTANT: title stays centered */
   }
+
 }
 
 /* ================= LAPTOP VISIT BOX (13″–17″) ================= */
