@@ -245,8 +245,7 @@
   }
 
   .what-matters-grid {
-    margin: 0 auto;
-    transform: translateX(-20px); /* optional aesthetic offset */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .what-matters-grid .main-title {
