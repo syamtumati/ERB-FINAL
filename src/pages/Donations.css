@@ -266,6 +266,9 @@
 /* =============================================== */
 
 @media (min-width: 900px) {
+  .donations-main {
+    padding-top: 14rem; /* was 10–12rem → increase slightly */
+  }
 
   /* Two-column layout */
   .donations-card {
