@@ -301,6 +301,7 @@
     max-width: fit-content;
     margin: 0 auto;
     justify-content: center;
+    margin-left: 100px;
   }
 
   .what-matters-grid .main-title {
