@@ -47,7 +47,7 @@
   text-align: center;
 }
 
-/* HERO TITLE – GRADIENT + SOFT SHADOW */
+/* HERO TITLE – GRADIENT ONLY (SAFE) */
 .hero-church-name {
   background: linear-gradient(
     180deg,
@@ -60,11 +60,9 @@
   background-clip: text;
   color: transparent;
 
+  /* 🔒 Lock font size so it NEVER shrinks */
   font-size: 3.4rem;
   line-height: 1.2;
-
-  /* ✅ subtle depth */
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero-church-name .hero-baptist {
@@ -81,10 +79,7 @@
 
   display: block;
   margin-top: 0.3rem;
-  font-size: inherit;
-
-  /* ✅ SAME shadow → same visual weight */
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  font-size: inherit; /* 🔒 inherit parent size */
 }
 
 /* VISIT BOX */
