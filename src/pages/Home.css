@@ -199,13 +199,13 @@
 @media (max-width: 768px) {
   /* HERO NAME – MOVE DOWN */
   .hero-church-name {
-    font-size: 2.3rem;
-    margin-top: 0.5rem;   /* 🔽 moves hero name DOWN clearly */
+    font-size: 2.4rem;
     margin-bottom: 0.8rem;
+    transform: translateY(-12px); /* ⬆ move UP safely */
   }
 
   .hero-baptist {
-    margin-top: 0.3rem;
+    transform: translateY(-8px);  /* ⬆ slightly up */
   }
 
   /* VISIT BOX – MOVE MORE DOWN */
