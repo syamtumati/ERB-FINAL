@@ -24,9 +24,9 @@ const Donations = () => {
 
   const copyBankDetails = () => {
     const text = [
-      "Kontoinhaber: Gnadenkirche Frankfurt",
-      "IBAN: DE00 0000 0000 0000 0000 00",
-      "BIC: ABCDDEFFXXX",
+      "Kontoinhaber: Reformierte Baptistengemeinde Frankfurt",
+      "IBAN: DE03510500150997023445",
+      "BIC: NASSDE55XXX",
       "Verwendungszweck: Spende",
     ].join("\n");
 
@@ -124,15 +124,15 @@ const Donations = () => {
               <div className="bank-box">
                 <div className="bank-row">
                   <span>Kontoinhaber</span>
-                  <strong>Gnadenkirche Frankfurt</strong>
+                  <strong>Reformierte Baptistengemeinde Frankfurt</strong>
                 </div>
                 <div className="bank-row">
                   <span>IBAN</span>
-                  <strong>DE00 0000 0000 0000 0000 00</strong>
+                  <strong>DE03510500150997023445</strong>
                 </div>
                 <div className="bank-row">
                   <span>BIC</span>
-                  <strong>ABCDDEFFXXX</strong>
+                  <strong>NASSDE55XXX</strong>
                 </div>
                 <div className="bank-row">
                   <span>Verwendungszweck</span>
