@@ -295,15 +295,7 @@
   }
 
   .what-matters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, max-content));
-    gap: 3rem;
-
-    /* 🔑 THIS is what actually centers the two cards */
-    max-width: fit-content;
-    margin: 0 auto;
-    justify-content: center;
-    margin-left: 60px;
+    justify-items: center;
   }
 
   .what-matters-grid .main-title {
