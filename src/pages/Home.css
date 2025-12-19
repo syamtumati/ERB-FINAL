@@ -296,15 +296,17 @@
 
   .what-matters-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards side by side */
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    justify-content: center;   /* 🔑 centers 2 cards */
     gap: 3rem;
     margin: 0 auto;
   }
 
   .what-matters-grid .main-title {
-    grid-column: 1 / -1;     /* title above cards */
+    grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 4rem;
   }
+
 }
 
