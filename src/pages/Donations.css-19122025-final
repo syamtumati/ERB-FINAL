@@ -180,21 +180,15 @@
 
 .bank-row {
   display: grid;
-  grid-template-columns: 140px 1fr; /* label | value */
-  gap: 1rem;
-  padding: 0.7rem 0;
+  grid-template-columns: 140px 1fr;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
   font-size: 1.05rem;
   border-bottom: 1px solid #eee;
-  align-items: start;
 }
 
 .bank-row:last-child {
   border-bottom: none;
-}
-
-.bank-row strong {
-  word-break: break-word;
-  font-family: "Georgia", serif;
 }
 
 .secondary-btn {
