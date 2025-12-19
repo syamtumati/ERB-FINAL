@@ -194,9 +194,8 @@
 
 .bank-row strong {
   font-family: "Georgia", serif;
-  white-space: normal;          /* allow wrapping */
-  word-break: normal;           /* ❗ do NOT break mid-number */
-  overflow-wrap: break-word;    /* wrap only if absolutely needed */
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 .secondary-btn {
@@ -309,6 +308,10 @@
   /* Remove mobile divider */
   .divider {
     display: none !important;
+  }
+
+  .bank-row strong {
+    white-space: nowrap;   /* ✅ FORCE IBAN + BIC to stay on ONE line */
   }
 }
 
