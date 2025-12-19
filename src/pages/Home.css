@@ -47,16 +47,44 @@
   text-align: center;
 }
 
+/* HERO TITLE – GRADIENT + SOFT SHADOW */
 .hero-church-name {
-  color: #d2b184; /* matches logo gold */
+  background: linear-gradient(
+    180deg,
+    #cfa88a 0%,
+    #b78f66 40%,
+    #7a4c2f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
   font-size: 3.4rem;
   line-height: 1.2;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+
+  /* ✅ subtle depth */
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero-church-name .hero-baptist {
-  color: inherit;
+  background: linear-gradient(
+    180deg,
+    #cfa88a 0%,
+    #b78f66 40%,
+    #7a4c2f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  display: block;
+  margin-top: 0.3rem;
   font-size: inherit;
+
+  /* ✅ SAME shadow → same visual weight */
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
 }
 
 /* VISIT BOX */
