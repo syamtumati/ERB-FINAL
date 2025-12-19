@@ -47,33 +47,24 @@
   text-align: center;
 }
 
-/* HERO TITLE – TOP LINE (SOLID, CLEAN) */
+/* HERO TITLE – CLEAN & SOLID */
 .hero-church-name {
-  color: #e6c3a0;            /* same tone, but SOLID */
+  color: #e6c3a0;          /* warm gold tone */
   font-size: 3.4rem;
   line-height: 1.2;
-  text-shadow: none;        /* keep it clean */
+  text-align: center;
+
+  /* optional: very soft depth for readability */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
-/* HERO TITLE – BOTTOM LINE (GRADIENT + DEPTH) */
+/* BAPTIST LINE – SAME STYLE AS ABOVE */
 .hero-church-name .hero-baptist {
-  background: linear-gradient(
-    180deg,
-    #cfa88a 0%,
-    #b78f66 40%,
-    #7a4c2f 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-
   display: block;
   margin-top: 0.3rem;
   font-size: inherit;
-
-  /* ✅ subtle depth ONLY for Baptistengemeinde */
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  color: inherit;         /* EXACT same color */
+  text-shadow: inherit;  /* EXACT same shadow */
 }
 
 /* VISIT BOX */
