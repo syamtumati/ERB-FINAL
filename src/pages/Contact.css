@@ -1,6 +1,5 @@
 /* ===================================================== */
-/* CONTACT PAGE – CLEAN FINAL VERSION                    */
-/* No gaps, no overlap, stable hero layout               */
+/* CONTACT PAGE – FINAL CLEAN (NO OVERLAP, NO HACKS)     */
 /* ===================================================== */
 
 .contact-page {
@@ -18,28 +17,26 @@
 .contact-hero-image {
   position: relative;
   width: 100%;
-  min-height: 88vh; /* responsive height */
+  min-height: 90vh;          /* flexible height */
   background: url("/images/contact-hero.jpg") center/cover no-repeat;
 }
 
+/* Overlay stays INSIDE hero height */
 .hero-overlay {
-  position: absolute;
-  inset: 0;
+  position: relative;        /* 🔑 NOT absolute */
+  min-height: 90vh;
   background: rgba(10, 8, 15, 0.58);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 
-  padding-top: 8rem; /* 👈 moves hero title DOWN safely */
-  padding-left: 2rem;
-  padding-right: 2rem;
+  text-align: center;
+  padding: 10rem 2rem 6rem;  /* 🔑 moves hero text DOWN */
 }
 
 /* Hero text */
-
 .contact-hero-title {
   font-size: 3.6rem;
   font-weight: 900;
@@ -63,12 +60,11 @@
   max-width: 1350px;
   width: 100%;
   margin: 0 auto;
-  padding: 5rem 2rem 8rem;
+  padding: 6rem 2rem 8rem;   /* 🔑 clear separation */
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
+/* Grid */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,8 +82,6 @@
   display: flex;
   flex-direction: column;
 }
-
-/* Address card */
 
 .address-card {
   text-align: center;
@@ -113,7 +107,7 @@
   height: 320px;
 }
 
-/* Form card */
+/* ================= FORM ============================ */
 
 .form-card form {
   display: flex;
@@ -123,7 +117,6 @@
 
 .form-card input,
 .form-card textarea {
-  width: 100%;
   padding: 1.4rem 1.6rem;
   margin-bottom: 1.6rem;
   border-radius: 1.6rem;
@@ -137,13 +130,6 @@
   resize: vertical;
 }
 
-.form-card input:focus,
-.form-card textarea:focus {
-  border-color: #8b4513;
-  box-shadow: 0 0 20px rgba(139,69,19,0.25);
-  outline: none;
-}
-
 .form-card .coffee-btn {
   margin-top: auto;
   padding: 1.5rem;
@@ -155,16 +141,10 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: 0 22px 60px rgba(107,78,49,0.6);
-}
-
-.form-card .coffee-btn:hover {
-  transform: translateY(-6px);
 }
 
 /* ================= RESPONSIVE ====================== */
 
-/* Tablet & mobile */
 @media (max-width: 968px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -177,9 +157,12 @@
   .contact-hero-subtitle {
     font-size: 1.5rem;
   }
+
+  .hero-overlay {
+    padding-top: 7rem;
+  }
 }
 
-/* Phones */
 @media (max-width: 600px) {
   .contact-hero-image {
     min-height: 70vh;
@@ -200,11 +183,11 @@
   }
 
   .contact-content {
-    padding: 3.5rem 1.5rem 5rem;
+    padding: 4rem 1.5rem 5rem;
   }
 }
 
-/* Hide legacy footer bits if any */
+/* Hide legacy elements */
 .biscuit-footer,
 .footer-links,
 .latin {
