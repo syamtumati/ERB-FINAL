@@ -8,7 +8,7 @@ import heroImage from "../assets/images/hero-message.jpg";
 function Home() {
   return (
     <div className="home-page">
-      {/* HERO BILD MIT DEUTSCHEM TEXT */}
+      {/* ================= HERO ================= */}
       <section className="hero-video-section">
         <img
           className="hero-video"
@@ -17,11 +17,12 @@ function Home() {
         />
         <div className="hero-overlay">
           <div className="hero-content-centered">
-            <h1 className=" hero-church-name">
-	      Evangelisch-Reformierte
-	      <span className="hero-baptist">Baptistengemeinde</span>
+            <h1 className="hero-church-name">
+              Evangelisch-Reformierte
+              <span className="hero-baptist">Baptistengemeinde</span>
             </h1>
-            {/* Visit-us card directly under title + subtitle */}
+
+            {/* Visit-us card */}
             <div className="hero-visit-box">
               <h2 className="hero-visit-title">
                 Besuchen Sie uns diesen Sonntag!
@@ -44,34 +45,39 @@ function Home() {
         </div>
       </section>
 
-      {/* WAS UNS WICHTIG IST */}
+      {/* ================= WAS UNS WICHTIG IST ================= */}
       <section className="what-matters-section">
-        <div className="container what-matters-grid">
+        <div className="container">
+          {/* TITLE (outside grid) */}
           <h2 className="main-title">Was uns wichtig ist</h2>
 
-          <Link to="/uber-uns" className="matter-block hope">
-            <h3>Wer wir sind</h3>
-            <p>
-              Dass Christus in seinem Volk Gestalt gewinnt, dass Sünder durch
-              souveräne Gnade gerettet werden und dass Gott in der Gemeinde und
-              unter den Völkern verherrlicht wird – bis er wiederkommt.
-            </p>
-            <span className="read-more">
-              Unsere Hirten &amp; Vision kennenlernen
-            </span>
-          </Link>
+          {/* GRID (cards only) */}
+          <div className="what-matters-grid">
+            <Link to="/uber-uns" className="matter-block hope">
+              <h3>Wer wir sind</h3>
+              <p>
+                Dass Christus in seinem Volk Gestalt gewinnt, dass Sünder durch
+                souveräne Gnade gerettet werden und dass Gott in der Gemeinde und
+                unter den Völkern verherrlicht wird – bis er wiederkommt.
+              </p>
+              <span className="read-more">
+                Unsere Hirten &amp; Vision kennenlernen
+              </span>
+            </Link>
 
-	  <Link to="/glaube" className="matter-block doctrine">
-            <h3>Unsere Lehre</h3>
-            <p>
-              Wir bekennen uns freudig zum Londoner Baptistenbekenntnis von 1689
-              – dem klassischen Ausdruck reformiert-baptistischer Überzeugungen
-              zur Schrift, zur Gnade allein und zur Herrlichkeit Gottes in allem.
-            </p>
-            <span className="read-more">
-              Unser vollständiges Bekenntnis lesen
-            </span>
-          </Link>
+            <Link to="/glaube" className="matter-block doctrine">
+              <h3>Unsere Lehre</h3>
+              <p>
+                Wir bekennen uns freudig zum Londoner Baptistenbekenntnis von 1689
+                – dem klassischen Ausdruck reformiert-baptistischer Überzeugungen
+                zur Schrift, zur Gnade allein und zur Herrlichkeit Gottes in
+                allem.
+              </p>
+              <span className="read-more">
+                Unser vollständiges Bekenntnis lesen
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
     </div>
