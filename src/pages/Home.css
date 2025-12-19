@@ -201,7 +201,7 @@
   .hero-church-name {
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
-    transform: translateY(-12px); /* ⬆ move UP safely */
+    transform: translateY(-30px); /* ⬆ move UP safely */
   }
 
   .hero-baptist {
