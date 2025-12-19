@@ -47,44 +47,37 @@
   text-align: center;
 }
 
-/* HERO TITLE – GRADIENT + SOFT SHADOW */
+/* HERO TITLE – CLEAN, SOLID, IDENTICAL LINES */
 .hero-church-name {
-  background: linear-gradient(
-    180deg,
-    #cfa88a 0%,
-    #b78f66 40%,
-    #7a4c2f 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-
   font-size: 3.4rem;
   line-height: 1.2;
+  text-align: center;
 
-  /* ✅ subtle depth */
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  /* SOLID color */
+  color: #d2b184;
+
+  /* readability on image */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+
+  /* 🚫 force-remove any old gradient behavior */
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
 }
 
+/* BAPTIST LINE – EXACT SAME STYLE */
 .hero-church-name .hero-baptist {
-  background: linear-gradient(
-    180deg,
-    #cfa88a 0%,
-    #b78f66 40%,
-    #7a4c2f 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-
   display: block;
   margin-top: 0.3rem;
-  font-size: inherit;
 
-  /* ✅ SAME shadow → same visual weight */
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  font-size: inherit;
+  color: inherit;
+  text-shadow: inherit;
+
+  /* 🚫 hard reset (this fixes your issue) */
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
 }
 
 /* VISIT BOX */
