@@ -65,7 +65,7 @@ const Messages = () => {
   return (
     <div className="messages-page">
       <div className="messages-hero">
-        <h1>Neueste Predigten – Peter Schild</h1>
+        <h1>Neueste Predigten</h1>
       </div>
 
       {/* GRID OF VIDEOS */}
@@ -88,7 +88,7 @@ const Messages = () => {
 
         {videos.length === 0 && (
           <p className="no-videos">
-            Keine Videos für &quot;Peter Schild&quot; gefunden.
+            Keine Videos für &quot;&quot; gefunden.
           </p>
         )}
       </div>
