@@ -129,6 +129,7 @@ function Home() {
           {/* Add more slides here if you import more images */}
 
           {/* Scripture Overlay */}
+	  {/*
           <div className="slideshow-overlay">
             <div className="scripture-box">
               <p className="scripture-text">
@@ -137,6 +138,7 @@ function Home() {
               <p className="scripture-reference">— Epheser 2,8</p>
             </div>
           </div>
+	  */}
         </div>
       </section>
     </div>
