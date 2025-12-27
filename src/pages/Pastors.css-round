@@ -1,0 +1,224 @@
+/* ===================================================== */
+/* PASTORS – CLEAN, STABLE, UNIFIED                     */
+/* ===================================================== */
+
+.pastors-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0c2340, #1e3a5f);
+  color: #eaf1ff;
+  font-family: "Georgia", serif;
+  overflow-x: hidden;
+}
+
+/* ===================================================== */
+/* SHARED CONTAINER                                     */
+/* ===================================================== */
+
+.pastors-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+/* ===================================================== */
+/* SECTION HEADINGS                                     */
+/* ===================================================== */
+
+.pastors-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 4rem;
+  text-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
+}
+
+/* ===================================================== */
+/* UNSERE LEITUNG                                       */
+/* ===================================================== */
+
+.leadership-section {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+.pastor-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+.pastor-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(232, 192, 160, 0.6);
+}
+
+.pastor-text {
+  max-width: 700px;
+}
+
+.pastor-text .label {
+  color: #e8c0a0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.pastor-text h3 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0.4rem 0 1.2rem;
+}
+
+.pastor-text p {
+  font-size: 1.24rem;
+  line-height: 2.05;
+  color: #eaf1ff;
+  opacity: 0.95;
+}
+
+/* ===================================================== */
+/* HEARTCRY                                             */
+/* ===================================================== */
+
+.heartcry-section {
+  padding: 6rem 0 7rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
+}
+
+.section-subtitle {
+  font-size: 1.7rem;
+  color: #d9e4ea;
+  margin-bottom: 2.8rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto 3rem auto;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 80px 190px rgba(0, 0, 0, 0.85);
+  border: 14px solid rgba(232, 192, 160, 0.42);
+}
+
+.video-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.youtube-player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-description {
+  font-size: 1.35rem;
+  color: #eff6fb;
+  max-width: 950px;
+  margin: 2.2rem auto 0;
+  line-height: 2.1;
+}
+
+/* ===================================================== */
+/* MOBILE (UNCHANGED BEHAVIOR)                          */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  .pastors-container {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .pastors-heading {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .pastor-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.8rem;
+  }
+
+  .pastor-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .pastor-text h3 {
+    font-size: 2rem;
+  }
+
+  .pastor-text p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .video-container {
+    border-radius: 1.6rem;
+    border-width: 6px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7);
+  }
+
+  .video-container::before {
+    padding-top: 75%;
+  }
+}
+
+/* ===================================================== */
+/* DESKTOP MICRO-ADJUSTMENTS (YOUR 3 REQUESTS)          */
+/* ===================================================== */
+
+@media (min-width: 1024px) {
+
+  /* 1️⃣ Slightly bigger pastor pictures */
+  .pastor-avatar {
+    width: 185px;
+    height: 185px;
+  }
+
+  /* 2️⃣ Move "Unsere Leitung" up & left */
+  .pastors-heading {
+    margin-top: -1.5rem;
+    transform: translateX(-18px);
+  }
+
+  /* 3️⃣ Move HeartCry section a little up */
+  .heartcry-section {
+    padding-top: 4.5rem;
+  }
+}
+

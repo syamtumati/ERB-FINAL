@@ -1,0 +1,98 @@
+import React from "react";
+import "./Pastors.css";
+
+import seniorPastor from "../assets/pastors/senior-pastor.jpg";
+import deaconHans from "../assets/pastors/deacon-hans.jpg";
+
+const Pastors = () => {
+  return (
+    <main className="pastors-page">
+
+      {/* ===== SHARED BACKGROUND ===== */}
+      <div className="pastors-bg">
+
+        {/* ================= UNSERE LEITUNG ================= */}
+        <section className="leadership-section">
+          <div className="pastors-container">
+
+            <h2 className="pastors-heading">Unsere Leitung</h2>
+
+            {/* PASTOR */}
+            <div className="pastor-row">
+              <img
+                src={seniorPastor}
+                alt="Pastor Peter Schild"
+                className="pastor-avatar"
+              />
+
+              <div className="pastor-text">
+                <span className="label">Pastor</span>
+                <h3>Peter Schild</h3>
+                <p>
+                  Peter Schild ist verheiratet und Vater von fünf Kindern. Er wuchs
+                  in Vernachlässigung auf und lebte in tiefer Gottlosigkeit, bis er
+                  als Teenager durch ein Traktat zum Glauben kam. Er studierte
+                  Evangelische Theologie, wurde 2014 als Missionar nach Frankfurt
+                  ausgesandt und dient seit 2016 als Pastor der
+                  Evangelisch-Reformierten Baptistengemeinde Frankfurt.
+                </p>
+              </div>
+            </div>
+
+            {/* DIAKON */}
+            <div className="pastor-row">
+              <img
+                src={deaconHans}
+                alt="Diakon Hans Ewert"
+                className="pastor-avatar"
+              />
+
+              <div className="pastor-text">
+                <span className="label">Diakon</span>
+                <h3>Hans Ewert</h3>
+                <p>
+                  Hans Ewert ist verheiratet und Vater von drei Kindern. Er wurde in
+                  eine russlanddeutsche Baptistengemeinde hineingeboren und
+                  bekehrte sich mit zehn Jahren. Er arbeitet im technischen
+                  Kundensupport und dient seit 2023 als Diakon der
+                  Evangelisch-Reformierten Baptistengemeinde Frankfurt.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ================= HEARTCRY ================= */}
+        <section className="heartcry-section">
+          <div className="pastors-container">
+
+            <h2 className="section-title white-title">HeartCry Film</h2>
+            <p className="section-subtitle">
+              Nach der Finsternis das Licht – Gottes Werk in Deutschland
+            </p>
+
+            <div className="video-container">
+              <iframe
+                className="youtube-player"
+                src="https://www.youtube.com/embed/zEU7AhZzdM8"
+                title="Nach der Finsternis das Licht"
+                allowFullScreen
+              />
+            </div>
+
+            <p className="video-description">
+              Ein eindrucksvoller Dokumentarfilm über das Erbe der Reformation
+              und das souveräne Wirken Gottes in unserem Land.
+            </p>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+  );
+};
+
+export default Pastors;
+

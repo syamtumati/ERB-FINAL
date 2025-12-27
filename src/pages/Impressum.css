@@ -1,6 +1,7 @@
 /* ================= SECTION ================= */
 .impressum-section {
-  background: linear-gradient(135deg, #0c2340, #1e3a5f);
+/*  background: linear-gradient(135deg, #0c2340, #1e3a5f);*/
+  background: #384852;
   padding: 7rem 2rem 10rem;
   color: white;
 }

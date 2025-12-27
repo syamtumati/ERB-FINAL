@@ -1,6 +1,7 @@
 /* ===== PAGE ===== */
 .slide-page {
-  background: linear-gradient(135deg, #0c2340, #1e3a5f);
+/*  background: linear-gradient(135deg, #0c2340, #1e3a5f);*/
+  background: #384852; /* ✅ unified solid background */
   padding: 6rem 1.5rem 7rem;
   font-family: "Georgia", serif;
   min-height: 100vh;
