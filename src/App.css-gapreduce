@@ -199,48 +199,29 @@ body {
 }
 
 /* ======================= */
-/* PAPER TEXTURE BACKGROUND FOR PARTNER & FOOTER */
-/* ======================= */
-.partner-heartcry,
-.related-churches,
-.clean-footer {
-  background: #f9f7f4;                 /* Matches "Unser Glaube" page */
-  position: relative;
-}
-
-.partner-heartcry::before,
-.related-churches::before,
-.clean-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(120, 119, 108, 0.03) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(120, 119, 108, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-/* ======================= */
-/* UNSERE PARTNER SECTION */
+/* UNSERE PARTNER SECTION – REDUCED PADDING */
 /* ======================= */
 .partner-heartcry {
-  padding: 2.5rem 1.5rem 2rem;
+  background: #f4f3f1;
+  padding: 2.5rem 1.5rem 2rem;        /* Reduced top/bottom padding */
   text-align: center;
   font-family: "Georgia", serif;
   color: #2d1b0a;
 }
+
 .partner-inner {
   max-width: 900px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
+
 .partner-heading {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
 }
+
 .partner-heartcry-title {
   font-size: 1rem;
   font-weight: 700;
@@ -248,38 +229,42 @@ body {
   text-transform: uppercase;
   color: #8b4513;
 }
+
 .partner-line {
   width: 60px;
   height: 1px;
   background: #8b4513;
 }
+
 .heartcry-logo {
   max-width: 240px;
   height: auto;
 }
 
 /* ======================= */
-/* VERBUNDENE GEMEINDEN */
+/* VERBUNDENE GEMEINDEN – REDUCED PADDING */
 /* ======================= */
 .related-churches {
-  padding: 2rem 1.5rem 2.5rem;
+  background: #f4f3f1;
+  padding: 2rem 1.5rem 2.5rem;        /* Reduced padding */
   text-align: center;
   font-family: "Georgia", serif;
   color: #2d1b0a;
 }
+
 .related-inner {
   max-width: 900px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
+
 .related-heading {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.4rem;
 }
+
 .related-title {
   font-size: 1rem;
   font-weight: 700;
@@ -287,11 +272,13 @@ body {
   text-transform: uppercase;
   color: #8b4513;
 }
+
 .related-line {
   width: 60px;
   height: 1px;
   background: #8b4513;
 }
+
 .related-list {
   display: flex;
   justify-content: center;
@@ -299,82 +286,72 @@ body {
   gap: 1rem;
   font-size: 1.15rem;
 }
+
 .related-church {
-  color: #000000;               /* Black as requested */
+  color: #8b4513;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 1px;
-  transition: color 0.3s ease;
 }
+
 .related-church:hover {
-  color: #333333;
   text-decoration: underline;
 }
+
 .related-separator {
   color: #8b4513;
   opacity: 0.7;
 }
 
 /* ======================= */
-/* FOOTER – GOLD TEXT */
+/* FOOTER – REDUCED PADDING */
 /* ======================= */
 .clean-footer {
-  padding: 2.8rem 2rem 2.2rem;
+  background: #f4f3f1;
+  padding: 2.8rem 2rem 2.2rem;        /* Reduced top/bottom padding */
   text-align: center;
   font-family: "Georgia", serif;
+  color: #2d1b0a;
 }
+
 .footer-inner {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.4rem;                        /* Slightly tighter gap */
   align-items: center;
-  position: relative;
-  z-index: 1;
 }
+
 .church-name {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 900;
-  color: #d7a955;               /* Gold */
+  color: #8b4513;
 }
+
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.8rem;
+  gap: 2.4rem;
   justify-content: center;
 }
+
 .footer-nav a {
-  color: #d7a955;               /* Gold */
-  font-size: 1.1rem;
-  font-weight: 600;
+  color: #8b4513;
+  font-size: 1.05rem;
   text-transform: uppercase;
-  letter-spacing: 2.4px;
+  letter-spacing: 2px;
   text-decoration: none;
-  transition: color 0.3s ease;
-}
-.footer-nav a:hover {
-  color: #e8c0a0;               /* Lighter gold hover */
-}
-.copyright {
-  font-size: 0.95rem;
-  color: #8b4513;               /* Brown for copyright */
-  opacity: 0.9;
-}
-.impressum-link {
-  color: #d7a955;               /* Gold */
-  text-decoration: none;
-}
-.impressum-link:hover {
-  text-decoration: underline;
-  color: #e8c0a0;
 }
 
-/* Desktop */
+/* Desktop footer links in one line */
 @media (min-width: 1024px) {
   .footer-nav {
     flex-wrap: nowrap;
-    gap: 3.5rem;
+    gap: 3rem;
+  }
+  .partner-inner {
+    transform: translateX(-2rem);
   }
 }
 
@@ -395,14 +372,33 @@ body {
 }
 
 /* ======================= */
+/* COPYRIGHT + IMPRESSUM */
+/* ======================= */
+.impressum-link {
+  color: #8b4513;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.impressum-link:hover {
+  color: #5a2d0c;
+}
+.copyright-sep {
+  margin: 0 0.4rem;
+  opacity: 0.7;
+}
+
+/* ======================= */
 /* MOBILE PARTNER & FOOTER */
 /* ======================= */
 @media (max-width: 600px) {
-  .partner-heartcry,
-  .related-churches,
+  .partner-heartcry {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  .related-churches {
+    padding: 1.8rem 1.5rem 2rem;
+  }
   .clean-footer {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 2.2rem 1.5rem 1.8rem;
   }
   .heartcry-logo {
     max-width: 200px;
@@ -414,16 +410,10 @@ body {
   .related-separator {
     display: none;
   }
-  .church-name {
-    font-size: 2.1rem;
-  }
 }
 @media (min-width: 1024px) {
   .related-inner {
     transform: translateX(-24px);
-  }
-  .partner-inner {
-    transform: translateX(-2rem);
   }
 }
 
@@ -431,9 +421,9 @@ body {
 /* FOOTER CHURCH NAME LINK */
 /* ======================= */
 .church-name-link {
-  color: #d7a955;
+  color: #8b4513;
   text-decoration: none;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 900;
   cursor: pointer;
 }
