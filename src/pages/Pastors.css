@@ -336,3 +336,33 @@
     font-size: 1.25rem;
   }
 }
+
+/* ================= FIX FOOTER NAV ON MOBILE – HORIZONTAL ROW ================= */
+@media (max-width: 768px) {
+  .footer-nav {
+    display: flex !important;
+    flex-direction: row !important;     /* Force horizontal */
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;                   /* Scroll if too many links */
+    padding: 1rem 0;
+    -webkit-overflow-scrolling: touch;  /* Smooth scroll on iOS */
+  }
+
+  .footer-nav a {
+    flex-shrink: 0;                     /* Prevent shrinking */
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-nav {
+    gap: 1.5rem;
+  }
+  .footer-nav a {
+    font-size: 0.95rem;
+  }
+}
