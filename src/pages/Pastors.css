@@ -376,3 +376,27 @@
     letter-spacing: 2px;
   }
 }
+
+/* Move "Unsere Leitung" heading slightly left on desktop */
+@media (min-width: 1024px) {
+  .pastors-heading {
+    position: relative;
+    left: -40px;               /* ← Adjust this: -30px = subtle, -60px = more left */
+  }
+}
+
+/* Mobile / Small Tablet */
+@media (max-width: 768px) {
+  .leadership-scripture-section {
+    padding: 7rem 1.5rem 4rem;
+  }
+  /* ... */
+}
+
+/* Small Mobile */
+@media (max-width: 600px) {
+  .leadership-scripture-section {
+    padding: 6rem 1rem 3.5rem;
+  }
+  /* ... */
+}
