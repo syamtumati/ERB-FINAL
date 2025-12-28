@@ -337,32 +337,42 @@
   }
 }
 
-/* ================= FIX FOOTER NAV ON MOBILE – HORIZONTAL ROW ================= */
+/* ================= FOOTER NAV – PERFECTLY CENTERED VERTICAL ON MOBILE ================= */
 @media (max-width: 768px) {
   .footer-nav {
-    display: flex !important;
-    flex-direction: row !important;     /* Force horizontal */
-    flex-wrap: nowrap !important;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    overflow-x: auto;                   /* Scroll if too many links */
-    padding: 1rem 0;
-    -webkit-overflow-scrolling: touch;  /* Smooth scroll on iOS */
+    display: flex;
+    flex-direction: column;        /* Stack vertically */
+    justify-content: center;       /* Vertical centering (if in a tall footer) */
+    align-items: center;           /* Perfect horizontal centering */
+    gap: 1.6rem;                   /* Nice breathing space between links */
+    padding: 1.2rem 0;
+    width: 100%;
+    text-align: center;
   }
 
   .footer-nav a {
-    flex-shrink: 0;                     /* Prevent shrinking */
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    color: #d9e4ea;
+    text-transform: uppercase;
     white-space: nowrap;
-    font-size: 1rem;
+    opacity: 0.95;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-nav a:hover {
+    opacity: 1;
+    color: #f9f6ef;
   }
 }
 
 @media (max-width: 480px) {
   .footer-nav {
-    gap: 1.5rem;
+    gap: 1.4rem;
   }
   .footer-nav a {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
   }
 }
