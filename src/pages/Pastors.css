@@ -388,7 +388,7 @@
 /* Mobile / Small Tablet */
 @media (max-width: 768px) {
   .leadership-scripture-section {
-    padding: 5rem 1.5rem 4rem;
+    padding: 6rem 1.5rem 4rem;
   }
   /* ... */
 }
@@ -396,7 +396,7 @@
 /* Small Mobile */
 @media (max-width: 600px) {
   .leadership-scripture-section {
-    padding: 4rem 1rem 3.5rem;
+    padding: 5rem 1rem 3.5rem;
   }
   /* ... */
 }
