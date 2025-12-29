@@ -20,3 +20,13 @@
   border-color: #e8c0a0;
 }
 
+/* ======================= */
+/* MOBILE FIX – AVOID HAMBURGER COLLISION */
+/* ======================= */
+@media (max-width: 768px) {
+  .lang-dropdown {
+    top: 72px;          /* move below header */
+    right: 16px;        /* align with mobile padding */
+  }
+}
+

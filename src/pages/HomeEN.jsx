@@ -1,0 +1,129 @@
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./HomeEN.css"; // You can use the same CSS as HomeDE or create a separate one if needed
+import heroImage from "../assets/images/hero-message.jpg";
+// Church slideshow images
+import church1 from "../assets/images/church1.jpg";
+import church2 from "../assets/images/church2.jpg";
+import church3 from "../assets/images/church3.jpg";
+import church4 from "../assets/images/church4.jpg";
+
+function HomeEN() {
+  // ================= SLIDESHOW LOGIC – SAME AS GERMAN VERSION =================
+  useEffect(() => {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
+    let current = 0;
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    };
+    showSlide(current);
+    const interval = setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="home-page">
+      {/* ================= HERO ================= */}
+      <section className="hero-video-section">
+        <img
+          className="hero-video"
+          src={heroImage}
+          alt="Grace Church Frankfurt – City View"
+        />
+        <div className="hero-overlay">
+          <div className="hero-content-centered">
+            <h1 className="hero-church-name">
+              Evangelical-Reformed
+              <span className="hero-baptist">Baptist Church</span>
+            </h1>
+            {/* Visit-us card */}
+            <div className="hero-visit-box">
+              <h2 className="hero-visit-title">
+                Visit us this Sunday!
+              </h2>
+              <div className="hero-visit-divider">
+                <span />
+                <span className="hero-visit-icon">✧</span>
+                <span />
+              </div>
+              <p className="hero-visit-time">at 4:30 PM</p>
+              <p className="hero-visit-address">
+                Hohemarkstraße 75
+                <br />
+                61440 Oberursel
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= WHAT MATTERS TO US ================= */}
+      <section className="what-matters-section">
+        <div className="container">
+          <h2 className="main-title">What Matters to Us</h2>
+          <div className="what-matters-grid">
+            <Link to="/uber-uns" className="matter-block hope">
+              <h3>Who We Are</h3>
+              <p>
+                That Christ takes form in His people, that sinners are saved through sovereign grace, and that God is glorified in the church and among the nations — until He returns.
+              </p>
+              <span className="read-more">
+                Meet Our Pastors & Vision
+              </span>
+            </Link>
+            <Link to="/glaube" className="matter-block doctrine">
+              <h3>Our Doctrine</h3>
+              <p>
+                We joyfully confess the 1689 London Baptist Confession — the classic expression of Reformed Baptist convictions concerning Scripture, grace alone, and the glory of God in all things.
+              </p>
+              <span className="read-more">
+                Read Our Full Confession
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CHURCH PHOTO SLIDESHOW WITH SCRIPTURE ================= */}
+      <section className="church-slideshow-section">
+        <div className="slideshow-container">
+          {/* Slide 1 */}
+          <div className="slide fade">
+            <img src={church1} alt="Our Church – Worship Service" />
+          </div>
+          {/* Slide 2 */}
+          <div className="slide fade">
+            <img src={church2} alt="Our Church – Fellowship" />
+          </div>
+          {/* Slide 3 */}
+          <div className="slide fade">
+            <img src={church3} alt="Our Church – Interior View" />
+          </div>
+          {/* Slide 4 */}
+          <div className="slide fade">
+            <img src={church4} alt="Our Church – Exterior View" />
+          </div>
+          {/* Scripture Overlay – Uncomment when ready */}
+          {/*
+          <div className="slideshow-overlay">
+            <div className="scripture-box">
+              <p className="scripture-text">
+                “For by grace you have been saved through faith. And this is not your own doing; it is the gift of God.”
+              </p>
+              <p className="scripture-reference">— Ephesians 2:8</p>
+            </div>
+          </div>
+          */}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default HomeEN;
