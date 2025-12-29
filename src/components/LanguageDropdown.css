@@ -25,7 +25,7 @@
 /* ======================= */
 @media (max-width: 768px) {
   .lang-dropdown {
-    top: 40px;          /* move below header */
+    top: 10px;          /* move below header */
     right: 16px;        /* align with mobile padding */
   }
 }
