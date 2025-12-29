@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "belief": "Glaube",
+    "about": "Über uns",
+    "sermons": "Predigten",
+    "donate": "Spenden",
+    "contact": "Kontakt"
+  },
+
+  "partners": {
+    "title": "UNSERE PARTNER"
+  },
+
+  "related": {
+    "title": "VERBUNDENE GEMEINDEN"
+  },
+
+  "footer": {
+    "impressum": "Impressum"
+  }
+}
+

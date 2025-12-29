@@ -1,0 +1,22 @@
+.lang-dropdown {
+  position: fixed;      /* 🔒 does NOT affect header layout */
+  top: 18px;
+  right: 22px;
+  z-index: 9999;
+}
+
+.lang-dropdown select {
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.lang-dropdown select:focus {
+  outline: none;
+  border-color: #e8c0a0;
+}
+
