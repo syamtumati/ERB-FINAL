@@ -18,6 +18,14 @@
 
   "footer": {
     "impressum": "Legal Notice"
+  },
+
+  {
+  "confession": {
+    "prev": "Previous",
+    "next": "Next",
+    "overview": "Chapter Overview"
+    }
   }
 }
 

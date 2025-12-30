@@ -1,0 +1,462 @@
+/* ===================================================== */
+/* PASTORS – CLEAN, SCRIPTURE AT TOP, FULLY RESPONSIVE */
+/* ===================================================== */
+.pastors-page {
+  min-height: 100vh;
+  background: #384852;
+  color: #eaf1ff;
+  font-family: "Georgia", serif;
+  overflow-x: hidden;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Better handling on some mobile browsers */
+@supports (-webkit-touch-callout: none) {
+  .pastors-page {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* ORBS */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+}
+.orb-1 {
+  width: 680px;
+  height: 680px;
+  background: rgba(214, 163, 119, 0.35);
+  top: -15%;
+  left: -10%;
+}
+.orb-2 {
+  width: 520px;
+  height: 520px;
+  background: rgba(186, 143, 101, 0.3);
+  top: 45%;
+  right: -8%;
+}
+.orb-3 {
+  width: 460px;
+  height: 460px;
+  background: rgba(214, 174, 133, 0.32);
+  top: 30%;
+  left: 70%;
+}
+
+/* ================= SCRIPTURE SECTION AT TOP ================= */
+.leadership-scripture-section {
+  padding: 9rem 2rem 6rem;
+  text-align: center;
+  background: #384852;
+  color: #eaf1ff;
+}
+.leadership-scripture-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.scripture-text {
+  font-size: 2.8rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #f9f6ef;
+  margin-bottom: 1.8rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+.scripture-reference {
+  font-size: 1.6rem;
+  color: #d7a955;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+/* ================= LEITUNG SECTION ================= */
+.leadership-section {
+  padding: 2rem 2rem 8rem;
+  background: #384852;
+}
+.leadership-section .container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.pastors-heading {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 5rem;
+  text-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
+}
+
+/* ================= CARD STYLES – NO BOX, DIRECT ON PAGE ================= */
+.pastor-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 5.5rem;
+  margin-bottom: 10rem;
+  align-items: start;
+  /* Removed: background, padding, border, border-radius, box-shadow */
+}
+
+.pastor-card:hover {
+  transform: none;
+}
+
+.deacon {
+  margin-top: 6rem;
+}
+
+.pastor-photo {
+  position: relative;
+  border-radius: 50%;               /* ← This makes it circular */
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  width: 380px;                     /* Optional: ensure fixed width */
+  height: 380px;                    /* Optional: make it square first for perfect circle */
+  flex-shrink: 0;                   /* Prevents distortion */
+}
+
+.pastor-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;      /* Adjust if face is cut off – try 'center top' or 'center 20%' */
+  transition: transform 0.6s ease;
+}
+
+.pastor-photo:hover img {
+  transform: scale(1.06);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232, 192, 160, 0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.pastor-photo:hover .glow {
+  opacity: 0.4;
+}
+
+/* Text directly on dark background – adjusted colors for readability */
+.pastor-content .label {
+  color: #d7a955;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+}
+
+.pastor-content h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #f9f6ef;
+  margin: 0.6rem 0 1rem;
+  line-height: 1.1;
+  letter-spacing: -1.4px;
+}
+
+.pastor-content h2 {
+  font-size: 1.6rem;
+  color: #d9e4ea;
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+}
+
+.bio {
+  font-size: 1.3rem;
+  line-height: 2.1;
+  color: #eaf1ff;
+  max-width: 780px;
+}
+
+/* ================= RESPONSIVE ================= */
+/* Tablet */
+@media (max-width: 992px) {
+  .leadership-scripture-section {
+    padding: 8rem 1.5rem 5rem;
+  }
+  .scripture-text {
+    font-size: 2.3rem;
+  }
+  .scripture-reference {
+    font-size: 1.4rem;
+  }
+
+  .pastor-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+    margin-bottom: 8rem;
+  }
+  .pastor-photo {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .pastor-photo img {
+    height: 460px;
+  }
+  .pastor-content h1 {
+    font-size: 3.4rem;
+  }
+  .bio {
+    font-size: 1.25rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .pastors-heading {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile / Small Tablet */
+@media (max-width: 768px) {
+  .leadership-scripture-section {
+    padding: 7rem 1.5rem 4rem;
+  }
+  .scripture-text {
+    font-size: 2rem;
+  }
+  .scripture-reference {
+    font-size: 1.3rem;
+  }
+  .leadership-section {
+    padding: 2rem 1.5rem 6rem;
+  }
+  .pastors-heading {
+    font-size: 2.6rem;
+    margin-bottom: 4rem;
+  }
+  .pastor-card {
+    gap: 2.5rem;
+    margin-bottom: 7rem;
+  }
+  .pastor-photo img {
+    height: 380px;
+  }
+  .pastor-content h1 {
+    font-size: 2.8rem;
+  }
+  .bio {
+    font-size: 1.15rem;
+  }
+  .orb-1,
+  .orb-2,
+  .orb-3 {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 600px) {
+  .leadership-scripture-section {
+    padding: 6rem 1rem 3.5rem;
+  }
+  .scripture-text {
+    font-size: 1.75rem;
+    line-height: 1.6;
+  }
+  .scripture-reference {
+    font-size: 1.2rem;
+  }
+  .pastors-heading {
+    font-size: 2.3rem;
+    margin-bottom: 3.5rem;
+  }
+  .pastor-card {
+    margin-bottom: 6rem;
+  }
+  .pastor-photo img {
+    height: 340px;
+  }
+  .pastor-content h1 {
+    font-size: 2.4rem;
+  }
+  .bio {
+    font-size: 1.1rem;
+    line-height: 1.9;
+  }
+}
+
+/* Desktop refinements */
+@media (min-width: 1024px) {
+  .leadership-section .container {
+    transform: translateX(-5px);
+  }
+  .deacon {
+    margin-top: 2rem !important;
+  }
+}
+
+/* ================= NEW FOOTER – ADDED ONLY ================= */
+.pastors-footer {
+  background: #2b3a45;
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  color: #d9e4ea;
+  margin-top: auto;
+}
+.pastors-footer .container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.footer-church-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f9f6ef;
+  margin-bottom: 0.8rem;
+}
+.footer-copyright {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+  .pastors-footer {
+    padding: 3.5rem 1.5rem 2.5rem;
+  }
+  .footer-church-name {
+    font-size: 1.25rem;
+  }
+}
+
+/* ================= FOOTER NAV – PERFECTLY CENTERED VERTICAL ON MOBILE ================= */
+@media (max-width: 768px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.2rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  .footer-nav a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    color: #d9e4ea;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.95;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+  .footer-nav a:hover {
+    opacity: 1;
+    color: #f9f6ef;
+  }
+}
+@media (max-width: 480px) {
+  .footer-nav {
+    gap: 1.4rem;
+  }
+  .footer-nav a {
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Move "Unsere Leitung" heading slightly left on desktop */
+@media (min-width: 1024px) {
+  .pastors-heading {
+    position: relative;
+    left: -40px;
+  }
+}
+
+/* Mobile scripture up */
+@media (max-width: 768px) {
+  .leadership-scripture-section {
+    padding: 6rem 1.5rem 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .leadership-scripture-section {
+    padding: 5rem 1rem 3.5rem;
+  }
+}
+
+/* ================= FIX TEXT READABILITY ON DARK BACKGROUND ================= */
+.pastor-content .bio {
+  color: #f0f4f8 !important;        /* Lighter color for better contrast */
+  opacity: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth and readability */
+}
+
+.pastor-content h1 {
+  color: #ffffff !important;       /* Pure white for name */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.pastor-content h2 {
+  color: #e8ecef !important;       /* Very light gray */
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.pastor-content .label {
+  color: #d7a955 !important;       /* Keep gold, but ensure visibility */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= PREVENT IMAGE ZOOM/SCALE ON TOUCH (MOBILE) ================= */
+/* Disable hover effects on touch devices */
+@supports (touch-action: manipulation) or (-webkit-overflow-scrolling: touch) {
+  .pastor-photo:hover img {
+    transform: none !important;    /* No zoom on tap */
+  }
+  .pastor-photo:hover .glow {
+    opacity: 0 !important;         /* No glow on tap */
+  }
+}
+
+/* Alternative strong fix – completely disable transform on touch */
+.pastor-photo img {
+  transition: transform 0.6s ease;
+}
+
+@media (pointer: coarse) {           /* Targets touch devices (phones/tablets) */
+  .pastor-photo img {
+    transform: none !important;
+    transition: none !important;
+  }
+  .glow {
+    opacity: 0 !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .pastor-photo {
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .pastor-photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pastor-photo {
+    width: 280px;
+    height: 280px;
+  }
+}

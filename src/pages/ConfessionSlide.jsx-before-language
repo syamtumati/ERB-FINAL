@@ -1,23 +1,12 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-
 import { confessionChapters } from "../data/confessionChapters";
-import { confessionChaptersEN } from "../data/confessionChaptersEN";
-
 import "./ConfessionSlide.css";
 
 export default function ConfessionSlide() {
   const { chapterId, pointId } = useParams();
   const navigate = useNavigate();
-  const { i18n, t } = useTranslation();
 
-  // 🔑 choose data source based on language
-  const chapters =
-    i18n.language.startsWith("en")
-      ? confessionChaptersEN
-      : confessionChapters;
-
-  const chapter = chapters.find(
+  const chapter = confessionChapters.find(
     (c) => String(c.chapter) === String(chapterId)
   );
 
@@ -33,7 +22,6 @@ export default function ConfessionSlide() {
   return (
     <section className="slide-page">
       <div className="slide-container">
-
         <h1 className="slide-title">
           {point.id}. {point.title}
         </h1>
@@ -47,38 +35,30 @@ export default function ConfessionSlide() {
         </ul>
 
         <div className="slide-navigation">
-
-          {/* PREVIOUS */}
           {index > 0 && (
             <button
               onClick={() =>
-                navigate(
-                  `/bekenntnis/${chapterId}/${chapter.points[index - 1].id}`
-                )
+                navigate(`/bekenntnis/${chapterId}/${chapter.points[index - 1].id}`)
               }
             >
-              ← {t("confession.prev")}
+              ← Zurück
             </button>
           )}
 
-          {/* BACK */}
           <button
             onClick={() => navigate("/glaube")}
             className="slide-back"
           >
-            {t("confession.overview")}
+            Kapitelübersicht
           </button>
 
-          {/* NEXT */}
           {index < chapter.points.length - 1 && (
             <button
               onClick={() =>
-                navigate(
-                  `/bekenntnis/${chapterId}/${chapter.points[index + 1].id}`
-                )
+                navigate(`/bekenntnis/${chapterId}/${chapter.points[index + 1].id}`)
               }
             >
-              {t("confession.next")} →
+              Weiter →
             </button>
           )}
         </div>

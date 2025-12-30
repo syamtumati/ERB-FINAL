@@ -18,6 +18,14 @@
 
   "footer": {
     "impressum": "Impressum"
+  },
+
+  {
+  "confession": {
+    "prev": "Zurück",
+    "next": "Weiter",
+    "overview": "Kapitelübersicht"
+    }
   }
 }
 

@@ -1,0 +1,121 @@
+import React, { useState } from "react";
+import "./Donations.css";
+
+export default function DonationsEN() {
+  const [amount, setAmount] = useState(50);
+
+  const stripeLink =
+    "https://donate.stripe.com/test_8x200k2ui7Ql6y2fuyes000";
+
+  const presetAmounts = [25, 50, 100, 200];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!amount || amount <= 0) return;
+    window.location.href = stripeLink;
+  };
+
+  const copyBankDetails = () => {
+    const text = [
+      "Account holder: Reformed Baptist Church Frankfurt",
+      "IBAN: DE03 5105 0015 0997 0234 45",
+      "BIC: NASSDE55XXX",
+      "Reference: Donation",
+    ].join("\n");
+
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Bank details copied!");
+    });
+  };
+
+  return (
+    <div className="donations-page">
+      <div className="donations-inner">
+        <main className="donations-main">
+          <section className="donations-card">
+            <h1>Support Our Ministry</h1>
+
+            <p className="donations-intro">
+              Your donation helps us proclaim the Gospel,
+              reach people with the truth,
+              and strengthen the local church.
+            </p>
+
+            {/* LEFT – STRIPE */}
+            <form onSubmit={handleSubmit} className="donations-form">
+              <label className="field-label">Select Amount</label>
+
+              <div className="amount-row">
+                {presetAmounts.map((value) => (
+                  <button
+                    key={value}
+                    type="button"
+                    className={`chip ${amount === value ? "active" : ""}`}
+                    onClick={() => setAmount(value)}
+                  >
+                    €{value}
+                  </button>
+                ))}
+              </div>
+
+              <div className="custom-amount">
+                <span className="currency">€</span>
+                <input
+                  type="number"
+                  min="1"
+                  value={amount}
+                  onChange={(e) =>
+                    setAmount(Math.max(1, Number(e.target.value)))
+                  }
+                  placeholder="Custom amount"
+                />
+              </div>
+
+              <button type="submit" className="primary-btn">
+                Donate now – €{amount}
+              </button>
+
+              <p className="secure-text">
+                Secure & encrypted via Stripe.
+              </p>
+            </form>
+
+            <div className="divider" />
+
+            {/* RIGHT – BANK TRANSFER */}
+            <div className="other-ways">
+              <h2>Bank Transfer</h2>
+              <p className="small-text">
+                You can also donate directly using the following bank details:
+              </p>
+
+              <div className="bank-box">
+                <div className="bank-row">
+                  <span>Account holder</span>
+                  <strong>Reformed Baptist Church Frankfurt</strong>
+                </div>
+                <div className="bank-row">
+                  <span>IBAN</span>
+                  <strong>DE03 5105 0015 0997 0234 45</strong>
+                </div>
+                <div className="bank-row">
+                  <span>BIC</span>
+                  <strong>NASSDE55XXX</strong>
+                </div>
+                <div className="bank-row">
+                  <span>Reference</span>
+                  <strong>Donation</strong>
+                </div>
+              </div>
+
+              <button className="secondary-btn" onClick={copyBankDetails}>
+                Copy bank details
+              </button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  );
+}
+
