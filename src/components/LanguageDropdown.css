@@ -66,3 +66,11 @@
     font-size: 0.85rem;
   }
 }
+
+/* MOBILE – move dropdown slightly right */
+@media (max-width: 768px) {
+  .lang-dropdown {
+    right: 10px;   /* move closer to the right edge */
+  }
+}
+
