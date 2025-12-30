@@ -1,34 +1,64 @@
+/* ======================= */
+/* LANGUAGE DROPDOWN – FIXED POSITION */
+/* ======================= */
 .lang-dropdown {
-  position: fixed;      /* 🔒 does NOT affect header layout */
-  top: 18px;
-  right: 18px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
+  position: fixed;            /* Stays in viewport */
+  top: 20px;                  /* Distance from top */
+  right: 20px;                /* Distance from right */
+  z-index: 9999;              /* Always on top */
 }
 
 .lang-dropdown select {
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 6px;
-  padding: 6px 10px;
-  font-size: 0.85rem;
+  background: rgba(15, 23, 42, 0.85);   /* Dark semi-transparent */
+  color: #f0e8ff;                       /* Light text */
+  border: 1px solid #e8c0a0;            /* Gold border */
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
   cursor: pointer;
+  backdrop-filter: blur(8px);           /* Premium glass effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.lang-dropdown select:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: #f9f6ef;
+  transform: translateY(-1px);
 }
 
 .lang-dropdown select:focus {
   outline: none;
   border-color: #e8c0a0;
+  box-shadow: 0 0 0 3px rgba(232, 192, 160, 0.3);
+}
+
+.lang-dropdown select option {
+  background: #1e293b;
+  color: #f0e8ff;
+  text-transform: uppercase;
 }
 
 /* ======================= */
-/* MOBILE FIX – AVOID HAMBURGER COLLISION */
+/* MOBILE – ADJUST POSITION TO AVOID OVERLAP */
 /* ======================= */
 @media (max-width: 768px) {
   .lang-dropdown {
-    top: 10px;          /* move below header */
-    right: 16px;        /* align with mobile padding */
+    top: 12px;
+    right: 70px;                /* Leave space for hamburger menu */
+  }
+  
+  .lang-dropdown select {
+    padding: 6px 10px;
+    font-size: 0.85rem;
   }
 }
 
+@media (max-width: 480px) {
+  .lang-dropdown {
+    right: 60px;
+  }
+}
