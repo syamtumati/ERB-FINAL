@@ -191,12 +191,12 @@
 }
 
 /* ======================= */
-/* MOBILE – FIX TOOLTIP CLIPPING ONLY ON MOBILE */
+/* MOBILE – TOOLTIP CENTERED ON SCREEN (NO CLIPPING) */
 /* ======================= */
 @media (max-width: 768px) {
   .slide-references {
     gap: 0.7rem;
-    justify-content: flex-start;
+    justify-content: center;     /* Center the pills */
     padding: 0 1rem;
   }
 
@@ -205,39 +205,42 @@
     font-size: 0.9rem;
   }
 
-  /* === ONLY THESE LINES FIX THE MOBILE CLIPPING === */
+  /* === FORCE TOOLTIP TO CENTER OF SCREEN ON MOBILE === */
   .tooltip {
-    max-width: calc(100vw - 40px) !important;   /* Fits fully on screen */
-    min-width: auto !important;
+    position: fixed !important;        /* ← Key: fixed to viewport */
+    top: 50% !important;               /* ← Center vertically */
+    left: 50% !important;              /* ← Center horizontally */
+    transform: translate(-50%, -50%) !important; /* ← Perfect center */
+    bottom: auto !important;
+    max-width: calc(100vw - 40px) !important;
     width: 92vw !important;
-    left: 50% !important;
-    transform: translateX(-50%) translateY(-10px) !important;
+    min-width: auto !important;
     font-size: 1rem;
-    padding: 1rem 1.3rem;
-    border-radius: 14px;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    padding: 1.2rem 1.4rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    z-index: 2000 !important;
   }
 
-  .reference-item:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-50%) translateY(-12px) !important;
-  }
-
-  /* Keep arrow centered */
+  /* Hide arrow on mobile — not needed when centered */
   .tooltip::after,
   .tooltip::before {
-    left: 50% !important;
-    transform: translateX(-50%);
+    display: none !important;
+  }
+
+  /* Show centered tooltip on hover/tap */
+  .reference-item:hover .tooltip,
+  .reference-item:active .tooltip {
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 
 @media (max-width: 480px) {
   .tooltip {
     max-width: calc(100vw - 30px) !important;
+    width: 94vw !important;
     font-size: 0.95rem;
-    padding: 0.9rem 1.1rem;
+    padding: 1rem 1.2rem;
   }
 }
