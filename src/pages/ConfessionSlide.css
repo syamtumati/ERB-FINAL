@@ -244,3 +244,15 @@
     padding: 1rem 1.2rem;
   }
 }
+
+/* ===== DESKTOP: Add more space below header/logo ===== */
+@media (min-width: 769px) {
+  .slide-container {
+    margin-top: 9rem; /* This pushes the entire content down on desktop */
+  }
+
+  /* Optional: even more space if you want it very airy */
+  /* .slide-container {
+    margin-top: 7rem;
+  } */
+}
