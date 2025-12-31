@@ -1,7 +1,6 @@
 /* ===== PAGE ===== */
 .slide-page {
-/*  background: linear-gradient(135deg, #0c2340, #1e3a5f);*/
-  background: #384852; /* ✅ unified solid background */
+  background: #384852;
   padding: 6rem 1.5rem 7rem;
   font-family: "Georgia", serif;
   min-height: 100vh;
@@ -10,7 +9,7 @@
 /* ===== CONTAINER ===== */
 .slide-container {
   max-width: 900px;
-  margin: 2.5rem auto 0; /* ✅ moved down */
+  margin: 2.5rem auto 0;
   color: white;
 }
 
@@ -18,7 +17,7 @@
 .slide-title {
   font-size: 2.4rem;
   font-weight: 900;
-  margin-top: 1rem;      /* ✅ slight extra drop */
+  margin-top: 1rem;
   margin-bottom: 2rem;
   color: white;
 }
@@ -28,21 +27,135 @@
   white-space: pre-line;
   font-size: 1.15rem;
   line-height: 1.9;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   color: #f5f5f5;
 }
 
-/* ===== REFERENCES ===== */
+/* ======================= */
+/* SCRIPTURE REFERENCES – HORIZONTAL PILLS */
+/* ======================= */
 .slide-references {
   list-style: none;
-  padding-left: 0;
-  margin-bottom: 3rem;
-  color: #e8c0a0;
-  font-size: 0.95rem;
+  padding: 0;
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
 }
 
-.slide-references li {
-  margin-bottom: 0.3rem;
+.reference-item {
+  position: relative;
+  display: inline-block;
+}
+
+.ref-text {
+  display: inline-block;
+  background: rgba(139, 69, 19, 0.3);
+  color: #d7a955;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  border: 1px solid rgba(215, 169, 85, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ref-text:hover {
+  background: rgba(139, 69, 19, 0.5);
+  border-color: #e8c0a0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ======================= */
+/* TOOLTIP – CLEAN & PROPER DISPLAY */
+/* ======================= */
+.reference-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-12px);
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: calc(100% + 12px);           /* Clear space above the pill */
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background: #1e1a15;                 /* Dark rich brown */
+  color: #f9f6ef;
+  padding: 1.2rem 1.6rem;
+  border-radius: 16px;
+  min-width: 320px;
+  max-width: 560px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  border: 2px solid #d7a955;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none;
+  word-wrap: break-word;
+}
+
+/* Arrow pointing down to the reference pill */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 12px solid transparent;
+  border-top-color: #d7a955;           /* Matches border */
+}
+
+/* Inner arrow shadow effect */
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  border: 12px solid transparent;
+  border-top-color: #1e1a15;
+  z-index: 1;
+}
+
+/* ======================= */
+/* MOBILE IMPROVEMENTS */
+/* ======================= */
+@media (max-width: 768px) {
+  .slide-references {
+    gap: 0.7rem;
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+
+  .ref-text {
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tooltip {
+    min-width: 280px;
+    max-width: 90vw;
+    font-size: 1rem;
+    padding: 1rem 1.3rem;
+    bottom: calc(100% + 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .tooltip {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.1rem;
+  }
 }
 
 /* ===== NAVIGATION ===== */
@@ -51,9 +164,9 @@
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 4rem;
 }
 
-/* ===== BUTTONS ===== */
 .slide-navigation button {
   background: #8b4513;
   color: white;
@@ -69,7 +182,6 @@
   background: #a85a1a;
 }
 
-/* ===== BACK BUTTON ===== */
 .slide-back {
   background: #2d1b0a;
 }
@@ -77,4 +189,3 @@
 .slide-back:hover {
   background: #3a2313;
 }
-
