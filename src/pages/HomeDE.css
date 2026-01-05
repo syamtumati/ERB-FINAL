@@ -34,7 +34,7 @@
     rgba(10, 8, 15, 0.2),
     rgba(15, 10, 30, 0.35)
   );
-  padding-top: 90px;
+  padding-top: 0;
 }
 
 .hero-content-centered {
@@ -202,7 +202,7 @@
   .hero-church-name {
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
-    transform: translateY(-60px); /* ⬆ move UP safely */
+    transform: translateY(-20px); /* ⬆ move UP safely */
   }
 
   .hero-baptist {
@@ -271,7 +271,7 @@
 /* ===================================================== */
 @media (min-width: 1024px) {
   .hero-church-name {
-    margin-top: 2rem; /* ⬇️ moves hero + baptist name down */
+    margin-top: 0rem; /* ⬇️ moves hero + baptist name down */
     transform: none;    /* ❌ no translate on desktop */
   }
 
