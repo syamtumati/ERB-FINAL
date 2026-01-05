@@ -559,3 +559,19 @@
   line-height: 1.7;
   color: #e4dccf;
 }
+
+/* ===================================================== */
+/* DESKTOP REFINEMENTS */
+/* ===================================================== */
+@media (min-width: 1024px) {
+  .hero-church-name {
+    margin-top: 0;
+    transform: translateY(-40px); /* ⬆️ MOVE HERO NAME UP */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-church-name {
+    transform: translateY(-30px); /* ⬆️ MOBILE UP */
+  }
+}
