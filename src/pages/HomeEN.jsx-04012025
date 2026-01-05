@@ -42,27 +42,24 @@ function HomeEN() {
               Evangelical-Reformed
               <span className="hero-baptist">Baptist Church</span>
             </h1>
+            {/* Visit-us card */}
+            <div className="hero-visit-box">
+              <h2 className="hero-visit-title">
+                Visit us this Sunday!
+              </h2>
+              <div className="hero-visit-divider">
+                <span />
+                <span className="hero-visit-icon">✧</span>
+                <span />
+              </div>
+              <p className="hero-visit-time">at 4:30 PM</p>
+              <p className="hero-visit-address">
+                Hohemarkstraße 75
+                <br />
+                61440 Oberursel
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-      
-      
-      {/* ================= VISIT US ================= */}
-      <section className="visit-section">
-        <div className="container visit-content">
-          <h2 className="visit-title">Visit us this Sunday</h2>
-
-          <div className="visit-divider">
-            <span />
-            <span className="visit-icon">✧</span>
-            <span />
-          </div>
-
-          <p className="visit-time">Sunday · 4:30 PM</p>
-          <p className="visit-address">
-            Hohemarkstraße 75<br />
-            61440 Oberursel
-          </p>
         </div>
       </section>
 
