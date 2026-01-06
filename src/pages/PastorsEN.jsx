@@ -39,13 +39,12 @@ export default function PastorsEN() {
               <h1>Peter Schild</h1>
               <h2>Pastor of the Evangelical Reformed Baptist Church</h2>
               <p className="bio">
-                Peter Schild is married and the father of five children.
-                He grew up in neglect and lived in deep godlessness
-                until, as a teenager, he came to faith through a gospel tract.
-                He studied Protestant theology,
-                was sent to Frankfurt as a missionary in 2014,
-                and has served as pastor of the
-                Evangelical Reformed Baptist Church since 2016.
+	        Peter Schild is married and the father of five children. Coming from
+                difficult circumstances and living far from God, he was brought to
+                faith in Jesus Christ as a teenager through reading a gospel tract. He
+                studied Protestant Theology, was sent to Frankfurt as a missionary in
+                2014, and has served as pastor of ERB Frankfurt since 2016. In addition
+                to his pastoral ministry, he is the author of several books.
               </p>
             </div>
           </div>
@@ -61,12 +60,11 @@ export default function PastorsEN() {
               <h1>Hans Ewert</h1>
               <h2>Deacon of the Evangelical Reformed Baptist Church</h2>
               <p className="bio">
-                Hans Ewert is married and the father of three children.
-                He was born into a Russian-German Baptist church
-                and was converted at the age of ten.
-                He works in technical customer support
-                and has served as a deacon of the
-                Evangelical Reformed Baptist Church in Frankfurt since 2023.
+	        Hans Ewert is married and the father of three children. He grew up in a
+                Russian-German Baptist church and came to faith in Jesus Christ as a
+                teenager. He is a trained automotive master technician and works in
+                technical customer support. Since 2023, he has served ERB Frankfurt as a
+                deacon.
               </p>
             </div>
           </div>

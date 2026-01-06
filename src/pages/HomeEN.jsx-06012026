@@ -74,20 +74,16 @@ function HomeEN() {
             <Link to="/uber-uns" className="matter-block hope">
               <h3>Who We Are</h3>
               <p>
-	        We are a church with Jesus Christ at the center. We believe and confess
-                that He is the Son of God, our Lord and Savior. We desire to live our
-                entire lives by God’s grace and for God’s glory.
+                That Christ takes form in His people, that sinners are saved through sovereign grace, and that God is glorified in the church and among the nations — until He returns.
               </p>
               <span className="read-more">
                 Meet Our Pastors & Vision
               </span>
             </Link>
             <Link to="/glaube" className="matter-block doctrine">
-              <h3>What We Believe</h3>
+              <h3>Our Doctrine</h3>
               <p>
-	        We believe that the Bible is God’s infallible Word. Our faith is grounded
-                solely in Holy Scripture and is summarized in the Baptist Confession of
-                Faith of 1689.
+                We joyfully confess the 1689 London Baptist Confession — the classic expression of Reformed Baptist convictions concerning Scripture, grace alone, and the glory of God in all things.
               </p>
               <span className="read-more">
                 Read Our Full Confession

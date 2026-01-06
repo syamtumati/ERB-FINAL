@@ -62,14 +62,18 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .scripture-text {
   font-size: 2.8rem;
-  line-height: 1.5;
-  font-style: italic;
+  line-height: 1.4;
+  font-style: normal;          /* force-normal */
+  font-weight: 700;            /* 👈 key fix */
+  letter-spacing: -0.5px;      /* 👈 key fix */
   color: #f9f6ef;
   margin-bottom: 1.8rem;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
+
 .scripture-reference {
   font-size: 1.6rem;
   color: #d7a955;
@@ -374,7 +378,7 @@
 @media (min-width: 1024px) {
   .pastors-heading {
     position: relative;
-    left: -40px;
+    left: -20px;
   }
 }
 

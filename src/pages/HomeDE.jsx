@@ -86,21 +86,20 @@ function Home() {
             <Link to="/uber-uns" className="matter-block hope">
               <h3>Wer wir sind</h3>
               <p>
-                Dass Christus in seinem Volk Gestalt gewinnt, dass Sünder durch
-                souveräne Gnade gerettet werden und dass Gott in der Gemeinde und
-                unter den Völkern verherrlicht wird – bis er wiederkommt.
+	        Wir sind eine Gemeinde mit Jesus Christus im Zentrum. Wir glauben und
+                bekennen, dass Er der Sohn Gottes, unser Herr und Erlöser ist. Unser
+                ganzes Leben wollen wir aus Gottes Gnade und zu Gottes Ehre führen.
               </p>
               <span className="read-more">
                 Unsere Hirten &amp; Vision kennenlernen
               </span>
             </Link>
             <Link to="/glaube" className="matter-block doctrine">
-              <h3>Unsere Lehre</h3>
+              <h3>Was wir glauben</h3>
               <p>
-                Wir bekennen uns freudig zum Londoner Baptistenbekenntnis von 1689
-                – dem klassischen Ausdruck reformiert-baptistischer Überzeugungen
-                zur Schrift, zur Gnade allein und zur Herrlichkeit Gottes in
-                allem.
+	        Wir glauben, dass die Bibel Gottes unfehlbares Wort ist. Unser Glaube
+                gründet sich allein auf die Heilige Schrift und wird im baptistischen
+                Glaubensbekenntnis von 1689 zusammengefasst.
               </p>
               <span className="read-more">
                 Unser vollständiges Bekenntnis lesen
