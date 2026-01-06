@@ -9,27 +9,33 @@ const resources = {
         home: "Startseite",
         belief: "Glaube",
         about: "Über uns",
-        sermons: "Predigten",
+        media: "Medien",
         donate: "Spenden",
-        contact: "Kontakt",
+        contact: "Kontakt"
+      },
+
+      media: {
+        title: "Medien",
+        videos: "Videos",
+        books: "Bücher"
       },
 
       partners: {
-        title: "UNSERE PARTNER",
+        title: "UNSERE PARTNER"
       },
 
       related: {
-        title: "VERBUNDENE GEMEINDEN",
+        title: "VERBUNDENE GEMEINDEN"
       },
 
       footer: {
-        impressum: "Impressum",
+        impressum: "Impressum"
       },
 
       church: {
-        name: "Evangelisch-Reformierte Baptistengemeinde",
-      },
-    },
+        name: "Evangelisch-Reformierte Baptistengemeinde"
+      }
+    }
   },
 
   en: {
@@ -38,38 +44,46 @@ const resources = {
         home: "Home",
         belief: "Belief",
         about: "About Us",
-        sermons: "Sermons",
+        media: "Media",
         donate: "Donate",
-        contact: "Contact",
+        contact: "Contact"
+      },
+
+      media: {
+        title: "Media",
+        videos: "Videos",
+        books: "Books"
       },
 
       partners: {
-        title: "OUR PARTNERS",
+        title: "OUR PARTNERS"
       },
 
       related: {
-        title: "AFFILIATED CHURCHES",
+        title: "AFFILIATED CHURCHES"
       },
 
       footer: {
-        impressum: "Legal Notice",
+        impressum: "Legal Notice"
       },
 
       church: {
-        name: "Evangelical Reformed Baptist Church",
-      },
-    },
-  },
+        name: "Evangelical Reformed Baptist Church"
+      }
+    }
+  }
 };
 
-i18n.use(initReactI18next).init({
-  resources,
-  lng: localStorage.getItem("lang") || "de",
-  fallbackLng: "de",
-  interpolation: {
-    escapeValue: false,
-  },
-});
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: localStorage.getItem("lang") || "de",
+    fallbackLng: "de",
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
 export default i18n;
 

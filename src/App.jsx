@@ -10,7 +10,9 @@ import Home from "./pages/Home";
 import Belief from "./pages/Belief";
 import ConfessionSlide from "./pages/ConfessionSlide";
 import Pastors from "./pages/Pastors";
-import Messages from "./pages/Messages";
+import Media from "./pages/Media";
+import MediaVideos from "./pages/MediaVideos";
+import MediaBooks from "./pages/MediaBooks";
 import Donations from "./pages/Donations";
 import Contact from "./pages/Contact";
 import Impressum from "./pages/Impressum";
@@ -38,12 +40,20 @@ function App() {
       <header className="heartcry-header">
         <div className="header-container">
 
+          {/* LEFT MENU */}
           <nav className="menu-left desktop-nav">
-            <NavLink to="/" end className="menu-item">{t("nav.home")}</NavLink>
-            <NavLink to="/glaube" className="menu-item">{t("nav.belief")}</NavLink>
-            <NavLink to="/uber-uns" className="menu-item">{t("nav.about")}</NavLink>
+            <NavLink to="/" end className="menu-item">
+              {t("nav.home")}
+            </NavLink>
+            <NavLink to="/glaube" className="menu-item">
+              {t("nav.belief")}
+            </NavLink>
+            <NavLink to="/uber-uns" className="menu-item">
+              {t("nav.about")}
+            </NavLink>
           </nav>
 
+          {/* LOGO */}
           <NavLink to="/" className="logo-center" onClick={closeMobile}>
             <img
               src="logo/gnadenkirche-logo-white.png"
@@ -52,12 +62,31 @@ function App() {
             />
           </NavLink>
 
+          {/* RIGHT MENU (DESKTOP DROPDOWN) */}
           <nav className="menu-right desktop-nav">
-            <NavLink to="/predigten" className="menu-item">{t("nav.sermons")}</NavLink>
-            <NavLink to="/spenden" className="menu-item">{t("nav.donate")}</NavLink>
-            <NavLink to="/kontakt" className="menu-item">{t("nav.contact")}</NavLink>
+
+            <div className="menu-item media-dropdown">
+              <span className="media-label">{t("nav.media")}</span>
+
+              <div className="media-dropdown-menu">
+                <NavLink to="/media/videos" className="dropdown-link">
+                  {t("media.videos")}
+                </NavLink>
+                <NavLink to="/media/books" className="dropdown-link">
+                  {t("media.books")}
+                </NavLink>
+              </div>
+            </div>
+
+            <NavLink to="/spenden" className="menu-item">
+              {t("nav.donate")}
+            </NavLink>
+            <NavLink to="/kontakt" className="menu-item">
+              {t("nav.contact")}
+            </NavLink>
           </nav>
 
+          {/* HAMBURGER */}
           <button
             className="mobile-menu-toggle"
             onClick={() => setMobileOpen(o => !o)}
@@ -70,14 +99,44 @@ function App() {
 
       {mobileOpen && <div className="mobile-backdrop" onClick={closeMobile} />}
 
+      {/* ================= MOBILE MENU ================= */}
       <nav className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
         <button className="mobile-close" onClick={closeMobile}>×</button>
-        <NavLink to="/" onClick={closeMobile}>{t("nav.home")}</NavLink>
-        <NavLink to="/glaube" onClick={closeMobile}>{t("nav.belief")}</NavLink>
-        <NavLink to="/uber-uns" onClick={closeMobile}>{t("nav.about")}</NavLink>
-        <NavLink to="/predigten" onClick={closeMobile}>{t("nav.sermons")}</NavLink>
-        <NavLink to="/spenden" onClick={closeMobile}>{t("nav.donate")}</NavLink>
-        <NavLink to="/kontakt" onClick={closeMobile}>{t("nav.contact")}</NavLink>
+
+        <NavLink to="/" onClick={closeMobile}>
+          {t("nav.home")}
+        </NavLink>
+
+        <NavLink to="/glaube" onClick={closeMobile}>
+          {t("nav.belief")}
+        </NavLink>
+
+        <NavLink to="/uber-uns" onClick={closeMobile}>
+          {t("nav.about")}
+        </NavLink>
+
+        {/* MEDIA ACCORDION */}
+        <div className="mobile-media">
+          <span className="mobile-media-title">
+            {t("nav.media")}
+          </span>
+
+          <NavLink to="/media/videos" onClick={closeMobile}>
+            {t("media.videos")}
+          </NavLink>
+
+          <NavLink to="/media/books" onClick={closeMobile}>
+            {t("media.books")}
+          </NavLink>
+        </div>
+
+        <NavLink to="/spenden" onClick={closeMobile}>
+          {t("nav.donate")}
+        </NavLink>
+
+        <NavLink to="/kontakt" onClick={closeMobile}>
+          {t("nav.contact")}
+        </NavLink>
       </nav>
 
       {/* ================= MAIN ================= */}
@@ -87,7 +146,13 @@ function App() {
           <Route path="/glaube" element={<Belief />} />
           <Route path="/bekenntnis/:chapterId/:pointId" element={<ConfessionSlide />} />
           <Route path="/uber-uns" element={<Pastors />} />
-          <Route path="/predigten" element={<Messages />} />
+
+          <Route path="/media" element={<Media />}>
+            <Route index element={<MediaVideos />} />
+            <Route path="videos" element={<MediaVideos />} />
+            <Route path="books" element={<MediaBooks />} />
+          </Route>
+
           <Route path="/spenden" element={<Donations />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/impressum" element={<Impressum />} />
@@ -109,7 +174,11 @@ function App() {
             rel="noreferrer"
             className="heartcry-logo-link"
           >
-            <img src={heartcryLogo} alt="HeartCry Missionary Society" className="heartcry-logo" />
+            <img
+              src={heartcryLogo}
+              alt="HeartCry Missionary Society"
+              className="heartcry-logo"
+            />
           </a>
         </div>
       </section>
@@ -124,9 +193,13 @@ function App() {
           </div>
 
           <div className="related-list">
-            <a href="https://ebc-waiblingen.de/" target="_blank" rel="noreferrer">EBC Waiblingen</a>
+            <a href="https://ebc-waiblingen.de/" target="_blank" rel="noreferrer">
+              EBC Waiblingen
+            </a>
             <span className="related-separator">·</span>
-            <a href="https://www.erb-basel.ch/" target="_blank" rel="noreferrer">ERB Basel</a>
+            <a href="https://www.erb-basel.ch/" target="_blank" rel="noreferrer">
+              ERB Basel
+            </a>
           </div>
         </div>
       </section>
@@ -141,7 +214,7 @@ function App() {
           <nav className="footer-nav">
             <Link to="/glaube">{t("nav.belief")}</Link>
             <Link to="/uber-uns">{t("nav.about")}</Link>
-            <Link to="/predigten">{t("nav.sermons")}</Link>
+            <Link to="/media/videos">{t("nav.media")}</Link>
             <Link to="/spenden">{t("nav.donate")}</Link>
             <Link to="/kontakt">{t("nav.contact")}</Link>
           </nav>

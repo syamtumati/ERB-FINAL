@@ -1,0 +1,33 @@
+import { useTranslation } from "react-i18next";
+import "./MediaBooks.css"; // ✅ REQUIRED
+
+export default function MediaBooks() {
+  const { i18n } = useTranslation();
+
+  const isGerman = i18n.language === "de";
+
+  return (
+    <div className="media-books">
+      <h2>
+        {isGerman ? "Bücher von Peter Schild" : "Books by Peter Schild"}
+      </h2>
+
+      <p>
+        {isGerman
+          ? "Offizieller Bücher-Shop"
+          : "Official book store"}
+      </p>
+
+      <a
+        href="https://www.voh-shop.de/s01.php?cur=EUR&sp=de&ag=1&pp=sucheper&per=551&pern=Peter%20Schild&pert=8&perbio=1#Start"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="gold-btn"
+      >
+        {isGerman ? "Zum Bücher-Shop" : "Go to Book Store"}
+        <div className="shine"></div>
+      </a>
+    </div>
+  );
+}
+

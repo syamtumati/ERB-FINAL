@@ -1,0 +1,152 @@
+/* ===================================================== */
+/* MEDIA BOOKS */
+/* ===================================================== */
+
+.media-books {
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+  color: #EAF1FF;
+  font-family: "Georgia", serif;
+}
+
+.media-books h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.media-books p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: #e5ecff;
+}
+
+/* ===================================================== */
+/* BOOK GRID */
+/* ===================================================== */
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE NORMALIZATION */
+.book-image-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ===================================================== */
+/* PRICE — FINAL FIX */
+/* ===================================================== */
+
+.book-price {
+  margin-top: 0.9rem;
+
+  /* FONT */
+  font-family: "Georgia", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e8c0a0;
+
+  /* 🔥 CRITICAL FIXES */
+  line-height: 1;                 /* removes vertical jump */
+  height: 1.05rem;                /* locks height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* numeric consistency */
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+
+  white-space: nowrap;
+}
+
+/* ===================================================== */
+/* STORE BUTTON */
+/* ===================================================== */
+
+.books-store-link {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* ===================================================== */
+/* RESPONSIVE */
+/* ===================================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .media-books h2 {
+    font-size: 2rem;
+  }
+
+  .media-books p {
+    font-size: 1.15rem;
+  }
+
+  .book-price {
+    font-size: 1.05rem;
+    height: 1.05rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-books {
+    margin-bottom: 4rem;
+  }
+
+  .book-price {
+    font-size: 1.05rem;
+    height: 1.05rem;
+  }
+}
+
+/* ===================================================== */
+/* DESKTOP FINE TUNING */
+/* ===================================================== */
+
+@media (min-width: 1024px) {
+  .media-books {
+    transform: translateX(-20px);
+  }
+}
+
