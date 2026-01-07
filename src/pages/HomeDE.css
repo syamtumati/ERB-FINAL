@@ -162,7 +162,7 @@
 /* ================= FORCE MOBILE VISIT TITLE SIZE ================= */
 @media (max-width: 768px) {
   .visit-title {
-    font-size: 1.6rem !important;   /* ✅ MOBILE FIX (Samsung safe) */
+    font-size: 2rem !important;   /* ✅ MOBILE FIX (Samsung safe) */
     line-height: 1.35;
   }
 }
