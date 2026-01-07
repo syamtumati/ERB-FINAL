@@ -582,4 +582,8 @@
     align-items: center;
     padding-top: 90px; /* SAME AS OLD FILE */
   }
+
+  .hero-content-centered {
+    transform: translateY(-20px); /* optional fine-tune */
+  }
 }
