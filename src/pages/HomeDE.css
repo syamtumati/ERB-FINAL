@@ -513,7 +513,7 @@
 /* Desktop-only offset */
 @media (min-width: 1024px) {
   .visit-content {
-    transform: translateX(40px);
+    transform: translateX(20px);
   }
 }
 
