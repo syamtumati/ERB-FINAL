@@ -199,6 +199,6 @@
 /* FINAL desktop hero title size – force apply */
 @media (min-width: 1024px) {
   .hero-church-name {
-    font-size: 2.6rem !important;
+    font-size: 3rem !important;
   }
 }
