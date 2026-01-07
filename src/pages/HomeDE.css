@@ -183,6 +183,6 @@
   }
 
   .visit-section .visit-content {
-    transform: translateX(40px);
+    transform: translateX(-20px);
   }
 }
