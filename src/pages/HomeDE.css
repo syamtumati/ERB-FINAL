@@ -580,10 +580,10 @@
   .hero-overlay {
     justify-content: center;
     align-items: center;
-    padding-top: 90px; /* SAME AS OLD FILE */
+    padding-top: 0; /* SAME AS OLD FILE */
   }
 
   .hero-content-centered {
-    transform: translateY(-120px); /* optional fine-tune */
+    transform: translateY(-180px); /* optional fine-tune */
   }
 }
