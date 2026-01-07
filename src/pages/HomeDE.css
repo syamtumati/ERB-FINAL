@@ -178,7 +178,7 @@
 /* ================= FORCE DESKTOP HERO TITLE SIZE ================= */
 @media (min-width: 1024px) {
   .hero-video-section .hero-church-name {
-    font-size: 2.4rem !important;  /* ✅ visibly smaller */
+    font-size: 2.6rem !important;  /* ✅ visibly smaller */
     line-height: 1.15;
   }
 }
