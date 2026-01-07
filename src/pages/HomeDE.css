@@ -124,7 +124,7 @@
 /* ================= MOBILE HERO POSITION ================= */
 @media (max-width: 768px) {
   .hero-content-centered {
-    transform: translateY(-160px);   /* ✅ MOVE HERO NAME UP */
+    transform: translateY(-170px);   /* ✅ MOVE HERO NAME UP */
   }
 }
 
@@ -180,5 +180,9 @@
   .hero-video-section .hero-church-name {
     font-size: 2.6rem !important;  /* ✅ visibly smaller */
     line-height: 1.15;
+  }
+
+  .visit-section .visit-content {
+    transform: translateX(20px);
   }
 }
