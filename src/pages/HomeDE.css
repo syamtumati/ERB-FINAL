@@ -575,3 +575,14 @@
     transform: translateY(-30px); /* ⬆️ MOBILE UP */
   }
 }
+
+@media (min-width: 1024px) {
+  .hero-overlay {
+    padding-top: 0;
+    justify-content: flex-start;
+  }
+
+  .hero-content-centered {
+    margin-top: 38vh; /* ⬆️ control vertical position */
+  }
+}
