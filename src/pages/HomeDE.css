@@ -49,12 +49,11 @@
   text-align: center;
 }
 
-/* ================= HERO TITLE ================= */
+/* ================= HERO TITLE (BASE = MOBILE) ================= */
 .hero-church-name {
   font-family: 'Libre Baskerville', serif;
-  font-size: 2.6rem;
+  font-size: 2.2rem;              /* ✅ MOBILE BASE SIZE */
   line-height: 1.2;
-  text-align: center;
   font-weight: 700;
   color: #d2b184;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
@@ -63,13 +62,11 @@
 .hero-church-name .hero-baptist {
   display: block;
   margin-top: 0.3rem;
-  font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  color: inherit;
 }
 
-/* ================= VISIT BOX ================= */
+/* ================= VISIT SECTION ================= */
 .hero-visit-box {
   margin-top: 4rem;
   max-width: 520px;
@@ -81,12 +78,12 @@
 }
 
 .hero-visit-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;              /* ✅ MOBILE REDUCED */
 }
 
 .hero-visit-time,
 .hero-visit-address {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 /* ================= WHAT MATTERS ================= */
@@ -97,71 +94,68 @@
 }
 
 .main-title {
-  font-size: 3.2rem;
+  font-size: 2.2rem;              /* ✅ MOBILE REDUCED */
   color: white;
 }
 
 /* ================= GRID ================= */
 .what-matters-grid {
   display: grid;
-  grid-template-columns: repeat(2, 420px);
-  gap: 3rem;
-  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .matter-block {
   background: white;
-  padding: 2.6rem 2rem;
+  padding: 2.4rem 1.8rem;
   border-radius: 2rem;
   color: #2d1b0a;
 }
 
-/* ================= MOBILE FIXES (IMPORTANT) ================= */
+.matter-block h3 {
+  font-size: 1.4rem;
+}
+
+.matter-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ================= MOBILE HERO POSITION ================= */
 @media (max-width: 768px) {
-
-  /* ✅ MOVE HERO NAME UP (correct way) */
   .hero-content-centered {
-    transform: translateY(-90px);
-  }
-
-  /* ✅ REDUCE HERO VISIT TITLE */
-  .hero-visit-title {
-    font-size: 1.25rem;
-  }
-
-  .hero-visit-time,
-  .hero-visit-address {
-    font-size: 0.95rem;
-  }
-
-  /* ✅ REDUCE "WAS UNS WICHTIG IST" TITLE */
-  .main-title {
-    font-size: 2.2rem;
-  }
-
-  /* ✅ REDUCE CARD TEXT */
-  .matter-block h3 {
-    font-size: 1.45rem;
-  }
-
-  .matter-block p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .what-matters-grid {
-    grid-template-columns: 1fr;
+    transform: translateY(-120px);   /* ✅ MOVE HERO NAME UP */
   }
 }
 
-/* ================= DESKTOP (UNCHANGED) ================= */
+/* ================= DESKTOP ONLY ================= */
 @media (min-width: 1024px) {
+
+  /* HERO POSITION */
   .hero-content-centered {
     transform: translateY(-240px);
   }
 
+  /* HERO TITLE SIZE */
   .hero-church-name {
-    font-size: 2.6rem;
+    font-size: 2.6rem;              /* ✅ DESKTOP REDUCED */
+  }
+
+  /* VISIT TITLE */
+  .hero-visit-title {
+    font-size: 1.8rem;
+  }
+
+  /* WHAT MATTERS TITLE */
+  .main-title {
+    font-size: 3.2rem;
+  }
+
+  /* GRID */
+  .what-matters-grid {
+    grid-template-columns: repeat(2, 420px);
+    gap: 3rem;
+    justify-content: center;
   }
 }
 
