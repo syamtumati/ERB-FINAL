@@ -37,7 +37,6 @@
     rgba(10, 8, 15, 0.2),
     rgba(15, 10, 30, 0.35)
   );
-  padding-top: 0;
 }
 
 .hero-content-centered {
@@ -59,9 +58,6 @@
   font-weight: 700;
   color: #d2b184;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  -webkit-text-fill-color: initial !important;
 }
 
 .hero-church-name .hero-baptist {
@@ -71,10 +67,6 @@
   font-size: inherit;
   font-weight: inherit;
   color: inherit;
-  text-shadow: inherit;
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  -webkit-text-fill-color: initial !important;
 }
 
 /* ================= VISIT BOX ================= */
@@ -86,35 +78,15 @@
   border-radius: 18px;
   padding: 2.4rem;
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
-  color: #2b2620;
 }
 
 .hero-visit-title {
   font-size: 1.8rem;
-  margin-bottom: 1.2rem;
-}
-
-.hero-visit-divider {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1.2rem;
-}
-
-.hero-visit-divider span {
-  flex: 1;
-  height: 2px;
-  background: rgba(215, 169, 85, 0.6);
-}
-
-.hero-visit-icon {
-  color: #d7a955;
 }
 
 .hero-visit-time,
 .hero-visit-address {
   font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 /* ================= WHAT MATTERS ================= */
@@ -124,15 +96,9 @@
   text-align: center;
 }
 
-.container {
-  max-width: 1350px;
-  margin: 0 auto;
-}
-
 .main-title {
   font-size: 3.2rem;
   color: white;
-  margin-bottom: 3rem;
 }
 
 /* ================= GRID ================= */
@@ -147,53 +113,40 @@
   background: white;
   padding: 2.6rem 2rem;
   border-radius: 2rem;
-  text-decoration: none;
   color: #2d1b0a;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease;
 }
 
-.matter-block:hover {
-  transform: translateY(-8px);
-}
-
-.read-more {
-  margin-top: auto;
-  padding-top: 1.8rem;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 2.2px;
-  text-transform: uppercase;
-  color: #c19a6b;
-  text-align: center;
-  transition: color 0.3s ease, letter-spacing 0.3s ease;
-}
-
-.matter-block:hover .read-more {
-  color: #a87d4f;
-  letter-spacing: 2.6px;
-}
-
-/* ================= MOBILE ================= */
+/* ================= MOBILE FIXES (IMPORTANT) ================= */
 @media (max-width: 768px) {
-  /* ✅ HERO NAME UP (mobile only) */
-  .hero-church-name {
-    transform: translateY(-45px);
+
+  /* ✅ MOVE HERO NAME UP (correct way) */
+  .hero-content-centered {
+    transform: translateY(-90px);
   }
 
-  /* ✅ WAS WICHTIG – REDUCED FONT SIZE (mobile only) */
+  /* ✅ REDUCE HERO VISIT TITLE */
+  .hero-visit-title {
+    font-size: 1.25rem;
+  }
+
+  .hero-visit-time,
+  .hero-visit-address {
+    font-size: 0.95rem;
+  }
+
+  /* ✅ REDUCE "WAS UNS WICHTIG IST" TITLE */
   .main-title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
+  /* ✅ REDUCE CARD TEXT */
   .matter-block h3 {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
   }
 
   .matter-block p {
-    font-size: 1.05rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .what-matters-grid {
@@ -201,17 +154,14 @@
   }
 }
 
-/* ================= DESKTOP POSITION ================= */
+/* ================= DESKTOP (UNCHANGED) ================= */
 @media (min-width: 1024px) {
   .hero-content-centered {
     transform: translateY(-240px);
   }
-}
 
-/* FINAL desktop hero title size – force apply */
-@media (min-width: 1024px) {
   .hero-church-name {
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
 }
 
