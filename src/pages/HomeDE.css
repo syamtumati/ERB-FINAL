@@ -186,3 +186,28 @@
     transform: translateX(-20px);
   }
 }
+
+
+/* ================= HERO TITLE LINE CONTROL ================= */
+
+/* Force first line break after Christus-zentrierte */
+.hero-church-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for second/third lines */
+.hero-church-name .hero-line {
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* MOBILE: split reformierte + Baptistengemeinde */
+@media (max-width: 768px) {
+  .hero-church-name .hero-line {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

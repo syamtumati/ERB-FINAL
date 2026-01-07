@@ -46,13 +46,16 @@ function Home() {
         <img
           className="hero-video"
           src={heroImage}
-          alt="Gnadenkirche Frankfurt – Stadtansicht"
+          alt="Christus-zentrierte reformierte Baptistengemeinde"
         />
         <div className="hero-overlay">
           <div className="hero-content-centered">
             <h1 className="hero-church-name">
-              Evangelisch-Reformierte
-              <span className="hero-baptist">Baptistengemeinde</span>
+              Christus-zentrierte
+	      <span className="hero-line">
+                <span className="hero-word reformierte">reformierte</span>
+                <span className="hero-word baptist">Baptistengemeinde</span>
+              </span>
             </h1>
           </div>
         </div>
