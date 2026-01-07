@@ -166,3 +166,19 @@
     line-height: 1.35;
   }
 }
+
+/* ================= FORCE MOBILE WHAT MATTERS TITLE SIZE ================= */
+@media (max-width: 768px) {
+  .what-matters-section .main-title {
+    font-size: 2rem !important;   /* ✅ reduced */
+    line-height: 1.25;
+  }
+}
+
+/* ================= FORCE DESKTOP HERO TITLE SIZE ================= */
+@media (min-width: 1024px) {
+  .hero-video-section .hero-church-name {
+    font-size: 2.4rem !important;  /* ✅ visibly smaller */
+    line-height: 1.15;
+  }
+}
