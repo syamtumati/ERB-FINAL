@@ -584,6 +584,6 @@
   }
 
   .hero-content-centered {
-    transform: translateY(-20px); /* optional fine-tune */
+    transform: translateY(-40px); /* optional fine-tune */
   }
 }
