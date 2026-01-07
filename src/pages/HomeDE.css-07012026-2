@@ -52,13 +52,15 @@
 
 /* ================= HERO TITLE ================= */
 .hero-church-name {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Libre Baskerville', serif; /* ✅ FORCE SAME FONT EVERYWHERE */
   font-size: 3.4rem;
   line-height: 1.2;
   text-align: center;
   font-weight: 700;
+
   color: #d2b184;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+
   background: none !important;
   -webkit-background-clip: initial !important;
   -webkit-text-fill-color: initial !important;
@@ -72,6 +74,7 @@
   font-weight: inherit;
   color: inherit;
   text-shadow: inherit;
+
   background: none !important;
   -webkit-background-clip: initial !important;
   -webkit-text-fill-color: initial !important;
@@ -177,23 +180,8 @@
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  /* ✅ HERO NAME UP (mobile only) */
   .hero-church-name {
-    transform: translateY(-45px);
-  }
-
-  /* ✅ WAS WICHTIG – REDUCED FONT SIZE (mobile only) */
-  .main-title {
-    font-size: 2.4rem;
-  }
-
-  .matter-block h3 {
-    font-size: 1.55rem;
-  }
-
-  .matter-block p {
-    font-size: 1.05rem;
-    line-height: 1.65;
+    transform: translateY(-20px);
   }
 
   .what-matters-grid {
@@ -214,4 +202,3 @@
     font-size: 3rem !important;
   }
 }
-
