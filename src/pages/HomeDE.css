@@ -576,6 +576,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .hero-content-centered {
+    transform: translateY(-40px);
+  }
+}
+
 @media (max-width: 768px) {
   .hero-church-name {
     transform: translateY(-30px); /* ⬆️ MOBILE UP */
