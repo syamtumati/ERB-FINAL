@@ -569,18 +569,6 @@
 /* ===================================================== */
 /* DESKTOP REFINEMENTS */
 /* ===================================================== */
-@media (min-width: 1024px) {
-  .hero-church-name {
-    margin-top: 0;
-    transform: translateY(-20px); /* ⬆️ MOVE HERO NAME UP */
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-content-centered {
-    transform: translateY(-40px);
-  }
-}
 
 @media (max-width: 768px) {
   .hero-church-name {
