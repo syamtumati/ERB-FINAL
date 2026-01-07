@@ -578,11 +578,8 @@
 
 @media (min-width: 1024px) {
   .hero-overlay {
-    padding-top: 0;
-    justify-content: flex-start;
-  }
-
-  .hero-content-centered {
-    margin-top: 26vh; /* ⬆️ control vertical position */
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px; /* SAME AS OLD FILE */
   }
 }
