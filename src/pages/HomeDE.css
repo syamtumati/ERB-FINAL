@@ -211,3 +211,47 @@
   }
 }
 
+
+
+/* ================= HERO MEDIA (IMAGE + MOBILE VIDEO) ================= */
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Default: show image, hide video */
+.hero-image {
+  display: block;
+}
+
+.hero-video-mobile {
+  display: none;
+}
+
+/* ================= MOBILE ONLY ================= */
+@media (max-width: 768px) {
+
+  /* Hide image on mobile */
+  .hero-image {
+    display: none;
+  }
+
+  /* Show video on mobile */
+  .hero-video-mobile {
+    display: block;
+  }
+
+  /* Ensure video stays behind content */
+  .hero-video-mobile {
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    z-index: 1;
+  }
+}
+

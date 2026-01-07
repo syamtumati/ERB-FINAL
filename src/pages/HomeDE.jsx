@@ -4,6 +4,7 @@ import "./HomeDE.css";
 
 // Static hero IMAGE
 import heroImage from "../assets/images/hero-message.jpg";
+import heroMobileVideo from "../assets/videos/hero-mobile.mp4";
 
 // Church slideshow images – import them here
 import church1 from "../assets/images/church1.jpg";
@@ -48,6 +49,17 @@ function Home() {
           src={heroImage}
           alt="Christus-zentrierte reformierte Baptistengemeinde"
         />
+	{/* Mobile video */}
+        <video
+          className="hero-media hero-video-mobile"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+	  <source src={heroMobileVideo} type="video/mp4" />
+        </video>
+
         <div className="hero-overlay">
           <div className="hero-content-centered">
             <h1 className="hero-church-name">
