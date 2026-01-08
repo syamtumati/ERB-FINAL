@@ -1,0 +1,77 @@
+/* ======================= */
+/* LANGUAGE DROPDOWN – FIXED IN VIEWPORT */
+/* ======================= */
+.lang-dropdown {
+  position: absolute;;              /* Fixed to viewport – stays on screen */
+  top: 20px;                    /* Distance from top */
+  right: 20px;                  /* Distance from right */
+  z-index: 10000;               /* Above header and everything else */
+  pointer-events: auto;         /* Clickable */
+}
+
+/* Dropdown button style */
+.lang-dropdown select {
+  background: rgba(15, 23, 42, 0.9);     /* Dark glass background */
+  color: #f0e8ff;                       /* Light text */
+  border: 1px solid #e8c0a0;            /* Gold border */
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);          /* Premium glass effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.lang-dropdown select:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: #f9f6ef;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.lang-dropdown select:focus {
+  outline: none;
+  border-color: #e8c0a0;
+  box-shadow: 0 0 0 4px rgba(232, 192, 160, 0.3);
+}
+
+.lang-dropdown select option {
+  background: #1e293b;
+  color: #f0e8ff;
+  text-transform: uppercase;
+}
+
+/* ======================= */
+/* MOBILE – POSITION TO AVOID HAMBURGER OVERLAP */
+/* ======================= */
+@media (max-width: 992px) {
+  .lang-dropdown {
+    top: 16px;
+    right: 80px;                /* Moves left to avoid hamburger */
+  }
+}
+
+@media (max-width: 480px) {
+  .lang-dropdown {
+    top: 12px;
+    right: 70px;
+  }
+
+  .lang-dropdown select {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* MOBILE – move dropdown slightly right */
+@media (max-width: 768px) {
+  .lang-dropdown {
+    top: 10px;
+    right: 10px;   /* move closer to the right edge */
+  }
+}
+
