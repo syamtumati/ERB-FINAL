@@ -3,9 +3,9 @@
 /* ======================= */
 
 .lang-dropdown {
-  position: fixed;
-  top: 18px;
-  right: 20px;
+  position: absolute;        /* ⬅️ attached to page, scrolls away */
+  top: 22px;
+  right: 28px;               /* desktop position */
   z-index: 1200;
 }
 
@@ -70,18 +70,22 @@
 }
 
 /* ======================= */
-/* MOBILE */
+/* MOBILE ADJUSTMENTS */
 /* ======================= */
+
+/* Tablets / mobile */
 @media (max-width: 992px) {
   .lang-dropdown {
-    right: 72px; /* avoids hamburger */
+    right: 40px;   /* ⬅️ move slightly RIGHT on mobile */
+    top: 18px;
   }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
   .lang-dropdown {
-    right: 64px;
-    top: 12px;
+    right: 48px;   /* ⬅️ a bit more right */
+    top: 14px;
   }
 
   .lang-selected {
