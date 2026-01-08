@@ -63,9 +63,8 @@ function Home() {
         <div className="hero-overlay">
           <div className="hero-content-centered">
             <h1 className="hero-church-name">
-              Christus-zentrierte
+              Evangelisch-Reformierte
 	      <span className="hero-line">
-                <span className="hero-word reformierte">reformierte</span>
                 <span className="hero-word baptist">Baptistengemeinde</span>
               </span>
             </h1>
