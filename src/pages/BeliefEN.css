@@ -6,7 +6,7 @@
 /* ================= SECTION ================= */
 .belief-grid-section {
 /*  background: linear-gradient(135deg, #0c2340, #1e3a5f);*/
-  background: #384852;
+  background: #26343a;
   padding: 7rem 2rem 10rem;
   color: white;
 }
@@ -75,7 +75,7 @@
   font-size: 1rem;
 
 /*  background: rgba(12, 35, 64, 0.92);*/
-  background: #384852;
+  background: #26343a;
   border-radius: 10px;
 
   padding: 0;

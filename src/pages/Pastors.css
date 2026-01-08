@@ -3,8 +3,8 @@
 /* ===================================================== */
 .pastors-page {
   min-height: 100vh;
-  background: #384852;
-  color: #eaf1ff;
+  background: #26343a;
+  color: #eaf1ff;;
   font-family: "Georgia", serif;
   overflow-x: hidden;
   padding-top: 0;
@@ -55,7 +55,7 @@
 .leadership-scripture-section {
   padding: 9rem 2rem 6rem;
   text-align: center;
-  background: #384852;
+  background: #26343a;
   color: #eaf1ff;
 }
 .leadership-scripture-section .container {
@@ -84,7 +84,7 @@
 /* ================= LEITUNG SECTION ================= */
 .leadership-section {
   padding: 2rem 2rem 8rem;
-  background: #384852;
+  background: #26343a;
 }
 .leadership-section .container {
   max-width: 1180px;
