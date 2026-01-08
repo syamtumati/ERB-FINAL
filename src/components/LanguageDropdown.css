@@ -76,7 +76,7 @@
 /* Tablets / mobile */
 @media (max-width: 992px) {
   .lang-dropdown {
-    right: 40px;   /* ⬅️ move slightly RIGHT on mobile */
+    right: 56px;   /* ⬅️ move slightly RIGHT on mobile */
     top: 18px;
   }
 }
@@ -84,7 +84,7 @@
 /* Small phones */
 @media (max-width: 480px) {
   .lang-dropdown {
-    right: 48px;   /* ⬅️ a bit more right */
+    right: 62px;   /* ⬅️ a bit more right */
     top: 14px;
   }
 
