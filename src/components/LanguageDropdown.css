@@ -84,7 +84,7 @@
 /* Small phones */
 @media (max-width: 480px) {
   .lang-dropdown {
-    right: 38px;   /* ⬅️ a bit more right */
+    right: 35px;   /* ⬅️ a bit more right */
     top: 14px;
   }
 
