@@ -70,7 +70,8 @@
 .hero-visit-box {
   margin-top: 4rem;
   max-width: 520px;
-  background: #f9f6ef;
+/*  background: #f9f6ef;*/
+  background: #26343a;
   border: 2px solid #d7a955;
   border-radius: 18px;
   padding: 2.4rem;
@@ -88,7 +89,7 @@
 
 /* ================= WHAT MATTERS ================= */
 .what-matters-section {
-  background: #384852;
+  background: #26343a;
   padding: 4rem 1.5rem;
   text-align: center;
 }

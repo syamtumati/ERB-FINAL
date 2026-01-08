@@ -233,7 +233,8 @@ body {
 /* ======================= */
 
 .partner-heartcry {
-  background: #f4f3f1;
+/*  background: #f4f3f1;*/
+  background: #DADADA;
   padding: 2rem 1.5rem 2.8rem;
   text-align: center;
   font-family: "Georgia", serif;
@@ -258,13 +259,13 @@ body {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #8b4513;
+  color: #26343a;
 }
 
 .partner-line {
   width: 60px;
   height: 1px;
-  background: #8b4513;
+  background: #26343a;
 }
 
 .heartcry-logo {
@@ -284,7 +285,8 @@ body {
 /* ======================= */
 
 .clean-footer {
-  background: #f4f3f1;
+/*  background: #f4f3f1;*/
+  background: #DADADA;
   padding: 4rem 2rem 3rem;
   text-align: center;
   font-family: "Georgia", serif;
@@ -314,7 +316,7 @@ body {
 }
 
 .footer-nav a {
-  color: #8b4513;
+  color: #26343a;
   font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -371,13 +373,13 @@ body {
 /* ======================= */
 
 .impressum-link {
-  color: #8b4513;
+  color: #26343a;
   text-decoration: underline;
   font-weight: 600;
 }
 
 .impressum-link:hover {
-  color: #5a2d0c;
+  color: #26343a;
 }
 
 .copyright-sep {
@@ -392,11 +394,12 @@ body {
 /* ======================= */
 
 .related-churches {
-  background: #f4f3f1;
+/*  background: #f4f3f1;*/
+  background: #DADADA;
   padding: 2.8rem 1.5rem 3.5rem;
   text-align: center;
   font-family: "Georgia", serif;
-  color: #2d1b0a;
+  color: #26343a;
 }
 
 .related-inner {
@@ -418,13 +421,13 @@ body {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #8b4513;
+  color: #26343a;
 }
 
 .related-line {
   width: 60px;
   height: 1px;
-  background: #8b4513;
+  background: #26343a;
 }
 
 /* CHURCH LINKS */
@@ -442,7 +445,8 @@ body {
 .related-list a:hover,
 .related-list a:active,
 .related-list a:focus {
-  color: #8b4513;
+/*  color: #8b4513;*/
+  color: #26343a;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 1px;
@@ -451,7 +455,7 @@ body {
 
 /* SEPARATOR DOT */
 .related-separator {
-  color: #8b4513;
+  color: #26343a;
   opacity: 0.7;
 }
 
@@ -478,7 +482,7 @@ body {
 /* ======================= */
 
 .church-name-link {
-  color: #8b4513;            /* same brown */
+  color: #26343a;            /* same brown */
   text-decoration: none;
   font-size: 2.2rem;
   font-weight: 900;
