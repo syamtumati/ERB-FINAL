@@ -479,4 +479,9 @@
     font-size: 2.8rem;   /* was 4rem */
   }
 
+  /* Reduce "Unsere Leitung" heading */
+  .pastors-heading {
+    font-size: 3rem;   /* was 3.4rem */
+  }
+
 }
