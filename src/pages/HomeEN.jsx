@@ -10,6 +10,16 @@ import church3 from "../assets/images/church3.jpg";
 import church4 from "../assets/images/church4.jpg";
 
 function HomeEN() {
+
+
+   /* ================= SCROLL TO BOTTOM ================= */
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  };
+
   // ================= SLIDESHOW LOGIC – SAME AS GERMAN VERSION =================
   useEffect(() => {
     const slides = document.querySelectorAll('.slide');
@@ -47,6 +57,17 @@ function HomeEN() {
         >
           <source src={heroMobileVideo} type="video/mp4" />
         </video>
+
+        {/* ===== SCROLL ARROWS (CLICKABLE) ===== */}
+        <button
+          className="scroll-arrows"
+          onClick={scrollToBottom}
+          aria-label="Zum Seitenende scrollen"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <div className="hero-overlay">
           <div className="hero-content-centered">

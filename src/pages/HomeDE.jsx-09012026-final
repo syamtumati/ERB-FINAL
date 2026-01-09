@@ -14,15 +14,6 @@ import church4 from "../assets/images/church4.jpg";
 // Add more imports if you have more images (church4.jpg, etc.)
 
 function Home() {
-
-  /* ================= SCROLL TO BOTTOM ================= */
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth"
-    });
-  };
-
   // ================= SLIDESHOW LOGIC – MUST BE INSIDE THE COMPONENT =================
   useEffect(() => {
     const slides = document.querySelectorAll('.slide');
@@ -69,17 +60,11 @@ function Home() {
 	  <source src={heroMobileVideo} type="video/mp4" />
         </video>
 
-	
-	{/* ===== SCROLL ARROWS (CLICKABLE) ===== */}
-        <button
-          className="scroll-arrows"
-          onClick={scrollToBottom}
-          aria-label="Zum Seitenende scrollen"
-        >
+	<div class="scroll-arrows">
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </div>
 
         <div className="hero-overlay">
           <div className="hero-content-centered">
