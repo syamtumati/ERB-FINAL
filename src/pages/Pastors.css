@@ -484,4 +484,9 @@
     font-size: 3rem;   /* was 3.4rem */
   }
 
+  /* Push scripture section slightly down */
+  .leadership-scripture-section {
+    margin-top: 2rem;
+  }
+
 }
