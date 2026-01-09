@@ -51,8 +51,8 @@
 
 .ref-text {
   display: inline-block;
-  background: #DADADA;
-  color: #26343a;
+  background: rgba(139, 69, 19, 0.3);
+  color: #d7a955;
   padding: 0.6rem 1.2rem;
   border-radius: 30px;
   font-size: 0.95rem;
@@ -65,8 +65,8 @@
 }
 
 .ref-text:hover {
-  background: #DADADA;
-  border-color: #26343a;
+  background: rgba(139, 69, 19, 0.5);
+  border-color: #e8c0a0;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
@@ -168,7 +168,7 @@
 }
 
 .slide-navigation button {
-  background: #44565d;
+  background: #8b4513;
   color: white;
   border: none;
   padding: 0.7rem 1.6rem;
@@ -179,15 +179,15 @@
 }
 
 .slide-navigation button:hover {
-  background: #44565d;
+  background: #a85a1a;
 }
 
 .slide-back {
-  background: #44565d;
+  background: #2d1b0a;
 }
 
 .slide-back:hover {
-  background: #44565d;
+  background: #3a2313;
 }
 
 /* ======================= */
