@@ -464,3 +464,19 @@
     height: 280px;
   }
 }
+
+
+/* ================= DESKTOP ONLY FONT REFINEMENTS ================= */
+@media (min-width: 1024px) {
+
+  /* Scripture text at top */
+  .scripture-text {
+    font-size: 2.3rem;   /* was 2.8rem */
+  }
+
+  /* Pastor & Deacon names */
+  .pastor-content h1 {
+    font-size: 2.8rem;   /* was 4rem */
+  }
+
+}
