@@ -13,9 +13,10 @@ function HomeEN() {
 
 
    /* ================= SCROLL TO BOTTOM ================= */
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
+  const scrollToNextSection = () => {
+  document
+    .getElementById("home-next-section")
+    ?.scrollIntoView({
       behavior: "smooth"
     });
   };
@@ -61,7 +62,7 @@ function HomeEN() {
         {/* ===== SCROLL ARROWS (CLICKABLE) ===== */}
         <button
           className="scroll-arrows"
-          onClick={scrollToBottom}
+          onClick={scrollToNextSection}
           aria-label="Zum Seitenende scrollen"
         >
           <span></span>
@@ -86,7 +87,7 @@ function HomeEN() {
       </section>
       
       {/* ================= VISIT US ================= */}
-      <section className="visit-section">
+      <section id="home-next-section" className="visit-section">
         <div className="container visit-content">
           <h2 className="visit-title">Visit us this Sunday</h2>
 

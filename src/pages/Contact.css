@@ -22,7 +22,7 @@
 }
 
 .contact-hero-title {
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: 900;
   margin-bottom: 1rem;
   color: #ffffff;
@@ -238,6 +238,6 @@
     text-align: center;
 
     /* 👈 move hero slightly left */
-    transform: translateX(-40px);
+    transform: translateX(-20px);
   }
 }

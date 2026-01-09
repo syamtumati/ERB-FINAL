@@ -15,10 +15,11 @@ import church4 from "../assets/images/church4.jpg";
 
 function Home() {
 
-  /* ================= SCROLL TO BOTTOM ================= */
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
+  /* ================= SCROLL TO NEXT SECTION ================= */
+  const scrollToNextSection = () => {
+  document
+    .getElementById("home-next-section")
+    ?.scrollIntoView({
       behavior: "smooth"
     });
   };
@@ -73,7 +74,7 @@ function Home() {
 	{/* ===== SCROLL ARROWS (CLICKABLE) ===== */}
         <button
           className="scroll-arrows"
-          onClick={scrollToBottom}
+          onClick={scrollToNextSection}
           aria-label="Zum Seitenende scrollen"
         >
           <span></span>
@@ -100,7 +101,7 @@ function Home() {
 
 
       {/* ================= VISIT US ================= */}
-      <section className="visit-section">
+      <section id="home-next-section" className="visit-section">
         <div className="container visit-content">
           <h2 className="visit-title">Besuchen Sie uns diesen Sonntag</h2>
 
