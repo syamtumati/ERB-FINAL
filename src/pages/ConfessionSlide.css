@@ -51,22 +51,22 @@
 
 .ref-text {
   display: inline-block;
-  background: #DADADA;
-  color: #26343a;
+  background: #44565d;
+  color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.8px;
-  border: 1px solid rgba(215, 169, 85, 0.5);
+  border: 1px solid #5a6b72;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
 
 .ref-text:hover {
-  background: #DADADA;
-  border-color: #26343a;
+  background: #44565d;
+  border-color: #5a6b72;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
@@ -87,8 +87,8 @@
   bottom: calc(100% + 12px);           /* Clear space above the pill */
   left: 50%;
   transform: translateX(-50%) translateY(0);
-  background: #1e1a15;                 /* Dark rich brown */
-  color: #f9f6ef;
+  background: #44565d;                 /* Dark rich brown */
+  color: #eaf1ff;
   padding: 1.2rem 1.6rem;
   border-radius: 16px;
   min-width: 320px;
@@ -97,7 +97,7 @@
   line-height: 1.8;
   text-align: left;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-  border: 2px solid #d7a955;
+  border: 1.5px solid #5a6b72;
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   pointer-events: none;
