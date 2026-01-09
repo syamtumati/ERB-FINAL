@@ -68,6 +68,11 @@ function Home() {
                 <span className="hero-word baptist">Baptistengemeinde</span>
               </span>
             </h1>
+	    {/* SLOGAN – NEW */}
+            <div className="hero-slogan">
+              <p className="hero-slogan-main">Christus im Zentrum</p>
+              <p className="hero-slogan-sub">ERB Frankfurt</p>
+            </div>
           </div>
         </div>
       </section>

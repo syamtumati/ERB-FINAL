@@ -66,38 +66,6 @@
   font-weight: inherit;
 }
 
-
-/* ================= HERO SLOGAN ================= */
-
-.hero-slogan {
-  margin-top: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-slogan-main {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-}
-
-.hero-slogan-sub {
-  margin-top: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #d7a955;
-}
-
-
 /* ================= VISIT SECTION ================= */
 .hero-visit-box {
   margin-top: 4rem;
@@ -285,22 +253,6 @@
 
   .hero-overlay {
     z-index: 1;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .hero-slogan-main {
-    font-size: 1.2rem;
-  }
-  .hero-slogan-sub {
-    font-size: 0.8rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-slogan-main {
-    font-size: 1.6rem;
   }
 }
 

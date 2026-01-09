@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./HomeEN.css"; // You can use the same CSS as HomeDE or create a separate one if needed
 import heroImage from "../assets/images/hero-message.jpg";
-import heroMobileVideo from "../assets/videos/hero-mobile.mp4";
 // Church slideshow images
 import church1 from "../assets/images/church1.jpg";
 import church2 from "../assets/images/church2.jpg";
@@ -37,32 +36,16 @@ function HomeEN() {
           src={heroImage}
           alt="Grace Church Frankfurt – City View"
         />
-	{/* Mobile video */}
-        <video
-          className="hero-media hero-video-mobile"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src={heroMobileVideo} type="video/mp4" />
-        </video>
-
         <div className="hero-overlay">
           <div className="hero-content-centered">
             <h1 className="hero-church-name">
               Evangelical-Reformed
               <span className="hero-baptist">Baptist Church</span>
             </h1>
-
-	    {/* SLOGAN – NEW */}
-            <div className="hero-slogan">
-              <p className="hero-slogan-main">Christ in the Center</p>
-              <p className="hero-slogan-sub">ERB Frankfurt</p>
-            </div>
           </div>
         </div>
       </section>
+      
       
       {/* ================= VISIT US ================= */}
       <section className="visit-section">
