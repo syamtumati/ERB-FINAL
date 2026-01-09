@@ -157,7 +157,7 @@
 /* ================= MOBILE HERO POSITION ================= */
 @media (max-width: 768px) {
   .hero-content-centered {
-    transform: translateY(-100px);   /* ✅ MOVE HERO NAME UP */
+    transform: translateY(-120px);   /* ✅ MOVE HERO NAME UP */
   }
 }
 
@@ -166,7 +166,7 @@
 
   /* HERO POSITION */
   .hero-content-centered {
-    transform: translateY(-240px);
+    transform: translateY(-200px);
   }
 
   /* HERO TITLE SIZE */
