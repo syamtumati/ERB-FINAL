@@ -57,7 +57,7 @@ function Home() {
         <img
           className="hero-video"
           src={heroImage}
-          alt="Christus-zentrierte reformierte Baptistengemeinde"
+          alt="Christus im Zentrum – ERB Frankfurt"
         />
 	{/* Mobile video */}
         <video
@@ -84,17 +84,12 @@ function Home() {
 
         <div className="hero-overlay">
           <div className="hero-content-centered">
-            <h1 className="hero-church-name">
-              Evangelisch-Reformierte
-	      <span className="hero-line">
-                <span className="hero-word baptist">Baptistengemeinde</span>
-              </span>
+	    <h1 className="hero-main-title">
+              Christus im Zentrum
             </h1>
-	    {/* SLOGAN – NEW */}
-            <div className="hero-slogan">
-              <p className="hero-slogan-main">Christus im Zentrum</p>
-              <p className="hero-slogan-sub">ERB Frankfurt</p>
-            </div>
+	    <h2 className="hero-secondary-title">
+              ERB Frankfurt
+            </h2>
           </div>
         </div>
       </section>

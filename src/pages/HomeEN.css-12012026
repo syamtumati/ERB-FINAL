@@ -80,35 +80,34 @@
   -webkit-text-fill-color: initial !important;
 }
 
-/* ================= HERO MAIN TITLE ================= */
-.hero-main-title {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 3.4rem;
-  font-weight: 700;
-  line-height: 1.2;
+/* ================= HERO SLOGAN ================= */
+
+.hero-slogan {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-
-  color: #ffffff; /* ✅ WHITE */
-
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
-  margin: 0;
 }
 
-/* ================= HERO SECONDARY TITLE ================= */
-.hero-secondary-title {
-  margin-top: 0.6rem;
-
+.hero-slogan-main {
   font-family: 'Libre Baskerville', serif;
-  font-size: 2.2rem;        /* ⬅️ clearly bigger */
+  font-size: 1.2rem;
   font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
 
+.hero-slogan-sub {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-
-  color: #d2b184;           /* old church name gold */
-  text-align: center;
-
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+  color: #d7a955;
 }
 
 /* VISIT BOX */
@@ -659,25 +658,3 @@
     height: 26px;
   }
 }
-
-@media (max-width: 768px) {
-  .hero-main-title {
-    font-size: 2.4rem;
-  }
-
-  .hero-secondary-title {
-    font-size: 1.5rem;
-    letter-spacing: 1.4px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-main-title {
-    font-size: 3.6rem;
-  }
-
-  .hero-secondary-title {
-    font-size: 2.6rem;
-  }
-}
-

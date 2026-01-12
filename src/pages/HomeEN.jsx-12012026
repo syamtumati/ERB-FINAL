@@ -46,7 +46,7 @@ function HomeEN() {
         <img
           className="hero-video"
           src={heroImage}
-          alt="Christ in the Center – ERB Frankfurt"
+          alt="Grace Church Frankfurt – City View"
         />
 	{/* Mobile video */}
         <video
@@ -72,12 +72,16 @@ function HomeEN() {
 
         <div className="hero-overlay">
           <div className="hero-content-centered">
-	    <h1 className="hero-main-title">
-              Christ in the Center
+            <h1 className="hero-church-name">
+              Evangelical-Reformed
+              <span className="hero-baptist">Baptist Church</span>
             </h1>
-	    <h2 className="hero-secondary-title">
-              ERB Frankfurt
-            </h2>
+
+	    {/* SLOGAN – NEW */}
+            <div className="hero-slogan">
+              <p className="hero-slogan-main">Christ in the Center</p>
+              <p className="hero-slogan-sub">ERB Frankfurt</p>
+            </div>
           </div>
         </div>
       </section>
