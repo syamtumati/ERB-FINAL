@@ -94,8 +94,3 @@
   }
 }
 
-.lang-selected:hover {
-  background: rgba(25, 35, 60, 0.95);
-  transform: translateY(-1px);
-}
-
