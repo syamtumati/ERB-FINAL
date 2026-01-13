@@ -16,10 +16,10 @@ export default function PastorsDE() {
       <section className="leadership-scripture-section">
         <div className="container">
           <p className="scripture-text">
-            Wer unter euch groß sein will, der sei euer Diener;
-            und wer unter euch der Erste sein will, der sei euer Knecht.
+            „Wer unter euch groß sein will, der sei euer Diener;
+            und wer unter euch der Erste sein will, der sei euer Knecht.“
           </p>
-          <p className="scripture-reference">— Matthäus 20,26–27</p>
+          <p className="scripture-reference">Matthäus 20,26–27</p>
         </div>
       </section>
 
@@ -35,7 +35,7 @@ export default function PastorsDE() {
               <div className="glow"></div>
             </div>
             <div className="pastor-content">
-	      <span className="label">Senior Pastor</span>
+	      <span className="label">Pastor</span>
               <h1>Peter Schild</h1>
               <p className="bio">
 	        Peter Schild ist verheiratet und Vater von fünf Kindern. Aus schwierigen

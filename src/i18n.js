@@ -34,6 +34,12 @@ const resources = {
 
       church: {
         name: "Evangelisch-Reformierte Baptistengemeinde"
+      },
+      /* ✅ ADD THIS */
+      confession: {
+        overview: "Zur Übersicht",
+        next: "Weiter",
+        prev: "Zurück"
       }
     }
   },
@@ -69,6 +75,13 @@ const resources = {
 
       church: {
         name: "Evangelical Reformed Baptist Church"
+      },
+	    
+      /* ✅ ADD THIS */
+      confession: {
+        overview: "Overview",
+        next: "Next",
+        prev: "Previous"
       }
     }
   }

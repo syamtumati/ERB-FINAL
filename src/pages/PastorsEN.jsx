@@ -16,17 +16,17 @@ export default function PastorsEN() {
       <section className="leadership-scripture-section">
         <div className="container">
           <p className="scripture-text">
-            Whoever wants to become great among you must be your servant,
-            and whoever wants to be first must be your slave.
+            „Whoever wants to become great among you must be your servant,
+            and whoever wants to be first must be your slave.“
           </p>
-          <p className="scripture-reference">— Matthew 20:26–27</p>
+          <p className="scripture-reference">Matthew 20:26–27</p>
         </div>
       </section>
 
       {/* LEADERSHIP */}
       <section className="leadership-section">
         <div className="container">
-          <h2 className="pastors-heading">Our Leadership</h2>
+          <h2 className="pastors-heading">Church Leadership</h2>
 
           {/* PASTOR */}
           <div className="pastor-card">
@@ -35,9 +35,8 @@ export default function PastorsEN() {
               <div className="glow"></div>
             </div>
             <div className="pastor-content">
-              <span className="label">Senior Pastor</span>
+              <span className="label">Pastor</span>
               <h1>Peter Schild</h1>
-              <h2>Pastor of the Evangelical Reformed Baptist Church</h2>
               <p className="bio">
 	        Peter Schild is married and the father of five children. Coming from
                 difficult circumstances and living far from God, he was brought to
@@ -58,7 +57,6 @@ export default function PastorsEN() {
             <div className="pastor-content">
               <span className="label">Deacon</span>
               <h1>Hans Ewert</h1>
-              <h2>Deacon of the Evangelical Reformed Baptist Church</h2>
               <p className="bio">
 	        Hans Ewert is married and the father of three children. He grew up in a
                 Russian-German Baptist church and came to faith in Jesus Christ as a
