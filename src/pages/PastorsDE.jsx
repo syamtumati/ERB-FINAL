@@ -26,7 +26,7 @@ export default function PastorsDE() {
       {/* LEADERSHIP */}
       <section className="leadership-section">
         <div className="container">
-          <h2 className="pastors-heading">Unsere Leitung</h2>
+          <h2 className="pastors-heading">Gemeinde Leitung</h2>
 
           {/* PASTOR */}
           <div className="pastor-card">
@@ -35,9 +35,8 @@ export default function PastorsDE() {
               <div className="glow"></div>
             </div>
             <div className="pastor-content">
-              <span className="label">Gemeindeleitung</span>
+	      <span className="label">Senior Pastor</span>
               <h1>Peter Schild</h1>
-              <h2>Pastor der Evangelisch-Reformierte Baptistengemeinde</h2>
               <p className="bio">
 	        Peter Schild ist verheiratet und Vater von fünf Kindern. Aus schwierigen
                 Lebensumständen kommend und fern von Gott, wurde er als Teenager durch
@@ -58,7 +57,6 @@ export default function PastorsDE() {
             <div className="pastor-content">
               <span className="label">Diakon</span>
               <h1>Hans Ewert</h1>
-              <h2>Diakon der Evangelisch-Reformierte Baptistengemeinde</h2>
               <p className="bio">
 	        Hans Ewert ist verheiratet und Vater von drei Kindern. In einer
                 russlanddeutschen Baptistengemeinde aufgewachsen, fand er als Teenager
