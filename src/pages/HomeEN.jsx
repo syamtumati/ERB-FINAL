@@ -64,7 +64,7 @@ function HomeEN() {
         <button
           className="scroll-arrows scroll-arrows-en"
           onClick={scrollToNextSection}
-          aria-label="Zum Seitenende scrollen"
+          aria-label="Scroll down"
         >
           <span></span>
           <span></span>

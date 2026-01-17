@@ -689,3 +689,8 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .scroll-arrows-en {
+    left: 49%;
+  }
+}

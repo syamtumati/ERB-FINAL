@@ -381,7 +381,7 @@
 
 @media (min-width: 1024px) {
   .scroll-arrows {
-    transform: translateX(-80%);
+    transform: translateX(-80%) !important;
   }
 }
 
@@ -407,10 +407,3 @@
   }
 }
 
-/* ================= DESKTOP: MOVE SCROLL ARROWS RIGHT ================= */
-@media (min-width: 1024px) {
-  .scroll-arrows {
-    left: 50%;
-    transform: translateX(-100%); /* ⬅️ was -50%, now slightly right */
-  }
-}
