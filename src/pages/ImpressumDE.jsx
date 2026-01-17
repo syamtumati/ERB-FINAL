@@ -7,10 +7,9 @@ export default function ImpressumDE() {
         <h1 className="impressum-heading">Impressum</h1>
 
         <p>
-          <strong>Evangelisch-Reformierte Baptistengemeinde Frankfurt e.V.</strong><br />
-          c/o International Christian Fellowship of the Taunus K.d.ö.R.<br />
-          Hohemarkstraße 75<br />
-          61440 Oberursel
+          <strong>Reformierte Baptistengemeinde Frankfurt e.V.</strong><br />
+          c/o Eschersheimer Landstr. 42<br />
+          60322 Frankfurt am Main
         </p>
 
         <p>
@@ -20,7 +19,7 @@ export default function ImpressumDE() {
 
         <p>
           <strong>Vereinsregister:</strong> VR 15879<br />
-          <strong>Registergericht:</strong> Amtsgericht Frankfurt am Main
+          <strong>Registergericht:</strong> Amtsgericht Hanau
         </p>
 
         <p>

@@ -7,10 +7,9 @@ export default function ImpressumEN() {
         <h1 className="impressum-heading">Legal Notice (Imprint)</h1>
 
         <p>
-          <strong>Evangelical Reformed Baptist Church Frankfurt e.V.</strong><br />
-          c/o International Christian Fellowship of the Taunus K.d.ö.R.<br />
-          Hohemarkstraße 75<br />
-          61440 Oberursel<br />
+          <strong>Reformed Baptist Church Frankfurt e.V.</strong><br />
+          c/o Eschersheimer Landstr. 42<br />
+          60322 Frankfurt am Main<br />
           Germany
         </p>
 
@@ -21,7 +20,7 @@ export default function ImpressumEN() {
 
         <p>
           <strong>Register of Associations:</strong> VR 15879<br />
-          <strong>Register Court:</strong> Frankfurt am Main District Court
+          <strong>Register Court:</strong> Hanau District Court
         </p>
 
         <p>
