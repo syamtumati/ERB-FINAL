@@ -681,11 +681,3 @@
   }
 }
 
-/* ================= ENGLISH HERO – HORIZONTAL TWEAK ONLY ================= */
-
-@media (min-width: 1024px) {
-  .hero-content-centered-en {
-    transform: translateX(-30px) translateY(-200px);
-  }
-}
-

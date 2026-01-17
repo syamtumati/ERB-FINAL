@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";  // ← Added useEffect
 import { Link } from "react-router-dom";
 import "./HomeDE.css";
+/*import "./Home.css";*/
 
 // Static hero IMAGE
 import heroImage from "../assets/images/hero-message.jpg";
