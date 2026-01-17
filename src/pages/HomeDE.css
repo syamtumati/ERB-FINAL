@@ -422,3 +422,9 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .hero-video {
+    object-fit: cover;
+    object-position: center 60%;
+  }
+}

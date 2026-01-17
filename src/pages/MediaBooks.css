@@ -116,3 +116,17 @@
   }
 }
 
+
+/* ================= MOBILE FIX: UNIFORM BOOK HEIGHT ================= */
+@media (max-width: 768px) {
+  .book-image-wrapper {
+    aspect-ratio: 2 / 3;   /* ⬅️ tighter ratio for phones */
+  }
+
+  .book-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* ⬅️ key fix */
+  }
+}
+
