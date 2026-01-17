@@ -407,3 +407,18 @@
   }
 }
 
+
+/* ================= LAPTOPS (13–14 inch) ================= */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero-content-centered {
+    transform: translateY(-150px); /* ⬇️ move DOWN a bit */
+  }
+}
+
+/* ================= LARGE DESKTOPS (15–27 inch) ================= */
+@media (min-width: 1440px) {
+  .hero-content-centered {
+    transform: translateY(-200px); /* your original value */
+  }
+}
+
