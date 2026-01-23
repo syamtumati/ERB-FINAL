@@ -130,3 +130,27 @@
   }
 }
 
+
+/* ================= DESKTOP: SLIGHTLY SMALLER BOOKS ================= */
+@media (min-width: 1025px) {
+  .book-image-wrapper {
+    max-width: 210px;   /* ⬅️ smaller but elegant */
+    margin: 0 auto;
+  }
+}
+
+/* ================= MOBILE FIX: UNIFORM & SMALLER BOOKS ================= */
+@media (max-width: 768px) {
+  .book-image-wrapper {
+    aspect-ratio: 2.2 / 3;   /* ⬅️ slightly less tall */
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .book-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
