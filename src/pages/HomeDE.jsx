@@ -56,7 +56,7 @@ function Home() {
       {/* ================= HERO ================= */}
       <section className="hero-video-section">
         <img
-          className="hero-video"
+          className="hero-video hero-image"
           src={heroImage}
           alt="Christus im Zentrum – ERB Frankfurt"
         />
@@ -78,8 +78,6 @@ function Home() {
           onClick={scrollToNextSection}
           aria-label="Zum Seitenende scrollen"
         >
-          <span></span>
-          <span></span>
           <span></span>
         </button>
 

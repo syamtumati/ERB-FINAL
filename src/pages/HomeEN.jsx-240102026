@@ -45,7 +45,7 @@ function HomeEN() {
       {/* ================= HERO ================= */}
       <section className="hero-video-section">
         <img
-          className="hero-video hero-image"
+          className="hero-video"
           src={heroImage}
           alt="Christ in the Center – ERB Frankfurt"
         />
@@ -66,6 +66,8 @@ function HomeEN() {
           onClick={scrollToNextSection}
           aria-label="Scroll down"
         >
+          <span></span>
+          <span></span>
           <span></span>
         </button>
 
