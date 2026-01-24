@@ -421,9 +421,15 @@
   }
 }
 
+/* ================= MOBILE VIDEO POSITION FIX ================= */
 @media (max-width: 768px) {
+
   .hero-video-mobile {
-    object-fit: cover;
-    object-position: 60% center; /*   moves video to the right */
+    object-fit: cover !important;
+
+    /* ⬇️ MOVE VIDEO MORE TO THE RIGHT */
+    object-position: 70% center !important;
   }
+
 }
+
