@@ -36,11 +36,9 @@ export default function DonationsEN() {
             <h1>Support Our Ministry</h1>
 
             <p className="donations-intro">
-	      Your donation helps us to serve the church of Jesus Christ,
-              to proclaim the Gospel to the world, and to care for those in need.
-              <br /><br />
-              We are deeply thankful for every gift and pray
-              that God will richly reward you for your generosity.
+              Your donation helps us proclaim the Gospel,
+              reach people with the truth,
+              and strengthen the local church.
             </p>
 
             {/* LEFT – STRIPE */}

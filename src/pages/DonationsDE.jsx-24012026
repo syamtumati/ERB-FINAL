@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Donations.css";
 
-export default function DonationsEN() {
+const Donations = () => {
   const [amount, setAmount] = useState(50);
 
   const stripeLink =
@@ -12,19 +12,20 @@ export default function DonationsEN() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!amount || amount <= 0) return;
+
     window.location.href = stripeLink;
   };
 
   const copyBankDetails = () => {
     const text = [
-      "Account holder: Reformed Baptist Church Frankfurt",
-      "IBAN: DE03 5105 0015 0997 0234 45",
+      "Kontoinhaber: Reformierte Baptistengemeinde Frankfurt",
+      "IBAN: DE03510500150997023445",
       "BIC: NASSDE55XXX",
-      "Reference: Donation",
+      "Verwendungszweck: Spende",
     ].join("\n");
 
     navigator.clipboard.writeText(text).then(() => {
-      alert("Bank details copied!");
+      alert("Bankdaten kopiert!");
     });
   };
 
@@ -33,19 +34,15 @@ export default function DonationsEN() {
       <div className="donations-inner">
         <main className="donations-main">
           <section className="donations-card">
-            <h1>Support Our Ministry</h1>
-
+            <h1>Unterstütze unseren Dienst</h1>
             <p className="donations-intro">
-	      Your donation helps us to serve the church of Jesus Christ,
-              to proclaim the Gospel to the world, and to care for those in need.
-              <br /><br />
-              We are deeply thankful for every gift and pray
-              that God will richly reward you for your generosity.
+              Deine Spende hilft uns, das Evangelium zu verkündigen,
+              Menschen zu erreichen und die Gemeinde zu stärken.
             </p>
 
-            {/* LEFT – STRIPE */}
+            {/* LEFT BOX – STRIPE ONLY */}
             <form onSubmit={handleSubmit} className="donations-form">
-              <label className="field-label">Select Amount</label>
+              <label className="field-label">Betrag wählen</label>
 
               <div className="amount-row">
                 {presetAmounts.map((value) => (
@@ -69,32 +66,32 @@ export default function DonationsEN() {
                   onChange={(e) =>
                     setAmount(Math.max(1, Number(e.target.value)))
                   }
-                  placeholder="Custom amount"
+                  placeholder="Eigener Betrag"
                 />
               </div>
 
               <button type="submit" className="primary-btn">
-                Donate now – €{amount}
+                Jetzt spenden – €{amount}
               </button>
 
               <p className="secure-text">
-                Secure & encrypted via Stripe.
+                Sicher & verschlüsselt über Stripe.
               </p>
             </form>
 
             <div className="divider" />
 
-            {/* RIGHT – BANK TRANSFER */}
+            {/* RIGHT BOX – BANK DETAILS */}
             <div className="other-ways">
-              <h2>Bank Transfer</h2>
+              <h2>Banküberweisung</h2>
               <p className="small-text">
-                You can also donate directly using the following bank details:
+                Nutze folgende Bankdaten für eine direkte Spende:
               </p>
 
               <div className="bank-box">
                 <div className="bank-row">
-                  <span>Account holder</span>
-                  <strong>Reformed Baptist Church Frankfurt</strong>
+                  <span>Kontoinhaber</span>
+                  <strong>Reformierte Baptistengemeinde Frankfurt</strong>
                 </div>
                 <div className="bank-row">
                   <span>IBAN</span>
@@ -105,13 +102,13 @@ export default function DonationsEN() {
                   <strong>NASSDE55XXX</strong>
                 </div>
                 <div className="bank-row">
-                  <span>Reference</span>
-                  <strong>Donation</strong>
+                  <span>Verwendungszweck</span>
+                  <strong>Spende</strong>
                 </div>
               </div>
 
               <button className="secondary-btn" onClick={copyBankDetails}>
-                Copy bank details
+                Bankdaten kopieren
               </button>
             </div>
           </section>
@@ -119,5 +116,7 @@ export default function DonationsEN() {
       </div>
     </div>
   );
-}
+};
+
+export default Donations;
 

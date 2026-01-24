@@ -36,8 +36,11 @@ const Donations = () => {
           <section className="donations-card">
             <h1>Unterstütze unseren Dienst</h1>
             <p className="donations-intro">
-              Deine Spende hilft uns, das Evangelium zu verkündigen,
-              Menschen zu erreichen und die Gemeinde zu stärken.
+	      Deine Spende hilft uns, der Gemeinde Jesu zu dienen,
+              der Welt das Evangelium zu verkündigen und den Bedürftigen beizustehen.
+	      <br /><br />
+              Wir danken herzlich für jede Spende und beten,
+              dass Gott es reichlich vergelten möge.
             </p>
 
             {/* LEFT BOX – STRIPE ONLY */}

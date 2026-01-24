@@ -97,13 +97,9 @@ function Home() {
       {/* ================= VISIT US ================= */}
       <section id="home-next-section" className="visit-section">
         <div className="container visit-content">
-          <h2 className="visit-title">Besuchen Sie uns diesen Sonntag</h2>
+          <h2 className="visit-title">Besuche uns diesen Sonntag!</h2>
 
-          <div className="visit-divider">
-            <span />
-            <span className="visit-icon">✧</span>
-            <span />
-          </div>
+          <div className="visit-divider" />
 
           <p className="visit-time">Sonntag · 16:30 Uhr</p>
           <p className="visit-address">
@@ -126,7 +122,7 @@ function Home() {
                 ganzes Leben wollen wir aus Gottes Gnade und zu Gottes Ehre führen.
               </p>
               <span className="read-more">
-                Unsere Hirten &amp; Vision kennenlernen
+                Mehr über uns
               </span>
             </Link>
             <Link to="/glaube" className="matter-block doctrine">
@@ -137,7 +133,7 @@ function Home() {
                 Glaubensbekenntnis von 1689 zusammengefasst.
               </p>
               <span className="read-more">
-                Unser vollständiges Bekenntnis lesen
+                Mehr über unseren Glauben
               </span>
             </Link>
           </div>

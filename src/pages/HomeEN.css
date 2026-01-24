@@ -135,16 +135,6 @@
   margin-bottom: 1.2rem;
 }
 
-.hero-visit-divider span {
-  flex: 1;
-  height: 2px;
-  background: rgba(215, 169, 85, 0.6);
-}
-
-.hero-visit-icon {
-  color: #d7a955;
-}
-
 .hero-visit-time,
 .hero-visit-address {
   font-size: 1.1rem;
@@ -720,3 +710,41 @@
 
 }
 
+
+/* ================= VISIT DIVIDER ================= */
+.visit-divider.simple {
+  width: 120px;
+  height: 2px;
+  margin: 2.2rem auto 2.6rem;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d7a955,
+    transparent
+  );
+}
+
+.visit-divider.double {
+  width: 140px;
+  height: 6px;
+  margin: 2.2rem auto 2.6rem;
+  border-top: 1px solid #d7a955;
+  border-bottom: 1px solid #d7a955;
+  opacity: 0.9;
+}
+
+.visit-divider {
+  width: 160px;                 /* length of the line */
+  height: 2px;                  /* thickness */
+  margin: 2.4rem auto 2.6rem;   /* spacing above & below */
+
+  background-color: #d7a955;    /* your gold */
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .visit-divider {
+    width: 120px;
+    margin: 2rem auto 2.2rem;
+  }
+}

@@ -84,13 +84,9 @@ function HomeEN() {
       {/* ================= VISIT US ================= */}
       <section id="home-next-section" className="visit-section">
         <div className="container visit-content">
-          <h2 className="visit-title">Visit us this Sunday</h2>
+          <h2 className="visit-title">Visit us this Sunday!</h2>
 
-          <div className="visit-divider">
-            <span />
-            <span className="visit-icon">✧</span>
-            <span />
-          </div>
+          <div className="visit-divider" />
 
           <p className="visit-time">Sunday · 4:30 PM</p>
           <p className="visit-address">
@@ -113,7 +109,7 @@ function HomeEN() {
                 entire lives by God’s grace and for God’s glory.
               </p>
               <span className="read-more">
-                Meet Our Pastors & Vision
+                Learn more about us
               </span>
             </Link>
             <Link to="/glaube" className="matter-block doctrine">
@@ -124,7 +120,7 @@ function HomeEN() {
                 Faith of 1689.
               </p>
               <span className="read-more">
-                Read Our Full Confession
+                Learn more about our faith
               </span>
             </Link>
           </div>
