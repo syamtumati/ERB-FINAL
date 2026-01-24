@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { confessionChaptersEN } from "../data/confessionChaptersEN";
-import "./BeliefEN.css";
+import "./BeliefEN.css"; // reuse same styles (recommended)
 
 export default function BeliefEN() {
   const navigate = useNavigate();
@@ -13,41 +13,13 @@ export default function BeliefEN() {
 
   return (
     <section className="belief-grid-section">
-      {/* ================= HEADING ================= */}
       <h1 className="belief-heading">Our Confession</h1>
 
-      {/* ================= INTRO ================= */}
-      <div className="belief-intro">
-        <p className="belief-intro-text">
-          Our statement of faith was issued in{" "}
-          <strong>1689</strong> by more than{" "}
-          <strong>100 Baptist congregations</strong>.
-          The world-renowned Baptist pastor{" "}
-          <strong>Charles Haddon Spurgeon</strong>{" "}
-          <span className="belief-dates">(1834–1892)</span>{" "}
-          wrote concerning this document:
-        </p>
-
-        <blockquote className="belief-quote">
-          “This ancient document is the most excellent epitome of the things
-          most surely believed among us. It is not issued as an authoritative
-          rule or code of faith, whereby you may be fettered, but as a means of
-          edification in righteousness. It is an excellent, though not inspired,
-          expression of the teaching of those Holy Scriptures by which all
-          confessions are to be measured. We hold to the humbling truths of
-          God’s sovereign grace in the salvation of lost sinners. Salvation is
-          through Christ alone and by faith alone.”
-          <span className="belief-quote-author">
-            — C. H. Spurgeon
-          </span>
-        </blockquote>
-      </div>
-
-      {/* ================= CONFESSION CHAPTERS ================= */}
       <div className="chapter-grid">
         {confessionChaptersEN.map((chapter) => (
           <div key={chapter.chapter} className="chapter-wrapper">
-            {/* CHAPTER ROW */}
+
+            {/* TEXT ROW */}
             <div
               className="chapter-text-row"
               onClick={() => toggleChapter(chapter.chapter)}
@@ -77,6 +49,7 @@ export default function BeliefEN() {
                 </li>
               ))}
             </ul>
+
           </div>
         ))}
       </div>

@@ -153,67 +153,68 @@
   }
 }
 
-
 /* ================= INTRO TEXT ================= */
 
 .belief-intro {
-  max-width: 820px;
-  margin: 0 auto 4.5rem;
+  max-width: 900px;              /* ⬅️ slightly wider for desktop */
+  margin: 0 auto 5rem;
   text-align: center;
   font-family: "Georgia", serif;
 }
 
 .belief-intro-text {
-  font-size: 1.5rem;
-  line-height: 1.75;
-  color: #e5ecff;
-  margin-bottom: 2.4rem;
+  font-size: 1.4rem;             /* ⬅️ increased */
+  line-height: 1.8;
+  color: #f1f4ff;
+  margin-bottom: 2.8rem;
 }
 
 /* ================= QUOTE ================= */
 
 .belief-quote {
-  font-size: 1.55rem;
-  line-height: 1.6;
+  max-width: 760px;
+  margin: 0 auto;
+
+  font-size: 1.6rem;             /* ⬅️ stronger emphasis */
+  line-height: 1.7;
   font-style: italic;
+
   color: #e8c0a0;
 
   padding: 2.2rem 2.6rem;
   border-left: 4px solid #e8c0a0;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 14px;
 }
 
-.belief-quote-author {
-  display: block;
-  margin-top: 1.4rem;
-  font-size: 1.05rem;
-  font-style: normal;
-  font-weight: 700;
-  color: #e8c0a0;
-  text-align: right;
-}
-
-
-/* ================= DATE FIX ================= */
 .belief-dates {
   display: inline-block;
   vertical-align: baseline;
   font-size: 0.95em;
   line-height: 1;
+
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum";
+
   white-space: nowrap;
 }
 
+
 /* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
+  .belief-intro {
+    margin-bottom: 3.5rem;
+  }
+
   .belief-intro-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;           /* ⬅️ readable but not huge */
+    line-height: 1.75;
   }
 
   .belief-quote {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     padding: 1.6rem 1.8rem;
   }
 }

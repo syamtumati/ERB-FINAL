@@ -163,7 +163,7 @@
 }
 
 .belief-intro-text {
-  font-size: 1.4rem;             /* ⬅️ increased */
+  font-size: 1.5rem;             /* ⬅️ increased */
   line-height: 1.8;
   color: #f1f4ff;
   margin-bottom: 2.8rem;
@@ -198,6 +198,16 @@
   font-feature-settings: "lnum";
 
   white-space: nowrap;
+}
+
+.belief-quote-author {
+  display: block;
+  margin-top: 1.4rem;
+  font-size: 1.05rem;
+  font-style: normal;
+  font-weight: 700;
+  color: #e8c0a0;
+  text-align: right;
 }
 
 
