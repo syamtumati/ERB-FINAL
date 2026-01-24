@@ -23,8 +23,9 @@ export default function Belief() {
           <strong>1689</strong> von mehr als{" "}
           <strong>100 Baptistengemeinden</strong> herausgegeben.
           Der weltbekannte Baptistenpastor{" "}
-          <strong>Charles Haddon Spurgeon</strong> (1834–1892)
-          schreibt über dieses Dokument:
+          <strong>Charles Haddon Spurgeon</strong>{" "}
+          <span className="belief-dates">(1834–1892)</span>
+          {" "}schreibt über dieses Dokument:
         </p>
 
         <blockquote className="belief-quote">
@@ -32,6 +33,7 @@ export default function Belief() {
           Dinge, die von uns mit größter Gewissheit geglaubt werden.“
         </blockquote>
       </div>
+
 
       {/* ================= CHAPTER LIST ================= */}
       <div className="chapter-grid">

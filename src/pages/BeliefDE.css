@@ -188,6 +188,19 @@
   border-radius: 14px;
 }
 
+.belief-dates {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 0.95em;
+  line-height: 1;
+
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+
+  white-space: nowrap;
+}
+
+
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
