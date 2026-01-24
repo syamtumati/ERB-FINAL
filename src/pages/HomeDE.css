@@ -220,6 +220,10 @@
     transform: translateY(-200px);
   }
 
+  .hero-video {
+    object-position: center 70%; /* ⬇️ pushes image DOWN */
+  }
+
   /* HERO TITLE SIZE */
   .hero-church-name {
     font-size: 2rem;              /* ✅ DESKTOP REDUCED */

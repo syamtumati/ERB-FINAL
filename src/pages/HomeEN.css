@@ -326,6 +326,10 @@
     transform: none;    /* ❌ no translate on desktop */
   }
 
+  .hero-video {
+    object-position: center 70%; /* ⬇️ pushes image DOWN */
+  }
+
 }
 
 /* ================= LAPTOP VISIT BOX (13″–17″) ================= */
