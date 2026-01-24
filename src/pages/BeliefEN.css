@@ -232,9 +232,8 @@
 
 @media (max-width: 768px) {
 
-  /* controls side spacing like Pastors */
-  .belief-intro {
-    padding: 0 1.2rem;   /* 👈 SAME idea as Pastors */
+  .belief-grid-section {
+    padding: 6rem 1.2rem 6rem;  /* 👈 SAME philosophy as Pastors */
   }
 
   .belief-quote {
