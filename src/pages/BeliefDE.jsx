@@ -23,7 +23,7 @@ export default function Belief() {
           <strong>1689</strong> von mehr als{" "}
           <strong>100 Baptistengemeinden</strong> herausgegeben.
           Der weltbekannte Baptistenpastor{" "}
-          <strong>Charles Haddon Spurgeon</strong> (*1834; †1892)
+          <strong>Charles Haddon Spurgeon</strong> (1834–1892)
           schreibt über dieses Dokument:
         </p>
 
