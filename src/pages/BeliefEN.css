@@ -211,29 +211,20 @@
   text-align: right;
 }
 
-
 /* ================= MOBILE ================= */
-
 @media (max-width: 768px) {
+
+  .belief-grid-section {
+    padding: 8rem 1.2rem 6rem;   /* ⬅️ spacing from header like Pastors */
+  }
+
   .belief-intro {
     margin-bottom: 3.5rem;
   }
 
   .belief-intro-text {
-    font-size: 1.2rem;           /* ⬅️ readable but not huge */
+    font-size: 1.2rem;
     line-height: 1.75;
-  }
-
-  .belief-quote {
-    font-size: 1.25rem;
-    padding: 1.8rem 1.6rem;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .belief-grid-section {
-    padding: 6rem 1.2rem 6rem;  /* 👈 SAME philosophy as Pastors */
   }
 
   .belief-quote {
@@ -245,7 +236,6 @@
 
     background: #DADADA;
     border-radius: 22px;
-
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
   }
 }
