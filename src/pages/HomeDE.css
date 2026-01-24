@@ -428,7 +428,7 @@
     object-fit: cover !important;
 
     /* ⬇️ MOVE VIDEO MORE TO THE RIGHT */
-    object-position: 70% center !important;
+    object-position: 40% center !important;
   }
 
 }
