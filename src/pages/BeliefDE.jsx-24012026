@@ -13,27 +13,8 @@ export default function Belief() {
 
   return (
     <section className="belief-grid-section">
-      {/* ================= HEADING ================= */}
       <h1 className="belief-heading">Unser Bekenntnis</h1>
 
-      {/* ================= INTRO TEXT ================= */}
-      <div className="belief-intro">
-        <p className="belief-intro-text">
-          Unser Glaubensbekenntnis wurde im Jahre{" "}
-          <strong>1689</strong> von mehr als{" "}
-          <strong>100 Baptistengemeinden</strong> herausgegeben.
-          Der weltbekannte Baptistenpastor{" "}
-          <strong>Charles Haddon Spurgeon</strong> (*1834; †1892)
-          schreibt über dieses Dokument:
-        </p>
-
-        <blockquote className="belief-quote">
-          „Dieses alte Schriftstück ist eine ausgezeichnete Zusammenfassung der
-          Dinge, die von uns mit größter Gewissheit geglaubt werden.“
-        </blockquote>
-      </div>
-
-      {/* ================= CHAPTER LIST ================= */}
       <div className="chapter-grid">
         {confessionChapters.map((chapter) => (
           <div key={chapter.chapter} className="chapter-wrapper">
