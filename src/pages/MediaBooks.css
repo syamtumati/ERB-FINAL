@@ -117,20 +117,6 @@
 }
 
 
-/* ================= MOBILE FIX: UNIFORM BOOK HEIGHT ================= */
-@media (max-width: 768px) {
-  .book-image-wrapper {
-    aspect-ratio: 2 / 3;   /* ⬅️ tighter ratio for phones */
-  }
-
-  .book-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    /* ⬅️ key fix */
-  }
-}
-
-
 /* ================= DESKTOP: SLIGHTLY SMALLER BOOKS ================= */
 @media (min-width: 1025px) {
   .book-image-wrapper {
@@ -139,18 +125,17 @@
   }
 }
 
-/* ================= MOBILE FIX: UNIFORM & SMALLER BOOKS ================= */
+/* ================= MOBILE FIX: NO IMAGE CROPPING ================= */
 @media (max-width: 768px) {
   .book-image-wrapper {
-    aspect-ratio: 2.2 / 3;   /* ⬅️ slightly less tall */
-    max-width: 240px;
-    margin: 0 auto;
+    aspect-ratio: 3 / 4.5;     /* same as desktop */
+    padding: 0.5rem;           /* breathing space */
   }
 
   .book-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;       /* ✅ NO CROPPING */
   }
 }
 

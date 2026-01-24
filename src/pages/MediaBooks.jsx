@@ -11,6 +11,10 @@ import treueMaennerPrint from "../assets/books/treue-maenner-wer-findet-sie-prin
 import brautwerbungPrint from "../assets/books/biblische-brautwerbung-print.jpg";
 import eineFrauPrint from "../assets/books/eine-frau-die-zu-ruehmen-ist-print.jpg";
 import missionPrint from "../assets/books/gemeinde-und-mission-print.jpg";
+import wahreDreiKoenige from "../assets/books/die-wahre-bedeutung-der-heiligen-drei-koenige.jpg";
+import schlachtfeldGedankenwelt from "../assets/books/das-schlachtfeld-der-gedankenwelt.jpg";
+import waffenruestungGottes from "../assets/books/die-waffenruestung-gottes.jpg";
+
 
 export default function MediaBooks() {
   const { i18n } = useTranslation();
@@ -61,7 +65,23 @@ export default function MediaBooks() {
     title: "Gemeinde und Mission",
     image: missionPrint,
     link: "https://www.voh-shop.de/Gemeinde-und-Mission.html"
+    },
+    {
+    title: "Die wahre Bedeutung der Heiligen Drei Könige",
+    image: wahreDreiKoenige,
+    link: "https://lichtzeichen-shop.com/buecher/evangelistische-literatur/35626/die-wahre-bedeutung-der-heiligen-drei-koenige"
+    },
+    {
+    title: "Das Schlachtfeld der Gedankenwelt",
+    image: schlachtfeldGedankenwelt,
+    link: "https://prorege.de/produkt/das-schlachtfeld-der-gedankenwelt/"
+    },
+    {
+    title: "Die Waffenrüstung Gottes",
+    image: waffenruestungGottes,
+    link: "https://prorege.de/produkt/die-waffenruestung-gottes/"
     }
+
   ];
 
   return (
