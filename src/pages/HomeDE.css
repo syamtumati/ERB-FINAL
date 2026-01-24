@@ -397,7 +397,7 @@
 /* ================= LAPTOPS (13–14 inch) ================= */
 @media (min-width: 1024px) and (max-width: 1439px) {
   .hero-content-centered {
-    transform: translateY(-110px); /* ⬇️ move DOWN a bit */
+    transform: translateY(-100px); /* ⬇️ move DOWN a bit */
   }
 }
 
