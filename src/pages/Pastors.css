@@ -78,6 +78,10 @@
     0 16px 40px rgba(0, 0, 0, 0.25);
 
   font-family: "Georgia", serif;
+
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* ================= TEXT ================= */
@@ -140,6 +144,30 @@
     color: #1f1f1f;
   }
 }
+
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+  .leadership-intro-section {
+    margin-top: 8rem;          /* move away from header */
+    padding: 0 1.2rem 4rem;    /* 👈 small side gap like Belief/Donations */
+  }
+
+  .leadership-intro-box {
+    max-width: 100%;
+    width: 100%;
+    padding: 2.2rem 1.8rem;    /* 👈 reduce inner padding */
+    border-radius: 22px;
+  }
+
+  .leadership-intro-box p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    text-align: left;          /* 🔑 fixes mobile readability */
+  }
+}
+
 
 /* ================= LEITUNG SECTION ================= */
 .leadership-section {
