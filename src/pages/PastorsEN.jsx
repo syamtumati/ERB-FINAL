@@ -12,23 +12,47 @@ export default function PastorsEN() {
       <div className="orb orb-2"></div>
       <div className="orb orb-3"></div>
 
-      {/* SCRIPTURE */}
-      <section className="leadership-scripture-section">
+      {/* ================= CHURCH INTRO ================= */}
+      <section className="leadership-intro-section">
         <div className="container">
-          <p className="scripture-text">
-            „Whoever wants to become great among you must be your servant,
-            and whoever wants to be first must be your slave.“
-          </p>
-          <p className="scripture-reference">Matthew 20:26–27</p>
+          <div className="leadership-intro-box">
+            <p>
+              Our church began in the year <strong>2014</strong>, when
+              <strong> Peter Schild</strong> was sent from ERB Wetzlar to
+              Frankfurt am Main to work on establishing a Reformed Baptist
+              church. This missionary work was made possible through the
+              guidance and support of the US-based
+              <strong> HeartCry Missionary Society</strong>, under the
+              leadership of <strong>Paul Washer</strong>.
+            </p>
+
+            <p>
+              Since then, we have experienced how God has graciously guided
+              us step by step. Today, we are a community of young families,
+              children, and people from diverse backgrounds and life
+              stories.
+            </p>
+
+            <p>
+              We are united by the desire to live as a community of Jesus
+              Christ in love for God and for one another, and to proclaim
+              the Gospel in word and deed — in Frankfurt and beyond.
+            </p>
+
+            <p className="intro-invite">
+              You are warmly invited to get to know us and to follow Jesus
+              Christ together with us.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* LEADERSHIP */}
+      {/* ================= LEADERSHIP ================= */}
       <section className="leadership-section">
         <div className="container">
           <h2 className="pastors-heading">Church Leadership</h2>
 
-          {/* PASTOR */}
+          {/* ================= PASTOR ================= */}
           <div className="pastor-card">
             <div className="pastor-photo">
               <img src={seniorPastor} alt="Pastor Peter Schild" />
@@ -38,17 +62,18 @@ export default function PastorsEN() {
               <span className="label">Pastor</span>
               <h1>Peter Schild</h1>
               <p className="bio">
-	        Peter Schild is married and the father of five children. Coming from
-                difficult circumstances and living far from God, he was brought to
-                faith in Jesus Christ as a teenager through reading a gospel tract. He
-                studied Protestant Theology, was sent to Frankfurt as a missionary in
-                2014, and has served as pastor of ERB Frankfurt since 2016. In addition
-                to his pastoral ministry, he is the author of several books.
+                Peter Schild is married and the father of five children.
+                Coming from difficult life circumstances and far from God,
+                he was led to faith in Jesus Christ as a teenager through
+                a gospel tract. He studied Evangelical Theology and was
+                sent as a missionary to Frankfurt in 2014 to establish
+                ERB Frankfurt. In addition to his pastoral ministry,
+                he is the author of several books.
               </p>
             </div>
           </div>
 
-          {/* DEACON */}
+          {/* ================= DEACON ================= */}
           <div className="pastor-card deacon">
             <div className="pastor-photo">
               <img src={deaconHans} alt="Deacon Hans Ewert" />
@@ -58,11 +83,12 @@ export default function PastorsEN() {
               <span className="label">Deacon</span>
               <h1>Hans Ewert</h1>
               <p className="bio">
-	        Hans Ewert is married and the father of three children. He grew up in a
-                Russian-German Baptist church and came to faith in Jesus Christ as a
-                teenager. He is a trained automotive master technician and works in
-                technical customer support. Since 2023, he has served ERB Frankfurt as a
-                deacon.
+                Hans Ewert is married and the father of three children.
+                Raised in a Russian-German Baptist church, he came to
+                faith in Jesus Christ as a teenager. He is a trained
+                automotive master mechanic and works in technical
+                customer support. Since 2023, he has been serving
+                ERB Frankfurt as a deacon.
               </p>
             </div>
           </div>
