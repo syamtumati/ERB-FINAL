@@ -112,9 +112,17 @@
   .leadership-intro-section {
     margin-top: 7rem;
     padding-bottom: 4rem;
+
+    /* 🔑 remove side padding */
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .leadership-intro-box {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;          /* optional but recommended */
+
     padding: 2.6rem 2.2rem;
   }
 
