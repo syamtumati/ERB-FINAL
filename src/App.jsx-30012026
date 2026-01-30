@@ -159,6 +159,30 @@ function App() {
         </Routes>
       </main>
 
+      {/* ================= PARTNERS ================= */}
+      <section className="partner-heartcry">
+        <div className="partner-inner">
+          <div className="partner-heading">
+            <span className="partner-line" />
+            <span className="partner-heartcry-title">{t("partners.title")}</span>
+            <span className="partner-line" />
+          </div>
+
+          <a
+            href="https://heartcrymissionary.com"
+            target="_blank"
+            rel="noreferrer"
+            className="heartcry-logo-link"
+          >
+            <img
+              src={heartcryLogo}
+              alt="HeartCry Missionary Society"
+              className="heartcry-logo"
+            />
+          </a>
+        </div>
+      </section>
+
       {/* ================= RELATED CHURCHES ================= */}
       <section className="related-churches">
         <div className="related-inner">

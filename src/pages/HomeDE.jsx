@@ -84,10 +84,10 @@ function Home() {
         <div className="hero-overlay">
           <div className="hero-content-centered">
 	    <h1 className="hero-main-title">
-              Christus im Zentrum
+              Gnadenkirche Frankfurt
             </h1>
 	    <h2 className="hero-secondary-title">
-              ERB Frankfurt
+              Reformierte Baptistengemeinde
             </h2>
           </div>
         </div>

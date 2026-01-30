@@ -33,7 +33,7 @@ const resources = {
       },
 
       church: {
-        name: "Evangelisch-Reformierte Baptistengemeinde"
+        name: "Gnadenkirche Frankfurt"
       },
       /* ✅ ADD THIS */
       confession: {
@@ -74,7 +74,7 @@ const resources = {
       },
 
       church: {
-        name: "Evangelical Reformed Baptist Church"
+        name: "Grace Church Frankfurt"
       },
 	    
       /* ✅ ADD THIS */

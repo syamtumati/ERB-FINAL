@@ -72,10 +72,10 @@ function HomeEN() {
         <div className="hero-overlay">
           <div className="hero-content-centered hero-content-centered-en">
 	    <h1 className="hero-main-title">
-              Christ in the Center
+              Grace Church Frankfurt
             </h1>
 	    <h2 className="hero-secondary-title">
-              ERB Frankfurt
+              Reformed Baptist Church
             </h2>
           </div>
         </div>
