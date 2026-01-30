@@ -174,7 +174,7 @@
 /* ================= WHAT MATTERS ================= */
 .what-matters-section {
 /*  background: linear-gradient(135deg, #0c2340, #1e3a5f);*/
-  background: #26343a;
+  background: #131A28;
   padding: 4rem 1.5rem;
   text-align: center;
 }
@@ -554,7 +554,7 @@
 
 /* ================= VISIT SECTION – MATCH WHAT MATTERS ================= */
 .visit-section {
-  background: #26343a; /* SAME as what-matters-section */
+  background: #131A28; /* SAME as what-matters-section */
   padding: 5.5rem 1.5rem 4.5rem;
   text-align: center;
 }
@@ -753,10 +753,12 @@
   }
 }
 
+
 /* ================= HERO IMAGE POSITION (DESKTOP) ================= */
 @media (min-width: 1024px) {
   .hero-image {
     object-fit: cover;
-    object-position: center -1%; /* ⬅️ push image DOWN */
+    object-position: center 35%;
   }
 }
+

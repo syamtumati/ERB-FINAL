@@ -3,7 +3,7 @@
 /* ===================================================== */
 .pastors-page {
   min-height: 100vh;
-  background: #26343a;
+  background: #131A28;
   color: #eaf1ff;;
   font-family: "Georgia", serif;
   overflow-x: hidden;
@@ -172,7 +172,7 @@
 /* ================= LEITUNG SECTION ================= */
 .leadership-section {
   padding: 2rem 2rem 8rem;
-  background: #26343a;
+  background: #131A28;
 }
 .leadership-section .container {
   max-width: 1180px;

@@ -1,0 +1,485 @@
+/* ================= FONT (GLOBAL, CROSS-PLATFORM FIX) ================= */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* ================= ROOT ================= */
+.home-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HERO ================= */
+.hero-video-section {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 8, 15, 0.2),
+    rgba(15, 10, 30, 0.35)
+  );
+}
+
+.hero-content-centered {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ================= HERO TITLE (BASE = MOBILE) ================= */
+.hero-church-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.2rem;              /* ✅ MOBILE BASE SIZE */
+  line-height: 1.2;
+  font-weight: 700;
+  color: #d2b184;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.hero-church-name .hero-baptist {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/* ================= HERO SLOGAN ================= */
+
+.hero-slogan {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-slogan-main {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= HERO MAIN TITLE ================= */
+.hero-main-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+
+  color: #ffffff; /* ✅ WHITE */
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  margin: 0;
+}
+
+/* ================= HERO SECONDARY TITLE ================= */
+.hero-secondary-title {
+  margin-top: 0.6rem;
+
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.2rem;        /* ⬅️ clearly bigger */
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #d2b184;           /* old church name gold */
+  text-align: center;
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= STATIC SCROLL ARROW ================= */
+
+.scroll-arrows {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Single arrow */
+.scroll-arrows span {
+  width: 60px;          /* ⬅️ bigger arrow */
+  height: 60px;
+
+  border-right: 5px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.9);
+
+  transform: rotate(45deg);   /* ✅ clean V shape */
+  opacity: 0.9;
+}
+
+/* ================= VISIT SECTION ================= */
+.hero-visit-box {
+  margin-top: 4rem;
+  max-width: 520px;
+/*  background: #f9f6ef;*/
+  background: #26343a;
+  border: 2px solid #d7a955;
+  border-radius: 18px;
+  padding: 2.4rem;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
+}
+
+.hero-visit-title {
+  font-size: 1.4rem;              /* ✅ MOBILE REDUCED */
+}
+
+.hero-visit-time,
+.hero-visit-address {
+  font-size: 0.95rem;
+}
+
+/* ================= WHAT MATTERS ================= */
+.what-matters-section {
+  background: #26343a;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.2rem;              /* ✅ MOBILE REDUCED */
+  color: white;
+}
+
+/* ================= GRID ================= */
+.what-matters-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.matter-block {
+  background: white;
+  padding: 2.4rem 1.8rem;
+  border-radius: 2rem;
+  color: #2d1b0a;
+}
+
+.matter-block h3 {
+  font-size: 1.4rem;
+}
+
+.matter-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ================= MOBILE HERO POSITION ================= */
+@media (max-width: 768px) {
+  .hero-content-centered {
+    transform: translateY(-120px);   /* ✅ MOVE HERO NAME UP */
+  }
+}
+
+/* ================= DESKTOP ONLY ================= */
+@media (min-width: 1024px) {
+
+  /* HERO POSITION */
+  .hero-content-centered {
+    transform: translateY(-200px);
+  }
+
+  .hero-video {
+    object-position: center 80%; /* ⬇️ pushes image DOWN */
+  }
+
+  /* HERO TITLE SIZE */
+  .hero-church-name {
+    font-size: 2rem;              /* ✅ DESKTOP REDUCED */
+  }
+
+  /* VISIT TITLE */
+  .hero-visit-title {
+    font-size: 1.8rem;
+  }
+
+  /* WHAT MATTERS TITLE */
+  .main-title {
+    font-size: 3.2rem;
+  }
+
+  /* GRID */
+  .what-matters-grid {
+    grid-template-columns: repeat(2, 420px);
+    gap: 3rem;
+    justify-content: center;
+  }
+}
+
+/* ================= FORCE MOBILE VISIT TITLE SIZE ================= */
+@media (max-width: 768px) {
+  .visit-title {
+    font-size: 2rem !important;   /* ✅ MOBILE FIX (Samsung safe) */
+    line-height: 1.35;
+  }
+}
+
+/* ================= FORCE MOBILE WHAT MATTERS TITLE SIZE ================= */
+@media (max-width: 768px) {
+  .what-matters-section .main-title {
+    font-size: 2rem !important;   /* ✅ reduced */
+    line-height: 1.25;
+  }
+}
+
+/* ================= FORCE DESKTOP HERO TITLE SIZE ================= */
+@media (min-width: 1024px) {
+  .hero-video-section .hero-church-name {
+    font-size: 2.6rem !important;  /* ✅ visibly smaller */
+    line-height: 1.15;
+  }
+
+  .visit-section .visit-content {
+    transform: translateX(-20px);
+  }
+}
+
+
+/* ================= HERO TITLE LINE CONTROL ================= */
+
+/* Force first line break after Christus-zentrierte */
+.hero-church-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for second/third lines */
+.hero-church-name .hero-line {
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* MOBILE: split reformierte + Baptistengemeinde */
+@media (max-width: 768px) {
+  .hero-church-name .hero-line {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* ================= HERO MEDIA (IMAGE + MOBILE VIDEO) ================= */
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Default: show image, hide video */
+.hero-image {
+  display: block;
+}
+
+.hero-video-mobile {
+  display: none;
+}
+
+/* ================= MOBILE ONLY ================= */
+@media (max-width: 768px) {
+
+  /* Hide image on mobile */
+  .hero-image {
+    display: none;
+  }
+
+  /* Show video on mobile */
+  .hero-video-mobile {
+    display: block;
+  }
+
+  /* Ensure video stays behind content */
+  .hero-video-mobile {
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    z-index: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-slogan-main {
+    font-size: 1.2rem;
+  }
+  .hero-slogan-sub {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-slogan-main {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-arrows {
+    bottom: 4rem;
+  }
+  .scroll-arrows span {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scroll-arrows {
+    transform: translateX(-80%) !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-main-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-secondary-title {
+    font-size: 1.5rem;
+    letter-spacing: 1.4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-main-title {
+    font-size: 3rem;
+  }
+
+  .hero-secondary-title {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* ================= LAPTOPS (13–14 inch) ================= */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero-content-centered {
+    transform: translateY(-90px); /* ⬇️ move DOWN a bit */
+  }
+}
+
+/* ================= LARGE DESKTOPS (15–27 inch) ================= */
+@media (min-width: 1440px) {
+  .hero-content-centered {
+    transform: translateY(-200px); /* your original value */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-video {
+    object-fit: cover;
+    object-position: center 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    display: none !important;
+  }
+}
+
+/* ================= MOBILE VIDEO POSITION FIX ================= */
+@media (max-width: 768px) {
+
+  .hero-video-mobile {
+    object-fit: cover !important;
+
+    /* ⬇️ MOVE VIDEO MORE TO THE RIGHT */
+    object-position: 40% center !important;
+  }
+
+}
+
+/* ================= VISIT DIVIDER ================= */
+.visit-divider.simple {
+  width: 120px;
+  height: 2px;
+  margin: 2.2rem auto 2.6rem;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d7a955,
+    transparent
+  );
+}
+
+.visit-divider.double {
+  width: 140px;
+  height: 6px;
+  margin: 2.2rem auto 2.6rem;
+  border-top: 1px solid #d7a955;
+  border-bottom: 1px solid #d7a955;
+  opacity: 0.9;
+}
+
+.visit-divider {
+  width: 160px;                 /* length of the line */
+  height: 2px;                  /* thickness */
+  margin: 2.4rem auto 2.6rem;   /* spacing above & below */
+
+  background-color: #d7a955;    /* your gold */
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .visit-divider {
+    width: 120px;
+    margin: 2rem auto 2.2rem;
+  }
+}
+
+
+/* ================= HERO IMAGE POSITION (DESKTOP) ================= */
+@media (min-width: 1024px) {
+  .hero-image {
+    object-fit: cover;
+    object-position: center 35%;
+  }
+}
