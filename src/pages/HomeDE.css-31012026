@@ -1,6 +1,5 @@
 /* ================= FONT (GLOBAL, CROSS-PLATFORM FIX) ================= */
-/*@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 /* ================= ROOT ================= */
 .home-page {
@@ -91,34 +90,36 @@
 
 /* ================= HERO MAIN TITLE ================= */
 .hero-main-title {
-  font-family: 'Gilda Display', serif;
-  font-size: 3.2rem;
-  font-weight: 400;              /* Gilda looks best lighter */
-  letter-spacing: 3px;
-  text-transform: uppercase;     /* FORCE CAPS */
-
-  color: #ffffff;
-  margin: 0;
-
-  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
-}
-/* ================= HERO SECONDARY TITLE ================= */
-.hero-secondary-title {
-  margin-top: 0.7rem;
-
-  font-family: 'Gilda Display', serif;
-  font-size: 1.4rem;             /* clearly smaller */
-  font-weight: 400;
-  letter-spacing: 1.6px;
-  text-transform: none;          /* ✅ IMPORTANT */
-
-  color: #d2b184;                /* your gold */
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
   text-align: center;
 
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  color: #ffffff; /* ✅ WHITE */
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  margin: 0;
 }
 
-/* ================= SCROLL ARROWS (3x FADE) ================= */
+/* ================= HERO SECONDARY TITLE ================= */
+.hero-secondary-title {
+  margin-top: 0.6rem;
+
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.2rem;        /* ⬅️ clearly bigger */
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #d2b184;           /* old church name gold */
+  text-align: center;
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= STATIC SCROLL ARROW ================= */
 
 .scroll-arrows {
   position: absolute;
@@ -127,65 +128,26 @@
   transform: translateX(-50%);
 
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 
+  z-index: 5;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 5;
 }
 
-/* Arrow shape */
+/* Single arrow */
 .scroll-arrows span {
-  width: 36px;
-  height: 36px;
+  width: 60px;          /* ⬅️ bigger arrow */
+  height: 60px;
 
-  border-right: 4px solid rgba(255, 255, 255, 0.9);
-  border-bottom: 4px solid rgba(255, 255, 255, 0.9);
+  border-right: 5px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.9);
 
-  transform: rotate(45deg);
-  opacity: 0;
-
-  animation: arrow-fade 2.2s infinite;
+  transform: rotate(45deg);   /* ✅ clean V shape */
+  opacity: 0.9;
 }
-
-/* Staggered fade timing */
-.scroll-arrows span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.scroll-arrows span:nth-child(2) {
-  animation-delay: 0.25s;
-}
-
-.scroll-arrows span:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-/* Fade in / fade out ONLY (no movement) */
-@keyframes arrow-fade {
-  0%   { opacity: 0; }
-  30%  { opacity: 1; }
-  60%  { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .scroll-arrows {
-    bottom: 4rem;
-    gap: 6px;
-  }
-
-  .scroll-arrows span {
-    width: 26px;
-    height: 26px;
-    border-width: 3px;
-  }
-}
-
 
 /* ================= VISIT SECTION ================= */
 .hero-visit-box {
@@ -519,17 +481,5 @@
   .hero-image {
     object-fit: cover;
     object-position: center 35%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-main-title {
-    font-size: 2.3rem;
-    letter-spacing: 2.2px;
-  }
-
-  .hero-secondary-title {
-    font-size: 1.1rem;
-    letter-spacing: 1.2px;
   }
 }

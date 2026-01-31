@@ -67,8 +67,6 @@ function HomeEN() {
           aria-label="Scroll down"
         >
           <span></span>
-          <span></span>
-          <span></span>
         </button>
 
         <div className="hero-overlay">
@@ -101,6 +99,7 @@ function HomeEN() {
       {/* ================= WHAT MATTERS TO US ================= */}
       <section className="what-matters-section">
         <div className="container">
+          <h2 className="main-title">What Matters to Us</h2>
           <div className="what-matters-grid">
             <Link to="/uber-uns" className="matter-block hope">
               <h3>Who We Are</h3>

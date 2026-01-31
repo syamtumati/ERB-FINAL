@@ -18,13 +18,19 @@ export default function PastorsEN() {
           <div className="leadership-intro-box">
             <p>
               Our church began in the year <strong>2014</strong>, when
-              Peter Schild was sent from ERB Wetzlar to Frankfurt am Main
-              to work on establishing a Reformed Baptist church.
+              <strong> Peter Schild</strong> was sent from ERB Wetzlar to
+              Frankfurt am Main to work on establishing a Reformed Baptist
+              church. This missionary work was made possible through the
+              guidance and support of the US-based
+              <strong> HeartCry Missionary Society</strong>, under the
+              leadership of <strong>Paul Washer</strong>.
             </p>
 
             <p>
               Since then, we have experienced how God has graciously guided
-              us step by step and granted us growth.
+              us step by step. Today, we are a community of young families,
+              children, and people from diverse backgrounds and life
+              stories.
             </p>
 
             <p>
@@ -60,9 +66,9 @@ export default function PastorsEN() {
                 Coming from difficult life circumstances and far from God,
                 he was led to faith in Jesus Christ as a teenager through
                 a gospel tract. He studied Evangelical Theology and was
-                sent as a missionary to Frankfurt in 2014 to establish a
-                Reformed Baptist church. In addition to his pastoral
-                ministry, he is the author of several books.
+                sent as a missionary to Frankfurt in 2014 to establish
+                ERB Frankfurt. In addition to his pastoral ministry,
+                he is the author of several books.
               </p>
             </div>
           </div>
@@ -82,7 +88,7 @@ export default function PastorsEN() {
                 faith in Jesus Christ as a teenager. He is a trained
                 automotive master mechanic and works in technical
                 customer support. Since 2023, he has been serving
-                the church as a deacon.
+                ERB Frankfurt as a deacon.
               </p>
             </div>
           </div>

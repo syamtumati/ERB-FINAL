@@ -3,6 +3,9 @@ import { useState } from "react";
 import { confessionChapters } from "../data/confessionChapters";
 import "./BeliefDE.css";
 
+// ✅ IMPORT SIGNATURE IMAGE
+import spurgeonSignature from "../assets/images/spurgeon_signature_transparent_black.png";
+
 export default function Belief() {
   const navigate = useNavigate();
   const [openChapter, setOpenChapter] = useState(null);
@@ -23,26 +26,37 @@ export default function Belief() {
           <strong>1689</strong> von mehr als{" "}
           <strong>100 Baptistengemeinden</strong> herausgegeben.
           Der weltbekannte Baptistenpastor{" "}
-          <strong>Charles Haddon Spurgeon</strong>{" "}
+          <a
+            href="https://de.wikipedia.org/wiki/Charles_Haddon_Spurgeon"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "inherit", textDecoration: "underline" }}
+          >
+            <strong>Charles Haddon Spurgeon</strong>
+          </a>{" "}
           <span className="belief-dates">(1834–1892)</span>{" "}
           schrieb über dieses Dokument:
         </p>
 
+        {/* ================= QUOTE BOX ================= */}
         <blockquote className="belief-quote">
           „Dieses alte Schriftstück ist eine ausgezeichnete Zusammenfassung der
           Dinge, die von uns mit größter Gewissheit geglaubt werden. Es ist nicht
           als verbindliche Glaubensregel herausgegeben, durch die man gebunden
           werden soll, sondern als Mittel zur Erbauung in der Gerechtigkeit.
-          <br /><br />
           Es ist eine vortreffliche, wenn auch nicht inspirierte, Darstellung
           der Lehre der Heiligen Schrift, an der alle Bekenntnisse zu messen sind.
-          <br /><br />
           Wir halten fest an den demütigenden Wahrheiten von Gottes souveräner
           Gnade in der Errettung verlorener Sünder. Das Heil ist allein durch
           Christus und allein durch den Glauben.“
-          <span className="belief-quote-author">
-            — C. H. Spurgeon
-          </span>
+
+          {/* ================= SIGNATURE ================= */}
+          <div className="spurgeon-signature">
+            <img
+              src={spurgeonSignature}
+              alt="C. H. Spurgeon Signatur"
+            />
+          </div>
         </blockquote>
       </div>
 

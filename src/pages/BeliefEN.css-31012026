@@ -183,7 +183,7 @@
   color: #000000;
 
   padding: 2.4rem 3rem;
-  background: #DADADA;
+  background: #DADADA;          /* ✅ BOX COLOR */
 
   border-radius: 16px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
@@ -238,17 +238,5 @@
     border-radius: 22px;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
   }
-}
-
-.spurgeon-signature {
-  margin-top: 2rem;
-  text-align: right;
-}
-
-.spurgeon-signature img {
-  max-width: 160px;
-  opacity: 0.85;
-  display: block;
-  margin-left: auto;
 }
 

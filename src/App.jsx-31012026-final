@@ -23,7 +23,6 @@ import "./App.css";
 function App() {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mediaOpen, setMediaOpen] = useState(false); // ✅ ADD THIS
   const location = useLocation();
 
   useEffect(() => {
@@ -66,37 +65,17 @@ function App() {
           {/* RIGHT MENU (DESKTOP DROPDOWN) */}
           <nav className="menu-right desktop-nav">
 
-	    <div className="menu-item media-dropdown">
-              <NavLink
-                to="/media"
-                className="media-label"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMediaOpen(o => !o);
-                }}
-              >
-                {t("nav.media")}
-              </NavLink>
+            <div className="menu-item media-dropdown">
+              <span className="media-label">{t("nav.media")}</span>
 
-              {mediaOpen && (
-                <div className="media-dropdown-menu">
-                  <NavLink
-                    to="/media/videos"
-                    className="dropdown-link"
-                    onClick={() => setMediaOpen(false)}
-                  >
-                    {t("media.videos")}
-                  </NavLink>
-
-                  <NavLink
-                    to="/media/books"
-                    className="dropdown-link"
-                    onClick={() => setMediaOpen(false)}
-                  >
-                    {t("media.books")}
-                  </NavLink>
-                </div>
-              )}
+              <div className="media-dropdown-menu">
+                <NavLink to="/media/videos" className="dropdown-link">
+                  {t("media.videos")}
+                </NavLink>
+                <NavLink to="/media/books" className="dropdown-link">
+                  {t("media.books")}
+                </NavLink>
+              </div>
             </div>
 
             <NavLink to="/spenden" className="menu-item">

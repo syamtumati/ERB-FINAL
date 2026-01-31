@@ -18,14 +18,19 @@ export default function PastorsDE() {
           <div className="leadership-intro-box">
             <p>
               Unsere Gemeinde hat ihre Anfänge im Jahr <strong>2014</strong>, als
-              Peter Schild von der ERB Wetzlar nach Frankfurt am
+              <strong> Peter Schild</strong> von der ERB Wetzlar nach Frankfurt am
               Main ausgesandt wurde, um an der Gründung einer reformierten
-              Baptistengemeinde zu arbeiten.
+              Baptistengemeinde zu arbeiten. Diese Missionsarbeit durfte durch
+              die Begleitung und Unterstützung der US-amerikanischen
+              <strong> HeartCry Missionary Society</strong> unter der Leitung von
+              <strong> Paul Washer</strong> geschehen.
             </p>
 
             <p>
               Seitdem haben wir erlebt, wie Gott uns Schritt für Schritt gnädig
-              geführt hat und uns Wachstum geschenkt hat.
+              geführt hat. Heute sind wir eine Gemeinschaft aus jungen Familien,
+              Kindern und Menschen unterschiedlicher Herkunft und
+              Lebensgeschichten.
             </p>
 
             <p>
@@ -61,9 +66,9 @@ export default function PastorsDE() {
                 schwierigen Lebensumständen kommend und fern von Gott, wurde er
                 als Teenager durch ein Traktat zum Glauben an Jesus Christus
                 geführt. Er studierte Evangelische Theologie, wurde 2014 als
-                Missionar nach Frankfurt ausgesandt, um eine reformierte
-                Baptistengemeinde zu gründen. Neben seinem Dienst als Pastor ist
-                er Autor mehrerer Bücher.
+                Missionar nach Frankfurt ausgesandt, um die ERB Frankfurt zu
+                gründen. Neben seinem Dienst als Pastor ist er Autor mehrerer
+                Bücher.
               </p>
             </div>
           </div>
@@ -82,7 +87,7 @@ export default function PastorsDE() {
                 russlanddeutschen Baptistengemeinde aufgewachsen, fand er als
                 Teenager zum Glauben an Jesus Christus. Er ist ausgebildeter
                 Kfz-Meister und arbeitet im technischen Kundensupport. Seit 2023
-                dient er der Gemeinde als Diakon.
+                dient er der ERB Frankfurt als Diakon.
               </p>
             </div>
           </div>

@@ -578,19 +578,3 @@
   }
 
 }
-
-/* ================= PASTOR IMAGE FIT FIX ================= */
-
-.pastor-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  /* 👇 move image slightly to the RIGHT */
-  object-position: 60% center;
-}
-
-.pastor-card.deacon .pastor-photo img {
-  object-position: 60% center;
-}
-

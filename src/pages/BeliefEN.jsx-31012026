@@ -3,9 +3,6 @@ import { useState } from "react";
 import { confessionChaptersEN } from "../data/confessionChaptersEN";
 import "./BeliefEN.css";
 
-// ✅ Spurgeon signature image
-import spurgeonSignature from "../assets/images/spurgeon_signature_transparent_black.png";
-
 export default function BeliefEN() {
   const navigate = useNavigate();
   const [openChapter, setOpenChapter] = useState(null);
@@ -26,19 +23,11 @@ export default function BeliefEN() {
           <strong>1689</strong> by more than{" "}
           <strong>100 Baptist congregations</strong>.
           The world-renowned Baptist pastor{" "}
-          <a
-            href="https://en.wikipedia.org/wiki/Charles_Spurgeon"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "inherit", textDecoration: "underline" }}
-          >
-            <strong>Charles Haddon Spurgeon</strong>
-          </a>{" "}
+          <strong>Charles Haddon Spurgeon</strong>{" "}
           <span className="belief-dates">(1834–1892)</span>{" "}
           wrote concerning this document:
         </p>
 
-        {/* ================= QUOTE ================= */}
         <blockquote className="belief-quote">
           “This ancient document is the most excellent epitome of the things
           most surely believed among us. It is not issued as an authoritative
@@ -48,14 +37,9 @@ export default function BeliefEN() {
           confessions are to be measured. We hold to the humbling truths of
           God’s sovereign grace in the salvation of lost sinners. Salvation is
           through Christ alone and by faith alone.”
-
-          {/* ================= SIGNATURE ================= */}
-          <div className="spurgeon-signature">
-            <img
-              src={spurgeonSignature}
-              alt="Charles Spurgeon Signature"
-            />
-          </div>
+          <span className="belief-quote-author">
+            — C. H. Spurgeon
+          </span>
         </blockquote>
       </div>
 
@@ -63,6 +47,7 @@ export default function BeliefEN() {
       <div className="chapter-grid">
         {confessionChaptersEN.map((chapter) => (
           <div key={chapter.chapter} className="chapter-wrapper">
+            {/* CHAPTER ROW */}
             <div
               className="chapter-text-row"
               onClick={() => toggleChapter(chapter.chapter)}
@@ -75,6 +60,7 @@ export default function BeliefEN() {
               </span>
             </div>
 
+            {/* POINTS */}
             <ul
               className={`chapter-points-below ${
                 openChapter === chapter.chapter ? "open" : ""

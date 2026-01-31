@@ -240,15 +240,3 @@
   }
 }
 
-.spurgeon-signature {
-  margin-top: 2rem;
-  text-align: right;
-}
-
-.spurgeon-signature img {
-  max-width: 160px;
-  opacity: 0.85;
-  display: block;
-  margin-left: auto;
-}
-
