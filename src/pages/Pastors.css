@@ -579,18 +579,20 @@
 
 }
 
-/* ================= PASTOR IMAGE FIT FIX ================= */
+/* ================= IMAGE POSITION TWEAK ================= */
 
+/* Pastor (Peter Schild) — move DOWN slightly */
 .pastor-photo img {
   width: 100%;
-  height: 100%;
+  height: 105%;
   object-fit: cover;
 
-  /* 👇 move image slightly to the RIGHT */
-  object-position: 60% center;
+  /* X = horizontal, Y = vertical */
+  object-position: 60% 60%;   /* ⬇️ move DOWN */
 }
 
+/* Deacon (Hans Ewert) — move LEFT + DOWN */
 .pastor-card.deacon .pastor-photo img {
-  object-position: 60% center;
+  object-position: 68% 60%;   /* ⬅️ LEFT + ⬇️ DOWN */
 }
 
