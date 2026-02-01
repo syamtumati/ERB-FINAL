@@ -166,7 +166,7 @@
 }
 
 .belief-intro-text {
-  font-size: 1.9rem;             /* ⬅️ increased */
+  font-size: 1.6rem;             /* ⬅️ increased */
   line-height: 1.9;
   color: #f1f4ff;
   margin-bottom: 3.2rem;
@@ -227,7 +227,7 @@
   }
 
   .belief-intro-text {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.75;
   }
 
