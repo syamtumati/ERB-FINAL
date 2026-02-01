@@ -168,6 +168,7 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
+/*  background: #131A28;*/
   z-index: 950;
 }
 
@@ -178,7 +179,8 @@ body {
   height: 100vh;
   width: 78%;
   max-width: 320px;
-  background: rgba(6, 6, 12, 0.97);
+/*  background: rgba(6, 6, 12, 0.97);*/
+  background: #131A28;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -596,4 +598,70 @@ body {
   display: none !important;
 }
 
+/* ======================= */
+/* MEDIA DROPDOWN (DESKTOP) */
+/* ======================= */
+
+.media-dropdown {
+  position: relative;
+}
+
+.media-label {
+  cursor: pointer;
+  color: #f0e8ff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+/* ❌ REMOVE underline ONLY for MEDIA */
+.menu-item.media-dropdown::after {
+  content: none !important;
+}
+
+.media-dropdown-menu {
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #131A28;
+  padding: 1rem 1.4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  z-index: 999;
+}
+
+.dropdown-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+.dropdown-link:hover {
+  color: #e8c0a0;
+}
+
+/* ======================= */
+/* MOBILE MENU COLORS */
+/* ======================= */
+
+.mobile-menu {
+  background: #131A28;
+}
+
+.mobile-backdrop {
+  background: rgba(0,0,0,0.45);
+}
+
+/* REMOVE underline for MEDIA only */
+.menu-item.media-dropdown::after {
+  content: none !important;
+}
 

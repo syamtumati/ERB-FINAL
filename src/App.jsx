@@ -17,18 +17,22 @@ import Donations from "./pages/Donations";
 import Contact from "./pages/Contact";
 import Impressum from "./pages/Impressum";
 
-import heartcryLogo from "./assets/partners/heartcry-logo.png";
 import "./App.css";
 
 function App() {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mediaOpen, setMediaOpen] = useState(false); // ✅ ADD THIS
+  const [mediaOpen, setMediaOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
+
+  // ✅ CLOSE MEDIA DROPDOWN ON ANY NAVIGATION
+  useEffect(() => {
+    setMediaOpen(false);
+  }, [location.pathname]);
 
   const closeMobile = () => setMobileOpen(false);
 
@@ -63,41 +67,36 @@ function App() {
             />
           </NavLink>
 
-          {/* RIGHT MENU (DESKTOP DROPDOWN) */}
+          {/* RIGHT MENU */}
           <nav className="menu-right desktop-nav">
 
-	    <div className="menu-item media-dropdown">
-              <NavLink
-                to="/media"
+            {/* ===== MEDIA (ONLY THIS BLOCK IS MODIFIED) ===== */}
+            <div className="menu-item media-dropdown">
+              <span
                 className="media-label"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMediaOpen(o => !o);
-                }}
+                onMouseEnter={() => setMediaOpen(true)}
+                onClick={() => setMediaOpen(o => !o)}
               >
                 {t("nav.media")}
-              </NavLink>
+              </span>
 
               {mediaOpen && (
-                <div className="media-dropdown-menu">
-                  <NavLink
-                    to="/media/videos"
-                    className="dropdown-link"
-                    onClick={() => setMediaOpen(false)}
-                  >
+                <div
+                  className="media-dropdown-menu"
+                  onMouseEnter={() => setMediaOpen(true)}
+                  onMouseLeave={() => setMediaOpen(false)}
+                >
+                  <NavLink to="/media/videos" className="dropdown-link">
                     {t("media.videos")}
                   </NavLink>
 
-                  <NavLink
-                    to="/media/books"
-                    className="dropdown-link"
-                    onClick={() => setMediaOpen(false)}
-                  >
+                  <NavLink to="/media/books" className="dropdown-link">
                     {t("media.books")}
                   </NavLink>
                 </div>
               )}
             </div>
+            {/* ===== END MEDIA ===== */}
 
             <NavLink to="/spenden" className="menu-item">
               {t("nav.donate")}
@@ -124,40 +123,18 @@ function App() {
       <nav className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
         <button className="mobile-close" onClick={closeMobile}>×</button>
 
-        <NavLink to="/" onClick={closeMobile}>
-          {t("nav.home")}
-        </NavLink>
+        <NavLink to="/" onClick={closeMobile}>{t("nav.home")}</NavLink>
+        <NavLink to="/glaube" onClick={closeMobile}>{t("nav.belief")}</NavLink>
+        <NavLink to="/uber-uns" onClick={closeMobile}>{t("nav.about")}</NavLink>
 
-        <NavLink to="/glaube" onClick={closeMobile}>
-          {t("nav.belief")}
-        </NavLink>
-
-        <NavLink to="/uber-uns" onClick={closeMobile}>
-          {t("nav.about")}
-        </NavLink>
-
-        {/* MEDIA ACCORDION */}
         <div className="mobile-media">
-          <span className="mobile-media-title">
-            {t("nav.media")}
-          </span>
-
-          <NavLink to="/media/videos" onClick={closeMobile}>
-            {t("media.videos")}
-          </NavLink>
-
-          <NavLink to="/media/books" onClick={closeMobile}>
-            {t("media.books")}
-          </NavLink>
+          <span className="mobile-media-title">{t("nav.media")}</span>
+          <NavLink to="/media/videos" onClick={closeMobile}>{t("media.videos")}</NavLink>
+          <NavLink to="/media/books" onClick={closeMobile}>{t("media.books")}</NavLink>
         </div>
 
-        <NavLink to="/spenden" onClick={closeMobile}>
-          {t("nav.donate")}
-        </NavLink>
-
-        <NavLink to="/kontakt" onClick={closeMobile}>
-          {t("nav.contact")}
-        </NavLink>
+        <NavLink to="/spenden" onClick={closeMobile}>{t("nav.donate")}</NavLink>
+        <NavLink to="/kontakt" onClick={closeMobile}>{t("nav.contact")}</NavLink>
       </nav>
 
       {/* ================= MAIN ================= */}
@@ -177,49 +154,8 @@ function App() {
           <Route path="/spenden" element={<Donations />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/impressum" element={<Impressum />} />
-        </Routes >
+        </Routes>
       </main>
-
-      {/* ================= RELATED CHURCHES ================= */}
-      <section className="related-churches">
-        <div className="related-inner">
-          <div className="related-heading">
-            <span className="related-line" />
-            <span className="related-title">{t("related.title")}</span>
-            <span className="related-line" />
-          </div>
-
-          <div className="related-list">
-            <a href="https://www.erb-wetzlar.de/" target="_blank" rel="noreferrer">
-              ERB Wetzlar
-            </a>
-
-            <span className="related-separator">·</span>
-
-            <a href="https://www.bibelgemeinde-neustadt.com/" target="_blank" rel="noreferrer">
-              Bibelgemeinde Neustadt
-            </a>
-
-            <span className="related-separator">·</span>
-
-            <a href="https://rbc-ds.de/" target="_blank" rel="noreferrer">
-              RBC Donaueschingen (Gnadenkirche)
-            </a>
-
-            <span className="related-separator">·</span>
-
-            <a href="https://ebc-waiblingen.de/" target="_blank" rel="noreferrer">
-              EBC Waiblingen
-            </a>
-
-            <span className="related-separator">·</span>
-
-            <a href="https://www.erb-basel.ch/" target="_blank" rel="noreferrer">
-              ERB Basel
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* ================= FOOTER ================= */}
       <footer className="clean-footer">
