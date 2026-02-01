@@ -453,7 +453,7 @@ body {
   display: flex;
   flex-direction: column;   /* 👈 KEY FIX */
   align-items: center;
-  gap: 1.6rem;
+  gap: 2rem;
   font-size: 1.15rem;
 }
 
@@ -480,7 +480,7 @@ body {
 @media (max-width: 600px) {
   .related-list {
     flex-direction: column;
-    gap: 1.8rem;
+    gap: 2rem;
   }
 
   .related-separator {
