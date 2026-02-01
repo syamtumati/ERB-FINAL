@@ -22,11 +22,17 @@ import "./App.css";
 function App() {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mediaOpen, setMediaOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
+
+  // ✅ CLOSE MEDIA DROPDOWN ON ANY NAVIGATION
+  useEffect(() => {
+    setMediaOpen(false);
+  }, [location.pathname]);
 
   const closeMobile = () => setMobileOpen(false);
 
@@ -39,12 +45,20 @@ function App() {
       <header className="heartcry-header">
         <div className="header-container">
 
+          {/* LEFT MENU */}
           <nav className="menu-left desktop-nav">
-            <NavLink to="/" end className="menu-item">{t("nav.home")}</NavLink>
-            <NavLink to="/glaube" className="menu-item">{t("nav.belief")}</NavLink>
-            <NavLink to="/uber-uns" className="menu-item">{t("nav.about")}</NavLink>
+            <NavLink to="/" end className="menu-item">
+              {t("nav.home")}
+            </NavLink>
+            <NavLink to="/glaube" className="menu-item">
+              {t("nav.belief")}
+            </NavLink>
+            <NavLink to="/uber-uns" className="menu-item">
+              {t("nav.about")}
+            </NavLink>
           </nav>
 
+          {/* LOGO */}
           <NavLink to="/" className="logo-center" onClick={closeMobile}>
             <img
               src="logo/gnadenkirche-logo-white.png"
@@ -53,10 +67,37 @@ function App() {
             />
           </NavLink>
 
+          {/* RIGHT MENU */}
           <nav className="menu-right desktop-nav">
-            <NavLink to="/media/videos" className="menu-item">
-              {t("nav.media")}
-            </NavLink>
+
+            {/* ===== MEDIA (UNCHANGED) ===== */}
+            <div className="menu-item media-dropdown">
+              <span
+                className="media-label"
+                onMouseEnter={() => setMediaOpen(true)}
+                onClick={() => setMediaOpen(o => !o)}
+              >
+                {t("nav.media")}
+              </span>
+
+              {mediaOpen && (
+                <div
+                  className="media-dropdown-menu"
+                  onMouseEnter={() => setMediaOpen(true)}
+                  onMouseLeave={() => setMediaOpen(false)}
+                >
+                  <NavLink to="/media/videos" className="dropdown-link">
+                    {t("media.videos")}
+                  </NavLink>
+
+                  <NavLink to="/media/books" className="dropdown-link">
+                    {t("media.books")}
+                  </NavLink>
+                </div>
+              )}
+            </div>
+            {/* ===== END MEDIA ===== */}
+
             <NavLink to="/spenden" className="menu-item">
               {t("nav.donate")}
             </NavLink>
@@ -65,6 +106,7 @@ function App() {
             </NavLink>
           </nav>
 
+          {/* HAMBURGER */}
           <button
             className="mobile-menu-toggle"
             onClick={() => setMobileOpen(o => !o)}
@@ -115,7 +157,7 @@ function App() {
         </Routes>
       </main>
 
-      {/* ================= RELATED CHURCHES (RESTORED) ================= */}
+      {/* ================= RELATED CHURCHES (ADDED) ================= */}
       <section className="related-churches">
         <div className="related-inner">
           <div className="related-heading">
