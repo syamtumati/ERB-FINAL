@@ -351,11 +351,11 @@
 
 /* Default: show image, hide video */
 .hero-image {
-  display: none;
+  display: block;
 }
 
 .hero-video-mobile {
-  display: block;
+  display: none;
 }
 
 /* ================= MOBILE ONLY ================= */
