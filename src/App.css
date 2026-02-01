@@ -478,7 +478,7 @@ body {
 @media (max-width: 600px) {
   .related-list {
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1.8rem;
   }
 
   .related-separator {
