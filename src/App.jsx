@@ -22,17 +22,11 @@ import "./App.css";
 function App() {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mediaOpen, setMediaOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
-
-  // ✅ CLOSE MEDIA DROPDOWN ON ANY NAVIGATION
-  useEffect(() => {
-    setMediaOpen(false);
-  }, [location.pathname]);
 
   const closeMobile = () => setMobileOpen(false);
 
@@ -45,20 +39,12 @@ function App() {
       <header className="heartcry-header">
         <div className="header-container">
 
-          {/* LEFT MENU */}
           <nav className="menu-left desktop-nav">
-            <NavLink to="/" end className="menu-item">
-              {t("nav.home")}
-            </NavLink>
-            <NavLink to="/glaube" className="menu-item">
-              {t("nav.belief")}
-            </NavLink>
-            <NavLink to="/uber-uns" className="menu-item">
-              {t("nav.about")}
-            </NavLink>
+            <NavLink to="/" end className="menu-item">{t("nav.home")}</NavLink>
+            <NavLink to="/glaube" className="menu-item">{t("nav.belief")}</NavLink>
+            <NavLink to="/uber-uns" className="menu-item">{t("nav.about")}</NavLink>
           </nav>
 
-          {/* LOGO */}
           <NavLink to="/" className="logo-center" onClick={closeMobile}>
             <img
               src="logo/gnadenkirche-logo-white.png"
@@ -67,37 +53,10 @@ function App() {
             />
           </NavLink>
 
-          {/* RIGHT MENU */}
           <nav className="menu-right desktop-nav">
-
-            {/* ===== MEDIA (ONLY THIS BLOCK IS MODIFIED) ===== */}
-            <div className="menu-item media-dropdown">
-              <span
-                className="media-label"
-                onMouseEnter={() => setMediaOpen(true)}
-                onClick={() => setMediaOpen(o => !o)}
-              >
-                {t("nav.media")}
-              </span>
-
-              {mediaOpen && (
-                <div
-                  className="media-dropdown-menu"
-                  onMouseEnter={() => setMediaOpen(true)}
-                  onMouseLeave={() => setMediaOpen(false)}
-                >
-                  <NavLink to="/media/videos" className="dropdown-link">
-                    {t("media.videos")}
-                  </NavLink>
-
-                  <NavLink to="/media/books" className="dropdown-link">
-                    {t("media.books")}
-                  </NavLink>
-                </div>
-              )}
-            </div>
-            {/* ===== END MEDIA ===== */}
-
+            <NavLink to="/media/videos" className="menu-item">
+              {t("nav.media")}
+            </NavLink>
             <NavLink to="/spenden" className="menu-item">
               {t("nav.donate")}
             </NavLink>
@@ -106,7 +65,6 @@ function App() {
             </NavLink>
           </nav>
 
-          {/* HAMBURGER */}
           <button
             className="mobile-menu-toggle"
             onClick={() => setMobileOpen(o => !o)}
@@ -156,6 +114,47 @@ function App() {
           <Route path="/impressum" element={<Impressum />} />
         </Routes>
       </main>
+
+      {/* ================= RELATED CHURCHES (RESTORED) ================= */}
+      <section className="related-churches">
+        <div className="related-inner">
+          <div className="related-heading">
+            <span className="related-line" />
+            <span className="related-title">{t("related.title")}</span>
+            <span className="related-line" />
+          </div>
+
+          <div className="related-list">
+            <a href="https://www.erb-wetzlar.de/" target="_blank" rel="noreferrer">
+              ERB Wetzlar
+            </a>
+
+            <span className="related-separator">·</span>
+
+            <a href="https://www.bibelgemeinde-neustadt.com/" target="_blank" rel="noreferrer">
+              Bibelgemeinde Neustadt
+            </a>
+
+            <span className="related-separator">·</span>
+
+            <a href="https://rbc-ds.de/" target="_blank" rel="noreferrer">
+              RBC Donaueschingen (Gnadenkirche)
+            </a>
+
+            <span className="related-separator">·</span>
+
+            <a href="https://ebc-waiblingen.de/" target="_blank" rel="noreferrer">
+              EBC Waiblingen
+            </a>
+
+            <span className="related-separator">·</span>
+
+            <a href="https://www.erb-basel.ch/" target="_blank" rel="noreferrer">
+              ERB Basel
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* ================= FOOTER ================= */}
       <footer className="clean-footer">
