@@ -435,11 +435,11 @@
 
 @media (max-width: 768px) {
   .hero-main-title {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 
   .hero-secondary-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     letter-spacing: 1.4px;
   }
 }
@@ -556,19 +556,19 @@
 
 @media (max-width: 768px) {
   .hero-line-primary {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     letter-spacing: 0.22em;
   }
 
   .hero-line-secondary {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     letter-spacing: 0.2em;
   }
 }
 
 @media (max-width: 768px) {
   .hero-secondary-title {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     letter-spacing: 0.16em;
   }
 }
