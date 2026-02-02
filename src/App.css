@@ -722,3 +722,10 @@ body {
   cursor: pointer;
 }
 
+/* ================= LOGO DIVIDER – MOBILE ALIGNMENT FIX ================= */
+@media (max-width: 768px) {
+  .logo-divider-image {
+    transform: translateX(-4px); /* 🔹 move slightly RIGHT on mobile */
+  }
+}
+

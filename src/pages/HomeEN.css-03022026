@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;500;600&display=swap');
 
 /* ================= ROOT ================= */
 .home-page {
@@ -113,22 +114,14 @@
 
 /* ================= HERO SECONDARY TITLE ================= */
 .hero-secondary-title {
-  font-family: 
-    "Avenir Next",
-    "Avenir",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
-  font-size: 1.2rem;
+  font-family: 'Livvic', sans-serif;
+  font-size: 2rem;
   font-weight: 400;
 
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
+  text-transform: uppercase;     /* ✅ CAPITAL LETTERS */
+  letter-spacing: 0.22em;        /* ✅ looks elegant in caps */
 
-  color: #d2b184;
+  color: #d2b184;                /* gold */
   text-align: center;
   margin-top: 0.6rem;
 
