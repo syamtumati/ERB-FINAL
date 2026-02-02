@@ -88,6 +88,8 @@
   line-height: 1.2;
   text-align: center;
 
+  text-transform: uppercase;   /* ✅ FORCE ALL CAPS */
+
   color: #ffffff; /* ✅ WHITE */
 
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
