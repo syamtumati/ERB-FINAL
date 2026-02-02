@@ -96,7 +96,7 @@
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
-   text-transform: uppercase;   /* ✅ FORCE ALL CAPS */
+  text-transform: uppercase;   /* ✅ FORCE ALL CAPS */
 
   color: #ffffff; /* ✅ WHITE */
 
