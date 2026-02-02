@@ -665,3 +665,60 @@ body {
   content: none !important;
 }
 
+
+/* ================= LOGO DIVIDER ================= */
+
+/* ================= LOGO DIVIDER ================= */
+
+.logo-divider {
+  background: #DADADA;          /* SAME as churches & footer */
+  display: flex;
+  position: relative;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  padding: 2.2rem 1rem;         /* tighter vertical balance */
+}
+
+.logo-divider-image {
+  width: 160px;                 /* visually balanced with footer title */
+  height: auto;
+  pointer-events: auto;   /* 👈 force clicks */
+  cursor: pointer;
+  display: block;
+
+  /* 🎯 PERFECT TYPOGRAPHIC ALIGNMENT */
+  transform: translateX(-18px);
+
+  /* footer text color */
+  filter: brightness(0) saturate(100%)
+          invert(19%) sepia(12%)
+          saturate(640%)
+          hue-rotate(167deg)
+          brightness(88%)
+          contrast(92%);
+
+  opacity: 0.95;
+}
+
+/* ================= LOGO DIVIDER FIX ================= */
+
+.logo-divider {
+  position: relative;
+  z-index: 50;              /* ⬅️ higher than surrounding sections */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DADADA;
+}
+
+.logo-divider a {
+  display: inline-block;
+  pointer-events: auto;     /* ⬅️ force link to receive clicks */
+}
+
+.logo-divider-image {
+  pointer-events: auto;
+  cursor: pointer;
+}
+

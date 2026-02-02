@@ -167,35 +167,52 @@ function App() {
           </div>
 
           <div className="related-list">
-            <a href="https://www.erb-wetzlar.de/" target="_blank" rel="noreferrer">
-              ERB Wetzlar
+	     <a href="https://www.erb-basel.ch/" target="_blank" rel="noreferrer">
+              ERB Basel
+            </a>
+	    
+	    <span className="related-separator">·</span>
+
+	    <a href="https://ebc-waiblingen.de/" target="_blank" rel="noreferrer">
+              EBC Waiblingen
+            </a>
+
+	    <span className="related-separator">·</span>
+
+	    <a href="https://rbc-ds.de/" target="_blank" rel="noreferrer">
+              RBC Donaueschingen
             </a>
 
             <span className="related-separator">·</span>
 
-            <a href="https://www.bibelgemeinde-neustadt.com/" target="_blank" rel="noreferrer">
+	    <a href="https://www.bibelgemeinde-neustadt.com/" target="_blank" rel="noreferrer">
               Bibelgemeinde Neustadt
             </a>
 
             <span className="related-separator">·</span>
 
-            <a href="https://rbc-ds.de/" target="_blank" rel="noreferrer">
-              RBC Donaueschingen (Gnadenkirche)
+	    <a href="https://voh-missionswerk.de/start/gottesdienst/" target="_blank" rel="noreferrer">
+              RBG Reichshof
             </a>
 
-            <span className="related-separator">·</span>
+	    <span className="related-separator">·</span>
 
-            <a href="https://ebc-waiblingen.de/" target="_blank" rel="noreferrer">
-              EBC Waiblingen
-            </a>
-
-            <span className="related-separator">·</span>
-
-            <a href="https://www.erb-basel.ch/" target="_blank" rel="noreferrer">
-              ERB Basel
+            <a href="https://www.erb-wetzlar.de/" target="_blank" rel="noreferrer">
+              ERB Wetzlar
             </a>
           </div>
         </div>
+      </section>
+
+      {/* ================= LOGO DIVIDER ================= */}
+      <section className="logo-divider">
+        <NavLink to="/" aria-label="Zur Startseite">
+          <img
+            src="logo/gnadenkirche-logo-blue.png"
+            alt="Gnadenkirche Frankfurt"
+            className="logo-divider-image"
+          />
+        </NavLink>
       </section>
 
       {/* ================= FOOTER ================= */}
