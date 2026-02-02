@@ -1,7 +1,8 @@
 /* ================= FONT (GLOBAL, CROSS-PLATFORM FIX) ================= */
 /*@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
 /* ================= ROOT ================= */
 .home-page {
@@ -92,15 +93,16 @@
 
 /* ================= HERO MAIN TITLE ================= */
 .hero-main-title {
-  font-family: 'Josefin Sans', sans-serif;   /* ✅ NEW FONT */
-  font-size: 2.8rem;                         /* slightly smaller */
-  font-weight: 700;
-  line-height: 1.15;
+  font-family: 'Cormorant Garamond', serif;   /* ✅ NEW FONT */
+  font-size: 3rem;
+  font-weight: 600;                          /* looks best here */
+  line-height: 1.1;
   text-align: center;
   text-transform: uppercase;
 
+  letter-spacing: 2.5px;                     /* important for caps */
   color: #ffffff;
-  letter-spacing: 3px;
+
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   margin: 0;
 }
@@ -109,14 +111,15 @@
 .hero-secondary-title {
   margin-top: 0.6rem;
 
-  font-family: 'Josefin Sans', sans-serif;   /* ✅ SAME FONT */
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: none;                      /* keep natural case */
+  font-family: 'Cormorant Garamond', serif;   /* ✅ SAME FONT */
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: none;                      /* natural case */
 
   color: #d2b184;
   text-align: center;
+
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
 }
 
