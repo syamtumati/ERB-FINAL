@@ -84,31 +84,18 @@
 
 /* ================= HERO MAIN TITLE ================= */
 .hero-main-title {
-  font-family: 'Cormorant Garamond', serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* GNADENKIRCHE — slightly bigger, tighter spacing */
-.hero-line-primary {
-  font-size: 3.2rem;          /* 🔼 bigger */
-  font-weight: 500;
-  letter-spacing: 0.28em;     /* 🔽 reduced gap */
+  font-family: 'Cormorant Garamond', serif;   /* ✅ NEW FONT */
+  font-size: 3rem;
+  font-weight: 600;                          /* looks best here */
   line-height: 1.1;
-}
+  text-align: center;
+  text-transform: uppercase;
 
-/* FRANKFURT — slightly smaller, still elegant */
-.hero-line-secondary {
-  margin-top: 0.35rem;
-  font-size: 2.6rem;
-  font-weight: 500;
-  letter-spacing: 0.24em;     /* 🔽 reduced gap */
+  letter-spacing: 2.5px;                     /* important for caps */
+  color: #ffffff;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  margin: 0;
 }
 
 /* ================= HERO SECONDARY TITLE ================= */
@@ -839,18 +826,6 @@
     font-size: 1.4rem;     /* ✅ bigger & readable */
     letter-spacing: 1.4px;
     margin-top: 0.6rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-line-primary {
-    font-size: 2.3rem;
-    letter-spacing: 0.22em;
-  }
-
-  .hero-line-secondary {
-    font-size: 1.9rem;
-    letter-spacing: 0.2em;
   }
 }
 

@@ -86,7 +86,8 @@ function Home() {
         <div className="hero-overlay">
           <div className="hero-content-centered">
 	    <h1 className="hero-main-title">
-              Gnadenkirche Frankfurt
+	      <span className="hero-line hero-line-primary">Gnadenkirche</span>
+	      <span className="hero-line hero-line-secondary">Frankfurt</span>
             </h1>
 	    <h2 className="hero-secondary-title">
               Reformierte Baptistengemeinde
