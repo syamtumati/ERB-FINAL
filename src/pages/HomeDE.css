@@ -3,6 +3,7 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;500;600&display=swap');
 
 /* ================= ROOT ================= */
 .home-page {
@@ -107,7 +108,7 @@
 /* GNADENKIRCHE — slightly bigger, tighter spacing */
 .hero-line-primary {
   font-size: 3.2rem;          /* 🔼 bigger */
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.28em;     /* 🔽 reduced gap */
   line-height: 1.1;
 }
@@ -116,24 +117,24 @@
 .hero-line-secondary {
   margin-top: 0.35rem;
   font-size: 2.6rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.24em;     /* 🔽 reduced gap */
 }
 
 /* ================= HERO SECONDARY TITLE ================= */
 .hero-secondary-title {
+  font-family: 'Livvic', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+
+  text-transform: uppercase;     /* ✅ CAPITAL LETTERS */
+  letter-spacing: 0.22em;        /* ✅ looks elegant in caps */
+
+  color: #d2b184;                /* gold */
+  text-align: center;
   margin-top: 0.6rem;
 
-  font-family: 'Cormorant Garamond', serif;   /* ✅ SAME FONT */
-  font-size: 1.9rem;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  text-transform: none;                      /* natural case */
-
-  color: #d2b184;
-  text-align: center;
-
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* ================= SCROLL ARROWS (3x FADE) ================= */
@@ -449,7 +450,7 @@
   }
 
   .hero-secondary-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -543,18 +544,6 @@
 @media (max-width: 768px) {
   .hero-main-title {
     font-size: 2rem;
-    letter-spacing: 2.2px;
-  }
-
-  .hero-secondary-title {
-    font-size: 1.4rem;
-    letter-spacing: 1.2px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-main-title {
-    font-size: 2rem;
     letter-spacing: 2.4px;
   }
 
@@ -574,6 +563,13 @@
   .hero-line-secondary {
     font-size: 1.9rem;
     letter-spacing: 0.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-secondary-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.16em;
   }
 }
 
