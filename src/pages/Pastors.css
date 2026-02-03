@@ -634,12 +634,11 @@
   }
 }
 
-
-/* ================= MOBILE PASTOR TEXT REFINEMENT ================= */
 @media (max-width: 768px) {
 
   .pastor-content {
-    padding: 0 0.5rem;   /* ✅ prevents edge-to-edge text */
+    padding: 0 0.5rem;
+    text-align: center;   /* ✅ THIS is the missing line */
   }
 
   .pastor-content h1 {
@@ -651,13 +650,15 @@
   .pastor-content .label {
     font-size: 0.85rem;
     letter-spacing: 3px;
+    display: block;
+    text-align: center;
   }
 
   .pastor-content .bio {
     font-size: 1.1rem;
-    line-height: 1.75;   /* ✅ key readability fix */
+    line-height: 1.75;
     max-width: 100%;
-    text-align: left;    /* ✅ very important */
+    text-align: center;   /* ✅ force centering */
   }
 }
 
