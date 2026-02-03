@@ -254,7 +254,8 @@
 }
 
 .matter-block {
-  background: white;
+/*  background: white; */
+  background: #DADADA;
   padding: 2.4rem 1.8rem;
   border-radius: 2rem;
   color: #2d1b0a;

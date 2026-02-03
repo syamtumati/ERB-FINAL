@@ -262,7 +262,8 @@
 
 /* Cards */
 .matter-block {
-  background: white;
+/*  background: white; */
+  background: #DADADA;
   padding: 2.6rem 2rem;
   border-radius: 2rem;
   text-decoration: none;
