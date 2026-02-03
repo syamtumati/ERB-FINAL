@@ -720,7 +720,7 @@ body {
   pointer-events: auto;
   cursor: pointer;
   margin-bottom: -0.3rem;  /* 👈 pulls text closer */
-  transform: translateX(-24px); /* 👈 moves LEFT on desktop + mobile */
+  transform: translateX(-22px); /* 👈 moves LEFT on desktop + mobile */
 }
 
 /* ================= LOGO DIVIDER – MOBILE ALIGNMENT FIX ================= */
@@ -749,7 +749,7 @@ body {
 .church-name,
 .church-name-link {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: normal;   /* ❌ no extra spacing */
   text-transform: uppercase;
