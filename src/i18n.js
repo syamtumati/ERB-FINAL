@@ -48,7 +48,7 @@ const resources = {
     translation: {
       nav: {
         home: "Home",
-        belief: "Belief",
+        belief: "Beliefs",
         about: "About Us",
         media: "Media",
         donate: "Donate",

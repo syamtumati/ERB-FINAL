@@ -180,7 +180,8 @@
   line-height: 1.7;
   font-style: italic;
 
-  color: #000000;
+/*  color: #000000; */
+  color: #131A28;
 
   padding: 2.4rem 3rem;
   background: #DADADA;
@@ -207,7 +208,7 @@
   font-size: 1.05rem;
   font-style: normal;
   font-weight: 700;
-  color: #000000;
+  color: #131A28;
   text-align: right;
 }
 

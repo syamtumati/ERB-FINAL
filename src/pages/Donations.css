@@ -442,3 +442,20 @@
   background: #0e1422;
 }
 
+
+/* =============================================== */
+/* SMALL DESKTOP / LARGE TABLET FIX (≈ 900–1200px) */
+/* =============================================== */
+@media (max-width: 1200px) and (min-width: 900px) {
+
+  .donations-main {
+    padding-top: 11rem;   /* ⬇ reduce top pressure */
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .donations-card {
+    column-gap: 2rem;     /* ⬇ prevent edge clipping */
+  }
+}
+

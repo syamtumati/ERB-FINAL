@@ -1,19 +1,30 @@
 import React, { useState } from "react";
 import "./Donations.css";
 
-const Donations = () => {
+const DonationsDE = () => {
   const [amount, setAmount] = useState(50);
 
-  const stripeLink =
-    "https://donate.stripe.com/test_8x200k2ui7Ql6y2fuyes000";
+  // ✅ UPDATED STRIPE PAYMENT LINKS (TEST MODE)
+  const stripeLinks = {
+    25: "https://buy.stripe.com/test_8x29AU0ma3A51dI6Y2es001",
+    50: "https://buy.stripe.com/test_fZu00k7OC9Yt2hM826es002",
+    100: "https://buy.stripe.com/test_5kQ5kE4Cq3A5g8CgyCes003",
+    200: "https://buy.stripe.com/test_3cIfZied03A59Keaaees004",
+  };
 
   const presetAmounts = [25, 50, 100, 200];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!amount || amount <= 0) return;
 
-    window.location.href = stripeLink;
+    const link = stripeLinks[amount];
+
+    if (!link) {
+      alert("Für individuelle Beträge nutze bitte die Banküberweisung.");
+      return;
+    }
+
+    window.location.href = link;
   };
 
   const copyBankDetails = () => {
@@ -35,15 +46,17 @@ const Donations = () => {
         <main className="donations-main">
           <section className="donations-card">
             <h1>Unterstütze unseren Dienst</h1>
+
             <p className="donations-intro">
-	      Deine Spende hilft uns, der Gemeinde Jesu zu dienen,
-              der Welt das Evangelium zu verkündigen und den Bedürftigen beizustehen.
-	      <br /><br />
+              Deine Spende hilft uns, der Gemeinde Jesu zu dienen,
+              der Welt das Evangelium zu verkündigen und den Bedürftigen
+              beizustehen.
+              <br /><br />
               Wir danken herzlich für jede Spende und beten,
               dass Gott es reichlich vergelten möge.
             </p>
 
-            {/* LEFT BOX – STRIPE ONLY */}
+            {/* ================= LEFT: STRIPE ================= */}
             <form onSubmit={handleSubmit} className="donations-form">
               <label className="field-label">Betrag wählen</label>
 
@@ -84,9 +97,10 @@ const Donations = () => {
 
             <div className="divider" />
 
-            {/* RIGHT BOX – BANK DETAILS */}
+            {/* ================= RIGHT: BANK ================= */}
             <div className="other-ways">
               <h2>Banküberweisung</h2>
+
               <p className="small-text">
                 Nutze folgende Bankdaten für eine direkte Spende:
               </p>
@@ -121,5 +135,5 @@ const Donations = () => {
   );
 };
 
-export default Donations;
+export default DonationsDE;
 

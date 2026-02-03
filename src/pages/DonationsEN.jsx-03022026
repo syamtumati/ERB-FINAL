@@ -29,21 +29,20 @@ export default function DonationsEN() {
   };
 
   return (
-    <div className="donations-page">
+    <div className="donations-page donations-page-en">
       <div className="donations-inner">
         <main className="donations-main">
           <section className="donations-card">
             <h1>Support Our Ministry</h1>
 
             <p className="donations-intro">
-	      Your donation helps us to serve the church of Jesus Christ,
+              Your donation helps us to serve the church of Jesus Christ,
               to proclaim the Gospel to the world, and to care for those in need.
               <br /><br />
               We are deeply thankful for every gift and pray
               that God will richly reward you for your generosity.
             </p>
 
-            {/* LEFT – STRIPE */}
             <form onSubmit={handleSubmit} className="donations-form">
               <label className="field-label">Select Amount</label>
 
@@ -84,7 +83,6 @@ export default function DonationsEN() {
 
             <div className="divider" />
 
-            {/* RIGHT – BANK TRANSFER */}
             <div className="other-ways">
               <h2>Bank Transfer</h2>
               <p className="small-text">
