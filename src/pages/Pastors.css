@@ -593,6 +593,22 @@
 
 /* Deacon (Hans Ewert) — move LEFT + DOWN */
 .pastor-card.deacon .pastor-photo img {
-  object-position: 68% 60%;   /* ⬅️ LEFT + ⬇️ DOWN */
+  object-position: 62% 60%;   /* ⬅️ LEFT + ⬇️ DOWN */
 }
 
+/* ================= REMOVE PARAGRAPH GAPS IN INTRO ONLY ================= */
+.leadership-intro-box p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ================= CONTINUOUS TEXT FLOW (BOOK STYLE) ================= */
+.leadership-intro-box p {
+  display: contents;     /* 🔑 removes paragraph block spacing */
+}
+
+/* ================= INVITATION AS SEPARATE PARAGRAPH ================= */
+.leadership-intro-box .intro-invite {
+  display: block;          /* restore paragraph block */
+  margin-top: 2.4rem;      /* controlled separation */
+}
