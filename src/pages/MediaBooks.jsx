@@ -22,11 +22,6 @@ export default function MediaBooks() {
 
   const books = [
     {
-      title: "Gemeinde und Mission – Hörbuch",
-      image: missionMp3,
-      link: "https://www.voh-shop.de/Gemeinde-und-Mission-Online-Hoerbuch-Download.html"
-    },
-    {
       title: "Gemeinde und Mission – eBook",
       image: missionEbook,
       link: "https://www.voh-shop.de/Gemeinde-und-Mission-eBook-Download.html"

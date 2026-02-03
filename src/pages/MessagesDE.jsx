@@ -14,7 +14,7 @@ export default function MessagesDE() {
         <div className="youtube-playlist-wrapper">
           <iframe
             title="Neueste Predigten – Gnadenkirche Frankfurt"
-            src={`https://www.youtube.com/embed/videoseries?list=${uploadsPlaylistId}&maxResults=12`}
+            src={`https://www.youtube.com/embed/videoseries?list=${uploadsPlaylistId}&rel=0&modestbranding=1&nocache=${Date.now()}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

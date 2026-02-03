@@ -14,7 +14,7 @@ export default function MessagesEN() {
         <div className="youtube-playlist-wrapper">
           <iframe
             title="Latest Sermons – Grace Church Frankfurt"
-            src={`https://www.youtube.com/embed/videoseries?list=${uploadsPlaylistId}&maxResults=12`}
+            src={`https://www.youtube.com/embed/videoseries?list=${uploadsPlaylistId}&rel=0&modestbranding=1&nocache=${Date.now()}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
