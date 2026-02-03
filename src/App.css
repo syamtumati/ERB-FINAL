@@ -720,7 +720,7 @@ body {
   pointer-events: auto;
   cursor: pointer;
   margin-bottom: -0.3rem;  /* 👈 pulls text closer */
-  transform: translateX(-22px); /* 👈 moves LEFT on desktop + mobile */
+  transform: translateX(-20px); /* 👈 moves LEFT on desktop + mobile */
 }
 
 /* ================= LOGO DIVIDER – MOBILE ALIGNMENT FIX ================= */
