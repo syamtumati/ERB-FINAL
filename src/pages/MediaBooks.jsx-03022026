@@ -22,11 +22,6 @@ export default function MediaBooks() {
 
   const books = [
     {
-      title: "Gemeinde und Mission – Hörbuch",
-      image: missionMp3,
-      link: "https://www.voh-shop.de/Gemeinde-und-Mission-Online-Hoerbuch-Download.html"
-    },
-    {
       title: "Gemeinde und Mission – eBook",
       image: missionEbook,
       link: "https://www.voh-shop.de/Gemeinde-und-Mission-eBook-Download.html"
@@ -89,12 +84,6 @@ export default function MediaBooks() {
       <h2>
         {isGerman ? "Bücher von Peter Schild" : "Books by Peter Schild"}
       </h2>
-
-      <p className="books-subtitle">
-        {isGerman
-          ? "Erhältlich im offiziellen Voice of Hope Shop"
-          : "Available in the official Voice of Hope store"}
-      </p>
 
       <div className="books-grid">
         {books.map((book, index) => (

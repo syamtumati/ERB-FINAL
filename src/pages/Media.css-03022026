@@ -137,17 +137,3 @@
   }
 }
 
-/* ================= ENGLISH DESKTOP – ALIGN MEDIA (VIDEOS + BOOKS) LEFT ================= */
-@media (min-width: 1024px) {
-
-  /* Move page title: Videos / Books */
-  .media-page-en .media-hero {
-    transform: translate(-40px, 45px);
-  }
-
-  /* Move tabs on /media root */
-  .media-page-en .media-tabs {
-    transform: translateX(-50px);
-  }
-}
-

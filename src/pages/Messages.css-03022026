@@ -102,13 +102,11 @@
 }
 
 /* GOLD BUTTON */
-
-/* GOLD BUTTON – UPDATED COLORS */
 .gold-btn {
   display: inline-block;
   padding: 1.2rem 3rem;
-  background: #DADADA;              /* ✅ new background */
-  color: #131A28;                   /* ✅ text color */
+  background: #44565d;
+  color: #eaf1ff;
   font-weight: 700;
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -116,10 +114,9 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  transition: all 0.4s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); /* ✅ neutral shadow */
+  transition: all 0.4s;
 }
-
 
 .gold-btn:hover {
   transform: translateY(-6px);
@@ -197,6 +194,10 @@
 
 /* DESKTOP ADJUSTMENTS */
 @media (min-width: 1024px) {
+  .messages-hero {
+    transform: translate(-20px, 45px);
+  }
+
   .messages-hero h1 {
     font-size: 3.2rem !important;
   }
@@ -237,16 +238,10 @@
   border-radius: 16px;
 }
 
-/* ================= ENGLISH DESKTOP – TRUE LOGO ALIGNMENT ================= */
+/* ================= ENGLISH DESKTOP – FINAL OVERRIDE ================= */
 @media (min-width: 1024px) {
-  .messages-page-en .messages-hero {
-    margin-top: 8rem;     /* keep vertical spacing */
-    transform: none;     /* 🔑 stop fighting the layout */
-  }
-
-  .messages-page-en .messages-hero h1 {
-    position: relative;
-    left: -35px;         /* 🔥 precise optical alignment */
+  .messages-page.messages-page-en .messages-hero {
+    transform: translate(-50px, 45px) !important;
   }
 }
 

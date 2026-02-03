@@ -15,7 +15,6 @@ import wahreDreiKoenige from "../assets/books/die-wahre-bedeutung-der-heiligen-d
 import schlachtfeldGedankenwelt from "../assets/books/das-schlachtfeld-der-gedankenwelt.jpg";
 import waffenruestungGottes from "../assets/books/die-waffenruestung-gottes.jpg";
 
-
 export default function MediaBooks() {
   const { i18n } = useTranslation();
   const isGerman = i18n.language === "de";
@@ -37,50 +36,53 @@ export default function MediaBooks() {
       link: "https://www.voh-shop.de/Treue-Maenner-wer-findet-sie-eBook-Download.html"
     },
     {
-    title: "Eine Frau, die zu rühmen ist – eBook",
-    image: eineFrauEbook,
-    link: "https://www.voh-shop.de/Eine-Frau-die-zu-ruehmen-ist-eBook-Download.html"
+      title: "Eine Frau, die zu rühmen ist – eBook",
+      image: eineFrauEbook,
+      link: "https://www.voh-shop.de/Eine-Frau-die-zu-ruehmen-ist-eBook-Download.html"
     },
     {
-    title: "Treue Männer – wer findet sie?",
-    image: treueMaennerPrint,
-    link: "https://www.voh-shop.de/Treue-Maenner-wer-findet-sie.html"
+      title: "Treue Männer – wer findet sie?",
+      image: treueMaennerPrint,
+      link: "https://www.voh-shop.de/Treue-Maenner-wer-findet-sie.html"
     },
     {
-    title: "Biblische Brautwerbung",
-    image: brautwerbungPrint,
-    link: "https://www.voh-shop.de/Biblische-Brautwerbung.html"
+      title: "Biblische Brautwerbung",
+      image: brautwerbungPrint,
+      link: "https://www.voh-shop.de/Biblische-Brautwerbung.html"
     },
     {
-    title: "Eine Frau, die zu rühmen ist",
-    image: eineFrauPrint,
-    link: "https://www.voh-shop.de/Eine-Frau-die-zu-ruehmen-ist.html"
+      title: "Eine Frau, die zu rühmen ist",
+      image: eineFrauPrint,
+      link: "https://www.voh-shop.de/Eine-Frau-die-zu-ruehmen-ist.html"
     },
     {
-    title: "Gemeinde und Mission",
-    image: missionPrint,
-    link: "https://www.voh-shop.de/Gemeinde-und-Mission.html"
+      title: "Gemeinde und Mission",
+      image: missionPrint,
+      link: "https://www.voh-shop.de/Gemeinde-und-Mission.html"
     },
     {
-    title: "Die wahre Bedeutung der Heiligen Drei Könige",
-    image: wahreDreiKoenige,
-    link: "https://lichtzeichen-shop.com/buecher/evangelistische-literatur/35626/die-wahre-bedeutung-der-heiligen-drei-koenige"
+      title: "Die wahre Bedeutung der Heiligen Drei Könige",
+      image: wahreDreiKoenige,
+      link: "https://lichtzeichen-shop.com/buecher/evangelistische-literatur/35626/die-wahre-bedeutung-der-heiligen-drei-koenige"
     },
     {
-    title: "Das Schlachtfeld der Gedankenwelt",
-    image: schlachtfeldGedankenwelt,
-    link: "https://prorege.de/produkt/das-schlachtfeld-der-gedankenwelt/"
+      title: "Das Schlachtfeld der Gedankenwelt",
+      image: schlachtfeldGedankenwelt,
+      link: "https://prorege.de/produkt/das-schlachtfeld-der-gedankenwelt/"
     },
     {
-    title: "Die Waffenrüstung Gottes",
-    image: waffenruestungGottes,
-    link: "https://prorege.de/produkt/die-waffenruestung-gottes/"
+      title: "Die Waffenrüstung Gottes",
+      image: waffenruestungGottes,
+      link: "https://prorege.de/produkt/die-waffenruestung-gottes/"
     }
-
   ];
 
   return (
-    <div className="media-books">
+    <div
+      className={`media-books ${
+        !isGerman ? "media-books-en" : ""
+      }`}
+    >
       <h2>
         {isGerman ? "Bücher von Peter Schild" : "Books by Peter Schild"}
       </h2>

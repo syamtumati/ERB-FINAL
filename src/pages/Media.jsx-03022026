@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import "./Media.css";
 
 export default function Media() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const location = useLocation();
 
   const isBooks = location.pathname.includes("/media/books");
@@ -20,11 +20,7 @@ export default function Media() {
   const showTabs = location.pathname === "/media";
 
   return (
-    <div
-      className={`media-page ${
-        i18n.language === "en" ? "media-page-en" : ""
-      }`}
-    >
+    <div className="media-page">
       {/* HERO TITLE */}
       <div className="media-hero">
         <h1>{pageTitle}</h1>

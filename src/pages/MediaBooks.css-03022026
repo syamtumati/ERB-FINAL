@@ -17,14 +17,6 @@
   margin-bottom: 1rem;
 }
 
-/* ================= ENGLISH TITLE ALIGNMENT ================= */
-@media (min-width: 1024px) {
-  .media-books-en h2 {
-    position: relative;
-    left: -40px;   /* 🔥 subtle optical alignment */
-  }
-}
-
 .books-subtitle {
   font-size: 1.2rem;
   margin-bottom: 3.5rem;
@@ -32,12 +24,12 @@
 }
 
 /* ===================================================== */
-/* BOOK GRID */
+/* BOOK GRID – 3 IN ONE ROW */
 /* ===================================================== */
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* ✅ SAME LINE */
   gap: 3rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -108,29 +100,42 @@
 @media (max-width: 768px) {
   .books-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+
+  .book-title {
+    font-size: 1.15rem;
   }
 
   .media-books h2 {
     font-size: 2rem;
   }
 
-  .book-title {
+  .books-subtitle {
     font-size: 1.1rem;
   }
+}
 
-  /* 🔥 Smaller books on mobile */
+
+/* ================= DESKTOP: SLIGHTLY SMALLER BOOKS ================= */
+@media (min-width: 1025px) {
   .book-image-wrapper {
-    max-width: 160px;
+    max-width: 210px;   /* ⬅️ smaller but elegant */
     margin: 0 auto;
   }
 }
 
-/* Desktop fine tuning */
-@media (min-width: 1025px) {
+/* ================= MOBILE FIX: NO IMAGE CROPPING ================= */
+@media (max-width: 768px) {
   .book-image-wrapper {
-    max-width: 210px;
-    margin: 0 auto;
+    aspect-ratio: 3 / 4.5;     /* same as desktop */
+    padding: 0.5rem;           /* breathing space */
+  }
+
+  .book-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;       /* ✅ NO CROPPING */
   }
 }
 
