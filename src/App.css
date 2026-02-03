@@ -304,7 +304,7 @@ body {
 .clean-footer {
 /*  background: #f4f3f1;*/
   background: #DADADA;
-  padding: 2.6rem 2rem 3rem;
+  padding: 2.4rem 2rem 3rem;
   text-align: center;
   font-family: "Georgia", serif;
   color: #2d1b0a;
@@ -413,7 +413,7 @@ body {
 .related-churches {
 /*  background: #f4f3f1;*/
   background: #DADADA;
-  padding: 2.8rem 1.5rem 1.6rem;
+  padding: 2.8rem 1.5rem 1.4rem;
   text-align: center;
   font-family: "Georgia", serif;
   color: #26343a;
@@ -674,7 +674,7 @@ body {
   z-index: 10;
   justify-content: center;
   align-items: center;
-  padding: 1.4rem 1rem;         /* tighter vertical balance */
+  padding: 1.2rem 1rem;         /* tighter vertical balance */
 }
 
 .logo-divider-image {
