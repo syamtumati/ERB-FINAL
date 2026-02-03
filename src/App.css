@@ -674,7 +674,7 @@ body {
   z-index: 10;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem 1rem;         /* tighter vertical balance */
+  padding: 0.9rem 1rem;         /* tighter vertical balance */
 }
 
 .logo-divider-image {
