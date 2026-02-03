@@ -75,11 +75,11 @@ export default function ContactDE() {
 
           {/* ADDRESS */}
           <div className="address-card">
-            <h3>Komm vorbei!</h3>
+            <h3>Komm vorbei</h3>
 
             <div className="address-block">
               <p>
-                <strong>Gnadenkirche Frankfurt</strong><br />
+                <strong>Evangelisch-Reformierte Baptistengemeinde</strong><br />
                 Hohemarkstraße 75<br />
                 61440 Oberursel
               </p>

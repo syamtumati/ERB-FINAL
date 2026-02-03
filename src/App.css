@@ -726,3 +726,14 @@ body {
   }
 }
 
+/* ======================= */
+/* MOBILE MENU CLOSE (GLOBAL FIX) */
+/* ======================= */
+
+.mobile-close {
+  position: absolute;
+  top: 3.2rem;        /* ⬇️ move down for BOTH desktop & mobile */
+  right: 1.6rem;
+  z-index: 1200;      /* ⬆️ ensure above language button */
+}
+

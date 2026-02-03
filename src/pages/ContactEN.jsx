@@ -44,7 +44,7 @@ export default function ContactEN() {
 
   if (submitted) {
     return (
-      <div className="contact-page">
+      <div className="contact-page contact-page-en">
         <section className="contact-hero">
           <h1 className="contact-hero-title">Contact</h1>
         </section>
@@ -62,7 +62,7 @@ export default function ContactEN() {
   }
 
   return (
-    <div className="contact-page">
+    <div className="contact-page contact-page-en">
       <section className="contact-hero">
         <h1 className="contact-hero-title">Contact</h1>
         <p className="contact-hero-subtitle">
@@ -75,11 +75,11 @@ export default function ContactEN() {
 
           {/* ADDRESS */}
           <div className="address-card">
-            <h3>Visit Us</h3>
+            <h3>Visit Us!</h3>
 
             <div className="address-block">
               <p>
-                <strong>Evangelical Reformed Baptist Church</strong><br />
+                <strong>Grace Church Frankfurt</strong><br />
                 Hohemarkstraße 75<br />
                 61440 Oberursel
               </p>
