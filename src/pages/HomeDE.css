@@ -272,7 +272,7 @@
 /* ================= MOBILE HERO POSITION ================= */
 @media (max-width: 768px) {
   .hero-content-centered {
-    transform: translateY(-120px);   /* ✅ MOVE HERO NAME UP */
+    transform: translateY(-80px);   /* ✅ MOVE HERO NAME UP */
   }
 }
 
@@ -561,6 +561,25 @@
   .hero-line-primary {
     letter-spacing: 0.16em;
     font-size: 1.9rem;
+  }
+}
+
+/* ===== MOBILE HERO – FINAL AUTHORITY ===== */
+@media (max-width: 768px) {
+  .hero-main-title .hero-line-primary {
+    white-space: nowrap;
+    font-size: 2.6rem;     /* 🔥 THIS WILL SHOW */
+    letter-spacing: 0.17em;
+    line-height: 1.05;
+  }
+
+  .hero-main-title .hero-line-secondary {
+    font-size: 1.9rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-secondary-title {
+    font-size: 1.15rem;
   }
 }
 

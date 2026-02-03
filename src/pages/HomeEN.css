@@ -840,3 +840,23 @@
   }
 }
 
+
+/* ===== MOBILE HERO – FINAL AUTHORITY ===== */
+@media (max-width: 768px) {
+  .hero-main-title .hero-line-primary {
+    white-space: nowrap;
+    font-size: 2.6rem;     /* 🔥 THIS WILL SHOW */
+    letter-spacing: 0.17em;
+    line-height: 1.05;
+  }
+
+  .hero-main-title .hero-line-secondary {
+    font-size: 1.9rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-secondary-title {
+    font-size: 1.15rem;
+  }
+}
+
