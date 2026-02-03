@@ -17,16 +17,28 @@ export default function PastorsDE() {
         <div className="container">
           <div className="leadership-intro-box">
 
-	    <p>
-              Unsere Gemeinde hat ihre Anfänge im Jahr <strong>2014</strong>, als Peter
-              Schild von der ERB Wetzlar nach Frankfurt am Main ausgesandt wurde, um an
-              der Gründung einer reformierten Baptistengemeinde zu arbeiten. Seitdem
-              haben wir erlebt, wie Gott uns Schritt für Schritt gnädig geführt und
-              uns Wachstum geschenkt hat. Heute sind wir eine Gemeinschaft aus vielen
-              jungen Familien, Kindern und Menschen unterschiedlicher Herkunft und
-              Lebensgeschichten. Uns verbindet der Wunsch, als Gemeinde Jesu Christi
-              in Liebe zu Gott und zueinander zu leben und das Evangelium in Wort und
-              Tat weiterzugeben – in Frankfurt und darüber hinaus.
+            <p style={{ marginBottom: 0 }}>
+              Unsere Gemeinde hat ihre Anfänge im Jahr <strong>2014</strong>, als
+              Peter Schild von der ERB Wetzlar nach Frankfurt am
+              Main ausgesandt wurde, um an der Gründung einer reformierten
+              Baptistengemeinde zu arbeiten.
+            </p>
+
+            <p style={{ marginBottom: 0 }}>
+              Seitdem haben wir erlebt, wie Gott uns Schritt für Schritt gnädig
+              geführt und uns Wachstum geschenkt hat.
+            </p>
+
+            <p style={{ marginBottom: 0 }}>
+              Heute sind wir eine Gemeinschaft aus vielen jungen Familien,
+              Kindern und Menschen unterschiedlicher Herkunft und
+              Lebensgeschichten.
+            </p>
+
+            <p style={{ marginBottom: 0 }}>
+              Uns verbindet der Wunsch, als Gemeinde Jesu Christi in Liebe zu
+              Gott und zueinander zu leben und das Evangelium in Wort und Tat
+              weiterzugeben – in Frankfurt und darüber hinaus.
             </p>
 
             <p className="intro-invite">
