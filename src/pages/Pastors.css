@@ -613,3 +613,51 @@
   display: block;          /* restore paragraph block */
   margin-top: 2.4rem;      /* controlled separation */
 }
+
+
+/* ================= MOBILE INTRO TEXT FIX ================= */
+@media (max-width: 768px) {
+
+  .leadership-intro-box p {
+    font-size: 1.12rem;
+    line-height: 1.75;
+    margin-bottom: 1.4rem;   /* ✅ restores paragraph rhythm */
+    text-align: left;        /* ✅ critical for mobile readability */
+  }
+
+  .leadership-intro-box .intro-invite {
+    margin-top: 2rem;
+    font-size: 1.18rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: left;
+  }
+}
+
+
+/* ================= MOBILE PASTOR TEXT REFINEMENT ================= */
+@media (max-width: 768px) {
+
+  .pastor-content {
+    padding: 0 0.5rem;   /* ✅ prevents edge-to-edge text */
+  }
+
+  .pastor-content h1 {
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+  }
+
+  .pastor-content .label {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+
+  .pastor-content .bio {
+    font-size: 1.1rem;
+    line-height: 1.75;   /* ✅ key readability fix */
+    max-width: 100%;
+    text-align: left;    /* ✅ very important */
+  }
+}
+
