@@ -845,13 +845,13 @@
 @media (max-width: 768px) {
   .hero-main-title .hero-line-primary {
     white-space: nowrap;
-    font-size: 2.6rem;     /* 🔥 THIS WILL SHOW */
+    font-size: 2.2rem;     /* 🔥 THIS WILL SHOW */
     letter-spacing: 0.17em;
     line-height: 1.05;
   }
 
   .hero-main-title .hero-line-secondary {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     letter-spacing: 0.2em;
   }
 
