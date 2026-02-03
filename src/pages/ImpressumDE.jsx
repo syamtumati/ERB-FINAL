@@ -28,8 +28,8 @@ export default function ImpressumDE() {
 
         <p>
           <strong>E-Mail:</strong>{" "}
-          <a href="mailto:kontakt@erb-frankfurt.de">
-            kontakt@erb-frankfurt.de
+          <a href="mailto:kontakt@gnadenkirche-frankfurt.de">
+            kontakt@gnadenkirche-frankfurt.de
           </a>
         </p>
 

@@ -326,3 +326,119 @@
   }
 }
 
+/* ================= ENGLISH ONLY – TITLE ALIGNMENT ================= */
+@media (min-width: 900px) {
+  .donations-page-en .donations-card h1 {
+    position: relative;
+    left: -30px; /* subtle, matches your layout */
+  }
+}
+
+/* ===================================================== */
+/* DONATIONS – LIGHT CARD + DARK ACTIONS                 */
+/* ===================================================== */
+
+/* Whole donation card */
+.donations-card {
+  background: #DADADA;
+  color: #131A28;
+}
+
+/* Inner sections */
+.donations-form,
+.other-ways {
+  background: #DADADA;
+  color: #131A28;
+  box-shadow: none;
+}
+
+/* Text tuning */
+.donations-card h1,
+.other-ways h2 {
+  color: #131A28;
+}
+
+.donations-intro,
+.small-text,
+.secure-text {
+  color: #2b2b2b;
+}
+
+/* ===================================================== */
+/* AMOUNT BUTTONS                                       */
+/* ===================================================== */
+
+.chip {
+  background: transparent;
+  border: 1px solid #131A28;
+  color: #131A28;
+}
+
+.chip:hover {
+  background: rgba(19, 26, 40, 0.08);
+}
+
+/* Selected amount */
+.chip.active {
+  background: #131A28;
+  color: #ffffff;
+  border-color: #131A28;
+}
+
+/* ===================================================== */
+/* CUSTOM AMOUNT INPUT                                  */
+/* ===================================================== */
+
+.custom-amount {
+  background: #ffffff;
+  border: 1px solid #131A28;
+}
+
+.currency,
+.custom-amount input {
+  color: #131A28;
+}
+
+/* ===================================================== */
+/* PRIMARY ACTION – DONATE NOW                           */
+/* ===================================================== */
+
+.primary-btn {
+  background: #131A28;
+  color: #ffffff;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #0e1422;
+}
+
+/* ===================================================== */
+/* BANK DETAILS                                         */
+/* ===================================================== */
+
+.bank-box {
+  background: #f6f6f6;
+  border: 1px solid rgba(19, 26, 40, 0.25);
+}
+
+.bank-row {
+  border-bottom: 1px solid rgba(19, 26, 40, 0.15);
+}
+
+.bank-row span,
+.bank-row strong {
+  color: #131A28;
+}
+
+/* Copy bank details button */
+.secondary-btn {
+  background: #131A28;
+  color: #ffffff;
+  border: none;
+}
+
+.secondary-btn:hover {
+  background: #0e1422;
+}
+
