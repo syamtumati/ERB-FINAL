@@ -108,21 +108,22 @@
 @media (max-width: 768px) {
   .books-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.4rem;
   }
 
   .media-books h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
-  .book-title {
-    font-size: 1.1rem;
-  }
-
-  /* 🔥 Smaller books on mobile */
+  /* 🔥 Slightly larger book images on mobile */
   .book-image-wrapper {
-    max-width: 160px;
+    max-width: 185px;   /* ⬆ increased from 160px */
     margin: 0 auto;
+  }
+
+  /* 🔥 Slightly larger title */
+  .book-title {
+    font-size: 1.18rem; /* ⬆ subtle increase */
   }
 }
 
