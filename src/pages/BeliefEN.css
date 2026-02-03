@@ -247,9 +247,13 @@
 }
 
 .spurgeon-signature img {
-  max-width: 160px;
+  max-width: 220px;
   opacity: 0.85;
   display: block;
   margin-left: auto;
 }
 
+.belief-intro-text strong {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+}
