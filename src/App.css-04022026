@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
-
 /* ======================= */
 /* GLOBAL RESET            */
 /* ======================= */
@@ -306,7 +304,7 @@ body {
 .clean-footer {
 /*  background: #f4f3f1;*/
   background: #DADADA;
-  padding: 1.6rem 2rem 3rem;
+  padding: 2.2rem 2rem 3rem;
   text-align: center;
   font-family: "Georgia", serif;
   color: #2d1b0a;
@@ -317,7 +315,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.8rem;
   align-items: center;
 }
 
@@ -676,7 +674,7 @@ body {
   z-index: 10;
   justify-content: center;
   align-items: center;
-  padding: 0.6rem 1rem;         /* tighter vertical balance */
+  padding: 0.9rem 1rem;         /* tighter vertical balance */
 }
 
 .logo-divider-image {
@@ -719,8 +717,6 @@ body {
 .logo-divider-image {
   pointer-events: auto;
   cursor: pointer;
-  margin-bottom: -0.3rem;  /* 👈 pulls text closer */
-  transform: translateX(-24px); /* 👈 moves LEFT on desktop + mobile */
 }
 
 /* ================= LOGO DIVIDER – MOBILE ALIGNMENT FIX ================= */
@@ -741,27 +737,3 @@ body {
   z-index: 1200;      /* ⬆️ ensure above language button */
 }
 
-
-/* ======================= */
-/* FOOTER CHURCH NAME – CLEAN CLASSIC */
-/* ======================= */
-
-.church-name,
-.church-name-link {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.6rem;
-  font-weight: 700;
-  letter-spacing: normal;   /* ❌ no extra spacing */
-  text-transform: uppercase;
-  text-align: center;
-  color: #131A28;           /* ✅ exact color you want */
-  line-height: 1.15;
-  text-decoration: none;
-  cursor: pointer;
-  margin-top: -0.6rem;   /* 👈 pulls text closer to logo */
-  line-height: 1.05;     /* 👈 removes extra vertical font space */
-}
-
-.church-name-link:hover {
-  text-decoration: none;
-}
