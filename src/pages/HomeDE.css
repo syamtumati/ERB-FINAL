@@ -608,3 +608,11 @@
   z-index: 1;
 }
 
+/* ===================================== */
+/* HERO → NEXT SECTION SEAM FIX           */
+/* ===================================== */
+
+.hero-video-section {
+  margin-bottom: -1px;   /* 🔑 kills the white line */
+}
+

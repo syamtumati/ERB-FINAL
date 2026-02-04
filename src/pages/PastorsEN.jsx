@@ -21,11 +21,11 @@ export default function PastorsEN() {
               establishing a Reformed Baptist church. Since then, we have
               experienced how God has graciously guided us step by step and
               granted us growth. Today, we are a community of people of all
-              ages, many young families with children, people of different
-              backgrounds and life stories. We are united by the desire to live
-              as a church of Jesus Christ in love for God and for one another,
-              and to proclaim the Gospel in word and deed — in Frankfurt and
-              beyond.
+              ages, many young families with children, and people from a wide
+              variety of backgrounds and life stories. We are united by the
+              desire to live as a church of Jesus Christ in love for God and for
+              one another, and to proclaim the Gospel in word and deed — in
+              Frankfurt and beyond.
             </p>
 
             <p className="intro-invite">

@@ -17,17 +17,16 @@ export default function PastorsDE() {
         <div className="container">
           <div className="leadership-intro-box">
 
-            <p>
+	    <p>
               Unsere Gemeinde hat ihre Anfänge im Jahr <strong>2014</strong>, als Peter
               Schild von der ERB Wetzlar nach Frankfurt am Main ausgesandt wurde, um an
               der Gründung einer reformierten Baptistengemeinde zu arbeiten. Seitdem
               haben wir erlebt, wie Gott uns Schritt für Schritt gnädig geführt und
-              uns Wachstum geschenkt hat. Heute sind wir eine Gemeinschaft aus Menschen
-              aller Altersstufen, vielen jungen Familien mit Kindern und Menschen
-              unterschiedlichster Herkunft und Lebensgeschichten. Uns verbindet der
-              Wunsch, als Gemeinde Jesu Christi in Liebe zu Gott und zueinander zu leben
-              und das Evangelium in Wort und Tat weiterzugeben – in Frankfurt und
-              darüber hinaus.
+              uns Wachstum geschenkt hat. Heute sind wir eine Gemeinschaft aus vielen
+              jungen Familien, Kindern und Menschen unterschiedlicher Herkunft und
+              Lebensgeschichten. Uns verbindet der Wunsch, als Gemeinde Jesu Christi
+              in Liebe zu Gott und zueinander zu leben und das Evangelium in Wort und
+              Tat weiterzugeben – in Frankfurt und darüber hinaus.
             </p>
 
             <p className="intro-invite">
@@ -57,7 +56,7 @@ export default function PastorsDE() {
                 Peter Schild ist verheiratet und Vater von fünf Kindern. Aus
                 schwierigen Lebensumständen kommend und fern von Gott, wurde er
                 als Teenager durch ein Traktat zum Glauben an Jesus Christus
-                geführt. Er studierte Evangelische Theologie und wurde 2014 als
+                geführt. Er studierte Evangelische Theologie, wurde 2014 als
                 Missionar nach Frankfurt ausgesandt, um eine reformierte
                 Baptistengemeinde zu gründen. Neben seinem Dienst als Pastor ist
                 er Autor mehrerer Bücher.

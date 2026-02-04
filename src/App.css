@@ -806,3 +806,25 @@ body {
   pointer-events: auto;
 }
 
+/* ======================================= */
+/* GLOBAL SECTION SEAM FIX (ANTI WHITE LINE) */
+/* ======================================= */
+
+/* Any section stacked vertically */
+section,
+.partner-heartcry,
+.related-churches,
+.clean-footer,
+.logo-divider {
+  position: relative;
+}
+
+/* Pull next section up by 1px */
+section + section,
+.partner-heartcry + .logo-divider,
+.logo-divider + .clean-footer,
+.related-churches + .logo-divider,
+.logo-divider + .related-churches {
+  margin-top: -1px;
+}
+
