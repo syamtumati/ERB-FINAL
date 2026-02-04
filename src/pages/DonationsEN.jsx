@@ -12,7 +12,7 @@ export default function DonationsEN() {
   });
 
   // 🔑 WEB3FORMS ACCESS KEY (REPLACE WITH YOUR REAL KEY)
-  const WEB3FORMS_ACCESS_KEY = "0b825998-fc99-47e5-aab2-f0af9abc279d";
+  const WEB3FORMS_ACCESS_KEY = "f5768b05-b1b6-4142-add8-7bb2ed6fb528";
 
   // ✅ UPDATED STRIPE PAYMENT LINKS (TEST MODE)
   const stripeLinks = {
