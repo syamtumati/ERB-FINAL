@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import "./Donations.css";
 
-export default function DonationsEN() {
+const DonationsDE = () => {
   const [amount, setAmount] = useState(50);
   const [recipient, setRecipient] = useState({
     name: "",
     street: "",
     zip: "",
     city: "",
-    country: "Germany",
+    country: "Deutschland",
   });
 
-  // 🔑 WEB3FORMS ACCESS KEY (REPLACE WITH YOUR REAL KEY)
-  const WEB3FORMS_ACCESS_KEY = "0b825998-fc99-47e5-aab2-f0af9abc279d";
-
-  // ✅ UPDATED STRIPE PAYMENT LINKS (TEST MODE)
   const stripeLinks = {
     25: "https://buy.stripe.com/test_8x29AU0ma3A51dI6Y2es001",
     50: "https://buy.stripe.com/test_fZu00k7OC9Yt2hM826es002",
@@ -24,58 +20,33 @@ export default function DonationsEN() {
 
   const presetAmounts = [25, 50, 100, 200];
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!recipient.name || !recipient.street || !recipient.zip || !recipient.city) {
-      alert("Please provide your full address for the donation receipt.");
+      alert("Bitte gib deine vollständige Adresse für die Spendenbescheinigung an.");
       return;
     }
 
     const link = stripeLinks[amount];
-
     if (!link) {
-      alert("For custom amounts, please use bank transfer.");
+      alert("Für individuelle Beträge nutze bitte die Banküberweisung.");
       return;
     }
 
-    // ✅ SEND DATA TO WEB3FORMS
-    try {
-      await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "New Donation – Receipt Required",
-          from_name: "Donation Form Website",
-          amount: `€${amount}`,
-          name: recipient.name,
-          street: recipient.street,
-          zip: recipient.zip,
-          city: recipient.city,
-          country: recipient.country,
-        }),
-      });
-    } catch (err) {
-      console.error("Web3Forms error:", err);
-    }
-
-    // ✅ REDIRECT TO STRIPE (UNCHANGED)
     window.location.href = link;
   };
 
   const copyBankDetails = () => {
     const text = [
-      "Account holder: Reformed Baptist Church Frankfurt",
-      "IBAN: DE03 5105 0015 0997 0234 45",
+      "Kontoinhaber: Reformierte Baptistengemeinde Frankfurt",
+      "IBAN: DE03510500150997023445",
       "BIC: NASSDE55XXX",
-      "Reference: Donation",
+      "Verwendungszweck: Spende",
     ].join("\n");
 
     navigator.clipboard.writeText(text).then(() => {
-      alert("Bank details copied!");
+      alert("Bankdaten kopiert!");
     });
   };
 
@@ -84,22 +55,21 @@ export default function DonationsEN() {
   };
 
   return (
-    <div className="donations-page donations-page-en">
+    <div className="donations-page">
       <div className="donations-inner">
         <main className="donations-main">
           <section className="donations-card">
-            <h1>Support Our Ministry</h1>
+            <h1>Unterstütze unseren Dienst</h1>
 
             <p className="donations-intro">
-              Your donation helps us to serve the church of Jesus Christ,
-              to proclaim the Gospel to the world, and to care for those in need.
+              Deine Spende hilft uns, der Gemeinde Jesu zu dienen.
               <br /><br />
-              To issue a donation receipt, we kindly ask for your address.
+              Für die Ausstellung einer Spendenbescheinigung benötigen wir deine Adresse.
             </p>
 
             {/* ================= LEFT: STRIPE ================= */}
             <form onSubmit={handleSubmit} className="donations-form">
-              <label className="field-label">Select Amount</label>
+              <label className="field-label">Betrag wählen</label>
 
               <div className="amount-row">
                 {presetAmounts.map((value) => (
@@ -123,41 +93,40 @@ export default function DonationsEN() {
                   onChange={(e) =>
                     setAmount(Math.max(1, Number(e.target.value)))
                   }
-                  placeholder="Custom amount"
                 />
               </div>
 
-              {/* ✅ RECIPIENT ADDRESS */}
-              <label className="field-label">Address for Donation Receipt</label>
-              <input name="name" placeholder="Full Name" value={recipient.name} onChange={handleRecipientChange} />
-              <input name="street" placeholder="Street & House Number" value={recipient.street} onChange={handleRecipientChange} />
-              <input name="zip" placeholder="ZIP Code" value={recipient.zip} onChange={handleRecipientChange} />
-              <input name="city" placeholder="City" value={recipient.city} onChange={handleRecipientChange} />
-              <input name="country" placeholder="Country" value={recipient.country} onChange={handleRecipientChange} />
+              {/* ✅ RECIPIENT ADDRESS (ADDED ONLY) */}
+              <label className="field-label">Adresse für Spendenbescheinigung</label>
+              <input name="name" placeholder="Vollständiger Name" value={recipient.name} onChange={handleRecipientChange} />
+              <input name="street" placeholder="Straße & Hausnummer" value={recipient.street} onChange={handleRecipientChange} />
+              <input name="zip" placeholder="PLZ" value={recipient.zip} onChange={handleRecipientChange} />
+              <input name="city" placeholder="Ort" value={recipient.city} onChange={handleRecipientChange} />
+              <input name="country" placeholder="Land" value={recipient.country} onChange={handleRecipientChange} />
 
               <button type="submit" className="primary-btn">
-                Donate now – €{amount}
+                Jetzt spenden – €{amount}
               </button>
 
               <p className="secure-text">
-                Secure & encrypted via Stripe.
+                Sicher & verschlüsselt über Stripe.
               </p>
             </form>
 
             <div className="divider" />
 
-            {/* ================= RIGHT: BANK ================= */}
+            {/* ================= RIGHT: BANK (UNCHANGED) ================= */}
             <div className="other-ways">
-              <h2>Bank Transfer</h2>
+              <h2>Banküberweisung</h2>
 
               <p className="small-text">
-                You can also donate directly using the following bank details:
+                Nutze folgende Bankdaten für eine direkte Spende:
               </p>
 
               <div className="bank-box">
                 <div className="bank-row">
-                  <span>Account holder</span>
-                  <strong>Reformed Baptist Church Frankfurt</strong>
+                  <span>Kontoinhaber</span>
+                  <strong>Reformierte Baptistengemeinde Frankfurt</strong>
                 </div>
                 <div className="bank-row">
                   <span>IBAN</span>
@@ -168,13 +137,13 @@ export default function DonationsEN() {
                   <strong>NASSDE55XXX</strong>
                 </div>
                 <div className="bank-row">
-                  <span>Reference</span>
-                  <strong>Donation</strong>
+                  <span>Verwendungszweck</span>
+                  <strong>Spende</strong>
                 </div>
               </div>
 
               <button className="secondary-btn" onClick={copyBankDetails}>
-                Copy bank details
+                Bankdaten kopieren
               </button>
             </div>
           </section>
@@ -182,5 +151,7 @@ export default function DonationsEN() {
       </div>
     </div>
   );
-}
+};
+
+export default DonationsDE;
 

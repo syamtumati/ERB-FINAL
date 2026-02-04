@@ -3,17 +3,8 @@ import "./Donations.css";
 
 const DonationsDE = () => {
   const [amount, setAmount] = useState(50);
-  const [recipient, setRecipient] = useState({
-    name: "",
-    street: "",
-    zip: "",
-    city: "",
-    country: "Deutschland",
-  });
 
-  // 🔑 WEB3FORMS ACCESS KEY (REPLACE WITH YOUR REAL KEY)
-  const WEB3FORMS_ACCESS_KEY = "0b825998-fc99-47e5-aab2-f0af9abc279d";
-
+  // ✅ UPDATED STRIPE PAYMENT LINKS (TEST MODE)
   const stripeLinks = {
     25: "https://buy.stripe.com/test_8x29AU0ma3A51dI6Y2es001",
     50: "https://buy.stripe.com/test_fZu00k7OC9Yt2hM826es002",
@@ -23,45 +14,16 @@ const DonationsDE = () => {
 
   const presetAmounts = [25, 50, 100, 200];
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!recipient.name || !recipient.street || !recipient.zip || !recipient.city) {
-      alert("Bitte gib deine vollständige Adresse für die Spendenbescheinigung an.");
-      return;
-    }
-
     const link = stripeLinks[amount];
+
     if (!link) {
       alert("Für individuelle Beträge nutze bitte die Banküberweisung.");
       return;
     }
 
-    // ✅ SEND DATA TO WEB3FORMS
-    try {
-      await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "Neue Spende – Spendenbescheinigung",
-          from_name: "Spendenformular Website",
-          amount: `€${amount}`,
-          name: recipient.name,
-          street: recipient.street,
-          zip: recipient.zip,
-          city: recipient.city,
-          country: recipient.country,
-        }),
-      });
-    } catch (err) {
-      // ❗ Even if email fails, donation can still proceed
-      console.error("Web3Forms error:", err);
-    }
-
-    // ✅ REDIRECT TO STRIPE (UNCHANGED)
     window.location.href = link;
   };
 
@@ -78,10 +40,6 @@ const DonationsDE = () => {
     });
   };
 
-  const handleRecipientChange = (e) => {
-    setRecipient({ ...recipient, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="donations-page">
       <div className="donations-inner">
@@ -90,9 +48,12 @@ const DonationsDE = () => {
             <h1>Unterstütze unseren Dienst</h1>
 
             <p className="donations-intro">
-              Deine Spende hilft uns, der Gemeinde Jesu zu dienen.
+              Deine Spende hilft uns, der Gemeinde Jesu zu dienen,
+              der Welt das Evangelium zu verkündigen und den Bedürftigen
+              beizustehen.
               <br /><br />
-              Für die Ausstellung einer Spendenbescheinigung benötigen wir deine Adresse.
+              Wir danken herzlich für jede Spende und beten,
+              dass Gott es reichlich vergelten möge.
             </p>
 
             {/* ================= LEFT: STRIPE ================= */}
@@ -121,16 +82,9 @@ const DonationsDE = () => {
                   onChange={(e) =>
                     setAmount(Math.max(1, Number(e.target.value)))
                   }
+                  placeholder="Eigener Betrag"
                 />
               </div>
-
-              {/* ✅ RECIPIENT ADDRESS */}
-              <label className="field-label">Adresse für Spendenbescheinigung</label>
-              <input name="name" placeholder="Vollständiger Name" value={recipient.name} onChange={handleRecipientChange} />
-              <input name="street" placeholder="Straße & Hausnummer" value={recipient.street} onChange={handleRecipientChange} />
-              <input name="zip" placeholder="PLZ" value={recipient.zip} onChange={handleRecipientChange} />
-              <input name="city" placeholder="Ort" value={recipient.city} onChange={handleRecipientChange} />
-              <input name="country" placeholder="Land" value={recipient.country} onChange={handleRecipientChange} />
 
               <button type="submit" className="primary-btn">
                 Jetzt spenden – €{amount}
@@ -143,7 +97,7 @@ const DonationsDE = () => {
 
             <div className="divider" />
 
-            {/* ================= RIGHT: BANK (UNCHANGED) ================= */}
+            {/* ================= RIGHT: BANK ================= */}
             <div className="other-ways">
               <h2>Banküberweisung</h2>
 

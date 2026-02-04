@@ -3,16 +3,6 @@ import "./Donations.css";
 
 export default function DonationsEN() {
   const [amount, setAmount] = useState(50);
-  const [recipient, setRecipient] = useState({
-    name: "",
-    street: "",
-    zip: "",
-    city: "",
-    country: "Germany",
-  });
-
-  // 🔑 WEB3FORMS ACCESS KEY (REPLACE WITH YOUR REAL KEY)
-  const WEB3FORMS_ACCESS_KEY = "0b825998-fc99-47e5-aab2-f0af9abc279d";
 
   // ✅ UPDATED STRIPE PAYMENT LINKS (TEST MODE)
   const stripeLinks = {
@@ -24,13 +14,8 @@ export default function DonationsEN() {
 
   const presetAmounts = [25, 50, 100, 200];
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!recipient.name || !recipient.street || !recipient.zip || !recipient.city) {
-      alert("Please provide your full address for the donation receipt.");
-      return;
-    }
 
     const link = stripeLinks[amount];
 
@@ -39,30 +24,6 @@ export default function DonationsEN() {
       return;
     }
 
-    // ✅ SEND DATA TO WEB3FORMS
-    try {
-      await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "New Donation – Receipt Required",
-          from_name: "Donation Form Website",
-          amount: `€${amount}`,
-          name: recipient.name,
-          street: recipient.street,
-          zip: recipient.zip,
-          city: recipient.city,
-          country: recipient.country,
-        }),
-      });
-    } catch (err) {
-      console.error("Web3Forms error:", err);
-    }
-
-    // ✅ REDIRECT TO STRIPE (UNCHANGED)
     window.location.href = link;
   };
 
@@ -79,10 +40,6 @@ export default function DonationsEN() {
     });
   };
 
-  const handleRecipientChange = (e) => {
-    setRecipient({ ...recipient, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="donations-page donations-page-en">
       <div className="donations-inner">
@@ -94,7 +51,8 @@ export default function DonationsEN() {
               Your donation helps us to serve the church of Jesus Christ,
               to proclaim the Gospel to the world, and to care for those in need.
               <br /><br />
-              To issue a donation receipt, we kindly ask for your address.
+              We are deeply thankful for every gift and pray
+              that God will richly reward you for your generosity.
             </p>
 
             {/* ================= LEFT: STRIPE ================= */}
@@ -126,14 +84,6 @@ export default function DonationsEN() {
                   placeholder="Custom amount"
                 />
               </div>
-
-              {/* ✅ RECIPIENT ADDRESS */}
-              <label className="field-label">Address for Donation Receipt</label>
-              <input name="name" placeholder="Full Name" value={recipient.name} onChange={handleRecipientChange} />
-              <input name="street" placeholder="Street & House Number" value={recipient.street} onChange={handleRecipientChange} />
-              <input name="zip" placeholder="ZIP Code" value={recipient.zip} onChange={handleRecipientChange} />
-              <input name="city" placeholder="City" value={recipient.city} onChange={handleRecipientChange} />
-              <input name="country" placeholder="Country" value={recipient.country} onChange={handleRecipientChange} />
 
               <button type="submit" className="primary-btn">
                 Donate now – €{amount}
