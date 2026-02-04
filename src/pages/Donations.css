@@ -577,6 +577,13 @@
 /* 768 × 1024 (tablet portrait) */
 @media (min-width: 701px) and (max-width: 899px) {
   .donations-main {
-    padding-top: 10rem;  /* ⬇️ matches Belief / Pastors */
+    padding-top: 12rem;  /* ⬇️ matches Belief / Pastors */
+  }
+}
+
+/* 768 × 1024 (tablet portrait) */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .donations-main {
+    padding-top: 13.5rem;  /*   matches Belief / Pastors */
   }
 }

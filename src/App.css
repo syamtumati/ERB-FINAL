@@ -366,7 +366,8 @@ body {
 
   /* PUSH HAMBURGER MORE TO THE RIGHT */
   .mobile-menu-toggle {
-    margin-right: -1rem; /* 👈 key line */
+    padding: 0.5rem;
+    margin-right: 0;
   }
 
   .logo-center {
@@ -844,5 +845,16 @@ section + section,
   color: #131A28 !important;
   text-decoration: none !important;
   font-weight: 400;
+}
+
+
+/* ======================= */
+/* TABLET (1024px) – HAMBURGER NUDGE RIGHT */
+/* ======================= */
+
+@media (max-width: 1100px) and (min-width: 1000px) {
+  .mobile-menu-toggle {
+    margin-right: 0.8rem;   /* 👈 adjust: 0.5rem – 1.2rem */
+  }
 }
 
