@@ -151,20 +151,3 @@
   }
 }
 
-
-/* ================= MEDIA HERO – MOBILE & TABLET ================= */
-
-/* 320 × 568, 375 × 667, 390 × 844 */
-@media (max-width: 480px) {
-  .media-hero {
-    padding-top: 4rem; /* ⬅️ slightly more space under logo */
-  }
-}
-
-/* 768 × 1024 */
-@media (max-width: 1024px) and (min-width: 481px) {
-  .media-hero {
-    padding-top: 4rem; /* ⬅️ balanced for tablets */
-  }
-}
-

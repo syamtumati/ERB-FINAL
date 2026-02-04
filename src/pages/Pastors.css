@@ -672,3 +672,19 @@
   margin-top: 0.6rem;    /* reduce gap above */
 }
 
+/* ================= PASTORS – HEADER OVERLAP (REFINED) ================= */
+
+/* Phones */
+@media (max-width: 480px) {
+  .leadership-intro-section {
+    padding-top: 40px; /* ⬅️ tighter */
+  }
+}
+
+/* Large phones & tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .leadership-intro-section {
+    padding-top: 60px; /* ⬅️ balanced */
+  }
+}
+

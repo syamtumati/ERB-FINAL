@@ -336,29 +336,3 @@
   color: #d2b184;
 }
 
-
-/* =============================================== */
-/* CONTACT – HEADER CLEARANCE (MOBILE & TABLET)    */
-/* =============================================== */
-
-/* Small phones: 320–375 */
-@media (max-width: 400px) {
-  .contact-hero {
-    padding-top: 7rem;
-  }
-}
-
-/* Phones: 390–600 */
-@media (min-width: 401px) and (max-width: 600px) {
-  .contact-hero {
-    padding-top: 7rem;
-  }
-}
-
-/* Tablets: 768 × 1024 */
-@media (min-width: 601px) and (max-width: 980px) {
-  .contact-hero {
-    padding-top: 7rem;
-  }
-}
-

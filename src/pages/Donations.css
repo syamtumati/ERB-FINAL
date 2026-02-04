@@ -532,3 +532,51 @@
   }
 }
 
+/* =============================================== */
+/* MID DESKTOP TUNING (≈ 1024–1200px)              */
+/* =============================================== */
+@media (min-width: 1024px) and (max-width: 1200px) {
+
+  .donations-card {
+    padding: 2.4rem 2.2rem;   /* ⬇️ slightly smaller */
+  }
+
+  .donations-form,
+  .other-ways {
+    padding: 1.6rem 1.5rem;  /* ⬇️ subtle reduction */
+  }
+
+  .donations-intro {
+    font-size: 1.08rem;      /* ⬇️ tiny text reduction */
+  }
+
+  .primary-btn {
+    font-size: 1.1rem;       /* ⬇️ button slightly smaller */
+    padding: 0.9rem;
+  }
+}
+
+/* =============================================== */
+/* DONATIONS – MOBILE & TABLET HEADER CLEARANCE    */
+/* =============================================== */
+
+/* 375 × 667 */
+@media (max-width: 400px) {
+  .donations-main {
+    padding-top: 10rem;   /* ⬇️ push card slightly DOWN */
+  }
+}
+
+/* 600 × 800 */
+@media (min-width: 401px) and (max-width: 700px) {
+  .donations-main {
+    padding-top: 9.5rem; /* ⬇️ balanced spacing */
+  }
+}
+
+/* 768 × 1024 (tablet portrait) */
+@media (min-width: 701px) and (max-width: 899px) {
+  .donations-main {
+    padding-top: 10rem;  /* ⬇️ matches Belief / Pastors */
+  }
+}

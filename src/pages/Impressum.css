@@ -62,3 +62,11 @@
   }
 }
 
+
+/* ================= DESKTOP – PUSH TITLE DOWN ================= */
+@media (min-width: 1024px) {
+  .impressum-heading {
+    margin-top: 5rem;   /* 👈 adjust 3.5–5rem if needed */
+  }
+}
+

@@ -114,7 +114,7 @@
   .belief-heading {
     font-size: 2.4rem;
     margin-bottom: 4rem;
-    margin-top: -0.5rem; /* move UP */
+    margin-top: 1.5rem; /* push DOWN */
   }
 
   .chapter-text-row {
@@ -129,6 +129,21 @@
     margin-left: 2.2rem;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .belief-heading {
+    margin-top: 3rem; /* 👌 extra breathing room below header */
+  }
+}
+
+/* ================= CONFESSION / BELIEF HEADING – MOBILE SPACING FIX ================= */
+
+@media (max-width: 1024px) {
+  .belief-heading {
+    margin-top: 2.5rem;   /* 👈 pushes it DOWN slightly */
+  }
+}
+
 
 @media (max-width: 480px) {
   .belief-heading {

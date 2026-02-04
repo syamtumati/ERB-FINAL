@@ -828,3 +828,21 @@ section + section,
   margin-top: -1px;
 }
 
+/* ======================= */
+/* FOOTER – COPYRIGHT COLOR FIX */
+/* ======================= */
+
+.clean-footer .copyright {
+  color: #131A28;
+}
+
+.clean-footer .copyright a,
+.clean-footer .copyright a:visited,
+.clean-footer .copyright a:hover,
+.clean-footer .copyright a:active,
+.clean-footer .copyright a:focus {
+  color: #131A28 !important;
+  text-decoration: none !important;
+  font-weight: 400;
+}
+
