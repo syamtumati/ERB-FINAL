@@ -662,3 +662,13 @@
   }
 }
 
+/* Reduce spacing between intro paragraphs */
+.leadership-intro-box p {
+  margin-bottom: 1.2rem; /* was likely ~2rem or more */
+}
+
+/* Even tighter spacing before the invitation line */
+.leadership-intro-box .intro-invite {
+  margin-top: 0.6rem;    /* reduce gap above */
+}
+

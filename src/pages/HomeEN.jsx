@@ -87,11 +87,11 @@ function HomeEN() {
       {/* ================= VISIT US ================= */}
       <section id="home-next-section" className="visit-section">
         <div className="container visit-content">
-          <h2 className="visit-title">Visit us this Sunday!</h2>
+          <h2 className="visit-title">Visit us this Sunday<span className="cardo-exclamation">!</span></h2>
 
           <div className="visit-divider" />
 
-          <p className="visit-time">Sunday · 4:30 PM</p>
+          <p className="visit-time">Church service - 4:30 PM</p>
           <p className="visit-address">
             Hohemarkstraße 75<br />
             61440 Oberursel
