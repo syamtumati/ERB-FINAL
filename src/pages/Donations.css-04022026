@@ -229,6 +229,12 @@
 /* -------------------------------------------------- */
 
 @media (min-width: 900px) {
+  .donations-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.4rem;
+  }
+
   .donations-card h1,
   .donations-intro {
     grid-column: 1 / -1;
@@ -280,6 +286,15 @@
 @media (min-width: 900px) {
   .donations-main {
     padding-top: 14rem; /* was 10–12rem → increase slightly */
+  }
+
+  /* Two-column layout */
+  .donations-card {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 2.5rem;
+    align-items: start;
   }
 
   /* Title & intro span full width */
@@ -501,34 +516,9 @@
 }
 
 @media (min-width: 1200px) {
-  .donations-main {
-    padding-top: 14rem;
-  }
-
   .donations-card {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
-    row-gap: 2.5rem;
-    align-items: start;
-  }
-
-  .donations-card h1,
-  .donations-intro {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  .donations-form {
-    grid-column: 1 / 2;
-  }
-
-  .other-ways {
-    grid-column: 2 / 3;
-  }
-
-  .divider {
-    display: none !important;
   }
 }
 

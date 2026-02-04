@@ -16,10 +16,10 @@ export default function DonationsEN() {
 
   // ✅ UPDATED STRIPE PAYMENT LINKS (TEST MODE)
   const stripeLinks = {
-    25: "https://buy.stripe.com/test_8x29AU0ma3A51dI6Y2es001",
-    50: "https://buy.stripe.com/test_fZu00k7OC9Yt2hM826es002",
-    100: "https://buy.stripe.com/test_5kQ5kE4Cq3A5g8CgyCes003",
-    200: "https://buy.stripe.com/test_3cIfZied03A59Keaaees004",
+    25: "https://donate.stripe.com/9B6dR99tkb27bHz9JO5kk00",
+    50: "https://donate.stripe.com/9B67sLaxo4DJ3b3f485kk01",
+    100: "https://donate.stripe.com/3cI5kD8pg7PVcLD1di5kk02",
+    200: "https://donate.stripe.com/bJe00jaxo5HN12Ve045kk03",
   };
 
   const presetAmounts = [25, 50, 100, 200];

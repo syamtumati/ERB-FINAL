@@ -869,3 +869,19 @@
   }
 }
 
+
+/* ===================================================== */
+/* FIX: SUB-PIXEL WHITE LINE BETWEEN SECTIONS            */
+/* ===================================================== */
+
+/* Force hero to overlap next section by 1px */
+.hero-video-section {
+  margin-bottom: -1px;
+}
+
+/* Ensure next section covers overlap */
+.what-matters-section {
+  position: relative;
+  z-index: 1;
+}
+

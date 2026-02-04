@@ -98,7 +98,7 @@
 /* ===================================================== */
 
 /* Tablets */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .books-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -132,6 +132,33 @@
   .book-image-wrapper {
     max-width: 210px;
     margin: 0 auto;
+  }
+}
+
+/* =============================================== */
+/* 1024px–1280px: FORCE 3 BOOKS, NORMAL SIZE       */
+/* =============================================== */
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .book-image-wrapper {
+    max-width: 220px;   /* 🔑 controls visual size */
+    margin: 0 auto;
+  }
+
+  .book-image-wrapper img {
+    max-height: 380px;
+    object-fit: contain;
+  }
+
+  .book-title {
+    font-size: 1.1rem;
+    line-height: 1.45;
   }
 }
 
