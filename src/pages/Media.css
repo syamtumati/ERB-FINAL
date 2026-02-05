@@ -196,7 +196,7 @@
 /* Reduce hero title font size only in narrow tablet/desktop range (993–1100 px) */
 @media (min-width: 993px) and (max-width: 1100px), (min-width: 1105px) and (max-width: 1130px) {
   .media-hero h1 {
-    font-size: 3.2rem !important;     /* ← main value – adjust as needed */
+    font-size: 3rem !important;     /* ← main value – adjust as needed */
     /* Suggested options – choose one: */
     /* 3.2rem → very subtle reduction */
     /* 3.1rem → gentle */
@@ -217,5 +217,67 @@
 
   .media-tabs {
     transform: translateX(-16px);    /* optional – match title */
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1200px), (min-width: 1300px) and (max-width: 1400px) {
+  .media-hero h1 {
+    font-size: 3rem !important;     /* ← main value – adjust as needed */
+    /* Suggested options – choose one: */
+    /* 3.2rem → very subtle reduction */
+    /* 3.1rem → gentle */
+    /* 3.0rem → good balanced smaller size (recommended start) */
+    /* 2.9rem → noticeably smaller */
+    /* 2.8rem → quite compact */
+  }
+}
+
+
+
+@media (min-width: 1250px) and (max-width: 1349px) {
+  .media-hero h1 {
+    font-size: 3rem !important;     /* ← main value – adjust as needed */
+    /* Suggested options – choose one: */
+    /* 3.2rem → very subtle reduction */
+    /* 3.1rem → gentle */
+    /* 3.0rem → good balanced smaller size (recommended start) */
+    /* 2.9rem → noticeably smaller */
+    /* 2.8rem → quite compact */
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+  .media-hero h1 {
+    font-size: 3rem !important;     /* ← main value – adjust as needed */
+    /* Suggested options – choose one: */
+    /* 3.2rem → very subtle reduction */
+    /* 3.1rem → gentle */
+    /* 3.0rem → good balanced smaller size (recommended start) */
+    /* 2.9rem → noticeably smaller */
+    /* 2.8rem → quite compact */
+  }
+}
+
+@media (min-width: 1900px) and (max-width: 1999px) {
+  .media-hero h1 {
+    font-size: 3rem !important;     /* ← main value – adjust as needed */
+    /* Suggested options – choose one: */
+    /* 3.2rem → very subtle reduction */
+    /* 3.1rem → gentle */
+    /* 3.0rem → good balanced smaller size (recommended start) */
+    /* 2.9rem → noticeably smaller */
+    /* 2.8rem → quite compact */
+  }
+}
+
+@media (min-width: 2500px) and (max-width: 2699px) {
+  .media-hero h1 {
+    font-size: 3rem !important;     /* ← main value – adjust as needed */
+    /* Suggested options – choose one: */
+    /* 3.2rem → very subtle reduction */
+    /* 3.1rem → gentle */
+    /* 3.0rem → good balanced smaller size (recommended start) */
+    /* 2.9rem → noticeably smaller */
+    /* 2.8rem → quite compact */
   }
 }

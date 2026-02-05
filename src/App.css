@@ -885,11 +885,11 @@ section + section,
     z-index: 10;
   }
 
-  .menu-left {
-    margin-right: 0.8rem !important;     /* smaller value = left menu moves RIGHT toward logo */
+ /* .menu-left {
+    margin-right: 0.8rem !important;*/    /* smaller value = left menu moves RIGHT toward logo */
     /* Try values: 0.6rem – 1.2rem */
     /* Do NOT touch margin-left on .menu-right or .header-container padding */
-  }
+ /* }*/
  
   .header-container {
     display: flex;
@@ -935,3 +935,17 @@ section + section,
   }
 
 }
+
+/* ========================================= */
+/* EN ONLY – Tablet Landscape Gap Fix       */
+/* 1024×768 and 1115×824                     */
+/* ========================================= */
+
+@media (min-width: 1000px) and (max-width: 1150px) {
+
+  html[lang="en"] .menu-left {
+    margin-right: 0.4rem; /* 👈 move LEFT menu closer to logo */
+  }
+
+}
+

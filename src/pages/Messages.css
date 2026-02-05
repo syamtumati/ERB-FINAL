@@ -250,11 +250,97 @@
 @media (min-width: 993px) and (max-width: 1100px), (min-width: 1105px) and (max-width: 1130px) {
   /* Both languages start with this */
   .messages-hero h1 {
-    font-size: 2.6rem !important;
+    font-size: 2.2rem !important;
   }
 
   /* English gets even smaller (optional) */
   .messages-page-en .messages-hero h1 {
-    font-size: 2.6rem !important;   /* example: slightly smaller than German */
+    font-size: 2.2rem !important;   /* example: slightly smaller than German */
   }
 }
+
+@media (min-width: 1250px) and (max-width: 1349px) {
+  /* Both languages start with this */
+  .messages-hero h1 {
+    font-size: 2.2rem !important;
+  }
+
+  /* English gets even smaller (optional) */
+  .messages-page-en .messages-hero h1 {
+    font-size: 2.2rem !important;   /* example: slightly smaller than German */
+  }
+
+  .messages-page-en .messages-hero h1 {
+    position: relative;
+    left: -25px;         /* 🔥 precise optical alignment */
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+  /* Both languages start with this */
+  .messages-hero h1 {
+    font-size: 2.2rem !important;
+  }
+
+  /* English gets even smaller (optional) */
+  .messages-page-en .messages-hero h1 {
+    font-size: 2.2rem !important;   /* example: slightly smaller than German */
+  }
+
+  .messages-page-en .messages-hero h1 {
+    position: relative;
+    left: -25px;         /* 🔥 precise optical alignment */
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+  /* Both languages start with this */
+  .messages-hero h1 {
+    font-size: 2.2rem !important;
+  }
+
+  /* English gets even smaller (optional) */
+  .messages-page-en .messages-hero h1 {
+    font-size: 2.2rem !important;   /* example: slightly smaller than German */
+  }
+
+  .messages-page-en .messages-hero h1 {
+    position: relative;
+    left: -25px;         /* 🔥 precise optical alignment */
+  }
+}
+
+@media (min-width: 1900px) and (max-width: 1999px) {
+  /* Both languages start with this */
+  .messages-hero h1 {
+    font-size: 2.2rem !important;
+  }
+
+  /* English gets even smaller (optional) */
+  .messages-page-en .messages-hero h1 {
+    font-size: 2.2rem !important;   /* example: slightly smaller than German */
+  }
+
+  .messages-page-en .messages-hero h1 {
+    position: relative;
+    left: -25px;         /* 🔥 precise optical alignment */
+  }
+}
+
+@media (min-width: 2500px) and (max-width: 2699px) {
+  /* Both languages start with this */
+  .messages-hero h1 {
+    font-size: 2.2rem !important;
+  }
+
+  /* English gets even smaller (optional) */
+  .messages-page-en .messages-hero h1 {
+    font-size: 2.2rem !important;   /* example: slightly smaller than German */
+  }
+
+  .messages-page-en .messages-hero h1 {
+    position: relative;
+    left: -25px;         /* 🔥 precise optical alignment */
+  }
+}
+

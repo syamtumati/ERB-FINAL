@@ -186,3 +186,116 @@
   }
 }
 
+@media (min-width: 1100px) and (max-width: 1200px) {
+  .media-books-en h2 {
+    position: relative;
+    left: -14px !important;          /* negative value = move LEFT */
+    /* Tuning values – start with -14px */
+    /* left: -8px;    → very subtle left shift */
+    /* left: -10px;   → gentle */
+    /* left: -12px;   → natural correction */
+    /* left: -14px;   → good starting point */
+    /* left: -16px;   → clearly moved left */
+    /* left: -20px;   → stronger if still looks too right */
+  }
+
+  /* Safety – German title not affected */
+  .media-books:not(.media-books-en) h2 {
+    left: 0 !important;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .media-books-en h2 {
+    position: relative;
+    left: -14px !important;          /* negative value = move LEFT */
+    /* Tuning values – start with -14px */
+    /* left: -8px;    → very subtle left shift */
+    /* left: -10px;   → gentle */
+    /* left: -12px;   → natural correction */
+    /* left: -14px;   → good starting point */
+    /* left: -16px;   → clearly moved left */
+    /* left: -20px;   → stronger if still looks too right */
+  }
+
+  /* Safety – German title not affected */
+  .media-books:not(.media-books-en) h2 {
+    left: 0 !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+  .media-books-en h2 {
+    position: relative;
+    left: -14px !important;          /* negative value = move LEFT */
+    /* Tuning values – start with -14px */
+    /* left: -8px;    → very subtle left shift */
+    /* left: -10px;   → gentle */
+    /* left: -12px;   → natural correction */
+    /* left: -14px;   → good starting point */
+    /* left: -16px;   → clearly moved left */
+    /* left: -20px;   → stronger if still looks too right */
+  }
+
+  /* Safety – German title not affected */
+  .media-books:not(.media-books-en) h2 {
+    left: 0 !important;
+  }
+}
+
+@media (min-width: 1900px) and (max-width: 1999px) {
+  .media-books-en h2 {
+    position: relative;
+    left: -14px !important;          /* negative value = move LEFT */
+    /* Tuning values – start with -14px */
+    /* left: -8px;    → very subtle left shift */
+    /* left: -10px;   → gentle */
+    /* left: -12px;   → natural correction */
+    /* left: -14px;   → good starting point */
+    /* left: -16px;   → clearly moved left */
+    /* left: -20px;   → stronger if still looks too right */
+  }
+
+  /* Safety – German title not affected */
+  .media-books:not(.media-books-en) h2 {
+    left: 0 !important;
+  }
+}
+
+@media (min-width: 2500px) and (max-width: 2699px) {
+  .media-books-en h2 {
+    position: relative;
+    left: -14px !important;          /* negative value = move LEFT */
+    /* Tuning values – start with -14px */
+    /* left: -8px;    → very subtle left shift */
+    /* left: -10px;   → gentle */
+    /* left: -12px;   → natural correction */
+    /* left: -14px;   → good starting point */
+    /* left: -16px;   → clearly moved left */
+    /* left: -20px;   → stronger if still looks too right */
+  }
+
+  /* Safety – German title not affected */
+  .media-books:not(.media-books-en) h2 {
+    left: 0 !important;
+  }
+}
+
+@media (min-width: 1250px) and (max-width: 1349px) {
+  .media-books-en h2 {
+    position: relative;
+    left: -14px !important;          /* negative value = move LEFT */
+    /* Tuning values – start with -14px */
+    /* left: -8px;    → very subtle left shift */
+    /* left: -10px;   → gentle */
+    /* left: -12px;   → natural correction */
+    /* left: -14px;   → good starting point */
+    /* left: -16px;   → clearly moved left */
+    /* left: -20px;   → stronger if still looks too right */
+  }
+
+  /* Safety – German title not affected */
+  .media-books:not(.media-books-en) h2 {
+    left: 0 !important;
+  }
+}

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Donations.css";
+import bankQr from "../assets/qr/bank-sepa-qr.png"; // ✅ QR import
 
 export default function DonationsEN() {
   const [amount, setAmount] = useState(50);
 
-  // ✅ UPDATED STRIPE PAYMENT LINKS (TEST MODE)
+  // ✅ Stripe payment links (TEST MODE)
   const stripeLinks = {
     25: "https://donate.stripe.com/9B6dR99tkb27bHz9JO5kk00",
     50: "https://donate.stripe.com/9B67sLaxo4DJ3b3f485kk01",
@@ -18,7 +19,6 @@ export default function DonationsEN() {
     e.preventDefault();
 
     const link = stripeLinks[amount];
-
     if (!link) {
       alert("For custom amounts, please use bank transfer.");
       return;
@@ -55,7 +55,7 @@ export default function DonationsEN() {
               that God will richly reward you for your generosity.
             </p>
 
-            {/* ================= LEFT: STRIPE ================= */}
+            {/* ================= STRIPE ================= */}
             <form onSubmit={handleSubmit} className="donations-form">
               <label className="field-label">Select Amount</label>
 
@@ -96,7 +96,7 @@ export default function DonationsEN() {
 
             <div className="divider" />
 
-            {/* ================= RIGHT: BANK ================= */}
+            {/* ================= BANK TRANSFER ================= */}
             <div className="other-ways">
               <h2>Bank Transfer</h2>
 
@@ -120,6 +120,17 @@ export default function DonationsEN() {
                 <div className="bank-row">
                   <span>Reference</span>
                   <strong>Donation</strong>
+                </div>
+
+                {/* ✅ QR CODE */}
+                <div className="bank-qr">
+                  <img
+                    src={bankQr}
+                    alt="QR code for bank transfer"
+                  />
+                  <p className="qr-hint">
+                    Scan with your banking app
+                  </p>
                 </div>
               </div>
 

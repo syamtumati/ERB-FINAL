@@ -900,3 +900,58 @@
     /* or transform: translateX(14px) !important; */
   }
 }
+
+/* ========================================= */
+/* SCROLL ARROWS – 1300px to 1400px (FINAL)  */
+/* ========================================= */
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+
+  /* German */
+  .scroll-arrows {
+    left: 48% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* English */
+  .scroll-arrows-en {
+    left: 47% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+
+  /* German */
+  .scroll-arrows {
+    left: 48.5% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* English */
+  .scroll-arrows-en {
+    left: 47% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* ========================================= */
+/* SCROLL ARROWS – 1280 × 800 (Laptop)       */
+/* ========================================= */
+
+@media (min-width: 1250px) and (max-width: 1299px) {
+
+  /* German (DE) */
+  .scroll-arrows {
+    left: 49%;
+    transform: translateX(-50%);
+  }
+
+  /* English (EN) – slightly more right */
+  .scroll-arrows-en {
+    left: 48%;
+    transform: translateX(-50%);
+  }
+}
+

@@ -616,3 +616,95 @@
   margin-bottom: -1px;   /* 🔑 kills the white line */
 }
 
+/* ========================================= */
+/* SCROLL ARROWS – 1300px to 1400px (FINAL)  */
+/* ========================================= */
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+
+  /* German */
+  .scroll-arrows {
+    left: 48% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* English */
+  .scroll-arrows-en {
+    left: 47% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+
+  /* German */
+  .scroll-arrows {
+    left: 48.5% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* English */
+  .scroll-arrows-en {
+    left: 47% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* ========================================= */
+/* SCROLL ARROWS – 1920 × 1080 (FULL HD)     */
+/* ========================================= */
+
+@media (min-width: 1900px) and (max-width: 1999px) {
+
+  /* German (DE) */
+  .scroll-arrows {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* English (EN) – slightly to the right */
+  .scroll-arrows-en {
+    left: 51.5%;   /* 👈 fine-tune: 51.2–51.8 if needed */
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================================= */
+/* SCROLL ARROWS – 2560 × 1440 (QHD / 2K)    */
+/* ========================================= */
+
+@media (min-width: 2500px) and (max-width: 2699px) {
+
+  /* German (DE) */
+  .scroll-arrows {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* English (EN) – slightly more right */
+  .scroll-arrows-en {
+    left: 52%;
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ========================================= */
+/* SCROLL ARROWS – 1280 × 800 (Laptop)       */
+/* ========================================= */
+
+@media (min-width: 1250px) and (max-width: 1349px) {
+
+  /* German (DE) */
+  .scroll-arrows {
+    left: 49%;
+    transform: translateX(-50%);
+  }
+
+  /* English (EN) – slightly more right */
+  .scroll-arrows-en {
+    left: 50.5%;
+    transform: translateX(-50%);
+  }
+}
+
