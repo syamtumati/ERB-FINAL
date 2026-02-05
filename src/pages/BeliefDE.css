@@ -274,7 +274,7 @@
 }
 
 
-@media (min-width: 993px) and (max-width: 1100px) {
+@media (min-width: 993px) and (max-width: 1100px), (min-width: 1105px) and (max-width: 1130px) {
   .belief-heading {
     margin-top: 5rem !important;     /* negative = move UP */
     /* Tuning values – start here: */

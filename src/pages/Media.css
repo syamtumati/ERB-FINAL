@@ -179,7 +179,7 @@
   }
 }
 
-@media (min-width: 993px) and (max-width: 1100px) and (min-height: 700px) and (max-height: 850px) {
+@media (min-width: 993px) and (max-width: 1100px) and (min-height: 700px) and (max-height: 850px) and (min-width: 1105px) and (max-width: 1130px) {
   .media-hero {
     margin-top: 6rem !important;     /* ← lift up – reduce to lift more */
   }
@@ -194,7 +194,7 @@
 }
 
 /* Reduce hero title font size only in narrow tablet/desktop range (993–1100 px) */
-@media (min-width: 993px) and (max-width: 1100px) {
+@media (min-width: 993px) and (max-width: 1100px), (min-width: 1105px) and (max-width: 1130px) {
   .media-hero h1 {
     font-size: 3.2rem !important;     /* ← main value – adjust as needed */
     /* Suggested options – choose one: */

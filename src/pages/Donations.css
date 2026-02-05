@@ -582,7 +582,7 @@
 }
 
 /* 768 × 1024 (tablet portrait) */
-@media (min-width: 900px) and (max-width: 1199px) {
+@media (min-width: 900px) and (max-width: 1199px), (min-width: 1105px) and (max-width: 1130px) {
   .donations-main {
     padding-top: 13rem;  /*   matches Belief / Pastors */
   }

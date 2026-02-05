@@ -872,7 +872,7 @@ section + section,
   }
 }
 
-@media (min-width: 993px) and (max-width: 1100px) {
+@media (min-width: 993px) and (max-width: 1100px), (min-width: 1105px) and (max-width: 1130px) {
 
   /* ────────────────────────────────────────────────
      Your current logo position – keep unchanged
@@ -919,7 +919,7 @@ section + section,
   }
 }
 
-@media (min-width: 993px) and (max-width: 1100px) {
+@media (min-width: 993px) and (max-width: 1100px), (min-width: 1105px) and (max-width: 1130px) {
   .logo-center {
     top: 54%;           /* was ~48–50% → higher % = moved DOWN */
     transform: translate(-50%, -50%);
