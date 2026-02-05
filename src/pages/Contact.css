@@ -362,3 +362,27 @@
   }
 }
 
+
+/* ===================================================== */
+/* Only for 993px – 1100px → English "CONTACT" move right */
+/* German "KONTAKT" stays 100% the same                  */
+/* ===================================================== */
+@media (min-width: 993px) and (max-width: 1100px) {
+
+  /* Only English version */
+  .contact-page-en .contact-hero-title {
+    display: inline-block;
+    transform: translateX(14px);     /*  ← main value – move right */
+    /* Try these values according to what you like: */
+    /* translateX(10px)  → very little */
+    /* translateX(12px)  → nice subtle movement */
+    /* translateX(16px)  → clearly visible to the right */
+    /* translateX(18px)  → the most you will probably need */
+  }
+
+  /* Make sure German stays in original position */
+  .contact-page-de .contact-hero-title,
+  .contact-page:not(.contact-page-en) .contact-hero-title {
+    transform: translateX(0) !important;
+  }
+}

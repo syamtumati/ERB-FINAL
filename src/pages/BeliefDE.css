@@ -272,3 +272,16 @@
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum";
 }
+
+
+@media (min-width: 993px) and (max-width: 1100px) {
+  .belief-heading {
+    margin-top: 5rem !important;     /* negative = move UP */
+    /* Tuning values – start here: */
+    /* -0.8rem  → very subtle lift */
+    /* -1.0rem  → gentle */
+    /* -1.2rem  → good natural upward shift (recommended) */
+    /* -1.5rem  → clearly moved up */
+    /* -2.0rem  → stronger lift */
+  }
+}

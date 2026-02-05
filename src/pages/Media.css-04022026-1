@@ -126,9 +126,8 @@
   }
 }
 
-/* ================= ENGLISH DESKTOP – ALIGN MEDIA (VIDEOS + BOOKS) LEFT ================= */
-/* TRUE desktop only */
-@media (min-width: 1200px) {
+/* DESKTOP FINE TUNING */
+@media (min-width: 1024px) {
   .media-hero {
     transform: translate(-20px, 45px);
   }
@@ -138,16 +137,20 @@
   }
 }
 
-/* ENGLISH desktop only */
-@media (min-width: 1200px) {
+/* ================= ENGLISH DESKTOP – ALIGN MEDIA (VIDEOS + BOOKS) LEFT ================= */
+@media (min-width: 1024px) {
+
+  /* Move page title: Videos / Books */
   .media-page-en .media-hero {
     transform: translate(-40px, 45px);
   }
 
+  /* Move tabs on /media root */
   .media-page-en .media-tabs {
     transform: translateX(-50px);
   }
 }
+
 
 /* ================= MEDIA HERO – MOBILE & TABLET ================= */
 
@@ -165,43 +168,11 @@
   }
 }
 
-/* 1024 × 768 — tablet landscape */
+/* 1024 × 768 — tablet landscape FIX */
 @media (width: 1024px) and (height: 768px) {
   .media-hero {
-    transform: none;
-    padding-top: 4.5rem;
-    text-align: center;
-  }
-
-  .media-tabs {
-    transform: none;
-    justify-content: center;
+    transform: none !important;
+    padding-top: 2rem;
   }
 }
 
-@media (min-width: 993px) and (max-width: 1100px) and (min-height: 700px) and (max-height: 850px) {
-  .media-hero {
-    margin-top: 6rem !important;     /* ← lift up – reduce to lift more */
-  }
-
-  .media-hero h1 {
-    transform: translateX(-14px);    /* ← move left – most balanced start */
-  }
-
-  .media-tabs {
-    transform: translateX(-14px);    /* optional – match title */
-  }
-}
-
-/* Reduce hero title font size only in narrow tablet/desktop range (993–1100 px) */
-@media (min-width: 993px) and (max-width: 1100px) {
-  .media-hero h1 {
-    font-size: 3.2rem !important;     /* ← main value – adjust as needed */
-    /* Suggested options – choose one: */
-    /* 3.2rem → very subtle reduction */
-    /* 3.1rem → gentle */
-    /* 3.0rem → good balanced smaller size (recommended start) */
-    /* 2.9rem → noticeably smaller */
-    /* 2.8rem → quite compact */
-  }
-}

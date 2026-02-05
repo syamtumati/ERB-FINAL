@@ -584,6 +584,6 @@
 /* 768 × 1024 (tablet portrait) */
 @media (min-width: 900px) and (max-width: 1199px) {
   .donations-main {
-    padding-top: 13.5rem;  /*   matches Belief / Pastors */
+    padding-top: 13rem;  /*   matches Belief / Pastors */
   }
 }
