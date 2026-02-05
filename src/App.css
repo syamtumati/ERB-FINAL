@@ -926,3 +926,12 @@ section + section,
   }
 
 }
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+
+  /* Only touch the left menu – nothing else */
+  .menu-left {
+    margin-right: 3rem !important;    /* smaller value = left menu moves RIGHT toward logo */
+  }
+
+}

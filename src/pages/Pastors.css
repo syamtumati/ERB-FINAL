@@ -695,3 +695,10 @@
     margin-top: -5rem !important;     /* small pull up */
   }
 }
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+  .leadership-intro-box {
+    padding-top: 2.8rem !important;     /* reduce from 3.6rem */
+    margin-top: -1rem !important;     /* small pull up */
+  }
+}
